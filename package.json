@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "start": "react-native run-android",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "check": "yarn run lint && yarn run test"
   },
   "dependencies": {
+    "@types/react-redux": "^7.1.7",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-redux": "^7.2.0",
     "redux": "^4.0.5"
   },
   "devDependencies": {
