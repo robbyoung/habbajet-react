@@ -10,7 +10,7 @@ export interface Purchase {
 }
 
 export interface State {
-    habits: Habbajet;
-    purchages: Purchase;
-    budget: string;
+    habbajets: Habbajet[];
+    purchases: Purchase[];
+    budget: number;
 }
