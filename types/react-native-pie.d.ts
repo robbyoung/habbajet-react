@@ -9,6 +9,7 @@ interface PieProps {
 	radius: number,
 	sections: Section[],
 	strokeCap: string,
+	dividerSize?: number,
 }
 
 export = Pie;

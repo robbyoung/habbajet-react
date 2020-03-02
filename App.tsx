@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView} from 'react-native';
 import {Provider} from 'react-redux';
 import store from './app/store';
 import HabitWheel from './app/components/habitWheel';
@@ -7,11 +7,17 @@ import HabitWheel from './app/components/habitWheel';
 const App = () => {
     return (
         <Provider store={store}>
-            <View>
+            <ScrollView>
                 <HabitWheel
-                    color="#ffffff"
+                    color="#8066C2"
                     wedges={[true, true, true, true, true, true, true]}/>
-            </View>
+                <HabitWheel
+                    color="#8066C2"
+                    wedges={[false, true, false, true, false, true, true]}/>
+                <HabitWheel
+                    color="#8066C2"
+                    wedges={[true, false, false, true, false, true, false]}/>
+            </ScrollView>
         </Provider>
     );
 };
