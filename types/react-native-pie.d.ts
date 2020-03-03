@@ -6,10 +6,11 @@ interface Section {
 }
 
 interface PieProps {
-	radius: number,
-	sections: Section[],
-	strokeCap: string,
-	dividerSize?: number,
+	radius: number;
+	sections: Section[];
+	strokeCap: string;
+	dividerSize?: number;
+	backgroundColor?: string;
 }
 
 export = Pie;
