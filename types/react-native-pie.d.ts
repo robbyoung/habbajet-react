@@ -1,16 +1,16 @@
-import { Component } from "react";
+import {Component} from 'react';
 
 interface Section {
-	percentage: number;
-	color: string;
+    percentage: number;
+    color: string;
 }
 
 interface PieProps {
-	radius: number;
-	sections: Section[];
-	strokeCap: string;
-	dividerSize?: number;
-	backgroundColor?: string;
+    radius: number;
+    sections: Section[];
+    strokeCap: string;
+    dividerSize?: number;
+    backgroundColor?: string;
 }
 
 export = Pie;

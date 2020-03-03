@@ -5,19 +5,11 @@ import Pie from 'react-native-pie';
 const CHART_MARGINS = 20;
 const styles = StyleSheet.create({
     container: {
-        margin: 20
+        margin: 20,
     },
 });
 
-const transparencies = [
-    '21',
-    '42',
-    '63',
-    '85',
-    'A6',
-    'C7',
-    'E8',
-];
+const transparencies = ['21', '42', '63', '85', 'A6', 'C7', 'E8'];
 
 interface HabitWheelProps {
     successes: number;
@@ -29,8 +21,8 @@ const HabitWheel = (props: HabitWheelProps) => {
         successes = 0;
     }
 
-    const sections: { color: string, percentage: number}[] = [];
-    for(let s = 0; s < successes; s++) {
+    const sections: {color: string; percentage: number}[] = [];
+    for (let s = 0; s < successes; s++) {
         sections.push({
             percentage: 14.3,
             color: props.color + transparencies[s],
@@ -40,11 +32,13 @@ const HabitWheel = (props: HabitWheelProps) => {
     return (
         <View style={styles.container}>
             <Pie
-              radius={(Dimensions.get('window').width - CHART_MARGINS * 2) / 2}
-              sections={sections}
-              strokeCap={'butt'}
-              dividerSize={2}
-              backgroundColor={'#f5f5f5'}
+                radius={
+                    (Dimensions.get('window').width - CHART_MARGINS * 2) / 2
+                }
+                sections={sections}
+                strokeCap={'butt'}
+                dividerSize={2}
+                backgroundColor={'#f5f5f5'}
             />
         </View>
     );
