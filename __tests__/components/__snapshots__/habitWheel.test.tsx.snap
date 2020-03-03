@@ -1,0 +1,696 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabitWheel Component handles invalid success counts 1`] = `
+<View
+  style={
+    Object {
+      "margin": 20,
+    }
+  }
+>
+  <ARTSurfaceView
+    style={
+      Array [
+        undefined,
+        Object {
+          "height": 710,
+          "width": 710,
+        },
+      ]
+    }
+  >
+    <ARTGroup
+      opacity={1}
+      transform={
+        Array [
+          6.123233995736766e-17,
+          -1,
+          1,
+          6.123233995736766e-17,
+          0,
+          710,
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            532.5,
+            355,
+            4,
+            355,
+            355,
+            177.5,
+            0,
+            6.283185307179586,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#f5f5f5"
+        strokeCap={1}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTGroup
+        opacity={1}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+    </ARTGroup>
+  </ARTSurfaceView>
+</View>
+`;
+
+exports[`HabitWheel Component renders a full circle with all successes 1`] = `
+<View
+  style={
+    Object {
+      "margin": 20,
+    }
+  }
+>
+  <ARTSurfaceView
+    style={
+      Array [
+        undefined,
+        Object {
+          "height": 710,
+          "width": 710,
+        },
+      ]
+    }
+  >
+    <ARTGroup
+      opacity={1}
+      transform={
+        Array [
+          6.123233995736766e-17,
+          -1,
+          1,
+          6.123233995736766e-17,
+          0,
+          710,
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            532.5,
+            355,
+            4,
+            355,
+            355,
+            177.5,
+            0,
+            6.283185307179586,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#f5f5f5"
+        strokeCap={1}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            532.3918717958895,
+            361.1946606646939,
+            4,
+            355,
+            355,
+            177.5,
+            0.03490658503988659,
+            0.8984954989266809,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#404fcd21"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            460.63084453369703,
+            497.64772933032594,
+            4,
+            355,
+            355,
+            177.5,
+            0.9334020839665675,
+            1.7969909978533618,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#404fcd42"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            309.17932664056264,
+            526.4838648179115,
+            4,
+            355,
+            355,
+            177.5,
+            1.8318975828932482,
+            2.6954864967800427,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#404fcd63"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            192.29604454231333,
+            425.9483817886152,
+            4,
+            355,
+            355,
+            177.5,
+            2.73039308181993,
+            3.593981995706724,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#404fcd85"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            198.16060276717863,
+            271.88770562879836,
+            4,
+            355,
+            355,
+            177.5,
+            3.6288885807466102,
+            4.4924774946334045,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#404fcda6"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            322.3486352662421,
+            180.52897552595414,
+            4,
+            355,
+            355,
+            177.5,
+            4.527384079673291,
+            5.390972993560085,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#404fcdc7"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            471.1696552879316,
+            220.79545018784518,
+            4,
+            355,
+            355,
+            177.5,
+            5.425879578599972,
+            6.289468492486765,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#404fcde8"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTGroup
+        opacity={1}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+    </ARTGroup>
+  </ARTSurfaceView>
+</View>
+`;
+
+exports[`HabitWheel Component renders a half-full circle with some successes 1`] = `
+<View
+  style={
+    Object {
+      "margin": 20,
+    }
+  }
+>
+  <ARTSurfaceView
+    style={
+      Array [
+        undefined,
+        Object {
+          "height": 710,
+          "width": 710,
+        },
+      ]
+    }
+  >
+    <ARTGroup
+      opacity={1}
+      transform={
+        Array [
+          6.123233995736766e-17,
+          -1,
+          1,
+          6.123233995736766e-17,
+          0,
+          710,
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            532.5,
+            355,
+            4,
+            355,
+            355,
+            177.5,
+            0,
+            6.283185307179586,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#f5f5f5"
+        strokeCap={1}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            532.3918717958895,
+            361.1946606646939,
+            4,
+            355,
+            355,
+            177.5,
+            0.03490658503988659,
+            0.8984954989266809,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#ebd22f21"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            460.63084453369703,
+            497.64772933032594,
+            4,
+            355,
+            355,
+            177.5,
+            0.9334020839665675,
+            1.7969909978533618,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#ebd22f42"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            309.17932664056264,
+            526.4838648179115,
+            4,
+            355,
+            355,
+            177.5,
+            1.8318975828932482,
+            2.6954864967800427,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#ebd22f63"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTShape
+        d={
+          Array [
+            0,
+            192.29604454231333,
+            425.9483817886152,
+            4,
+            355,
+            355,
+            177.5,
+            2.73039308181993,
+            3.593981995706724,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#ebd22f85"
+        strokeCap={0}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTGroup
+        opacity={1}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+    </ARTGroup>
+  </ARTSurfaceView>
+</View>
+`;
+
+exports[`HabitWheel Component renders an empty circle with no successes 1`] = `
+<View
+  style={
+    Object {
+      "margin": 20,
+    }
+  }
+>
+  <ARTSurfaceView
+    style={
+      Array [
+        undefined,
+        Object {
+          "height": 710,
+          "width": 710,
+        },
+      ]
+    }
+  >
+    <ARTGroup
+      opacity={1}
+      transform={
+        Array [
+          6.123233995736766e-17,
+          -1,
+          1,
+          6.123233995736766e-17,
+          0,
+          710,
+        ]
+      }
+    >
+      <ARTShape
+        d={
+          Array [
+            0,
+            532.5,
+            355,
+            4,
+            355,
+            355,
+            177.5,
+            0,
+            6.283185307179586,
+            1,
+          ]
+        }
+        fill={null}
+        opacity={1}
+        stroke="#f5f5f5"
+        strokeCap={1}
+        strokeDash={null}
+        strokeJoin={1}
+        strokeWidth={355}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+      <ARTGroup
+        opacity={1}
+        transform={
+          Array [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+          ]
+        }
+      />
+    </ARTGroup>
+  </ARTSurfaceView>
+</View>
+`;
