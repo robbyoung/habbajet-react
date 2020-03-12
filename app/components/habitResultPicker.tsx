@@ -11,8 +11,9 @@ const styles = StyleSheet.create({
         alignContent: 'center',
     },
     text: {
-        fontSize: 25,
+        fontSize: 30,
         alignSelf: 'center',
+        fontFamily: 'Abel'
     },
 });
 const days = [

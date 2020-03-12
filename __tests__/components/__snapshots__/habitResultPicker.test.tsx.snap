@@ -49,7 +49,8 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
     style={
       Object {
         "alignSelf": "center",
-        "fontSize": 25,
+        "fontFamily": "Abel",
+        "fontSize": 30,
       }
     }
   >
