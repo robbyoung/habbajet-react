@@ -10,7 +10,8 @@ const App = () => {
                 color={'#8742f5'}
                 dayOfWeek={0}
                 onSuccess={() => undefined}
-                onFailure={() => undefined}/>
+                onFailure={() => undefined}
+            />
         </Provider>
     );
 };

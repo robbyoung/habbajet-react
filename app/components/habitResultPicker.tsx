@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 import IconButton from './iconButton';
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 const ICON_SIZE = 90;
 const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 25,
         alignSelf: 'center',
-    }
+    },
 });
 const days = [
     'Monday',
@@ -38,13 +38,15 @@ const HabitResultPicker = (props: HabitResultPickerProps) => {
                 icon={faCheck}
                 size={ICON_SIZE}
                 color={props.color}
-                onPress={() => props.onSuccess()}/>
+                onPress={() => props.onSuccess()}
+            />
             <Text style={styles.text}>{days[props.dayOfWeek]}</Text>
             <IconButton
                 icon={faTimes}
                 size={ICON_SIZE}
                 color={props.color}
-                onPress={() => props.onFailure()}/>
+                onPress={() => props.onFailure()}
+            />
         </View>
     );
 };
