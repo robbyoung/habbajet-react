@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 30,
         alignSelf: 'center',
-        fontFamily: 'Abel'
+        fontFamily: 'Abel',
     },
 });
 const days = [
