@@ -1,16 +1,15 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import store from './app/store';
-import HabitResultPicker from './app/components/habitResultPicker';
+import Label from './app/components/label';
 
 const App = () => {
     return (
         <Provider store={store}>
-            <HabitResultPicker
-                color={'#8742f5'}
-                dayOfWeek={0}
-                onSuccess={() => undefined}
-                onFailure={() => undefined}
+            <Label
+                title="Title"
+                content="Content"
+                color="#32a852"
             />
         </Provider>
     );
