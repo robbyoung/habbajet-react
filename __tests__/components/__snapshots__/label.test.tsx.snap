@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label Component will render a button with a font-awesome icon 1`] = `
+<View>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+        Object {
+          "color": "#036bfc",
+        },
+      ]
+    }
+  >
+    Title
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 30,
+        "marginTop": -10,
+        "padding": 0,
+      }
+    }
+  >
+    Content
+  </Text>
+</View>
+`;

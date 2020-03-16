@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         marginTop: -10,
         padding: 0,
         fontSize: 30,
-    }
+    },
 });
 
 interface LabelProps {
@@ -25,9 +25,7 @@ const Label = (props: LabelProps) => {
             <Text style={[styles.title, {color: props.color}]}>
                 {props.title}
             </Text>
-            <Text style={styles.content}>
-                {props.content}
-            </Text>
+            <Text style={styles.content}>{props.content}</Text>
         </View>
     );
 };
