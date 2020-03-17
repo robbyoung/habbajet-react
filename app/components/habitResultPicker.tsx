@@ -17,18 +17,10 @@ const styles = StyleSheet.create({
         fontFamily: 'Abel',
         color: '#fff',
         width: 60,
-        textAlign: 'center'
+        textAlign: 'center',
     },
 });
-const days = [
-    'Mon',
-    'Tues',
-    'Weds',
-    'Thurs',
-    'Fri',
-    'Sat',
-    'Sun',
-];
+const days = ['Mon', 'Tues', 'Weds', 'Thurs', 'Fri', 'Sat', 'Sun'];
 
 interface HabitResultPickerProps {
     color: string;
@@ -45,9 +37,7 @@ const HabitResultPicker = (props: HabitResultPickerProps) => {
                 color={'#fff'}
                 onLongPress={() => props.onSuccess()}
             />
-            <Text style={[styles.text]}>
-                {days[props.dayOfWeek]}
-            </Text>
+            <Text style={[styles.text]}>{days[props.dayOfWeek]}</Text>
             <IconButton
                 icon={faTimes}
                 size={ICON_SIZE}

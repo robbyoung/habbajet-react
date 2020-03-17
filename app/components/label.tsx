@@ -29,7 +29,13 @@ const Label = (props: LabelProps) => {
             <Text style={[styles.title, {color: props.color}]}>
                 {props.title}
             </Text>
-            <Text style={[styles.content, {fontSize: props.contentSize || DEFAULT_CONTENT_SIZE}]}>{props.content}</Text>
+            <Text
+                style={[
+                    styles.content,
+                    {fontSize: props.contentSize || DEFAULT_CONTENT_SIZE},
+                ]}>
+                {props.content}
+            </Text>
         </View>
     );
 };

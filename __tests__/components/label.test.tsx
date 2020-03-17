@@ -12,7 +12,12 @@ describe('Label Component', () => {
 
     it('can take a larger font size', () => {
         const component = renderer.create(
-            <Label title="Title" content="Content" color="#036bfc" contentSize={70} />,
+            <Label
+                title="Title"
+                content="Content"
+                color="#036bfc"
+                contentSize={70}
+            />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });

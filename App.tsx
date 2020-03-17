@@ -1,8 +1,9 @@
 import React from 'react';
-import Habbajet from './app/containers/habbajet';
+import {Provider} from 'react-redux';
+import store from './app/store';
 
 const App = () => {
-    return <Habbajet/>
+    return <Provider store={store} />;
 };
 
 export default App;
