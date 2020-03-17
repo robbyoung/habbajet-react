@@ -1,13 +1,18 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Dimensions} from 'react-native';
-import Pie from 'react-native-pie';
+import {View, StyleSheet, ScrollView} from 'react-native';
 import {State} from '../state';
-import {useSelector} from 'react-redux';
 import Label from '../components/label';
 import HabitWheel from '../components/habitWheel';
 import HabitResultPicker from '../components/habitResultPicker';
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    container: {
+        height: '100%',
+    },
+    details: {
+        marginLeft: '20%',
+    }
+});
 
 const habbajetSelector = (state: State) => state.habbajets[0];
 
@@ -17,9 +22,13 @@ const Habbajet = () => {
     const color = '#32a852';
 
     return (
-        <View>
-            <HabitWheel color={color} successes={(successes % 7) + 1} />
-            <Label title="Value" content={'$100.00'} color={color} />
+        <View style={styles.container}>
+            <ScrollView>
+                <HabitWheel color={color} successes={(successes % 7) + 1} />
+                <View style={styles.details}>
+                    <Label title="Value" content={'$100.00'} color={color} contentSize={50}/>
+                </View>
+            </ScrollView>
             <HabitResultPicker
                 dayOfWeek={successes % 7}
                 color={color}

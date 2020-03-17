@@ -11,15 +11,17 @@ const styles = StyleSheet.create({
     content: {
         marginTop: -10,
         padding: 0,
-        fontSize: 30,
         fontFamily: 'Abel',
     },
 });
+
+const DEFAULT_CONTENT_SIZE = 30;
 
 interface LabelProps {
     title: string;
     content: string;
     color: string;
+    contentSize?: number;
 }
 const Label = (props: LabelProps) => {
     return (
@@ -27,7 +29,7 @@ const Label = (props: LabelProps) => {
             <Text style={[styles.title, {color: props.color}]}>
                 {props.title}
             </Text>
-            <Text style={styles.content}>{props.content}</Text>
+            <Text style={[styles.content, {fontSize: props.contentSize || DEFAULT_CONTENT_SIZE}]}>{props.content}</Text>
         </View>
     );
 };
