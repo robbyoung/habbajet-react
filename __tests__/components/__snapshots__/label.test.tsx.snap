@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Label Component will render a button with a font-awesome icon 1`] = `
+exports[`Label Component will render a label with a title and content 1`] = `
 <View>
   <Text
     style={
       Array [
         Object {
+          "fontFamily": "Abel",
           "fontSize": 20,
           "margin": 0,
           "padding": 0,
@@ -21,6 +22,7 @@ exports[`Label Component will render a button with a font-awesome icon 1`] = `
   <Text
     style={
       Object {
+        "fontFamily": "Abel",
         "fontSize": 30,
         "marginTop": -10,
         "padding": 0,

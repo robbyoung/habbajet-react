@@ -6,11 +6,13 @@ const styles = StyleSheet.create({
         fontSize: 20,
         margin: 0,
         padding: 0,
+        fontFamily: 'Abel',
     },
     content: {
         marginTop: -10,
         padding: 0,
         fontSize: 30,
+        fontFamily: 'Abel',
     },
 });
 
