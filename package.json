@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "react-native run-android",
+    "tsc": "tsc -p tsconfig.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest",
-    "check": "yarn run lint && yarn run test"
+    "check": "yarn run tsc && yarn run lint && yarn run test"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
