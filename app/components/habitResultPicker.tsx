@@ -39,14 +39,16 @@ const HabitResultPicker = (props: HabitResultPickerProps) => {
                 icon={faCheck}
                 size={ICON_SIZE}
                 color={props.color}
-                onPress={() => props.onSuccess()}
+                onLongPress={() => props.onSuccess()}
             />
-            <Text style={styles.text}>{days[props.dayOfWeek]}</Text>
+            <Text style={[styles.text, {color: props.color}]}>
+                {days[props.dayOfWeek]}
+            </Text>
             <IconButton
                 icon={faTimes}
                 size={ICON_SIZE}
                 color={props.color}
-                onPress={() => props.onFailure()}
+                onLongPress={() => props.onFailure()}
             />
         </View>
     );

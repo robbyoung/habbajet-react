@@ -7,11 +7,14 @@ interface IconButtonProps {
     icon: IconDefinition;
     size: number;
     color: string;
-    onPress: () => void;
+    onPress?: () => void;
+    onLongPress?: () => void;
 }
 const IconButton = (props: IconButtonProps) => {
     return (
-        <TouchableOpacity onPress={() => props.onPress()}>
+        <TouchableOpacity
+            onPress={props.onPress || undefined}
+            onLongPress={props.onLongPress || undefined}>
             <FontAwesomeIcon
                 icon={props.icon}
                 size={props.size}

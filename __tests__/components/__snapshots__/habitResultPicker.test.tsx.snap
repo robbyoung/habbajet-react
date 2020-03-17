@@ -12,7 +12,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
 >
   <View
     accessible={true}
-    focusable={true}
+    focusable={false}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -47,18 +47,23 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
   </View>
   <Text
     style={
-      Object {
-        "alignSelf": "center",
-        "fontFamily": "Abel",
-        "fontSize": 30,
-      }
+      Array [
+        Object {
+          "alignSelf": "center",
+          "fontFamily": "Abel",
+          "fontSize": 30,
+        },
+        Object {
+          "color": "#000000",
+        },
+      ]
     }
   >
     Wednesday
   </Text>
   <View
     accessible={true}
-    focusable={true}
+    focusable={false}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
