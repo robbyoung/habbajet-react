@@ -13,7 +13,6 @@ describe('HabbajetDisplay Component', () => {
         const component = renderer.create(
             <HabbajetDisplay
                 habbajet={habbajet}
-                day={0}
                 onSuccess={() => undefined}
                 onFailure={() => undefined}
             />,

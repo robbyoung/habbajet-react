@@ -33,7 +33,7 @@ describe('Add Habbajet Action', () => {
         const date = moment(newState[0].date);
         expect(date.format('ddmmyyyy')).toEqual(
             moment()
-                .day(1)
+                .startOf('isoWeek')
                 .format('ddmmyyyy'),
         );
         expect(date.day()).toEqual(1);

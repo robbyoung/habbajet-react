@@ -11,7 +11,7 @@ describe('HabitResultPicker Component', () => {
         const component = renderer.create(
             <HabitResultPicker
                 color="#000000"
-                dayOfWeek={2}
+                timestamp={'2020-03-21T20:44:24.967Z'}
                 onFailure={() => undefined}
                 onSuccess={() => undefined}
             />,

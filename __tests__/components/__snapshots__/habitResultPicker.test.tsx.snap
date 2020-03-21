@@ -5,10 +5,8 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
   style={
     Array [
       Object {
-        "alignContent": "center",
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-        "padding": 20,
+        "flexDirection": "column",
+        "padding": 10,
       },
       Object {
         "backgroundColor": "#000000",
@@ -16,41 +14,6 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
     ]
   }
 >
-  <View
-    accessible={true}
-    focusable={false}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <
-      color="#fff"
-      icon={
-        Object {
-          "icon": Array [
-            512,
-            512,
-            Array [],
-            "f00c",
-            "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
-          ],
-          "iconName": "check",
-          "prefix": "fas",
-        }
-      }
-      size={100}
-    />
-  </View>
   <Text
     style={
       Array [
@@ -60,47 +23,94 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
           "fontFamily": "Abel",
           "fontSize": 30,
           "textAlign": "center",
-          "width": 60,
+          "width": "100%",
         },
       ]
     }
   >
-    Weds
+    Sunday, March 22nd
   </Text>
   <View
-    accessible={true}
-    focusable={false}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
     style={
-      Object {
-        "opacity": 1,
-      }
+      Array [
+        Object {
+          "alignContent": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        },
+      ]
     }
   >
-    <
-      color="#fff"
-      icon={
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
         Object {
-          "icon": Array [
-            352,
-            512,
-            Array [],
-            "f00d",
-            "M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z",
-          ],
-          "iconName": "times",
-          "prefix": "fas",
+          "opacity": 1,
         }
       }
-      size={100}
-    />
+    >
+      <
+        color="#fff"
+        icon={
+          Object {
+            "icon": Array [
+              512,
+              512,
+              Array [],
+              "f00c",
+              "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z",
+            ],
+            "iconName": "check",
+            "prefix": "fas",
+          }
+        }
+        size={100}
+      />
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <
+        color="#fff"
+        icon={
+          Object {
+            "icon": Array [
+              352,
+              512,
+              Array [],
+              "f00d",
+              "M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z",
+            ],
+            "iconName": "times",
+            "prefix": "fas",
+          }
+        }
+        size={100}
+      />
+    </View>
   </View>
 </View>
 `;

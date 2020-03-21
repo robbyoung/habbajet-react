@@ -14,7 +14,7 @@ export function addHabbajetAction(
     color: string,
 ): AddHabbajetAction {
     const monday = moment()
-        .day(1)
+        .startOf('isoWeek')
         .toISOString();
     return {
         type: ActionType.ADD_HABBAJET,
