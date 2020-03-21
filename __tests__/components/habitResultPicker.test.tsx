@@ -11,7 +11,19 @@ describe('HabitResultPicker Component', () => {
         const component = renderer.create(
             <HabitResultPicker
                 color="#000000"
-                dayOfWeek={2}
+                timestamp={'2020-03-21T20:44:24.967Z'}
+                onFailure={() => undefined}
+                onSuccess={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('collapses for dates in the future', () => {
+        const component = renderer.create(
+            <HabitResultPicker
+                color="#000000"
+                timestamp={'3000-01-01T00:00:00.000Z'}
                 onFailure={() => undefined}
                 onSuccess={() => undefined}
             />,

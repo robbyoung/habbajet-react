@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
 
 interface HabbajetDisplayProps {
     habbajet: Habbajet;
-    day: number;
     onSuccess: () => void;
     onFailure: () => void;
 }
@@ -38,7 +37,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                 </View>
             </ScrollView>
             <HabitResultPicker
-                dayOfWeek={props.day}
+                timestamp={props.habbajet.date}
                 color={props.habbajet.color}
                 onSuccess={() => props.onSuccess()}
                 onFailure={() => props.onFailure()}

@@ -3,6 +3,7 @@ export interface Habbajet {
     value: number;
     successes: number;
     color: string;
+    date: string;
 }
 
 export interface Purchase {
