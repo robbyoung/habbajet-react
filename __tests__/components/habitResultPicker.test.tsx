@@ -18,4 +18,16 @@ describe('HabitResultPicker Component', () => {
         );
         expect(component.toJSON()).toMatchSnapshot();
     });
+
+    it('collapses for dates in the future', () => {
+        const component = renderer.create(
+            <HabitResultPicker
+                color="#000000"
+                timestamp={'3000-01-01T00:00:00.000Z'}
+                onFailure={() => undefined}
+                onSuccess={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
 });

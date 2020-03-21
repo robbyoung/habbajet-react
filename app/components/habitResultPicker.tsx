@@ -43,6 +43,9 @@ interface HabitResultPickerProps {
 }
 const HabitResultPicker = (props: HabitResultPickerProps) => {
     const date = getDateFormatted(props.timestamp);
+    if (date === undefined) {
+        return <View />;
+    }
 
     return (
         <View style={[styles.container, {backgroundColor: props.color}]}>

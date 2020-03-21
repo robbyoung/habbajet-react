@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HabitResultPicker Component collapses for dates in the future 1`] = `<View />`;
+
 exports[`HabitResultPicker Component renders buttons and the specified day of the week 1`] = `
 <View
   style={
