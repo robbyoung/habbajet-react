@@ -3,16 +3,22 @@
 exports[`HabitResultPicker Component renders buttons and the specified day of the week 1`] = `
 <View
   style={
-    Object {
-      "alignContent": "center",
-      "flexDirection": "row",
-      "justifyContent": "space-around",
-    }
+    Array [
+      Object {
+        "alignContent": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "padding": 20,
+      },
+      Object {
+        "backgroundColor": "#000000",
+      },
+    ]
   }
 >
   <View
     accessible={true}
-    focusable={true}
+    focusable={false}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -28,7 +34,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
     }
   >
     <
-      color="#000000"
+      color="#fff"
       icon={
         Object {
           "icon": Array [
@@ -42,23 +48,28 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
           "prefix": "fas",
         }
       }
-      size={90}
+      size={100}
     />
   </View>
   <Text
     style={
-      Object {
-        "alignSelf": "center",
-        "fontFamily": "Abel",
-        "fontSize": 30,
-      }
+      Array [
+        Object {
+          "alignSelf": "center",
+          "color": "#fff",
+          "fontFamily": "Abel",
+          "fontSize": 30,
+          "textAlign": "center",
+          "width": 60,
+        },
+      ]
     }
   >
-    Wednesday
+    Weds
   </Text>
   <View
     accessible={true}
-    focusable={true}
+    focusable={false}
     isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
@@ -74,7 +85,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
     }
   >
     <
-      color="#000000"
+      color="#fff"
       icon={
         Object {
           "icon": Array [
@@ -88,7 +99,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
           "prefix": "fas",
         }
       }
-      size={90}
+      size={100}
     />
   </View>
 </View>

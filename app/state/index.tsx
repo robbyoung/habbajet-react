@@ -1,7 +1,8 @@
 export interface Habbajet {
     name: string;
     value: number;
-    days: boolean[];
+    successes: number;
+    color: string;
 }
 
 export interface Purchase {

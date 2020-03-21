@@ -10,13 +10,15 @@ export interface AddHabbajetAction extends Action {
 export function addHabbajetAction(
     name: string,
     value: number,
+    color: string,
 ): AddHabbajetAction {
     return {
         type: ActionType.ADD_HABBAJET,
         newHabbajet: {
             name,
             value,
-            days: [],
+            successes: 0,
+            color,
         },
     };
 }

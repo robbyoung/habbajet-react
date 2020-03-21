@@ -5,7 +5,7 @@ import {Habbajet} from '../../app/state';
 
 describe('Add Habbajet Action', () => {
     it('can add a habbajet to the empty state', () => {
-        const action = addHabbajetAction('Test Habbajet', 80);
+        const action = addHabbajetAction('Test Habbajet', 80, '#000');
         const state: Habbajet[] = [];
         const newState = habbajetsReducer(state, action);
         expect(newState).toEqual([action.newHabbajet]);
@@ -15,7 +15,7 @@ describe('Add Habbajet Action', () => {
     });
 
     it('will add habbajets to the end of the list', () => {
-        const action = addHabbajetAction('Test Habbajet', 80);
+        const action = addHabbajetAction('Test Habbajet', 80, '#000');
         const state = createTestState(10, 1, 20).habbajets;
         const newState = habbajetsReducer(state, action);
         expect(newState).toEqual([
