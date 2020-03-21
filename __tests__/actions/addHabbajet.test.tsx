@@ -2,6 +2,7 @@ import habbajetsReducer from '../../app/reducers/habbajets';
 import {createTestState} from '../../app/state/testState';
 import {addHabbajetAction} from '../../app/actions';
 import {Habbajet} from '../../app/state';
+import moment from 'moment';
 
 describe('Add Habbajet Action', () => {
     it('can add a habbajet to the empty state', () => {
@@ -23,5 +24,19 @@ describe('Add Habbajet Action', () => {
             action.newHabbajet,
         ]);
         expect(state).toEqual(createTestState(10, 1, 20).habbajets);
+    });
+
+    it('will set the date to a timestamp of the most recent Monday', () => {
+        const action = addHabbajetAction('Test Habbajet', 80, '#000');
+        const state: Habbajet[] = [];
+        const newState = habbajetsReducer(state, action);
+        const date = moment(newState[0].date);
+        expect(date.format('ddmmyyyy')).toEqual(
+            moment()
+                .day(1)
+                .format('ddmmyyyy'),
+        );
+        expect(date.day()).toEqual(1);
+        expect(state).toEqual([]);
     });
 });

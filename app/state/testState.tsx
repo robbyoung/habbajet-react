@@ -12,6 +12,7 @@ export function createTestState(
             value: i,
             successes: 0,
             color: '#000',
+            date: '2020-03-22T19:58:06.967Z',
         });
     }
 

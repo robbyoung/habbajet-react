@@ -1,3 +1,4 @@
+import moment from 'moment';
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
 import {Habbajet} from '../state';
@@ -12,6 +13,9 @@ export function addHabbajetAction(
     value: number,
     color: string,
 ): AddHabbajetAction {
+    const monday = moment()
+        .day(1)
+        .toISOString();
     return {
         type: ActionType.ADD_HABBAJET,
         newHabbajet: {
@@ -19,6 +23,7 @@ export function addHabbajetAction(
             value,
             successes: 0,
             color,
+            date: monday,
         },
     };
 }
