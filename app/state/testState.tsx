@@ -10,7 +10,8 @@ export function createTestState(
         habbajets.push({
             name: `Habbajet ${i}`,
             value: i,
-            days: [],
+            successes: 0,
+            color: '#000',
         });
     }
 
