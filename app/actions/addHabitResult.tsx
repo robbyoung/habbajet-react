@@ -24,15 +24,15 @@ export function addHabitResult(
     state: Habbajet[],
     action: AddHabitResultAction,
 ): Habbajet[] {
-    const selected = state.findIndex(
+    const index = state.findIndex(
         habbajet => habbajet.name === action.habbajetName,
     );
-    if (selected === undefined) {
+    if (index === undefined) {
         return state;
     }
 
     const newState = [...state];
-    const edited: Habbajet = {...newState[selected]};
+    const edited: Habbajet = {...newState[index]};
     const date = moment(edited.date);
 
     date.add(1, 'day');
@@ -40,5 +40,7 @@ export function addHabitResult(
     if (action.success) {
         edited.successes++;
     }
+    newState[index] = edited;
+    
     return newState;
 }
