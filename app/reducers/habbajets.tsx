@@ -1,7 +1,12 @@
 import {Action} from 'redux';
 import {Habbajet} from '../state';
-import {ActionType, addHabbajet, AddHabbajetAction} from '../actions';
-
+import {
+    ActionType,
+    addHabbajet,
+    AddHabbajetAction,
+    addHabitResult,
+    AddHabitResultAction,
+} from '../actions';
 export default function habbajetsReducer(
     state: Habbajet[] = [],
     action: Action,
@@ -9,6 +14,8 @@ export default function habbajetsReducer(
     switch (action.type) {
         case ActionType.ADD_HABBAJET:
             return addHabbajet(state, action as AddHabbajetAction);
+        case ActionType.ADD_HABIT_RESULT:
+            return addHabitResult(state, action as AddHabitResultAction);
     }
     return state;
 }
