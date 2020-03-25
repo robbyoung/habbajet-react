@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HabbajetDisplay Component will hook various components up to a habbajet 1`] = `
+exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
 <View
   style={
     Object {

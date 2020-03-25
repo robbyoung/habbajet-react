@@ -11,8 +11,8 @@ export function createTestState(
             name: `Habbajet ${i}`,
             value: i,
             successes: 0,
-            color: '#000',
-            date: '2020-03-21T20:44:24.967Z',
+            color: '#8066C2',
+            date: '2020-03-22T11:00:00.000Z',
         });
     }
 
