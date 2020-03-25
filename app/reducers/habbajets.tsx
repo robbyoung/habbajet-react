@@ -7,9 +7,11 @@ import {
     addHabitResult,
     AddHabitResultAction,
 } from '../actions';
-import { createTestState } from '../state/testState';
+// import {createTestState} from '../state/testState';
+
 export default function habbajetsReducer(
-    state: Habbajet[] = createTestState(1, 0, 0).habbajets,
+    // state: Habbajet[] = createTestState(1, 0, 0).habbajets,
+    state: Habbajet[] = [],
     action: Action,
 ): Habbajet[] {
     switch (action.type) {

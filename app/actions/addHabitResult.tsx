@@ -41,6 +41,6 @@ export function addHabitResult(
         edited.successes++;
     }
     newState[index] = edited;
-    
+
     return newState;
 }

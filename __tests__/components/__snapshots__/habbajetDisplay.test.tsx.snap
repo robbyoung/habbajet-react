@@ -108,7 +108,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
                   "padding": 0,
                 },
                 Object {
-                  "color": "#000",
+                  "color": "#8066C2",
                 },
               ]
             }
@@ -143,7 +143,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
           "padding": 10,
         },
         Object {
-          "backgroundColor": "#000",
+          "backgroundColor": "#8066C2",
         },
       ]
     }
@@ -162,7 +162,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
         ]
       }
     >
-      Sunday, March 22nd
+      Monday, March 23rd
     </Text>
     <View
       style={
