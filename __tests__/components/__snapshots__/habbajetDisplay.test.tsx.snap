@@ -113,7 +113,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
               ]
             }
           >
-            Value
+            Expected Output
           </Text>
           <Text
             style={
