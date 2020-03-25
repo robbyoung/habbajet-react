@@ -1,6 +1,8 @@
 export interface Habbajet {
     name: string;
-    value: number;
+    maxValue: number;
+    currentValue: number;
+    factor: number;
     successes: number;
     color: string;
     date: string;

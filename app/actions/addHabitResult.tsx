@@ -39,6 +39,8 @@ export function addHabitResult(
     edited.date = date.toISOString();
     if (action.success) {
         edited.successes++;
+    } else {
+        edited.currentValue /= edited.factor;
     }
     newState[index] = edited;
 

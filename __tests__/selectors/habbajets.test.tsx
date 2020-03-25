@@ -1,5 +1,5 @@
-import { createTestState } from '../../app/state/testState';
-import { getHabbajets } from '../../app/selector/habbajets';
+import {createTestState} from '../../app/state/testState';
+import {getHabbajets} from '../../app/selector/habbajets';
 
 describe('Habbajet Selectors', () => {
     describe('Get Habbajets', () => {

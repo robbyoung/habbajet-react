@@ -30,7 +30,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                 <View style={styles.details}>
                     <Label
                         title="Value"
-                        content={'$100.00'}
+                        content={`$${props.habbajet.currentValue.toFixed(2)}`}
                         color={props.habbajet.color}
                         contentSize={50}
                     />
