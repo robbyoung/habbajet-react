@@ -12,6 +12,7 @@ describe('Add Habit Result Action', () => {
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
         expect(result.successes).toEqual(1);
+        expect(result.currentValue).toEqual(state[0].currentValue * 2);
 
         const date = moment(state[0].date);
         expect(moment(result.date).day()).toEqual(date.day() + 1);
@@ -26,6 +27,7 @@ describe('Add Habit Result Action', () => {
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
         expect(result.successes).toEqual(0);
+        expect(result.currentValue).toEqual(state[0].currentValue);
 
         const date = moment(state[0].date);
         expect(moment(result.date).day()).toEqual(date.day() + 1);

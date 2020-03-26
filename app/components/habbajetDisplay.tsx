@@ -31,7 +31,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                 />
                 <View style={styles.details}>
                     <Label
-                        title="Expected Output"
+                        title="Current Value"
                         content={`$${props.habbajet.currentValue.toFixed(2)}`}
                         color={props.habbajet.color}
                         contentSize={50}

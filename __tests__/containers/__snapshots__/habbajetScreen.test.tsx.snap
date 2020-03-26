@@ -113,7 +113,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
               ]
             }
           >
-            Expected Output
+            Current Value
           </Text>
           <Text
             style={
@@ -129,7 +129,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
               ]
             }
           >
-            $100.00
+            $0.78
           </Text>
         </View>
       </View>

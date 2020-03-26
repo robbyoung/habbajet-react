@@ -2,7 +2,7 @@
 
 exports[`HabbajetClaimer Component collapses unclaimable habbajets 1`] = `<View />`;
 
-exports[`HabbajetClaimer Component renders buttons and the specified day of the week 1`] = `
+exports[`HabbajetClaimer Component renders a claim button with the habbajet value 1`] = `
 <View
   accessible={true}
   focusable={true}
@@ -48,7 +48,7 @@ exports[`HabbajetClaimer Component renders buttons and the specified day of the 
       }
     >
       Claim $
-      100.00
+      0.78
     </Text>
   </View>
 </View>

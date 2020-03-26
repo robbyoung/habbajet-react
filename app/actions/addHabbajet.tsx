@@ -22,7 +22,7 @@ export function addHabbajetAction(
         newHabbajet: {
             name,
             maxValue: value,
-            currentValue: value,
+            currentValue: value / Math.pow(factor, 7),
             factor,
             successes: 0,
             color,

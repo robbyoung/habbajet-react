@@ -13,7 +13,9 @@ describe('Add Habit Result Action', () => {
 
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
-        expect(result.currentValue).toEqual(result.maxValue);
+        expect(result.currentValue).toEqual(
+            result.maxValue / Math.pow(result.factor, 7),
+        );
         expect(result.toClaim).toEqual(false);
         expect(result.successes).toEqual(0);
         expect(state).toEqual([toReset]);

@@ -27,7 +27,7 @@ export function resetHabbajet(
 
     const newState = [...state];
     const edited: Habbajet = {...newState[index]};
-    edited.currentValue = edited.maxValue;
+    edited.currentValue = edited.maxValue / Math.pow(edited.factor, 7);
     edited.toClaim = false;
     edited.successes = 0;
     newState[index] = edited;

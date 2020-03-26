@@ -10,7 +10,7 @@ export function createTestState(
         habbajets.push({
             name: `Habbajet ${i}`,
             maxValue: 100,
-            currentValue: 100,
+            currentValue: 100 / Math.pow(2, 7),
             factor: 2,
             successes: 0,
             color: '#8066C2',

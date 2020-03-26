@@ -8,7 +8,7 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
 }));
 
 describe('HabbajetClaimer Component', () => {
-    it('renders buttons and the specified day of the week', () => {
+    it('renders a claim button with the habbajet value', () => {
         const habbajet = createTestState(1, 0, 0).habbajets[0];
         habbajet.toClaim = true;
         const component = renderer.create(
