@@ -4,6 +4,7 @@ import {Habbajet} from '../state';
 import Label from './label';
 import HabitWheel from './habitWheel';
 import HabitResultPicker from './habitResultPicker';
+import HabbajetClaimer from './habbajetClaimer';
 
 const styles = StyleSheet.create({
     container: {
@@ -18,6 +19,7 @@ interface HabbajetDisplayProps {
     habbajet: Habbajet;
     onSuccess: () => void;
     onFailure: () => void;
+    onClaim: () => void;
 }
 const HabbajetDisplay = (props: HabbajetDisplayProps) => {
     return (
@@ -40,6 +42,10 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                 habbajet={props.habbajet}
                 onSuccess={() => props.onSuccess()}
                 onFailure={() => props.onFailure()}
+            />
+            <HabbajetClaimer
+                habbajet={props.habbajet}
+                onClaim={() => props.onClaim()}
             />
         </View>
     );
