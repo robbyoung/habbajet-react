@@ -6,6 +6,7 @@ export interface Habbajet {
     successes: number;
     color: string;
     date: string;
+    toClaim: boolean;
 }
 
 export interface Purchase {

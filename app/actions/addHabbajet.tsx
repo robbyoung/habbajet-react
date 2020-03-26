@@ -27,6 +27,7 @@ export function addHabbajetAction(
             successes: 0,
             color,
             date: monday,
+            toClaim: false,
         },
     };
 }

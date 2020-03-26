@@ -37,8 +37,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                 </View>
             </ScrollView>
             <HabitResultPicker
-                timestamp={props.habbajet.date}
-                color={props.habbajet.color}
+                habbajet={props.habbajet}
                 onSuccess={() => props.onSuccess()}
                 onFailure={() => props.onFailure()}
             />

@@ -40,4 +40,15 @@ describe('Add Habit Result Action', () => {
         expect([...newState]).toEqual(createTestState(5, 1, 10).habbajets);
         expect(state).toEqual(createTestState(5, 1, 10).habbajets);
     });
+
+    it('will set the toClaim variable at the end of the week', () => {
+        const state = createTestState(5, 1, 10).habbajets;
+        state[0].date = moment(state[0].date)
+            .add(6, 'days')
+            .toISOString();
+        const action = addHabitResultAction(state[0].name, false);
+
+        const newState = habbajetsReducer(state, action);
+        expect(newState[0].toClaim).toEqual(true);
+    });
 });

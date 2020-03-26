@@ -15,6 +15,7 @@ export function createTestState(
             successes: 0,
             color: '#8066C2',
             date: '2020-03-22T11:00:00.000Z',
+            toClaim: false,
         });
     }
 

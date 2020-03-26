@@ -3,6 +3,7 @@ import {StyleSheet, View, Text} from 'react-native';
 import moment from 'moment';
 import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 import IconButton from './iconButton';
+import {Habbajet} from '../state';
 
 const DATE_FORMAT = 'dddd, MMMM Do';
 const ICON_SIZE = 100;
@@ -36,19 +37,19 @@ function getDateFormatted(timestamp: string): string | undefined {
 }
 
 interface HabitResultPickerProps {
-    color: string;
-    timestamp: string;
+    habbajet: Habbajet;
     onSuccess: () => void;
     onFailure: () => void;
 }
 const HabitResultPicker = (props: HabitResultPickerProps) => {
-    const date = getDateFormatted(props.timestamp);
-    if (date === undefined) {
+    const date = getDateFormatted(props.habbajet.date);
+    if (date === undefined || props.habbajet.toClaim) {
         return <View />;
     }
 
     return (
-        <View style={[styles.container, {backgroundColor: props.color}]}>
+        <View
+            style={[styles.container, {backgroundColor: props.habbajet.color}]}>
             <Text style={[styles.text]}>{date}</Text>
             <View style={[styles.buttonRow]}>
                 <IconButton
