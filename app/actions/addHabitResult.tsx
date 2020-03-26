@@ -36,11 +36,16 @@ export function addHabitResult(
     const date = moment(edited.date);
 
     date.add(1, 'day');
+    if (date.day() === 1) {
+        edited.toClaim = true;
+    }
+
     edited.date = date.toISOString();
     if (action.success) {
         edited.successes++;
+        edited.currentValue *= edited.factor;
     }
-    newState[index] = edited;
 
+    newState[index] = edited;
     return newState;
 }

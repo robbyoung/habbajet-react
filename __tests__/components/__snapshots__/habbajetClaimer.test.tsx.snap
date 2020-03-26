@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HabbajetClaimer Component collapses unclaimable habbajets 1`] = `<View />`;
+
+exports[`HabbajetClaimer Component renders a claim button with the habbajet value 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "column",
+          "padding": 30,
+        },
+        Object {
+          "backgroundColor": "#8066C2",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "color": "#fff",
+            "fontFamily": "Abel",
+            "fontSize": 50,
+            "textAlign": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      Claim $
+      0.78
+    </Text>
+  </View>
+</View>
+`;

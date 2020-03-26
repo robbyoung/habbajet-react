@@ -113,7 +113,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
               ]
             }
           >
-            Value
+            Current Value
           </Text>
           <Text
             style={
@@ -129,7 +129,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
               ]
             }
           >
-            $100.00
+            $0.78
           </Text>
         </View>
       </View>
@@ -247,5 +247,6 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
       </View>
     </View>
   </View>
+  <View />
 </View>
 `;

@@ -4,6 +4,7 @@ import {Habbajet} from '../state';
 import Label from './label';
 import HabitWheel from './habitWheel';
 import HabitResultPicker from './habitResultPicker';
+import HabbajetClaimer from './habbajetClaimer';
 
 const styles = StyleSheet.create({
     container: {
@@ -18,6 +19,7 @@ interface HabbajetDisplayProps {
     habbajet: Habbajet;
     onSuccess: () => void;
     onFailure: () => void;
+    onClaim: () => void;
 }
 const HabbajetDisplay = (props: HabbajetDisplayProps) => {
     return (
@@ -29,18 +31,21 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                 />
                 <View style={styles.details}>
                     <Label
-                        title="Value"
-                        content={'$100.00'}
+                        title="Current Value"
+                        content={`$${props.habbajet.currentValue.toFixed(2)}`}
                         color={props.habbajet.color}
                         contentSize={50}
                     />
                 </View>
             </ScrollView>
             <HabitResultPicker
-                timestamp={props.habbajet.date}
-                color={props.habbajet.color}
+                habbajet={props.habbajet}
                 onSuccess={() => props.onSuccess()}
                 onFailure={() => props.onFailure()}
+            />
+            <HabbajetClaimer
+                habbajet={props.habbajet}
+                onClaim={() => props.onClaim()}
             />
         </View>
     );

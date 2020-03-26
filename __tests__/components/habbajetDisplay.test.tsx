@@ -15,6 +15,7 @@ describe('HabbajetDisplay Component', () => {
                 habbajet={habbajet}
                 onSuccess={() => undefined}
                 onFailure={() => undefined}
+                onClaim={() => undefined}
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
