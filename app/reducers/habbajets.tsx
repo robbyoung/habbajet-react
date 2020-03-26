@@ -6,6 +6,8 @@ import {
     AddHabbajetAction,
     addHabitResult,
     AddHabitResultAction,
+    ResetHabbajetAction,
+    resetHabbajet,
 } from '../actions';
 import {createTestState} from '../state/testState';
 
@@ -19,6 +21,8 @@ export default function habbajetsReducer(
             return addHabbajet(state, action as AddHabbajetAction);
         case ActionType.ADD_HABIT_RESULT:
             return addHabitResult(state, action as AddHabitResultAction);
+        case ActionType.RESET_HABBAJET:
+            return resetHabbajet(state, action as ResetHabbajetAction);
     }
     return state;
 }
