@@ -1,21 +1,4 @@
 import {Navigation} from 'react-native-navigation';
-import App from './App';
-import {name as appName} from './app.json';
+import {goToLoading} from './app/navigation';
 
-Navigation.registerComponent(appName, () => App);
-Navigation.events().registerAppLaunchedListener(() => {
-    Navigation.setRoot({
-        root: {
-            stack: {
-                id: 'navigation',
-                children: [
-                    {
-                        component: {
-                            name: appName,
-                        },
-                    },
-                ],
-            },
-        },
-    });
-});
+Navigation.events().registerAppLaunchedListener(() => goToLoading());

@@ -8,19 +8,17 @@ import {
     resetHabbajetAction,
 } from '../actions';
 import {Navigation} from 'react-native-navigation';
+import {STACK_NAVIGATOR} from '../navigation';
 
 const HabbajetScreen = () => {
     const habbajets = useSelector(getHabbajets);
     const dispatch = useDispatch();
 
     useEffect(() => {
-        Navigation.mergeOptions('navigation', {
+        Navigation.mergeOptions(STACK_NAVIGATOR, {
             topBar: {
                 title: {
                     text: habbajets[0].name,
-                    fontFamily: 'Abel',
-                    fontSize: 30,
-                    color: '#ffffff',
                 },
                 background: {
                     color: habbajets[0].color,
