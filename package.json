@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-native-fontawesome": "^0.2.3",
     "@react-native-community/art": "^1.1.2",
+    "@react-native-community/async-storage": "^1.8.1",
     "@types/react-redux": "^7.1.7",
     "moment": "^2.24.0",
     "prop-types": "15.6.0",
