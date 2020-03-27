@@ -1,12 +1,15 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import {State} from './state';
 import store from './store';
+import {createTestState} from './state/testState';
 
-const defaultState: State = {
-    budget: 0,
-    habbajets: [],
-    purchases: [],
-};
+// const defaultState: State = {
+//     budget: 0,
+//     habbajets: [],
+//     purchases: [],
+// };
+
+const defaultState = createTestState(1, 0, 0);
 
 export async function saveState(): Promise<void> {
     const state = store.getState();

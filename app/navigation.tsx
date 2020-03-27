@@ -12,12 +12,21 @@ enum Screens {
 
 export const STACK_NAVIGATOR = 'StackNavigator';
 
-Navigation.registerComponent(Screens.Loading, () => LoadingScreen);
+Navigation.registerComponent(
+    Screens.Loading,
+    () => () => (
+        <Provider store={store}>
+            <LoadingScreen />
+        </Provider>
+    ),
+    () => LoadingScreen,
+);
+
 Navigation.registerComponent(
     Screens.Habbajet,
-    () => props => (
+    () => () => (
         <Provider store={store}>
-            <HabbajetScreen {...props} />
+            <HabbajetScreen />
         </Provider>
     ),
     () => HabbajetScreen,

@@ -9,6 +9,7 @@ import {
 } from '../actions';
 import {Navigation} from 'react-native-navigation';
 import {STACK_NAVIGATOR} from '../navigation';
+import {saveState} from '../storage';
 
 const HabbajetScreen = () => {
     const habbajets = useSelector(getHabbajets);
@@ -30,15 +31,18 @@ const HabbajetScreen = () => {
     return (
         <HabbajetDisplay
             habbajet={habbajets[0]}
-            onSuccess={() =>
-                dispatch(addHabitResultAction(habbajets[0].name, true))
-            }
-            onFailure={() =>
-                dispatch(addHabitResultAction(habbajets[0].name, false))
-            }
+            onSuccess={() => {
+                dispatch(addHabitResultAction(habbajets[0].name, true));
+                saveState();
+            }}
+            onFailure={() => {
+                dispatch(addHabitResultAction(habbajets[0].name, false));
+                saveState();
+            }}
             onClaim={() => {
                 dispatch(updateBudgetAction(habbajets[0].currentValue));
                 dispatch(resetHabbajetAction(habbajets[0].name));
+                saveState();
             }}
         />
     );
