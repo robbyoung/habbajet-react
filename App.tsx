@@ -11,13 +11,4 @@ const App = () => {
     );
 };
 
-// App.options = {
-//     topBar: {
-//         visible: true,
-//         title: {
-//             text: 'Forgot Password',
-//         },
-//     },
-// };
-
 export default App;

@@ -7,6 +7,7 @@ Navigation.events().registerAppLaunchedListener(() => {
     Navigation.setRoot({
         root: {
             stack: {
+                id: 'navigation',
                 children: [
                     {
                         component: {
@@ -14,13 +15,6 @@ Navigation.events().registerAppLaunchedListener(() => {
                         },
                     },
                 ],
-                options: {
-                    topBar: {
-                        title: {
-                            text: appName,
-                        },
-                    },
-                },
             },
         },
     });
