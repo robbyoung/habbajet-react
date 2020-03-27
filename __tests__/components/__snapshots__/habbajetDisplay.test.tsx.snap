@@ -13,7 +13,9 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
       <View
         style={
           Object {
-            "margin": 20,
+            "margin": 30,
+            "marginBottom": 10,
+            "marginTop": 10,
           }
         }
       >
@@ -22,8 +24,8 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
             Array [
               undefined,
               Object {
-                "height": 710,
-                "width": 710,
+                "height": 690,
+                "width": 690,
               },
             ]
           }
@@ -37,7 +39,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
                 1,
                 6.123233995736766e-17,
                 0,
-                710,
+                690,
               ]
             }
           >
@@ -45,12 +47,12 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
               d={
                 Array [
                   0,
-                  532.5,
-                  355,
+                  517.5,
+                  345,
                   4,
-                  355,
-                  355,
-                  177.5,
+                  345,
+                  345,
+                  172.5,
                   0,
                   6.283185307179586,
                   1,
@@ -62,7 +64,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
               strokeCap={1}
               strokeDash={null}
               strokeJoin={1}
-              strokeWidth={355}
+              strokeWidth={345}
               transform={
                 Array [
                   1,

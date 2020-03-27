@@ -2,10 +2,12 @@ import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import Pie from 'react-native-pie';
 
-const CHART_MARGINS = 20;
+const CHART_MARGINS = 30;
 const styles = StyleSheet.create({
     container: {
-        margin: 20,
+        margin: CHART_MARGINS,
+        marginBottom: 10,
+        marginTop: 10,
     },
 });
 
