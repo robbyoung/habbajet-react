@@ -5,11 +5,16 @@ import LoadingScreen from './containers/loadingScreen';
 import {Provider} from 'react-redux';
 import store from './store';
 
+enum Screens {
+    Loading = 'Loading',
+    Habbajet = 'Habbajet',
+}
+
 export const STACK_NAVIGATOR = 'StackNavigator';
 
-Navigation.registerComponent('LoadingScreen', () => LoadingScreen);
+Navigation.registerComponent(Screens.Loading, () => LoadingScreen);
 Navigation.registerComponent(
-    'HabbajetScreen',
+    Screens.Habbajet,
     () => props => (
         <Provider store={store}>
             <HabbajetScreen {...props} />
@@ -26,7 +31,12 @@ export const goToLoading = () => {
                 children: [
                     {
                         component: {
-                            name: 'LoadingScreen',
+                            name: Screens.Loading,
+                            options: {
+                                topBar: {
+                                    visible: false,
+                                },
+                            },
                         },
                     },
                 ],
@@ -43,7 +53,7 @@ export const goToHabbajet = () => {
                 children: [
                     {
                         component: {
-                            name: 'HabbajetScreen',
+                            name: Screens.Habbajet,
                             options: {
                                 topBar: {
                                     title: {

@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 
 jest.mock('react-native-navigation', () => ({
     Navigation: {
+        registerComponent: () => undefined,
         mergeOptions: () => undefined,
     },
 }));
