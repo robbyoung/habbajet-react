@@ -3,4 +3,5 @@ export enum ActionType {
     ADD_HABIT_RESULT = 'Add Habit Result',
     UPDATE_BUDGET = 'Update Budget',
     RESET_HABBAJET = 'Reset Habbajet',
+    LOAD_STATE = 'Load State',
 }
