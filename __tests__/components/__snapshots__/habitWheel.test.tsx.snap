@@ -4,7 +4,9 @@ exports[`HabitWheel Component handles invalid success counts 1`] = `
 <View
   style={
     Object {
-      "margin": 20,
+      "margin": 30,
+      "marginBottom": 10,
+      "marginTop": 10,
     }
   }
 >
@@ -13,8 +15,8 @@ exports[`HabitWheel Component handles invalid success counts 1`] = `
       Array [
         undefined,
         Object {
-          "height": 710,
-          "width": 710,
+          "height": 690,
+          "width": 690,
         },
       ]
     }
@@ -28,7 +30,7 @@ exports[`HabitWheel Component handles invalid success counts 1`] = `
           1,
           6.123233995736766e-17,
           0,
-          710,
+          690,
         ]
       }
     >
@@ -36,12 +38,12 @@ exports[`HabitWheel Component handles invalid success counts 1`] = `
         d={
           Array [
             0,
-            532.5,
-            355,
+            517.5,
+            345,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0,
             6.283185307179586,
             1,
@@ -53,7 +55,7 @@ exports[`HabitWheel Component handles invalid success counts 1`] = `
         strokeCap={1}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -87,7 +89,9 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
 <View
   style={
     Object {
-      "margin": 20,
+      "margin": 30,
+      "marginBottom": 10,
+      "marginTop": 10,
     }
   }
 >
@@ -96,8 +100,8 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
       Array [
         undefined,
         Object {
-          "height": 710,
-          "width": 710,
+          "height": 690,
+          "width": 690,
         },
       ]
     }
@@ -111,7 +115,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
           1,
           6.123233995736766e-17,
           0,
-          710,
+          690,
         ]
       }
     >
@@ -119,12 +123,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            532.5,
-            355,
+            517.5,
+            345,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0,
             6.283185307179586,
             1,
@@ -136,7 +140,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={1}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -152,12 +156,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            532.3918717958895,
-            361.1946606646939,
+            517.394917660794,
+            351.02016318118143,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0.03490658503988659,
             0.8984954989266809,
             1,
@@ -169,7 +173,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -185,12 +189,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            460.63084453369703,
-            497.64772933032594,
+            447.6553277862689,
+            483.62948343369703,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0.9334020839665675,
             1.7969909978533618,
             1,
@@ -202,7 +206,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -218,12 +222,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            309.17932664056264,
-            526.4838648179115,
+            300.4700498337862,
+            511.65333341459007,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             1.8318975828932482,
             2.6954864967800427,
             1,
@@ -235,7 +239,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -251,12 +255,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            192.29604454231333,
-            425.9483817886152,
+            186.8792545552059,
+            413.94983582273875,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             2.73039308181993,
             3.593981995706724,
             1,
@@ -268,7 +272,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -284,12 +288,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            198.16060276717863,
-            271.88770562879836,
+            192.5786139568356,
+            264.2288970195365,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             3.6288885807466102,
             4.4924774946334045,
             1,
@@ -301,7 +305,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -317,12 +321,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            322.3486352662421,
-            180.52897552595414,
+            313.26839201930574,
+            175.4436522717019,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             4.527384079673291,
             5.390972993560085,
             1,
@@ -334,7 +338,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -350,12 +354,12 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         d={
           Array [
             0,
-            471.1696552879316,
-            220.79545018784518,
+            457.89727063193357,
+            214.5758600417087,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             5.425879578599972,
             6.289468492486765,
             1,
@@ -367,7 +371,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -401,7 +405,9 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
 <View
   style={
     Object {
-      "margin": 20,
+      "margin": 30,
+      "marginBottom": 10,
+      "marginTop": 10,
     }
   }
 >
@@ -410,8 +416,8 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
       Array [
         undefined,
         Object {
-          "height": 710,
-          "width": 710,
+          "height": 690,
+          "width": 690,
         },
       ]
     }
@@ -425,7 +431,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
           1,
           6.123233995736766e-17,
           0,
-          710,
+          690,
         ]
       }
     >
@@ -433,12 +439,12 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         d={
           Array [
             0,
-            532.5,
-            355,
+            517.5,
+            345,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0,
             6.283185307179586,
             1,
@@ -450,7 +456,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         strokeCap={1}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -466,12 +472,12 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         d={
           Array [
             0,
-            532.3918717958895,
-            361.1946606646939,
+            517.394917660794,
+            351.02016318118143,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0.03490658503988659,
             0.8984954989266809,
             1,
@@ -483,7 +489,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -499,12 +505,12 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         d={
           Array [
             0,
-            460.63084453369703,
-            497.64772933032594,
+            447.6553277862689,
+            483.62948343369703,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0.9334020839665675,
             1.7969909978533618,
             1,
@@ -516,7 +522,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -532,12 +538,12 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         d={
           Array [
             0,
-            309.17932664056264,
-            526.4838648179115,
+            300.4700498337862,
+            511.65333341459007,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             1.8318975828932482,
             2.6954864967800427,
             1,
@@ -549,7 +555,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -565,12 +571,12 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         d={
           Array [
             0,
-            192.29604454231333,
-            425.9483817886152,
+            186.8792545552059,
+            413.94983582273875,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             2.73039308181993,
             3.593981995706724,
             1,
@@ -582,7 +588,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,
@@ -616,7 +622,9 @@ exports[`HabitWheel Component renders an empty circle with no successes 1`] = `
 <View
   style={
     Object {
-      "margin": 20,
+      "margin": 30,
+      "marginBottom": 10,
+      "marginTop": 10,
     }
   }
 >
@@ -625,8 +633,8 @@ exports[`HabitWheel Component renders an empty circle with no successes 1`] = `
       Array [
         undefined,
         Object {
-          "height": 710,
-          "width": 710,
+          "height": 690,
+          "width": 690,
         },
       ]
     }
@@ -640,7 +648,7 @@ exports[`HabitWheel Component renders an empty circle with no successes 1`] = `
           1,
           6.123233995736766e-17,
           0,
-          710,
+          690,
         ]
       }
     >
@@ -648,12 +656,12 @@ exports[`HabitWheel Component renders an empty circle with no successes 1`] = `
         d={
           Array [
             0,
-            532.5,
-            355,
+            517.5,
+            345,
             4,
-            355,
-            355,
-            177.5,
+            345,
+            345,
+            172.5,
             0,
             6.283185307179586,
             1,
@@ -665,7 +673,7 @@ exports[`HabitWheel Component renders an empty circle with no successes 1`] = `
         strokeCap={1}
         strokeDash={null}
         strokeJoin={1}
-        strokeWidth={355}
+        strokeWidth={345}
         transform={
           Array [
             1,

@@ -5,6 +5,13 @@ import store from '../../app/store';
 import {addHabbajetAction} from '../../app/actions';
 import {Provider} from 'react-redux';
 
+jest.mock('react-native-navigation', () => ({
+    Navigation: {
+        registerComponent: () => undefined,
+        mergeOptions: () => undefined,
+    },
+}));
+
 jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
 }));
