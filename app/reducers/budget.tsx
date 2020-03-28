@@ -1,5 +1,11 @@
 import {Action} from 'redux';
-import {ActionType, updateBudget, UpdateBudgetAction} from '../actions';
+import {
+    ActionType,
+    updateBudget,
+    UpdateBudgetAction,
+    loadBudget,
+    LoadStateAction,
+} from '../actions';
 
 export default function budgetReducer(
     state: number = 0,
@@ -8,6 +14,8 @@ export default function budgetReducer(
     switch (action.type) {
         case ActionType.UPDATE_BUDGET:
             return updateBudget(state, action as UpdateBudgetAction);
+        case ActionType.LOAD_STATE:
+            return loadBudget(state, action as LoadStateAction);
     }
     return state;
 }

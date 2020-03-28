@@ -2,7 +2,7 @@ import habbajetsReducer from '../../app/reducers/habbajets';
 import {createTestState} from '../../app/state/testState';
 import {resetHabbajetAction} from '../../app/actions';
 
-describe('Add Habit Result Action', () => {
+describe('Reset Habbajet Action', () => {
     it('will reset the weekly state of a habbajet', () => {
         const toReset = createTestState(1, 0, 0).habbajets[0];
         toReset.currentValue = 20;

@@ -16,6 +16,10 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
 }));
 
+jest.mock('../../app/storage', () => ({
+    saveState: () => undefined,
+}));
+
 describe('Habbajet Screen Component', () => {
     it('will map state to a habbajet display', () => {
         store.dispatch(addHabbajetAction('Test Habbajet', 100, 2, '#8066C2'));
