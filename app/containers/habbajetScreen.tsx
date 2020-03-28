@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import HabbajetDisplay from '../components/habbajetDisplay';
 import {useSelector, useDispatch} from 'react-redux';
-import {getHabbajets} from '../selector/habbajets';
+import {getHabbajets} from '../selectors';
 import {
     addHabitResultAction,
     updateBudgetAction,

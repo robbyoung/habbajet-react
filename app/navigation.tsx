@@ -4,9 +4,11 @@ import HabbajetScreen from './containers/habbajetScreen';
 import LoadingScreen from './containers/loadingScreen';
 import {Provider} from 'react-redux';
 import store from './store';
+import HomeScreen from './containers/homeScreen';
 
 enum Screens {
     Loading = 'Loading',
+    Home = 'Home',
     Habbajet = 'Habbajet',
 }
 
@@ -20,6 +22,16 @@ Navigation.registerComponent(
         </Provider>
     ),
     () => LoadingScreen,
+);
+
+Navigation.registerComponent(
+    Screens.Home,
+    () => () => (
+        <Provider store={store}>
+            <HomeScreen />
+        </Provider>
+    ),
+    () => HabbajetScreen,
 );
 
 Navigation.registerComponent(
@@ -44,6 +56,36 @@ export const goToLoading = () => {
                             options: {
                                 topBar: {
                                     visible: false,
+                                },
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    });
+};
+
+export const goToHome = () => {
+    Navigation.setRoot({
+        root: {
+            stack: {
+                id: STACK_NAVIGATOR,
+                children: [
+                    {
+                        component: {
+                            name: Screens.Home,
+                            options: {
+                                topBar: {
+                                    title: {
+                                        text: 'Habbajet',
+                                        fontFamily: 'Abel',
+                                        fontSize: 30,
+                                        color: '#ffffff',
+                                    },
+                                    background: {
+                                        color: '#959595',
+                                    },
                                 },
                             },
                         },
