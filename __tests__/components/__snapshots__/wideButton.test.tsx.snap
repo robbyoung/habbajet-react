@@ -16,6 +16,7 @@ exports[`WideButton Component will render a button with specified color and text
     Object {
       "backgroundColor": "#C2A066",
       "borderRadius": 10,
+      "marginBottom": 10,
       "opacity": 1,
       "width": "100%",
     }
