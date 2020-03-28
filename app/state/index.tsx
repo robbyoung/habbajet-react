@@ -1,7 +1,12 @@
 export interface Habbajet {
     name: string;
-    value: number;
-    days: boolean[];
+    maxValue: number;
+    currentValue: number;
+    factor: number;
+    successes: number;
+    color: string;
+    date: string;
+    toClaim: boolean;
 }
 
 export interface Purchase {

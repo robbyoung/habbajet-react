@@ -1,17 +1,28 @@
 {
   "name": "Habbajet",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-native run-android",
+    "tsc": "tsc -p tsconfig.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest",
-    "check": "yarn run lint && yarn run test"
+    "check": "yarn run tsc && yarn run lint && yarn run test"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-native-fontawesome": "^0.2.3",
+    "@react-native-community/art": "^1.1.2",
+    "@react-native-community/async-storage": "^1.8.1",
     "@types/react-redux": "^7.1.7",
+    "moment": "^2.24.0",
+    "prop-types": "15.6.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-navigation": "^6.3.2",
+    "react-native-pie": "^1.1.2",
+    "react-native-svg": "^12.0.2",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5"
   },
