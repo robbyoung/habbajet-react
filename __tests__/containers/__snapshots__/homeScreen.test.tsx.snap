@@ -2,38 +2,40 @@
 
 exports[`Home Screen Component will map state to a budget display and habbajet list 1`] = `
 <View>
-  <Text
-    style={
-      Array [
-        Object {
-          "fontFamily": "Abel",
-          "fontSize": 20,
-          "margin": 0,
-          "padding": 0,
-        },
-        Object {
-          "color": "#959595",
-        },
-      ]
-    }
-  >
-    My Budget
-  </Text>
-  <Text
-    style={
-      Array [
-        Object {
-          "fontFamily": "Abel",
-          "marginTop": -10,
-          "padding": 0,
-        },
-        Object {
-          "fontSize": 50,
-        },
-      ]
-    }
-  >
-    $200.00
-  </Text>
+  <View>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "margin": 0,
+            "padding": 0,
+          },
+          Object {
+            "color": "#959595",
+          },
+        ]
+      }
+    >
+      My Budget
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "marginTop": -10,
+            "padding": 0,
+          },
+          Object {
+            "fontSize": 50,
+          },
+        ]
+      }
+    >
+      $200.00
+    </Text>
+  </View>
 </View>
 `;
