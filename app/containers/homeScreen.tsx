@@ -1,9 +1,11 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import Label from '../components/label';
 import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import HabbajetList from '../components/habbajetList';
+import {goToHabbajet} from '../navigation';
+import {selectHabbajetAction} from '../actions';
 
 const styles = StyleSheet.create({
     container: {
@@ -15,6 +17,7 @@ const styles = StyleSheet.create({
 const HomeScreen = () => {
     const budget = useSelector(getBudgetFormatted);
     const habbajets = useSelector(getHabbajets);
+    const dispatch = useDispatch();
 
     return (
         <ScrollView>
@@ -27,7 +30,10 @@ const HomeScreen = () => {
                 />
                 <HabbajetList
                     habbajets={habbajets}
-                    onSelect={_name => undefined}
+                    onSelect={name => {
+                        dispatch(selectHabbajetAction(name));
+                        goToHabbajet();
+                    }}
                 />
             </View>
         </ScrollView>

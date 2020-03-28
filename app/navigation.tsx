@@ -97,27 +97,24 @@ export const goToHome = () => {
 };
 
 export const goToHabbajet = () => {
-    Navigation.setRoot({
-        root: {
-            stack: {
-                id: STACK_NAVIGATOR,
-                children: [
-                    {
-                        component: {
-                            name: Screens.Habbajet,
-                            options: {
-                                topBar: {
-                                    title: {
-                                        text: ' ',
-                                        fontFamily: 'Abel',
-                                        fontSize: 30,
-                                        color: '#ffffff',
-                                    },
-                                },
-                            },
-                        },
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.Habbajet,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: '#ffffff',
                     },
-                ],
+                    title: {
+                        text: ' ',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: '#ffffff',
+                    },
+                    background: {
+                        color: '#959595',
+                    },
+                },
             },
         },
     });
