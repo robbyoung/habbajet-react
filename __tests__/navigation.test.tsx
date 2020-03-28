@@ -13,6 +13,11 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
 }));
 
+jest.mock('../app/storage', () => ({
+    saveState: () => undefined,
+    loadState: () => undefined,
+}));
+
 describe('Navigation', () => {
     it('goToLoading correctly navigates to loading screen', () => {
         goToLoading();
