@@ -13,6 +13,7 @@ export function createTestState(
     numHabbajets: number,
     numPurchases: number,
     budget: number,
+    selectedIndex: number = -1,
 ): State {
     const habbajets: Habbajet[] = [];
     for (let i = 0; i < numHabbajets; i++) {
@@ -25,6 +26,7 @@ export function createTestState(
             color: colors[i % colors.length],
             date: '2020-03-22T11:00:00.000Z',
             toClaim: false,
+            selected: i === selectedIndex,
         });
     }
 

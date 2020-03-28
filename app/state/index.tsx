@@ -7,6 +7,7 @@ export interface Habbajet {
     color: string;
     date: string;
     toClaim: boolean;
+    selected: boolean;
 }
 
 export interface Purchase {
