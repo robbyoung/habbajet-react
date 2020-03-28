@@ -1,5 +1,5 @@
 import {LayoutRoot} from 'react-native-navigation';
-import {goToLoading, goToHabbajet} from '../app/navigation';
+import {goToLoading, goToHabbajet, goToHome} from '../app/navigation';
 
 let layout: LayoutRoot;
 jest.mock('react-native-navigation', () => ({
@@ -18,20 +18,23 @@ jest.mock('../app/storage', () => ({
     loadState: () => undefined,
 }));
 
+function testStackNavigation(navigate: () => void, expected: string) {
+    navigate();
+
+    // @ts-ignore
+    expect(layout.root.stack.children[0].component.name).toEqual(expected);
+}
+
 describe('Navigation', () => {
     it('goToLoading correctly navigates to loading screen', () => {
-        goToLoading();
+        testStackNavigation(goToLoading, 'Loading');
+    });
 
-        // @ts-ignore
-        expect(layout.root.stack.children[0].component.name).toEqual('Loading');
+    it('goToHome correctly navigates to home screen', () => {
+        testStackNavigation(goToHome, 'Home');
     });
 
     it('goToHabbajet correctly navigates to habbajet screen', () => {
-        goToHabbajet();
-
-        // @ts-ignore
-        expect(layout.root.stack.children[0].component.name).toEqual(
-            'Habbajet',
-        );
+        testStackNavigation(goToHabbajet, 'Habbajet');
     });
 });
