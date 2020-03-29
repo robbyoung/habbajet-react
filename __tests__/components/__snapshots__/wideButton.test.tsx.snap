@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WideButton Component will render a button with specified color and text 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#C2A066",
+      "borderRadius": 10,
+      "marginBottom": 10,
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "color": "#fff",
+          "fontFamily": "Abel",
+          "fontSize": 30,
+          "padding": 10,
+          "textAlign": "center",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    Test Button
+  </Text>
+</View>
+`;

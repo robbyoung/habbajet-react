@@ -1,11 +1,13 @@
-import {LayoutRoot} from 'react-native-navigation';
-import {goToLoading, goToHabbajet} from '../app/navigation';
+import {LayoutRoot, Layout} from 'react-native-navigation';
+import {goToLoading, goToHabbajet, goToHome} from '../app/navigation';
 
-let layout: LayoutRoot;
+let layoutRoot: LayoutRoot;
+let layout: Layout;
 jest.mock('react-native-navigation', () => ({
     Navigation: {
         registerComponent: () => undefined,
-        setRoot: (args: LayoutRoot) => (layout = args),
+        setRoot: (args: LayoutRoot) => (layoutRoot = args),
+        push: (id: string, args: Layout) => (layout = args),
     },
 }));
 
@@ -18,20 +20,30 @@ jest.mock('../app/storage', () => ({
     loadState: () => undefined,
 }));
 
+function testStackReset(navigate: () => void, expected: string) {
+    navigate();
+
+    // @ts-ignore
+    expect(layoutRoot.root.stack.children[0].component.name).toEqual(expected);
+}
+
+function testStackPush(navigate: () => void, expected: string) {
+    navigate();
+
+    // @ts-ignore
+    expect(layout.component.name).toEqual(expected);
+}
+
 describe('Navigation', () => {
     it('goToLoading correctly navigates to loading screen', () => {
-        goToLoading();
+        testStackReset(goToLoading, 'Loading');
+    });
 
-        // @ts-ignore
-        expect(layout.root.stack.children[0].component.name).toEqual('Loading');
+    it('goToHome correctly navigates to home screen', () => {
+        testStackReset(goToHome, 'Home');
     });
 
     it('goToHabbajet correctly navigates to habbajet screen', () => {
-        goToHabbajet();
-
-        // @ts-ignore
-        expect(layout.root.stack.children[0].component.name).toEqual(
-            'Habbajet',
-        );
+        testStackPush(goToHabbajet, 'Habbajet');
     });
 });

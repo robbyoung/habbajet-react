@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {View} from 'react-native';
-import {goToHabbajet} from '../navigation';
+import {goToHome} from '../navigation';
 import {loadState} from '../storage';
 import {useDispatch} from 'react-redux';
 import {loadStateAction} from '../actions';
@@ -11,7 +11,7 @@ const LoadingScreen = () => {
         async function loadAndRedirect() {
             const state = await loadState();
             dispatch(loadStateAction(state));
-            goToHabbajet();
+            goToHome();
         }
         loadAndRedirect();
     });

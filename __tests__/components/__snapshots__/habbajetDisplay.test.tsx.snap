@@ -4,6 +4,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
 <View
   style={
     Object {
+      "backgroundColor": "#ffffff",
       "height": "100%",
     }
   }

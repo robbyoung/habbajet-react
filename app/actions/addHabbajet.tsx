@@ -28,6 +28,7 @@ export function addHabbajetAction(
             color,
             date: monday,
             toClaim: false,
+            selected: false,
         },
     };
 }

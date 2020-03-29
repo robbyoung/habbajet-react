@@ -9,7 +9,7 @@ import {createTestState} from './state/testState';
 //     purchases: [],
 // };
 
-const defaultState = createTestState(1, 0, 0);
+const defaultState = createTestState(5, 0, 100);
 
 export async function saveState(): Promise<void> {
     const state = store.getState();
