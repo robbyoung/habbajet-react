@@ -4,6 +4,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
 <View
   style={
     Object {
+      "backgroundColor": "#ffffff",
       "height": "100%",
     }
   }
@@ -110,7 +111,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
                   "padding": 0,
                 },
                 Object {
-                  "color": "#8066C2",
+                  "color": "#2AAD5E",
                 },
               ]
             }
@@ -145,7 +146,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
           "padding": 10,
         },
         Object {
-          "backgroundColor": "#8066C2",
+          "backgroundColor": "#2AAD5E",
         },
       ]
     }
@@ -252,3 +253,5 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
   <View />
 </View>
 `;
+
+exports[`Habbajet Screen Component will return an empty view if no habbajets are selected 1`] = `<View />`;

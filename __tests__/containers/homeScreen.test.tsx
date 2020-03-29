@@ -6,6 +6,14 @@ import {Provider} from 'react-redux';
 import HomeScreen from '../../app/containers/homeScreen';
 import {createTestState} from '../../app/state/testState';
 
+jest.mock('@fortawesome/react-native-fontawesome', () => ({
+    FontAwesomeIcon: '',
+}));
+
+jest.mock('../../app/storage', () => ({
+    saveState: () => undefined,
+}));
+
 describe('Home Screen Component', () => {
     it('will map state to a budget display and habbajet list', () => {
         const state = createTestState(5, 10, 200);
