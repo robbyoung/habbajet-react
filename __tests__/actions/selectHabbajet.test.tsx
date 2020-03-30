@@ -29,11 +29,11 @@ describe('Select Habbajet Action', () => {
         expect(newState).toEqual(createTestState(10, 0, 0, 1).habbajets);
     });
 
-    it('will deselect everything for invalid habbajet names', () => {
+    it('will return state unchanged for invalid habbajet names', () => {
         const state = createTestState(10, 0, 0, 1).habbajets;
         const action = selectHabbajetAction('invalid');
         const newState = habbajetsReducer(state, action);
 
-        expect([...newState]).toEqual(createTestState(10, 0, 0).habbajets);
+        expect([...newState]).toEqual(createTestState(10, 0, 0, 1).habbajets);
     });
 });

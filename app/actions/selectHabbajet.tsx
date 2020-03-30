@@ -26,11 +26,11 @@ export function selectHabbajet(
     );
     const newState = [...state];
 
-    if (selectIndex === undefined || selectIndex === deselectIndex) {
+    if (selectIndex === -1 || selectIndex === deselectIndex) {
         return state;
     }
 
-    if (deselectIndex !== undefined) {
+    if (deselectIndex !== -1) {
         const deselected: Habbajet = {...newState[deselectIndex]};
         deselected.selected = false;
         newState[deselectIndex] = deselected;

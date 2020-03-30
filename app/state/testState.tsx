@@ -14,7 +14,7 @@ export function createTestState(
             maxValue: 100,
             currentValue: 100 / Math.pow(2, 7),
             factor: 2,
-            successes: 0,
+            results: [],
             color: habbajetColors[i % habbajetColors.length],
             date: '2020-03-22T11:00:00.000Z',
             toClaim: false,

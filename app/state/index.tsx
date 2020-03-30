@@ -3,7 +3,7 @@ export interface Habbajet {
     maxValue: number;
     currentValue: number;
     factor: number;
-    successes: number;
+    results: boolean[];
     color: string;
     date: string;
     toClaim: boolean;

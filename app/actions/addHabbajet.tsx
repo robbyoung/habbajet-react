@@ -24,7 +24,7 @@ export function addHabbajetAction(
             maxValue: value,
             currentValue: value / Math.pow(factor, 7),
             factor,
-            successes: 0,
+            results: [],
             color,
             date: monday,
             toClaim: false,
