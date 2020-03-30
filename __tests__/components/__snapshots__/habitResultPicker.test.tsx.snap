@@ -23,7 +23,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
       Array [
         Object {
           "alignSelf": "center",
-          "color": "#fff",
+          "color": "#ffffff",
           "fontFamily": "Abel",
           "fontSize": 30,
           "textAlign": "center",
@@ -63,7 +63,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
       }
     >
       <
-        color="#fff"
+        color="#ffffff"
         icon={
           Object {
             "icon": Array [
@@ -98,7 +98,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
       }
     >
       <
-        color="#fff"
+        color="#ffffff"
         icon={
           Object {
             "icon": Array [

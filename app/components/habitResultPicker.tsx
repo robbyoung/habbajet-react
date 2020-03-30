@@ -4,6 +4,7 @@ import moment from 'moment';
 import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 import IconButton from './iconButton';
 import {Habbajet} from '../state';
+import {white} from '../colors';
 
 const DATE_FORMAT = 'dddd, MMMM Do';
 const ICON_SIZE = 100;
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         alignSelf: 'center',
         fontFamily: 'Abel',
-        color: '#fff',
+        color: white,
         width: '100%',
         textAlign: 'center',
     },
@@ -55,13 +56,13 @@ const HabitResultPicker = (props: HabitResultPickerProps) => {
                 <IconButton
                     icon={faCheck}
                     size={ICON_SIZE}
-                    color={'#fff'}
+                    color={white}
                     onLongPress={() => props.onSuccess()}
                 />
                 <IconButton
                     icon={faTimes}
                     size={ICON_SIZE}
-                    color={'#fff'}
+                    color={white}
                     onLongPress={() => props.onFailure()}
                 />
             </View>

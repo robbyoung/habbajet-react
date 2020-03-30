@@ -156,7 +156,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "textAlign": "center",
@@ -196,7 +196,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
         }
       >
         <
-          color="#fff"
+          color="#ffffff"
           icon={
             Object {
               "icon": Array [
@@ -231,7 +231,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
         }
       >
         <
-          color="#fff"
+          color="#ffffff"
           icon={
             Object {
               "icon": Array [

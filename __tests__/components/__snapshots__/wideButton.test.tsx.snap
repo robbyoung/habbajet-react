@@ -27,7 +27,7 @@ exports[`WideButton Component will render a button with specified color and text
       Array [
         Object {
           "alignSelf": "center",
-          "color": "#fff",
+          "color": "#ffffff",
           "fontFamily": "Abel",
           "fontSize": 30,
           "padding": 10,

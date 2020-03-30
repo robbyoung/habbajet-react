@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import Pie from 'react-native-pie';
+import {lightGrey} from '../colors';
 
 const CHART_MARGINS = 30;
 const styles = StyleSheet.create({
@@ -40,7 +41,7 @@ const HabitWheel = (props: HabitWheelProps) => {
                 sections={sections}
                 strokeCap={'butt'}
                 dividerSize={2}
-                backgroundColor={'#f5f5f5'}
+                backgroundColor={lightGrey}
             />
         </View>
     );
