@@ -482,7 +482,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
                 }
               }
             >
-              10
+              5
             </Text>
           </View>
         </View>

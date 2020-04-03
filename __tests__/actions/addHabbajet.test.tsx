@@ -40,4 +40,14 @@ describe('Add Habbajet Action', () => {
         expect(date.day()).toEqual(1);
         expect(state).toEqual([]);
     });
+
+    it('will set the streak values to zero', () => {
+        const action = addHabbajetAction('Test Habbajet', 80, 2, white);
+        const state: Habbajet[] = [];
+        const newState = habbajetsReducer(state, action);
+
+        expect(newState[0].currentStreak).toEqual(0);
+        expect(newState[0].bestStreak).toEqual(0);
+        expect(state).toEqual([]);
+    });
 });

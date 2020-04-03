@@ -40,8 +40,8 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                         contentSize={50}
                     />
                     <HabitStreak
-                        best={10}
-                        current={0}
+                        best={props.habbajet.bestStreak}
+                        current={props.habbajet.currentStreak}
                         color={props.habbajet.color}
                     />
                 </View>
