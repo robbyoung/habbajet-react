@@ -366,6 +366,126 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
             $0.78
           </Text>
         </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 10,
+              "marginTop": 10,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Abel",
+                  "fontSize": 20,
+                  "margin": 0,
+                  "padding": 0,
+                },
+                Object {
+                  "color": "#2AAD5E",
+                },
+              ]
+            }
+          >
+            Streaks
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Abel",
+                  "fontSize": 20,
+                  "margin": 0,
+                  "padding": 0,
+                  "width": 35,
+                }
+              }
+            >
+              Now
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 20,
+                    "marginRight": 5,
+                  },
+                  Object {
+                    "backgroundColor": "#2AAD5E",
+                    "width": 2,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Abel",
+                  "fontSize": 20,
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              0
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Abel",
+                  "fontSize": 20,
+                  "margin": 0,
+                  "padding": 0,
+                  "width": 35,
+                }
+              }
+            >
+              Best
+            </Text>
+            <View
+              style={
+                Array [
+                  Object {
+                    "height": 20,
+                    "marginRight": 5,
+                  },
+                  Object {
+                    "backgroundColor": "#2AAD5E",
+                    "width": 375,
+                  },
+                ]
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "fontFamily": "Abel",
+                  "fontSize": 20,
+                  "margin": 0,
+                  "padding": 0,
+                }
+              }
+            >
+              10
+            </Text>
+          </View>
+        </View>
       </View>
     </View>
   </RCTScrollView>
