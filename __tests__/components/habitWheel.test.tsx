@@ -6,28 +6,23 @@ import {habbajetColors} from '../../app/colors';
 describe('HabitWheel Component', () => {
     it('renders an empty circle with no successes', () => {
         const component = renderer.create(
-            <HabitWheel color={habbajetColors[0]} successes={0} />,
+            <HabitWheel color={habbajetColors[0]} results={[]} />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });
 
     it('renders a half-full circle with some successes', () => {
+        const results = [true, false, true, true];
         const component = renderer.create(
-            <HabitWheel color={habbajetColors[1]} successes={4} />,
+            <HabitWheel color={habbajetColors[1]} results={results} />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });
 
     it('renders a full circle with all successes', () => {
+        const results = [true, true, true, true, true, true, true];
         const component = renderer.create(
-            <HabitWheel color={habbajetColors[2]} successes={7} />,
-        );
-        expect(component.toJSON()).toMatchSnapshot();
-    });
-
-    it('handles invalid success counts', () => {
-        const component = renderer.create(
-            <HabitWheel color={habbajetColors[3]} successes={-8} />,
+            <HabitWheel color={habbajetColors[2]} results={results} />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });

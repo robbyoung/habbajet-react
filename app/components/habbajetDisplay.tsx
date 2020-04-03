@@ -29,7 +29,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
             <ScrollView>
                 <HabitWheel
                     color={props.habbajet.color}
-                    successes={props.habbajet.results.length}
+                    results={props.habbajet.results}
                 />
                 <View style={styles.details}>
                     <Label
