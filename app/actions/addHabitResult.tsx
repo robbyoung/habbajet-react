@@ -44,6 +44,12 @@ export function addHabitResult(
     edited.results = [...edited.results, action.result];
     if (action.result) {
         edited.currentValue *= edited.factor;
+        edited.currentStreak++;
+        if (edited.currentStreak > edited.bestStreak) {
+            edited.bestStreak = edited.currentStreak;
+        }
+    } else {
+        edited.currentStreak = 0;
     }
 
     newState[index] = edited;

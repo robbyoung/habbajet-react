@@ -8,6 +8,8 @@ export interface Habbajet {
     date: string;
     toClaim: boolean;
     selected: boolean;
+    currentStreak: number;
+    bestStreak: number;
 }
 
 export interface Purchase {

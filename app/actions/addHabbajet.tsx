@@ -29,6 +29,8 @@ export function addHabbajetAction(
             date: monday,
             toClaim: false,
             selected: false,
+            currentStreak: 0,
+            bestStreak: 0,
         },
     };
 }

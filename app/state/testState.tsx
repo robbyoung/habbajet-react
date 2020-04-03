@@ -19,6 +19,8 @@ export function createTestState(
             date: '2020-03-22T11:00:00.000Z',
             toClaim: false,
             selected: i === selectedIndex,
+            currentStreak: 0,
+            bestStreak: 5,
         });
     }
 

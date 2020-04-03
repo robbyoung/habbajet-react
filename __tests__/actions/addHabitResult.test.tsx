@@ -13,6 +13,8 @@ describe('Add Habit Result Action', () => {
         expect(newState.length).toEqual(state.length);
         expect(result.results).toEqual([true]);
         expect(result.currentValue).toEqual(state[0].currentValue * 2);
+        expect(result.currentStreak).toEqual(state[0].currentStreak + 1);
+        expect(result.bestStreak).toEqual(state[0].bestStreak);
 
         const date = moment(state[0].date);
         expect(moment(result.date).day()).toEqual(date.day() + 1);
@@ -54,5 +56,25 @@ describe('Add Habit Result Action', () => {
         const newState = habbajetsReducer(state, action);
         expect(newState[0].toClaim).toEqual(true);
         expect(newState[0].results[6]).toEqual(false);
+    });
+
+    it('will reset habit streak on an unsuccessful habit outcome', () => {
+        const state = createTestState(1, 0, 0).habbajets;
+        state[0].currentStreak = 5;
+
+        const action = addHabitResultAction(state[0].name, false);
+        const newState = habbajetsReducer(state, action);
+        expect(newState[0].bestStreak).toEqual(5);
+        expect(newState[0].currentStreak).toEqual(0);
+    });
+
+    it('will keep the best streak up to date', () => {
+        const state = createTestState(1, 0, 0).habbajets;
+        state[0].currentStreak = state[0].bestStreak;
+
+        const action = addHabitResultAction(state[0].name, true);
+        const newState = habbajetsReducer(state, action);
+        expect(newState[0].bestStreak).toEqual(newState[0].currentStreak);
+        expect(newState[0].currentStreak).toEqual(state[0].currentStreak + 1);
     });
 });
