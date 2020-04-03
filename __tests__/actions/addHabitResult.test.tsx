@@ -11,7 +11,7 @@ describe('Add Habit Result Action', () => {
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
-        expect(result.successes).toEqual(1);
+        expect(result.results).toEqual([true]);
         expect(result.currentValue).toEqual(state[0].currentValue * 2);
 
         const date = moment(state[0].date);
@@ -26,7 +26,7 @@ describe('Add Habit Result Action', () => {
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
-        expect(result.successes).toEqual(0);
+        expect(result.results).toEqual([false]);
         expect(result.currentValue).toEqual(state[0].currentValue);
 
         const date = moment(state[0].date);
@@ -48,9 +48,11 @@ describe('Add Habit Result Action', () => {
         state[0].date = moment(state[0].date)
             .add(6, 'days')
             .toISOString();
+        state[0].results = [true, true, true, true, true, true];
         const action = addHabitResultAction(state[0].name, false);
 
         const newState = habbajetsReducer(state, action);
         expect(newState[0].toClaim).toEqual(true);
+        expect(newState[0].results[6]).toEqual(false);
     });
 });

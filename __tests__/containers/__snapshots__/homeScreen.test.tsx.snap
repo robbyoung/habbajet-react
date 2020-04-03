@@ -92,7 +92,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               Array [
                 Object {
                   "alignSelf": "center",
-                  "color": "#fff",
+                  "color": "#ffffff",
                   "fontFamily": "Abel",
                   "fontSize": 30,
                   "padding": 10,
@@ -131,7 +131,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               Array [
                 Object {
                   "alignSelf": "center",
-                  "color": "#fff",
+                  "color": "#ffffff",
                   "fontFamily": "Abel",
                   "fontSize": 30,
                   "padding": 10,
@@ -170,7 +170,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               Array [
                 Object {
                   "alignSelf": "center",
-                  "color": "#fff",
+                  "color": "#ffffff",
                   "fontFamily": "Abel",
                   "fontSize": 30,
                   "padding": 10,
@@ -209,7 +209,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               Array [
                 Object {
                   "alignSelf": "center",
-                  "color": "#fff",
+                  "color": "#ffffff",
                   "fontFamily": "Abel",
                   "fontSize": 30,
                   "padding": 10,
@@ -248,7 +248,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               Array [
                 Object {
                   "alignSelf": "center",
-                  "color": "#fff",
+                  "color": "#ffffff",
                   "fontFamily": "Abel",
                   "fontSize": 30,
                   "padding": 10,

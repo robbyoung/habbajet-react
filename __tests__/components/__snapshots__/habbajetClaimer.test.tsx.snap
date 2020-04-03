@@ -38,7 +38,7 @@ exports[`HabbajetClaimer Component renders a claim button with the habbajet valu
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 50,
             "textAlign": "center",

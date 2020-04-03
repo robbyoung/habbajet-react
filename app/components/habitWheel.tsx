@@ -1,8 +1,10 @@
 import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import Pie from 'react-native-pie';
+import {lightGrey, complementColors} from '../colors';
 
 const CHART_MARGINS = 30;
+const TRANSPARENCY = 'BF';
 const styles = StyleSheet.create({
     container: {
         margin: CHART_MARGINS,
@@ -11,23 +13,29 @@ const styles = StyleSheet.create({
     },
 });
 
-const transparencies = ['21', '42', '63', '85', 'A6', 'C7', 'E8'];
-
 interface HabitWheelProps {
-    successes: number;
+    results: boolean[];
     color: string;
 }
 const HabitWheel = (props: HabitWheelProps) => {
-    let successes = props.successes;
-    if (props.successes < 0 || props.successes > 7) {
-        successes = 0;
-    }
-
     const sections: {color: string; percentage: number}[] = [];
-    for (let s = 0; s < successes; s++) {
+    let results = props.results;
+
+    for (let i = 0; i < 7; i++) {
+        let color: string;
+        switch (results[i]) {
+            case true:
+                color = props.color + TRANSPARENCY;
+                break;
+            case false:
+                color = complementColors[props.color] + TRANSPARENCY;
+                break;
+            default:
+                color = lightGrey;
+        }
         sections.push({
-            percentage: 14.3,
-            color: props.color + transparencies[s],
+            percentage: 100 / 7,
+            color: color,
         });
     }
 
@@ -40,7 +48,6 @@ const HabitWheel = (props: HabitWheelProps) => {
                 sections={sections}
                 strokeCap={'butt'}
                 dividerSize={2}
-                backgroundColor={'#f5f5f5'}
             />
         </View>
     );

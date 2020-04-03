@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Habbajet} from '../state';
 import WideButton from './wideButton';
+import {grey} from '../colors';
 
 const styles = StyleSheet.create({
     container: {
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
         margin: 0,
         padding: 0,
         fontFamily: 'Abel',
-        color: '#959595',
+        color: grey,
     },
 });
 

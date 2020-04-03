@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {white} from '../colors';
 
 const styles = StyleSheet.create({
     container: {
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         alignSelf: 'center',
         fontFamily: 'Abel',
-        color: '#fff',
+        color: white,
         width: '100%',
         textAlign: 'center',
         padding: 10,

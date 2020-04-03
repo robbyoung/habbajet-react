@@ -5,6 +5,7 @@ import LoadingScreen from './containers/loadingScreen';
 import {Provider} from 'react-redux';
 import store from './store';
 import HomeScreen from './containers/homeScreen';
+import {grey, white} from './colors';
 
 enum Screens {
     Loading = 'Loading',
@@ -81,10 +82,10 @@ export const goToHome = () => {
                                         text: 'Habbajet',
                                         fontFamily: 'Abel',
                                         fontSize: 30,
-                                        color: '#ffffff',
+                                        color: white,
                                     },
                                     background: {
-                                        color: '#959595',
+                                        color: grey,
                                     },
                                 },
                             },
@@ -103,16 +104,16 @@ export const goToHabbajet = () => {
             options: {
                 topBar: {
                     backButton: {
-                        color: '#ffffff',
+                        color: white,
                     },
                     title: {
                         text: ' ',
                         fontFamily: 'Abel',
                         fontSize: 30,
-                        color: '#ffffff',
+                        color: white,
                     },
                     background: {
-                        color: '#959595',
+                        color: grey,
                     },
                 },
             },

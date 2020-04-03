@@ -71,7 +71,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -110,7 +110,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -149,7 +149,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -188,7 +188,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -227,7 +227,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -253,7 +253,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#000000",
+        "backgroundColor": "#8066C2",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -266,7 +266,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -292,7 +292,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#8066C2",
+        "backgroundColor": "#2AAD5E",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -305,7 +305,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -331,7 +331,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#2AAD5E",
+        "backgroundColor": "#E04747",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -344,7 +344,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -370,7 +370,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#E04747",
+        "backgroundColor": "#7F90EC",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -383,7 +383,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -409,7 +409,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#7F90EC",
+        "backgroundColor": "#B1B952",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -422,7 +422,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -448,7 +448,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#B1B952",
+        "backgroundColor": "#8066C2",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -461,7 +461,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -487,7 +487,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#000000",
+        "backgroundColor": "#2AAD5E",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -500,7 +500,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -526,7 +526,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#8066C2",
+        "backgroundColor": "#E04747",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -539,7 +539,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -565,7 +565,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#2AAD5E",
+        "backgroundColor": "#7F90EC",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -578,7 +578,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -604,7 +604,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#E04747",
+        "backgroundColor": "#B1B952",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -617,7 +617,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -643,7 +643,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#7F90EC",
+        "backgroundColor": "#8066C2",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -656,7 +656,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -682,7 +682,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#B1B952",
+        "backgroundColor": "#2AAD5E",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -695,7 +695,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -721,7 +721,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#000000",
+        "backgroundColor": "#E04747",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -734,7 +734,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -760,7 +760,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#8066C2",
+        "backgroundColor": "#7F90EC",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -773,7 +773,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -799,123 +799,6 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#2AAD5E",
-        "borderRadius": 10,
-        "marginBottom": 10,
-        "opacity": 1,
-        "width": "100%",
-      }
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "alignSelf": "center",
-            "color": "#fff",
-            "fontFamily": "Abel",
-            "fontSize": 30,
-            "padding": 10,
-            "textAlign": "center",
-            "width": "100%",
-          },
-        ]
-      }
-    >
-      Habbajet 19
-    </Text>
-  </View>
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#E04747",
-        "borderRadius": 10,
-        "marginBottom": 10,
-        "opacity": 1,
-        "width": "100%",
-      }
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "alignSelf": "center",
-            "color": "#fff",
-            "fontFamily": "Abel",
-            "fontSize": 30,
-            "padding": 10,
-            "textAlign": "center",
-            "width": "100%",
-          },
-        ]
-      }
-    >
-      Habbajet 20
-    </Text>
-  </View>
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#7F90EC",
-        "borderRadius": 10,
-        "marginBottom": 10,
-        "opacity": 1,
-        "width": "100%",
-      }
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "alignSelf": "center",
-            "color": "#fff",
-            "fontFamily": "Abel",
-            "fontSize": 30,
-            "padding": 10,
-            "textAlign": "center",
-            "width": "100%",
-          },
-        ]
-      }
-    >
-      Habbajet 21
-    </Text>
-  </View>
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
         "backgroundColor": "#B1B952",
         "borderRadius": 10,
         "marginBottom": 10,
@@ -929,7 +812,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -939,46 +822,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         ]
       }
     >
-      Habbajet 22
-    </Text>
-  </View>
-  <View
-    accessible={true}
-    focusable={true}
-    isTVSelectable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "backgroundColor": "#000000",
-        "borderRadius": 10,
-        "marginBottom": 10,
-        "opacity": 1,
-        "width": "100%",
-      }
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "alignSelf": "center",
-            "color": "#fff",
-            "fontFamily": "Abel",
-            "fontSize": 30,
-            "padding": 10,
-            "textAlign": "center",
-            "width": "100%",
-          },
-        ]
-      }
-    >
-      Habbajet 23
+      Habbajet 19
     </Text>
   </View>
   <View
@@ -1007,7 +851,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -1017,7 +861,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         ]
       }
     >
-      Habbajet 24
+      Habbajet 20
     </Text>
   </View>
   <View
@@ -1046,7 +890,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -1056,7 +900,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         ]
       }
     >
-      Habbajet 25
+      Habbajet 21
     </Text>
   </View>
   <View
@@ -1085,7 +929,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -1095,7 +939,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         ]
       }
     >
-      Habbajet 26
+      Habbajet 22
     </Text>
   </View>
   <View
@@ -1124,7 +968,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -1134,7 +978,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         ]
       }
     >
-      Habbajet 27
+      Habbajet 23
     </Text>
   </View>
   <View
@@ -1163,7 +1007,163 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
+            "fontFamily": "Abel",
+            "fontSize": 30,
+            "padding": 10,
+            "textAlign": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      Habbajet 24
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#8066C2",
+        "borderRadius": 10,
+        "marginBottom": 10,
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontFamily": "Abel",
+            "fontSize": 30,
+            "padding": 10,
+            "textAlign": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      Habbajet 25
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#2AAD5E",
+        "borderRadius": 10,
+        "marginBottom": 10,
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontFamily": "Abel",
+            "fontSize": 30,
+            "padding": 10,
+            "textAlign": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      Habbajet 26
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#E04747",
+        "borderRadius": 10,
+        "marginBottom": 10,
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontFamily": "Abel",
+            "fontSize": 30,
+            "padding": 10,
+            "textAlign": "center",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      Habbajet 27
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    isTVSelectable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#7F90EC",
+        "borderRadius": 10,
+        "marginBottom": 10,
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
@@ -1189,7 +1189,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
     onStartShouldSetResponder={[Function]}
     style={
       Object {
-        "backgroundColor": "#000000",
+        "backgroundColor": "#B1B952",
         "borderRadius": 10,
         "marginBottom": 10,
         "opacity": 1,
@@ -1202,7 +1202,7 @@ exports[`HabbajetList Component will create buttons out of an array of habbajets
         Array [
           Object {
             "alignSelf": "center",
-            "color": "#fff",
+            "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 30,
             "padding": 10,
