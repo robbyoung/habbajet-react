@@ -262,6 +262,45 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
           </Text>
         </View>
       </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#959595",
+            "borderRadius": 10,
+            "marginBottom": 10,
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "padding": 10,
+                "textAlign": "center",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          New Habbajet
+        </Text>
+      </View>
     </View>
   </View>
 </RCTScrollView>

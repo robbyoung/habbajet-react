@@ -1,5 +1,10 @@
 import {LayoutRoot, Layout} from 'react-native-navigation';
-import {goToLoading, goToHabbajet, goToHome} from '../app/navigation';
+import {
+    goToLoading,
+    goToHabbajet,
+    goToHome,
+    goToNewHabbajet,
+} from '../app/navigation';
 
 let layoutRoot: LayoutRoot;
 let layout: Layout;
@@ -45,5 +50,9 @@ describe('Navigation', () => {
 
     it('goToHabbajet correctly navigates to habbajet screen', () => {
         testStackPush(goToHabbajet, 'Habbajet');
+    });
+
+    it('goToNewHabbajet correctly navigates to the new habbajet screen', () => {
+        testStackPush(goToNewHabbajet, 'NewHabbajet');
     });
 });
