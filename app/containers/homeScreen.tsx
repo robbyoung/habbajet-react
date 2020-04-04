@@ -4,8 +4,10 @@ import Label from '../components/label';
 import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import HabbajetList from '../components/habbajetList';
-import {goToHabbajet} from '../navigation';
+import {goToHabbajet, goToNewHabbajet} from '../navigation';
 import {selectHabbajetAction} from '../actions';
+import WideButton from '../components/wideButton';
+import {grey} from '../colors';
 
 const styles = StyleSheet.create({
     container: {
@@ -34,6 +36,11 @@ const HomeScreen = () => {
                         dispatch(selectHabbajetAction(name));
                         goToHabbajet();
                     }}
+                />
+                <WideButton
+                    text="New Habbajet"
+                    color={grey}
+                    onPress={() => goToNewHabbajet()}
                 />
             </View>
         </ScrollView>
