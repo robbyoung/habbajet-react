@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormField Component can render a form field with a placeholder 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+    Test Field
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    keyboardType="default"
+    onChangeText={[Function]}
+    placeholder="placeholder"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "borderColor": "#959595",
+        "borderWidth": 1,
+        "fontFamily": "Abel",
+        "fontSize": 30,
+        "paddingLeft": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <View />
+</View>
+`;
+
+exports[`FormField Component can render a form field with a value 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+    Test Field
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    keyboardType="default"
+    onChangeText={[Function]}
+    placeholder="placeholder"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "borderColor": "#959595",
+        "borderWidth": 1,
+        "fontFamily": "Abel",
+        "fontSize": 30,
+        "paddingLeft": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="value"
+  />
+  <View />
+</View>
+`;
+
+exports[`FormField Component can render a form field with error text 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+    Test Field
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    keyboardType="numeric"
+    onChangeText={[Function]}
+    placeholder="placeholder"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "borderColor": "#959595",
+        "borderWidth": 1,
+        "fontFamily": "Abel",
+        "fontSize": 30,
+        "paddingLeft": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="124"
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+        Object {
+          "color": "#b02f1e",
+        },
+      ]
+    }
+  >
+    This is an error message
+  </Text>
+</View>
+`;
+
+exports[`FormField Component can render an empty form field 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+    Test Field
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    keyboardType="default"
+    onChangeText={[Function]}
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "borderColor": "#959595",
+        "borderWidth": 1,
+        "fontFamily": "Abel",
+        "fontSize": 30,
+        "paddingLeft": 10,
+      }
+    }
+    underlineColorAndroid="transparent"
+  />
+  <View />
+</View>
+`;

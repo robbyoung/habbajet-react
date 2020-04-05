@@ -28,6 +28,14 @@ const NewHabbajetScreen = () => {
                 <FormField
                     title="Name"
                     value="My Habbajet"
+                    errorText="Something is wrong with the input"
+                    onValueChange={() => undefined}
+                />
+                <FormField
+                    title="Value"
+                    value=""
+                    placeholder={'2'}
+                    numeric={true}
                     onValueChange={() => undefined}
                 />
                 <WideButton

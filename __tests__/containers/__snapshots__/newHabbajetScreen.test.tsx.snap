@@ -14,6 +14,106 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
   <View>
     <View>
       <View
+        style={
+          Object {
+            "marginBottom": 15,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#959595",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "margin": 0,
+                "padding": 0,
+              },
+            ]
+          }
+        >
+          Name
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          keyboardType="default"
+          onChangeText={[Function]}
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "borderColor": "#959595",
+              "borderWidth": 1,
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "paddingLeft": 10,
+            }
+          }
+          underlineColorAndroid="transparent"
+          value="My Habbajet"
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#959595",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "margin": 0,
+                "padding": 0,
+              },
+              Object {
+                "color": "#b02f1e",
+              },
+            ]
+          }
+        >
+          Something is wrong with the input
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 15,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#959595",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "margin": 0,
+                "padding": 0,
+              },
+            ]
+          }
+        >
+          Value
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          keyboardType="numeric"
+          onChangeText={[Function]}
+          placeholder="2"
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "borderColor": "#959595",
+              "borderWidth": 1,
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "paddingLeft": 10,
+            }
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+        <View />
+      </View>
+      <View
         accessible={true}
         focusable={true}
         isTVSelectable={true}
