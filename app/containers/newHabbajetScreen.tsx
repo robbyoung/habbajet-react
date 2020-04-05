@@ -6,6 +6,7 @@ import WideButton from '../components/wideButton';
 import {grey, habbajetColors, white} from '../colors';
 import {goBack} from '../navigation';
 import {saveState} from '../storage';
+import FormField from '../components/formField';
 
 const styles = StyleSheet.create({
     container: {
@@ -24,6 +25,11 @@ const NewHabbajetScreen = () => {
     return (
         <ScrollView style={styles.container}>
             <View>
+                <FormField
+                    title="Name"
+                    value="My Habbajet"
+                    onValueChange={() => undefined}
+                />
                 <WideButton
                     text="Done"
                     onPress={() => {
