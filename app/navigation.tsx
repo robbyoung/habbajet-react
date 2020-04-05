@@ -6,11 +6,13 @@ import {Provider} from 'react-redux';
 import store from './store';
 import HomeScreen from './containers/homeScreen';
 import {grey, white} from './colors';
+import NewHabbajetScreen from './containers/newHabbajetScreen';
 
 enum Screens {
     Loading = 'Loading',
     Home = 'Home',
     Habbajet = 'Habbajet',
+    NewHabbajet = 'NewHabbajet',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -44,6 +46,18 @@ Navigation.registerComponent(
     ),
     () => HabbajetScreen,
 );
+
+Navigation.registerComponent(
+    Screens.NewHabbajet,
+    () => () => (
+        <Provider store={store}>
+            <NewHabbajetScreen />
+        </Provider>
+    ),
+    () => NewHabbajetScreen,
+);
+
+export const goBack = () => Navigation.pop(STACK_NAVIGATOR);
 
 export const goToLoading = () => {
     Navigation.setRoot({
@@ -108,6 +122,30 @@ export const goToHabbajet = () => {
                     },
                     title: {
                         text: ' ',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};
+
+export const goToNewHabbajet = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.NewHabbajet,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'New Habbajet',
                         fontFamily: 'Abel',
                         fontSize: 30,
                         color: white,
