@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {ScrollView, StyleSheet} from 'react-native';
-import {addHabbajetAction} from '../actions';
+import {addHabbajetAction, updateEditorFieldAction} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey, habbajetColors, white} from '../colors';
 import {goBack} from '../navigation';
@@ -31,14 +31,18 @@ const NewHabbajetScreen = () => {
             <FormField
                 field={nameField}
                 title="Name"
-                onValueChange={() => undefined}
+                onValueChange={value =>
+                    dispatch(updateEditorFieldAction('Name', value))
+                }
             />
             <FormField
                 field={valueField}
                 title="Value"
                 placeholder={'2'}
                 numeric={true}
-                onValueChange={() => undefined}
+                onValueChange={value =>
+                    dispatch(updateEditorFieldAction('Value', value))
+                }
             />
             <WideButton
                 text="Done"

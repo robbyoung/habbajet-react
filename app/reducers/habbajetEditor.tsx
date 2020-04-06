@@ -1,5 +1,10 @@
 import {Action} from 'redux';
 import {HabbajetEditor} from '../state';
+import {
+    ActionType,
+    UpdateEditorFieldAction,
+    updateEditorField,
+} from '../actions';
 
 export const DEFAULT_EDITOR_STATE: HabbajetEditor = {
     name: {
@@ -15,7 +20,11 @@ export const DEFAULT_EDITOR_STATE: HabbajetEditor = {
 
 export default function habbajetEditorReducer(
     state: HabbajetEditor = DEFAULT_EDITOR_STATE,
-    _action: Action,
+    action: Action,
 ): HabbajetEditor {
+    switch (action.type) {
+        case ActionType.UPDATE_EDITOR_FIELD:
+            return updateEditorField(state, action as UpdateEditorFieldAction);
+    }
     return state;
 }

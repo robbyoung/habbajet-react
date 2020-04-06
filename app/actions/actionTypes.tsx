@@ -5,4 +5,5 @@ export enum ActionType {
     RESET_HABBAJET = 'Reset Habbajet',
     LOAD_STATE = 'Load State',
     SELECT_HABBAJET = 'Select Habbajet',
+    UPDATE_EDITOR_FIELD = 'Update Editor Field',
 }
