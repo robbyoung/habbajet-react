@@ -5,7 +5,14 @@ import FormField from '../../app/components/formField';
 describe('FormField Component', () => {
     it('can render an empty form field', () => {
         const component = renderer.create(
-            <FormField title="Test Field" onValueChange={() => undefined} />,
+            <FormField
+                title="Test Field"
+                field={{
+                    value: '',
+                    errorMessage: '',
+                }}
+                onValueChange={() => undefined}
+            />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });
@@ -13,6 +20,10 @@ describe('FormField Component', () => {
     it('can render a form field with a placeholder', () => {
         const component = renderer.create(
             <FormField
+                field={{
+                    value: '',
+                    errorMessage: '',
+                }}
                 title="Test Field"
                 placeholder="placeholder"
                 onValueChange={() => undefined}
@@ -24,9 +35,12 @@ describe('FormField Component', () => {
     it('can render a form field with a value', () => {
         const component = renderer.create(
             <FormField
+                field={{
+                    value: 'value',
+                    errorMessage: '',
+                }}
                 title="Test Field"
                 placeholder="placeholder"
-                value="value"
                 onValueChange={() => undefined}
             />,
         );
@@ -36,11 +50,13 @@ describe('FormField Component', () => {
     it('can render a form field with error text', () => {
         const component = renderer.create(
             <FormField
+                field={{
+                    value: '124',
+                    errorMessage: 'This is an error message',
+                }}
                 title="Test Field"
                 placeholder="placeholder"
-                value="124"
                 numeric={true}
-                errorText="This is an error message"
                 onValueChange={() => undefined}
             />,
         );

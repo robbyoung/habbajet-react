@@ -1,5 +1,6 @@
-import {State, Habbajet, Purchase} from '.';
+import {State, Habbajet, Purchase, HabbajetEditor} from '.';
 import {habbajetColors} from '../colors';
+import {DEFAULT_EDITOR_STATE} from '../reducers/habbajetEditor';
 
 export function createTestState(
     numHabbajets: number,
@@ -32,9 +33,12 @@ export function createTestState(
         });
     }
 
+    const habbajetEditor: HabbajetEditor = DEFAULT_EDITOR_STATE;
+
     return {
         habbajets,
         purchases,
         budget,
+        habbajetEditor,
     };
 }

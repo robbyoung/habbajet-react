@@ -1,12 +1,13 @@
 import React from 'react';
-import {useDispatch} from 'react-redux';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import {ScrollView, StyleSheet} from 'react-native';
 import {addHabbajetAction} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey, habbajetColors, white} from '../colors';
 import {goBack} from '../navigation';
 import {saveState} from '../storage';
 import FormField from '../components/formField';
+import {getEditorNameField, getEditorValueField} from '../selectors';
 
 const styles = StyleSheet.create({
     container: {
@@ -19,42 +20,42 @@ const styles = StyleSheet.create({
 
 const NewHabbajetScreen = () => {
     const dispatch = useDispatch();
+    const nameField = useSelector(getEditorNameField);
+    const valueField = useSelector(getEditorValueField);
+
     const habbajetName = `h${Math.floor(Math.random() * 1000)}`;
     const colorIndex = Math.floor(Math.random() * habbajetColors.length);
 
     return (
         <ScrollView style={styles.container}>
-            <View>
-                <FormField
-                    title="Name"
-                    value="My Habbajet"
-                    errorText="Something is wrong with the input"
-                    onValueChange={() => undefined}
-                />
-                <FormField
-                    title="Value"
-                    value=""
-                    placeholder={'2'}
-                    numeric={true}
-                    onValueChange={() => undefined}
-                />
-                <WideButton
-                    text="Done"
-                    onPress={() => {
-                        dispatch(
-                            addHabbajetAction(
-                                habbajetName,
-                                200,
-                                2,
-                                habbajetColors[colorIndex],
-                            ),
-                        );
-                        goBack();
-                        saveState();
-                    }}
-                    color={grey}
-                />
-            </View>
+            <FormField
+                field={nameField}
+                title="Name"
+                onValueChange={() => undefined}
+            />
+            <FormField
+                field={valueField}
+                title="Value"
+                placeholder={'2'}
+                numeric={true}
+                onValueChange={() => undefined}
+            />
+            <WideButton
+                text="Done"
+                onPress={() => {
+                    dispatch(
+                        addHabbajetAction(
+                            habbajetName,
+                            200,
+                            2,
+                            habbajetColors[colorIndex],
+                        ),
+                    );
+                    goBack();
+                    saveState();
+                }}
+                color={grey}
+            />
         </ScrollView>
     );
 };

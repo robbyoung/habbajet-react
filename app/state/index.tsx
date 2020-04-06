@@ -17,8 +17,20 @@ export interface Purchase {
     value: number;
 }
 
+export interface EditorField {
+    value: string;
+    errorMessage: string;
+}
+
+export interface HabbajetEditor {
+    name: EditorField;
+    value: EditorField;
+    color: string;
+}
+
 export interface State {
     habbajets: Habbajet[];
     purchases: Purchase[];
+    habbajetEditor: HabbajetEditor;
     budget: number;
 }

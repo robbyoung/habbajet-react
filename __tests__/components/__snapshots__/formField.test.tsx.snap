@@ -39,6 +39,7 @@ exports[`FormField Component can render a form field with a placeholder 1`] = `
       }
     }
     underlineColorAndroid="transparent"
+    value=""
   />
   <View />
 </View>
@@ -189,6 +190,7 @@ exports[`FormField Component can render an empty form field 1`] = `
       }
     }
     underlineColorAndroid="transparent"
+    value=""
   />
   <View />
 </View>
