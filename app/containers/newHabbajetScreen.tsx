@@ -7,7 +7,11 @@ import {grey, habbajetColors, white} from '../colors';
 import {goBack} from '../navigation';
 import {saveState} from '../storage';
 import FormField from '../components/formField';
-import {getEditorNameField, getEditorValueField} from '../selectors';
+import {
+    getEditorNameField,
+    getEditorValueField,
+    getValuesForNewHabbajet,
+} from '../selectors';
 
 const styles = StyleSheet.create({
     container: {
@@ -23,7 +27,7 @@ const NewHabbajetScreen = () => {
     const nameField = useSelector(getEditorNameField);
     const valueField = useSelector(getEditorValueField);
 
-    const habbajetName = `h${Math.floor(Math.random() * 1000)}`;
+    const [habbajetName, habbajetValue] = useSelector(getValuesForNewHabbajet);
     const colorIndex = Math.floor(Math.random() * habbajetColors.length);
 
     return (
@@ -49,8 +53,8 @@ const NewHabbajetScreen = () => {
                 onPress={() => {
                     dispatch(
                         addHabbajetAction(
-                            habbajetName,
-                            200,
+                            habbajetName as string,
+                            habbajetValue as number,
                             2,
                             habbajetColors[colorIndex],
                         ),
