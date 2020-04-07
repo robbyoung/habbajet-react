@@ -67,16 +67,16 @@ describe('HabbaajetEditor Selectors', () => {
             });
         });
 
-        it('will return invalid number strings as NaN', () => {
+        it('will return invalid number strings as defaults', () => {
             const state = createTestState(0, 0, 0);
             state.habbajetEditor.name.value = 'Test 2';
-            state.habbajetEditor.value.value = '.';
+            state.habbajetEditor.value.value = '';
 
             const result = getValuesForNewHabbajet(state);
             expect(result).toEqual({
                 name: 'Test 2',
-                value: NaN,
-                modifier: NaN,
+                value: 50,
+                modifier: 2,
                 color: habbajetColors[0],
             });
         });

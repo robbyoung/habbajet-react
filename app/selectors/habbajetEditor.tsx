@@ -14,8 +14,8 @@ export function getEditorModifierField(state: State) {
 
 export function getValuesForNewHabbajet(state: State) {
     const name = state.habbajetEditor.name.value;
-    const value = parseInt(state.habbajetEditor.value.value, 10);
-    const modifier = parseInt(state.habbajetEditor.modifier.value, 10);
+    const value = parseInt(state.habbajetEditor.value.value, 10) || 50;
+    const modifier = parseInt(state.habbajetEditor.modifier.value, 10) || 2;
     const color = state.habbajetEditor.color;
 
     return {
