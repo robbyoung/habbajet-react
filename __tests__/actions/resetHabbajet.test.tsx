@@ -14,7 +14,7 @@ describe('Reset Habbajet Action', () => {
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
         expect(result.currentValue).toEqual(
-            result.maxValue / Math.pow(result.factor, 7),
+            result.maxValue / Math.pow(result.modifier, 7),
         );
         expect(result.toClaim).toEqual(false);
         expect(result.results).toEqual([]);

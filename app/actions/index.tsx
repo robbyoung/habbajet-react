@@ -5,3 +5,4 @@ export * from './updateBudget';
 export * from './resetHabbajet';
 export * from './loadState';
 export * from './selectHabbajet';
+export * from './updateEditorField';

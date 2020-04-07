@@ -1,11 +1,18 @@
 import React from 'react';
-import {useDispatch} from 'react-redux';
-import {ScrollView, StyleSheet, View} from 'react-native';
-import {addHabbajetAction} from '../actions';
+import {useDispatch, useSelector} from 'react-redux';
+import {ScrollView, StyleSheet} from 'react-native';
+import {addHabbajetAction, updateEditorFieldAction} from '../actions';
 import WideButton from '../components/wideButton';
-import {grey, habbajetColors, white} from '../colors';
+import {grey, white} from '../colors';
 import {goBack} from '../navigation';
 import {saveState} from '../storage';
+import FormField from '../components/formField';
+import {
+    getEditorNameField,
+    getEditorValueField,
+    getValuesForNewHabbajet,
+    getEditorModifierField,
+} from '../selectors';
 
 const styles = StyleSheet.create({
     container: {
@@ -18,29 +25,54 @@ const styles = StyleSheet.create({
 
 const NewHabbajetScreen = () => {
     const dispatch = useDispatch();
-    const habbajetName = `h${Math.floor(Math.random() * 1000)}`;
-    const colorIndex = Math.floor(Math.random() * habbajetColors.length);
+    const nameField = useSelector(getEditorNameField);
+    const valueField = useSelector(getEditorValueField);
+    const modifierField = useSelector(getEditorModifierField);
+    const newHabbajet = useSelector(getValuesForNewHabbajet);
 
     return (
         <ScrollView style={styles.container}>
-            <View>
-                <WideButton
-                    text="Done"
-                    onPress={() => {
-                        dispatch(
-                            addHabbajetAction(
-                                habbajetName,
-                                200,
-                                2,
-                                habbajetColors[colorIndex],
-                            ),
-                        );
-                        goBack();
-                        saveState();
-                    }}
-                    color={grey}
-                />
-            </View>
+            <FormField
+                field={nameField}
+                title="Name"
+                onValueChange={value =>
+                    dispatch(updateEditorFieldAction('Name', value))
+                }
+            />
+            <FormField
+                field={valueField}
+                title="Value"
+                placeholder={'50'}
+                numeric={true}
+                onValueChange={value =>
+                    dispatch(updateEditorFieldAction('Value', value))
+                }
+            />
+            <FormField
+                field={modifierField}
+                title="Modifier"
+                placeholder={'2'}
+                numeric={true}
+                onValueChange={value =>
+                    dispatch(updateEditorFieldAction('Modifier', value))
+                }
+            />
+            <WideButton
+                text="Done"
+                onPress={() => {
+                    dispatch(
+                        addHabbajetAction(
+                            newHabbajet.name,
+                            newHabbajet.value,
+                            newHabbajet.modifier,
+                            newHabbajet.color,
+                        ),
+                    );
+                    goBack();
+                    saveState();
+                }}
+                color={grey}
+            />
         </ScrollView>
     );
 };

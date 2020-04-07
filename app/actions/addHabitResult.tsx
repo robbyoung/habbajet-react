@@ -43,7 +43,7 @@ export function addHabitResult(
     edited.date = date.toISOString();
     edited.results = [...edited.results, action.result];
     if (action.result) {
-        edited.currentValue *= edited.factor;
+        edited.currentValue *= edited.modifier;
         edited.currentStreak++;
         if (edited.currentStreak > edited.bestStreak) {
             edited.bestStreak = edited.currentStreak;
