@@ -21,6 +21,15 @@ describe('Update Budget Action', () => {
         expect(state).toEqual(createTestState(0, 0, 0).habbajetEditor);
     });
 
+    it('can update the modifier field', () => {
+        const state = createTestState(0, 0, 0).habbajetEditor;
+        const action = updateEditorFieldAction('Modifier', '5678');
+        const newState = habbajetEditorReducer(state, action);
+
+        expect(newState.modifier.value).toEqual('5678');
+        expect(state).toEqual(createTestState(0, 0, 0).habbajetEditor);
+    });
+
     it('will return state unchanged for invalid field names', () => {
         const state = createTestState(0, 0, 0).habbajetEditor;
         const action = updateEditorFieldAction('Invalid Name', 'asdfasdf');

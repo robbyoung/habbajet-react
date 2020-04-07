@@ -1,6 +1,5 @@
 import {State, Habbajet, Purchase, HabbajetEditor} from '.';
 import {habbajetColors} from '../colors';
-import {DEFAULT_EDITOR_STATE} from '../reducers/habbajetEditor';
 
 export function createTestState(
     numHabbajets: number,
@@ -14,7 +13,7 @@ export function createTestState(
             name: `Habbajet ${i}`,
             maxValue: 100,
             currentValue: 100 / Math.pow(2, 7),
-            factor: 2,
+            modifier: 2,
             results: [],
             color: habbajetColors[i % habbajetColors.length],
             date: '2020-03-22T11:00:00.000Z',
@@ -33,7 +32,16 @@ export function createTestState(
         });
     }
 
-    const habbajetEditor: HabbajetEditor = DEFAULT_EDITOR_STATE;
+    const EMPTY_FIELD = {
+        value: '',
+        errorMessage: '',
+    };
+    const habbajetEditor: HabbajetEditor = {
+        name: {...EMPTY_FIELD},
+        value: {...EMPTY_FIELD},
+        modifier: {...EMPTY_FIELD},
+        color: habbajetColors[0],
+    };
 
     return {
         habbajets,

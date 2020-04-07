@@ -3,8 +3,10 @@ import {
     getEditorNameField,
     getEditorValueField,
     getValuesForNewHabbajet,
+    getEditorModifierField,
 } from '../../app/selectors';
 import {EditorField} from '../../app/state';
+import {habbajetColors} from '../../app/colors';
 
 describe('HabbaajetEditor Selectors', () => {
     describe('Get Editor Name Field', () => {
@@ -35,14 +37,34 @@ describe('HabbaajetEditor Selectors', () => {
         });
     });
 
+    describe('Get Editor Modifier Field', () => {
+        it('will return the value field value and message', () => {
+            const state = createTestState(0, 0, 0);
+            const expected: EditorField = {
+                value: '12423',
+                errorMessage: 'This is a message',
+            };
+            state.habbajetEditor.modifier = expected;
+
+            const result = getEditorModifierField(state);
+            expect(result).toEqual(expected);
+        });
+    });
+
     describe('Get Values For New Habbajet', () => {
         it('will parse and return values from the habbajet editor', () => {
             const state = createTestState(0, 0, 0);
             state.habbajetEditor.name.value = 'Test';
             state.habbajetEditor.value.value = '123';
+            state.habbajetEditor.modifier.value = '456';
 
             const result = getValuesForNewHabbajet(state);
-            expect(result).toEqual(['Test', 123]);
+            expect(result).toEqual({
+                name: 'Test',
+                value: 123,
+                modifier: 456,
+                color: habbajetColors[0],
+            });
         });
 
         it('will return invalid number strings as NaN', () => {
@@ -51,7 +73,12 @@ describe('HabbaajetEditor Selectors', () => {
             state.habbajetEditor.value.value = '.';
 
             const result = getValuesForNewHabbajet(state);
-            expect(result).toEqual(['Test 2', NaN]);
+            expect(result).toEqual({
+                name: 'Test 2',
+                value: NaN,
+                modifier: NaN,
+                color: habbajetColors[0],
+            });
         });
     });
 });

@@ -5,17 +5,17 @@ import {
     UpdateEditorFieldAction,
     updateEditorField,
 } from '../actions';
+import {habbajetColors} from '../colors';
 
+const EMPTY_FIELD = {
+    value: '',
+    errorMessage: '',
+};
 export const DEFAULT_EDITOR_STATE: HabbajetEditor = {
-    name: {
-        value: '',
-        errorMessage: '',
-    },
-    value: {
-        value: '',
-        errorMessage: '',
-    },
-    color: '',
+    name: EMPTY_FIELD,
+    value: EMPTY_FIELD,
+    modifier: EMPTY_FIELD,
+    color: habbajetColors[0],
 };
 
 export default function habbajetEditorReducer(
