@@ -41,6 +41,7 @@ export function createTestState(
         value: {...EMPTY_FIELD},
         modifier: {...EMPTY_FIELD},
         color: habbajetColors[0],
+        validated: false,
     };
 
     return {

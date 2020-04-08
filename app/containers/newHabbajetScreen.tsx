@@ -1,7 +1,11 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {ScrollView, StyleSheet} from 'react-native';
-import {addHabbajetAction, updateEditorFieldAction} from '../actions';
+import {
+    addHabbajetAction,
+    updateEditorFieldAction,
+    validateEditorAction,
+} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey, white} from '../colors';
 import {goBack} from '../navigation';
@@ -12,6 +16,7 @@ import {
     getEditorValueField,
     getValuesForNewHabbajet,
     getEditorModifierField,
+    getValidationStateForNewHabbajet,
 } from '../selectors';
 
 const styles = StyleSheet.create({
@@ -28,7 +33,21 @@ const NewHabbajetScreen = () => {
     const nameField = useSelector(getEditorNameField);
     const valueField = useSelector(getEditorValueField);
     const modifierField = useSelector(getEditorModifierField);
+    const isValid = useSelector(getValidationStateForNewHabbajet);
     const newHabbajet = useSelector(getValuesForNewHabbajet);
+
+    if (isValid) {
+        dispatch(
+            addHabbajetAction(
+                newHabbajet.name,
+                newHabbajet.value,
+                newHabbajet.modifier,
+                newHabbajet.color,
+            ),
+        );
+        goBack();
+        saveState();
+    }
 
     return (
         <ScrollView style={styles.container}>
@@ -60,16 +79,7 @@ const NewHabbajetScreen = () => {
             <WideButton
                 text="Done"
                 onPress={() => {
-                    dispatch(
-                        addHabbajetAction(
-                            newHabbajet.name,
-                            newHabbajet.value,
-                            newHabbajet.modifier,
-                            newHabbajet.color,
-                        ),
-                    );
-                    goBack();
-                    saveState();
+                    dispatch(validateEditorAction());
                 }}
                 color={grey}
             />

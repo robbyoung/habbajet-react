@@ -27,6 +27,7 @@ export interface HabbajetEditor {
     value: EditorField;
     modifier: EditorField;
     color: string;
+    validated: boolean;
 }
 
 export interface State {

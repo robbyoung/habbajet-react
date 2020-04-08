@@ -4,6 +4,8 @@ import {
     ActionType,
     UpdateEditorFieldAction,
     updateEditorField,
+    ValidateEditorAction,
+    validateEditor,
 } from '../actions';
 import {habbajetColors} from '../colors';
 
@@ -16,6 +18,7 @@ export const DEFAULT_EDITOR_STATE: HabbajetEditor = {
     value: EMPTY_FIELD,
     modifier: EMPTY_FIELD,
     color: habbajetColors[0],
+    validated: false,
 };
 
 export default function habbajetEditorReducer(
@@ -25,6 +28,8 @@ export default function habbajetEditorReducer(
     switch (action.type) {
         case ActionType.UPDATE_EDITOR_FIELD:
             return updateEditorField(state, action as UpdateEditorFieldAction);
+        case ActionType.VALIDATE_EDITOR:
+            return validateEditor(state, action as ValidateEditorAction);
     }
     return state;
 }
