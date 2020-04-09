@@ -47,6 +47,7 @@ export function updateEditorField(
 
     fieldToUpdate.value = action.newValue;
     fieldToUpdate.errorMessage = '';
+    newState.validated = false;
 
     return newState;
 }

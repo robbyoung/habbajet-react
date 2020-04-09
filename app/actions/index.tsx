@@ -6,3 +6,5 @@ export * from './resetHabbajet';
 export * from './loadState';
 export * from './selectHabbajet';
 export * from './updateEditorField';
+export * from './validateEditor';
+export * from './clearEditor';

@@ -6,4 +6,6 @@ export enum ActionType {
     LOAD_STATE = 'Load State',
     SELECT_HABBAJET = 'Select Habbajet',
     UPDATE_EDITOR_FIELD = 'Update Editor Field',
+    VALIDATE_EDITOR = 'Validate Editor',
+    CLEAR_EDITOR = 'Clear Editor',
 }

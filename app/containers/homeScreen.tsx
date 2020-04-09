@@ -5,7 +5,7 @@ import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import HabbajetList from '../components/habbajetList';
 import {goToHabbajet, goToNewHabbajet} from '../navigation';
-import {selectHabbajetAction} from '../actions';
+import {selectHabbajetAction, clearEditorAction} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 
@@ -40,7 +40,10 @@ const HomeScreen = () => {
                 <WideButton
                     text="New Habbajet"
                     color={grey}
-                    onPress={() => goToNewHabbajet()}
+                    onPress={() => {
+                        dispatch(clearEditorAction());
+                        goToNewHabbajet();
+                    }}
                 />
             </View>
         </ScrollView>
