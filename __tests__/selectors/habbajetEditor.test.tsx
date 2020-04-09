@@ -4,6 +4,7 @@ import {
     getEditorValueField,
     getValuesForNewHabbajet,
     getEditorModifierField,
+    getValidationStateForNewHabbajet,
 } from '../../app/selectors';
 import {EditorField} from '../../app/state';
 import {habbajetColors} from '../../app/colors';
@@ -79,6 +80,31 @@ describe('HabbaajetEditor Selectors', () => {
                 modifier: 2,
                 color: habbajetColors[0],
             });
+        });
+    });
+
+    describe('Get Validation State For New Habbajet', () => {
+        it('will return true for validation with no errors', () => {
+            const state = createTestState(0, 0, 0);
+            state.habbajetEditor.validated = true;
+
+            const result = getValidationStateForNewHabbajet(state);
+            expect(result).toEqual(true);
+        });
+
+        it('will return false if no validation occurred', () => {
+            const state = createTestState(0, 0, 0);
+
+            const result = getValidationStateForNewHabbajet(state);
+            expect(result).toEqual(false);
+        });
+
+        it('will return false if there are error messages', () => {
+            const state = createTestState(0, 0, 0);
+            state.habbajetEditor.modifier.errorMessage = 'Invalid';
+
+            const result = getValidationStateForNewHabbajet(state);
+            expect(result).toEqual(false);
         });
     });
 });
