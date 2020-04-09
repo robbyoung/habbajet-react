@@ -51,10 +51,10 @@ export function validateEditor(
 
     if (newState.modifier.value.length > 0) {
         const modifier = parseFloat(state.modifier.value);
-        if (isNaN(modifier) || modifier <= 0) {
+        if (isNaN(modifier) || modifier <= 1) {
             newState.modifier = {
                 value: state.modifier.value,
-                errorMessage: 'Must be a number greater than 1',
+                errorMessage: 'Must be a number greater than one',
             };
         }
     }

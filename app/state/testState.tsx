@@ -51,3 +51,27 @@ export function createTestState(
         habbajetEditor,
     };
 }
+
+export function createTestEditor(
+    name: string,
+    value: string,
+    modifier: string,
+    validated = false,
+): HabbajetEditor {
+    return {
+        name: {
+            value: name,
+            errorMessage: '',
+        },
+        value: {
+            value,
+            errorMessage: '',
+        },
+        modifier: {
+            value: modifier,
+            errorMessage: '',
+        },
+        color: habbajetColors[0],
+        validated,
+    };
+}
