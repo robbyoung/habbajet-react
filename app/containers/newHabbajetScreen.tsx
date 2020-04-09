@@ -5,6 +5,7 @@ import {
     addHabbajetAction,
     updateEditorFieldAction,
     validateEditorAction,
+    clearEditorAction,
 } from '../actions';
 import WideButton from '../components/wideButton';
 import {grey, white} from '../colors';
@@ -37,6 +38,7 @@ const NewHabbajetScreen = () => {
     const newHabbajet = useSelector(getValuesForNewHabbajet);
 
     if (isValid) {
+        dispatch(clearEditorAction());
         dispatch(
             addHabbajetAction(
                 newHabbajet.name,

@@ -6,6 +6,8 @@ import {
     updateEditorField,
     ValidateEditorAction,
     validateEditor,
+    clearEditor,
+    ClearEditorAction,
 } from '../actions';
 import {habbajetColors} from '../colors';
 
@@ -30,6 +32,8 @@ export default function habbajetEditorReducer(
             return updateEditorField(state, action as UpdateEditorFieldAction);
         case ActionType.VALIDATE_EDITOR:
             return validateEditor(state, action as ValidateEditorAction);
+        case ActionType.CLEAR_EDITOR:
+            return clearEditor(state, action as ClearEditorAction);
     }
     return state;
 }
