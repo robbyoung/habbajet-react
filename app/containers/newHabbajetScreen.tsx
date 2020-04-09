@@ -18,6 +18,7 @@ import {
     getValuesForNewHabbajet,
     getEditorModifierField,
     getValidationStateForNewHabbajet,
+    getHabbajetNames,
 } from '../selectors';
 
 const styles = StyleSheet.create({
@@ -36,6 +37,7 @@ const NewHabbajetScreen = () => {
     const modifierField = useSelector(getEditorModifierField);
     const isValid = useSelector(getValidationStateForNewHabbajet);
     const newHabbajet = useSelector(getValuesForNewHabbajet);
+    const habbajetNames = useSelector(getHabbajetNames);
 
     if (isValid) {
         dispatch(clearEditorAction());
@@ -81,7 +83,7 @@ const NewHabbajetScreen = () => {
             <WideButton
                 text="Done"
                 onPress={() => {
-                    dispatch(validateEditorAction());
+                    dispatch(validateEditorAction(habbajetNames));
                 }}
                 color={grey}
             />

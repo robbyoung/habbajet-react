@@ -4,17 +4,21 @@ import {HabbajetEditor} from '../state';
 
 export interface ValidateEditorAction extends Action {
     type: ActionType.VALIDATE_EDITOR;
+    existingNames: string[];
 }
 
-export function validateEditorAction(): ValidateEditorAction {
+export function validateEditorAction(
+    existingNames: string[],
+): ValidateEditorAction {
     return {
         type: ActionType.VALIDATE_EDITOR,
+        existingNames,
     };
 }
 
 export function validateEditor(
     state: HabbajetEditor,
-    _action: ValidateEditorAction,
+    action: ValidateEditorAction,
 ): HabbajetEditor {
     const newState: HabbajetEditor = {
         ...state,
@@ -25,6 +29,13 @@ export function validateEditor(
         newState.name = {
             value: state.name.value,
             errorMessage: 'Must be between 1 and 20 characters long',
+        };
+    }
+
+    if (action.existingNames.find(name => name === state.name.value)) {
+        newState.name = {
+            value: state.name.value,
+            errorMessage: 'Used by an existing habit',
         };
     }
 

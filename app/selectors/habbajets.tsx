@@ -7,3 +7,7 @@ export function getHabbajets(state: State) {
 export function getSelectedHabbajet(state: State) {
     return state.habbajets.find(habbajet => habbajet.selected);
 }
+
+export function getHabbajetNames(state: State) {
+    return state.habbajets.map(habbajet => habbajet.name);
+}
