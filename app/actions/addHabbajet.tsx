@@ -11,7 +11,7 @@ export interface AddHabbajetAction extends Action {
 export function addHabbajetAction(
     name: string,
     value: number,
-    factor: number,
+    modifier: number,
     color: string,
 ): AddHabbajetAction {
     const monday = moment()
@@ -22,12 +22,15 @@ export function addHabbajetAction(
         newHabbajet: {
             name,
             maxValue: value,
-            currentValue: value / Math.pow(factor, 7),
-            factor,
-            successes: 0,
+            currentValue: value / Math.pow(modifier, 7),
+            modifier,
+            results: [],
             color,
             date: monday,
             toClaim: false,
+            selected: false,
+            currentStreak: 0,
+            bestStreak: 0,
         },
     };
 }

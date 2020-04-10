@@ -30,7 +30,7 @@ jest.mock('../../app/storage', () => ({
 }));
 
 describe('Loading Screen Component', () => {
-    it('will redirect to habbajet screen', async () => {
+    it('will redirect to home screen', async () => {
         const component = renderer.create(
             <Provider store={store}>
                 <LoadingScreen />
@@ -39,9 +39,7 @@ describe('Loading Screen Component', () => {
         await waitForLoad();
 
         // @ts-ignore
-        expect(layout.root.stack.children[0].component.name).toEqual(
-            'Habbajet',
-        );
+        expect(layout.root.stack.children[0].component.name).toEqual('Home');
         expect(stateLoaded).toEqual(true);
         expect(component.toJSON()).toMatchSnapshot();
     });

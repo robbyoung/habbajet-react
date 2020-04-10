@@ -6,17 +6,17 @@ import {Habbajet} from '../state';
 export interface AddHabitResultAction extends Action {
     type: ActionType.ADD_HABIT_RESULT;
     habbajetName: string;
-    success: boolean;
+    result: boolean;
 }
 
 export function addHabitResultAction(
     habbajetName: string,
-    success: boolean,
+    result: boolean,
 ): AddHabitResultAction {
     return {
         type: ActionType.ADD_HABIT_RESULT,
         habbajetName,
-        success,
+        result,
     };
 }
 
@@ -27,7 +27,7 @@ export function addHabitResult(
     const index = state.findIndex(
         habbajet => habbajet.name === action.habbajetName,
     );
-    if (index === undefined) {
+    if (index === -1) {
         return state;
     }
 
@@ -41,9 +41,15 @@ export function addHabitResult(
     }
 
     edited.date = date.toISOString();
-    if (action.success) {
-        edited.successes++;
-        edited.currentValue *= edited.factor;
+    edited.results = [...edited.results, action.result];
+    if (action.result) {
+        edited.currentValue *= edited.modifier;
+        edited.currentStreak++;
+        if (edited.currentStreak > edited.bestStreak) {
+            edited.bestStreak = edited.currentStreak;
+        }
+    } else {
+        edited.currentStreak = 0;
     }
 
     newState[index] = edited;

@@ -5,10 +5,13 @@ import Label from './label';
 import HabitWheel from './habitWheel';
 import HabitResultPicker from './habitResultPicker';
 import HabbajetClaimer from './habbajetClaimer';
+import {white} from '../colors';
+import HabitStreak from './habitStreak';
 
 const styles = StyleSheet.create({
     container: {
         height: '100%',
+        backgroundColor: white,
     },
     details: {
         marginLeft: '20%',
@@ -27,7 +30,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
             <ScrollView>
                 <HabitWheel
                     color={props.habbajet.color}
-                    successes={props.habbajet.successes}
+                    results={props.habbajet.results}
                 />
                 <View style={styles.details}>
                     <Label
@@ -35,6 +38,11 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                         content={`$${props.habbajet.currentValue.toFixed(2)}`}
                         color={props.habbajet.color}
                         contentSize={50}
+                    />
+                    <HabitStreak
+                        best={props.habbajet.bestStreak}
+                        current={props.habbajet.currentStreak}
+                        color={props.habbajet.color}
                     />
                 </View>
             </ScrollView>

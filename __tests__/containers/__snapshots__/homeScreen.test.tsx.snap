@@ -1,0 +1,307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Screen Component will map state to a budget display and habbajet list 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "margin": 0,
+                "padding": 0,
+              },
+              Object {
+                "color": "#959595",
+              },
+            ]
+          }
+        >
+          My Budget
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Abel",
+                "marginTop": -10,
+                "padding": 0,
+              },
+              Object {
+                "fontSize": 50,
+              },
+            ]
+          }
+        >
+          $200.00
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          My Habits
+        </Text>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#8066C2",
+              "borderRadius": 10,
+              "marginBottom": 10,
+              "opacity": 1,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "alignSelf": "center",
+                  "color": "#ffffff",
+                  "fontFamily": "Abel",
+                  "fontSize": 30,
+                  "padding": 10,
+                  "textAlign": "center",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            Habbajet 0
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#E04747",
+              "borderRadius": 10,
+              "marginBottom": 10,
+              "opacity": 1,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "alignSelf": "center",
+                  "color": "#ffffff",
+                  "fontFamily": "Abel",
+                  "fontSize": 30,
+                  "padding": 10,
+                  "textAlign": "center",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            Habbajet 1
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#2AAD5E",
+              "borderRadius": 10,
+              "marginBottom": 10,
+              "opacity": 1,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "alignSelf": "center",
+                  "color": "#ffffff",
+                  "fontFamily": "Abel",
+                  "fontSize": 30,
+                  "padding": 10,
+                  "textAlign": "center",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            Habbajet 2
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#B1B952",
+              "borderRadius": 10,
+              "marginBottom": 10,
+              "opacity": 1,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "alignSelf": "center",
+                  "color": "#ffffff",
+                  "fontFamily": "Abel",
+                  "fontSize": 30,
+                  "padding": 10,
+                  "textAlign": "center",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            Habbajet 3
+          </Text>
+        </View>
+        <View
+          accessible={true}
+          focusable={true}
+          isTVSelectable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#7F90EC",
+              "borderRadius": 10,
+              "marginBottom": 10,
+              "opacity": 1,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "alignSelf": "center",
+                  "color": "#ffffff",
+                  "fontFamily": "Abel",
+                  "fontSize": 30,
+                  "padding": 10,
+                  "textAlign": "center",
+                  "width": "100%",
+                },
+              ]
+            }
+          >
+            Habbajet 4
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#959595",
+            "borderRadius": 10,
+            "marginBottom": 10,
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "padding": 10,
+                "textAlign": "center",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          New Habbajet
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

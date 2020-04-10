@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import HabbajetDisplay from '../components/habbajetDisplay';
 import {useSelector, useDispatch} from 'react-redux';
-import {getHabbajets} from '../selector/habbajets';
+import {getSelectedHabbajet} from '../selectors';
 import {
     addHabitResultAction,
     updateBudgetAction,
@@ -10,38 +10,43 @@ import {
 import {Navigation} from 'react-native-navigation';
 import {STACK_NAVIGATOR} from '../navigation';
 import {saveState} from '../storage';
+import {View} from 'react-native';
 
 const HabbajetScreen = () => {
-    const habbajets = useSelector(getHabbajets);
+    const habbajet = useSelector(getSelectedHabbajet);
     const dispatch = useDispatch();
 
     useEffect(() => {
         Navigation.mergeOptions(STACK_NAVIGATOR, {
             topBar: {
                 title: {
-                    text: habbajets[0].name,
+                    text: habbajet ? habbajet.name : '',
                 },
                 background: {
-                    color: habbajets[0].color,
+                    color: habbajet ? habbajet.color : '',
                 },
             },
         });
-    }, [habbajets]);
+    }, [habbajet]);
+
+    if (habbajet === undefined) {
+        return <View />;
+    }
 
     return (
         <HabbajetDisplay
-            habbajet={habbajets[0]}
+            habbajet={habbajet}
             onSuccess={() => {
-                dispatch(addHabitResultAction(habbajets[0].name, true));
+                dispatch(addHabitResultAction(habbajet.name, true));
                 saveState();
             }}
             onFailure={() => {
-                dispatch(addHabitResultAction(habbajets[0].name, false));
+                dispatch(addHabitResultAction(habbajet.name, false));
                 saveState();
             }}
             onClaim={() => {
-                dispatch(updateBudgetAction(habbajets[0].currentValue));
-                dispatch(resetHabbajetAction(habbajets[0].name));
+                dispatch(updateBudgetAction(habbajet.currentValue));
+                dispatch(resetHabbajetAction(habbajet.name));
                 saveState();
             }}
         />

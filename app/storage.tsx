@@ -1,15 +1,14 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import {State} from './state';
 import store from './store';
-import {createTestState} from './state/testState';
+import {DEFAULT_EDITOR_STATE} from './reducers/habbajetEditor';
 
-// const defaultState: State = {
-//     budget: 0,
-//     habbajets: [],
-//     purchases: [],
-// };
-
-const defaultState = createTestState(1, 0, 0);
+const defaultState: State = {
+    budget: 0,
+    habbajets: [],
+    purchases: [],
+    habbajetEditor: DEFAULT_EDITOR_STATE,
+};
 
 export async function saveState(): Promise<void> {
     const state = store.getState();

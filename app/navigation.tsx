@@ -4,10 +4,15 @@ import HabbajetScreen from './containers/habbajetScreen';
 import LoadingScreen from './containers/loadingScreen';
 import {Provider} from 'react-redux';
 import store from './store';
+import HomeScreen from './containers/homeScreen';
+import {grey, white} from './colors';
+import NewHabbajetScreen from './containers/newHabbajetScreen';
 
 enum Screens {
     Loading = 'Loading',
+    Home = 'Home',
     Habbajet = 'Habbajet',
+    NewHabbajet = 'NewHabbajet',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -23,6 +28,16 @@ Navigation.registerComponent(
 );
 
 Navigation.registerComponent(
+    Screens.Home,
+    () => () => (
+        <Provider store={store}>
+            <HomeScreen />
+        </Provider>
+    ),
+    () => HabbajetScreen,
+);
+
+Navigation.registerComponent(
     Screens.Habbajet,
     () => () => (
         <Provider store={store}>
@@ -31,6 +46,18 @@ Navigation.registerComponent(
     ),
     () => HabbajetScreen,
 );
+
+Navigation.registerComponent(
+    Screens.NewHabbajet,
+    () => () => (
+        <Provider store={store}>
+            <NewHabbajetScreen />
+        </Provider>
+    ),
+    () => NewHabbajetScreen,
+);
+
+export const goBack = () => Navigation.pop(STACK_NAVIGATOR);
 
 export const goToLoading = () => {
     Navigation.setRoot({
@@ -54,7 +81,7 @@ export const goToLoading = () => {
     });
 };
 
-export const goToHabbajet = () => {
+export const goToHome = () => {
     Navigation.setRoot({
         root: {
             stack: {
@@ -62,20 +89,71 @@ export const goToHabbajet = () => {
                 children: [
                     {
                         component: {
-                            name: Screens.Habbajet,
+                            name: Screens.Home,
                             options: {
                                 topBar: {
                                     title: {
-                                        text: ' ',
+                                        text: 'Habbajet',
                                         fontFamily: 'Abel',
                                         fontSize: 30,
-                                        color: '#ffffff',
+                                        color: white,
+                                    },
+                                    background: {
+                                        color: grey,
                                     },
                                 },
                             },
                         },
                     },
                 ],
+            },
+        },
+    });
+};
+
+export const goToHabbajet = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.Habbajet,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: ' ',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};
+
+export const goToNewHabbajet = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.NewHabbajet,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'New Habbajet',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
             },
         },
     });

@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import {Habbajet} from '../state';
+import {white} from '../colors';
 
 const styles = StyleSheet.create({
     container: {
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
         fontSize: 50,
         alignSelf: 'center',
         fontFamily: 'Abel',
-        color: '#fff',
+        color: white,
         width: '100%',
         textAlign: 'center',
     },
