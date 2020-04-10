@@ -41,6 +41,10 @@ export function updateEditorField(
             newState.modifier = {...state.modifier};
             fieldToUpdate = newState.modifier;
             break;
+        case 'Color':
+            newState.color = action.newValue;
+            newState.validated = false;
+            return newState;
         default:
             return state;
     }

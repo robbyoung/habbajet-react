@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker Component can render a color picker 1`] = `
+<View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+    Color
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "space-between",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#8066C2",
+          "borderColor": "#959595",
+          "borderRadius": 4,
+          "borderStyle": "dotted",
+          "borderWidth": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#2AAD5E",
+          "borderRadius": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E04747",
+          "borderRadius": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#7F90EC",
+          "borderRadius": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#B1B952",
+          "borderRadius": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+  </View>
+</View>
+`;
