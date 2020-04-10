@@ -1,6 +1,7 @@
 export const white = '#ffffff';
-export const lightGrey = 'F5F5F5';
+export const lightGrey = '#f5f5f5';
 export const grey = '#959595';
+export const black = '#000000';
 export const errorRed = '#b02f1e';
 
 export const habbajetColors = [

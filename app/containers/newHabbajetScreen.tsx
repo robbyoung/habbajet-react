@@ -8,7 +8,7 @@ import {
     clearEditorAction,
 } from '../actions';
 import WideButton from '../components/wideButton';
-import {grey, white} from '../colors';
+import {grey, white, habbajetColors} from '../colors';
 import {goBack} from '../navigation';
 import {saveState} from '../storage';
 import FormField from '../components/formField';
@@ -20,6 +20,7 @@ import {
     getValidationStateForNewHabbajet,
     getHabbajetNames,
 } from '../selectors';
+import ColorPicker from '../components/colorPicker';
 
 const styles = StyleSheet.create({
     container: {
@@ -79,6 +80,10 @@ const NewHabbajetScreen = () => {
                 onValueChange={value =>
                     dispatch(updateEditorFieldAction('Modifier', value))
                 }
+            />
+            <ColorPicker
+                selected={habbajetColors[0]}
+                onSelect={() => undefined}
             />
             <WideButton
                 text="Done"
