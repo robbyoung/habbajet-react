@@ -66,6 +66,29 @@ exports[`ColorPicker Component can render a color picker 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "backgroundColor": "#E04747",
+          "borderRadius": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
           "backgroundColor": "#2AAD5E",
           "borderRadius": 4,
           "height": 60,
@@ -89,7 +112,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#E04747",
+          "backgroundColor": "#B1B952",
           "borderRadius": 4,
           "height": 60,
           "marginBottom": 10,
@@ -135,7 +158,53 @@ exports[`ColorPicker Component can render a color picker 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "backgroundColor": "#B1B952",
+          "backgroundColor": "#37353C",
+          "borderRadius": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E64CE9",
+          "borderRadius": 4,
+          "height": 60,
+          "marginBottom": 10,
+          "marginRight": 10,
+          "opacity": 1,
+          "width": 60,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#EB712D",
           "borderRadius": 4,
           "height": 60,
           "marginBottom": 10,

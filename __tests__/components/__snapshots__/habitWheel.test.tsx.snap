@@ -84,7 +84,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         }
         fill={null}
         opacity={1}
-        stroke="#e04747bf"
+        stroke="#2aad5ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -117,7 +117,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         }
         fill={null}
         opacity={1}
-        stroke="#e04747bf"
+        stroke="#2aad5ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -150,7 +150,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         }
         fill={null}
         opacity={1}
-        stroke="#e04747bf"
+        stroke="#2aad5ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -183,7 +183,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         }
         fill={null}
         opacity={1}
-        stroke="#e04747bf"
+        stroke="#2aad5ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -216,7 +216,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         }
         fill={null}
         opacity={1}
-        stroke="#e04747bf"
+        stroke="#2aad5ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -249,7 +249,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         }
         fill={null}
         opacity={1}
-        stroke="#e04747bf"
+        stroke="#2aad5ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -282,7 +282,7 @@ exports[`HabitWheel Component renders a full circle with all successes 1`] = `
         }
         fill={null}
         opacity={1}
-        stroke="#e04747bf"
+        stroke="#2aad5ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -400,7 +400,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         }
         fill={null}
         opacity={1}
-        stroke="#2aad5ebf"
+        stroke="#e04747bf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -433,7 +433,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         }
         fill={null}
         opacity={1}
-        stroke="#ad372abf"
+        stroke="#6e6e6ebf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -466,7 +466,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         }
         fill={null}
         opacity={1}
-        stroke="#2aad5ebf"
+        stroke="#e04747bf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
@@ -499,7 +499,7 @@ exports[`HabitWheel Component renders a half-full circle with some successes 1`]
         }
         fill={null}
         opacity={1}
-        stroke="#2aad5ebf"
+        stroke="#e04747bf"
         strokeCap={0}
         strokeDash={null}
         strokeJoin={1}
