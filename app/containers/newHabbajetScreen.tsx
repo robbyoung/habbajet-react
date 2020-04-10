@@ -20,6 +20,7 @@ import {
     getValidationStateForNewHabbajet,
     getHabbajetNames,
 } from '../selectors';
+import ColorPicker from '../components/colorPicker';
 
 const styles = StyleSheet.create({
     container: {
@@ -78,6 +79,12 @@ const NewHabbajetScreen = () => {
                 numeric={true}
                 onValueChange={value =>
                     dispatch(updateEditorFieldAction('Modifier', value))
+                }
+            />
+            <ColorPicker
+                selected={newHabbajet.color}
+                onSelect={color =>
+                    dispatch(updateEditorFieldAction('Color', color))
                 }
             />
             <WideButton

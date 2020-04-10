@@ -23,7 +23,7 @@ exports[`HabitStreak Component renders a sliver bar for zero-value current strea
           "padding": 0,
         },
         Object {
-          "color": "#E04747",
+          "color": "#2AAD5E",
         },
       ]
     }
@@ -58,7 +58,7 @@ exports[`HabitStreak Component renders a sliver bar for zero-value current strea
             "marginRight": 5,
           },
           Object {
-            "backgroundColor": "#E04747",
+            "backgroundColor": "#2AAD5E",
             "width": 2,
           },
         ]
@@ -105,7 +105,7 @@ exports[`HabitStreak Component renders a sliver bar for zero-value current strea
             "marginRight": 5,
           },
           Object {
-            "backgroundColor": "#E04747",
+            "backgroundColor": "#2AAD5E",
             "width": 375,
           },
         ]
@@ -269,7 +269,7 @@ exports[`HabitStreak Component renders identical bars for equal current and best
           "padding": 0,
         },
         Object {
-          "color": "#2AAD5E",
+          "color": "#E04747",
         },
       ]
     }
@@ -304,7 +304,7 @@ exports[`HabitStreak Component renders identical bars for equal current and best
             "marginRight": 5,
           },
           Object {
-            "backgroundColor": "#2AAD5E",
+            "backgroundColor": "#E04747",
             "width": 375,
           },
         ]
@@ -351,7 +351,7 @@ exports[`HabitStreak Component renders identical bars for equal current and best
             "marginRight": 5,
           },
           Object {
-            "backgroundColor": "#2AAD5E",
+            "backgroundColor": "#E04747",
             "width": 375,
           },
         ]

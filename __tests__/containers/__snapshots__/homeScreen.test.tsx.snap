@@ -118,7 +118,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#2AAD5E",
+              "backgroundColor": "#E04747",
               "borderRadius": 10,
               "marginBottom": 10,
               "opacity": 1,
@@ -157,7 +157,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#E04747",
+              "backgroundColor": "#2AAD5E",
               "borderRadius": 10,
               "marginBottom": 10,
               "opacity": 1,
@@ -196,7 +196,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#7F90EC",
+              "backgroundColor": "#B1B952",
               "borderRadius": 10,
               "marginBottom": 10,
               "opacity": 1,
@@ -235,7 +235,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#B1B952",
+              "backgroundColor": "#7F90EC",
               "borderRadius": 10,
               "marginBottom": 10,
               "opacity": 1,
