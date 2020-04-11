@@ -7,12 +7,14 @@ import store from './store';
 import HomeScreen from './containers/homeScreen';
 import {grey, white} from './colors';
 import NewHabbajetScreen from './containers/newHabbajetScreen';
+import PurchasesScreen from './containers/purchasesScreen';
 
 enum Screens {
     Loading = 'Loading',
     Home = 'Home',
     Habbajet = 'Habbajet',
     NewHabbajet = 'NewHabbajet',
+    Purchases = 'Purchases',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -55,6 +57,16 @@ Navigation.registerComponent(
         </Provider>
     ),
     () => NewHabbajetScreen,
+);
+
+Navigation.registerComponent(
+    Screens.Purchases,
+    () => () => (
+        <Provider store={store}>
+            <PurchasesScreen />
+        </Provider>
+    ),
+    () => PurchasesScreen,
 );
 
 export const goBack = () => Navigation.pop(STACK_NAVIGATOR);
@@ -146,6 +158,30 @@ export const goToNewHabbajet = () => {
                     },
                     title: {
                         text: 'New Habbajet',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};
+
+export const goToPurchases = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.Purchases,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'Purchases',
                         fontFamily: 'Abel',
                         fontSize: 30,
                         color: white,
