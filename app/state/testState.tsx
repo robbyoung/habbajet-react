@@ -28,7 +28,8 @@ export function createTestState(
     for (let i = 0; i < numPurchases; i++) {
         purchases.push({
             name: `Purchase ${i}`,
-            value: i,
+            cost: i,
+            date: '2020-03-22T11:00:00.000Z',
         });
     }
 
