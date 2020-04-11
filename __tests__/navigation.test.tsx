@@ -4,6 +4,7 @@ import {
     goToHabbajet,
     goToHome,
     goToNewHabbajet,
+    goToPurchases,
 } from '../app/navigation';
 
 let layoutRoot: LayoutRoot;
@@ -54,5 +55,9 @@ describe('Navigation', () => {
 
     it('goToNewHabbajet correctly navigates to the new habbajet screen', () => {
         testStackPush(goToNewHabbajet, 'NewHabbajet');
+    });
+
+    it('goToPurchases correctly navigates to the purchases screen', () => {
+        testStackPush(goToPurchases, 'Purchases');
     });
 });

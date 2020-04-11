@@ -1,13 +1,13 @@
 import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import Label from '../components/label';
 import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import HabbajetList from '../components/habbajetList';
-import {goToHabbajet, goToNewHabbajet} from '../navigation';
+import {goToHabbajet, goToNewHabbajet, goToPurchases} from '../navigation';
 import {selectHabbajetAction, clearEditorAction} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
+import BudgetDisplay from '../components/budgetDisplay';
 
 const styles = StyleSheet.create({
     container: {
@@ -24,12 +24,7 @@ const HomeScreen = () => {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Label
-                    title="My Budget"
-                    content={budget}
-                    color="#959595"
-                    contentSize={50}
-                />
+                <BudgetDisplay budget={budget} onPress={goToPurchases} />
                 <HabbajetList
                     habbajets={habbajets}
                     onSelect={name => {

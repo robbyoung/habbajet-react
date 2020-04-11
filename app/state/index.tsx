@@ -14,7 +14,8 @@ export interface Habbajet {
 
 export interface Purchase {
     name: string;
-    value: number;
+    cost: number;
+    date: string;
 }
 
 export interface EditorField {

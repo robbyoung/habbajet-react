@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {State} from './state';
 import store from './store';
 import {DEFAULT_EDITOR_STATE} from './reducers/habbajetEditor';
+import {createTestState} from './state/testState';
 
 const defaultState: State = {
     budget: 0,
@@ -20,6 +21,7 @@ export async function loadState(): Promise<State> {
     let savedState: State;
     if (state !== undefined && state !== null) {
         savedState = JSON.parse(state) as State;
+        savedState.purchases = createTestState(0, 10, 0).purchases;
         return savedState;
     }
     return defaultState;

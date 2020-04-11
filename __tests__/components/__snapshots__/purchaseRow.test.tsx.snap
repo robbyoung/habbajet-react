@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PurchaseRow Component can render a purchase row 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "borderColor": "#f5f5f5",
+      "borderWidth": 2,
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 30,
+          "width": "50%",
+        }
+      }
+    >
+      Test Purchase
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 30,
+          "textAlign": "right",
+          "width": "50%",
+        }
+      }
+    >
+      $87.40
+    </Text>
+  </View>
+  <Text
+    style={
+      Object {
+        "color": "#959595",
+        "fontFamily": "Abel",
+        "fontSize": 20,
+      }
+    }
+  >
+    12/04/2020
+  </Text>
+</View>
+`;
