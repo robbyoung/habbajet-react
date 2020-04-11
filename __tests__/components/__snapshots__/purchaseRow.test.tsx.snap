@@ -38,7 +38,7 @@ exports[`PurchaseRow Component can render a purchase row 1`] = `
         }
       }
     >
-      Purchase 0
+      Test Purchase
     </Text>
     <Text
       style={
@@ -50,7 +50,7 @@ exports[`PurchaseRow Component can render a purchase row 1`] = `
         }
       }
     >
-      $0.00
+      $87.40
     </Text>
   </View>
   <Text
@@ -62,7 +62,7 @@ exports[`PurchaseRow Component can render a purchase row 1`] = `
       }
     }
   >
-    23/03/2020
+    12/04/2020
   </Text>
 </View>
 `;

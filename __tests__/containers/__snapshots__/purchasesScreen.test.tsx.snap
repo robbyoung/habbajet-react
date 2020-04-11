@@ -1,0 +1,668 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`New Purchases Screen Component can be empty if there are no purchases 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+      "height": "100%",
+    }
+  }
+>
+  <View />
+</RCTScrollView>
+`;
+
+exports[`New Purchases Screen Component will map state to a list of purchases 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+      "height": "100%",
+    }
+  }
+>
+  <View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 0
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $0.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 1
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $1.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 2
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $2.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 3
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $3.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 4
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $4.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 5
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $5.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 6
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $6.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 7
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $7.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 8
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $8.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "borderColor": "#f5f5f5",
+          "borderWidth": 2,
+          "opacity": 1,
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "width": "50%",
+            }
+          }
+        >
+          Purchase 9
+        </Text>
+        <Text
+          style={
+            Object {
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "textAlign": "right",
+              "width": "50%",
+            }
+          }
+        >
+          $9.00
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+          }
+        }
+      >
+        23/03/2020
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;

@@ -2,7 +2,8 @@ import React from 'react';
 import {StyleSheet, ScrollView} from 'react-native';
 import {white} from '../colors';
 import PurchaseRow from '../components/purchaseRow';
-import {createTestState} from '../state/testState';
+import {useSelector} from 'react-redux';
+import {getPurchaseListFormatted} from '../selectors';
 
 const styles = StyleSheet.create({
     background: {
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
 });
 
 const PurchasesScreen = () => {
-    const purchases = createTestState(0, 10, 0).purchases;
+    const purchases = useSelector(getPurchaseListFormatted);
     return (
         <ScrollView style={styles.background}>
             {purchases.map((purchase, index) => (

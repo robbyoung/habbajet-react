@@ -1,10 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {grey, lightGrey} from '../colors';
-import {Purchase} from '../state';
-import moment from 'moment';
+import {FormattedPurchase} from '../selectors';
 
-const DATE_FORMAT = 'DD/MM/YYYY';
 const styles = StyleSheet.create({
     container: {
         borderWidth: 2,
@@ -34,20 +32,17 @@ const styles = StyleSheet.create({
 });
 
 interface PurchaseRowProps {
-    purchase: Purchase;
+    purchase: FormattedPurchase;
     onPress: () => void;
 }
 const PurchaseRow = (props: PurchaseRowProps) => {
-    const cost = `$${props.purchase.cost.toFixed(2)}`;
-    const date = moment(props.purchase.date).format(DATE_FORMAT);
-
     return (
         <TouchableOpacity style={styles.container}>
             <View style={styles.row}>
                 <Text style={styles.name}>{props.purchase.name}</Text>
-                <Text style={styles.cost}>{cost}</Text>
+                <Text style={styles.cost}>{props.purchase.cost}</Text>
             </View>
-            <Text style={styles.date}>{date}</Text>
+            <Text style={styles.date}>{props.purchase.date}</Text>
         </TouchableOpacity>
     );
 };
