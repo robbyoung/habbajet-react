@@ -1,4 +1,4 @@
-import {State, Habbajet, Purchase, HabbajetEditor} from '.';
+import {State, Habbajet, Purchase, HabbajetEditor, Tag} from '.';
 import {habbajetColors} from '../colors';
 
 export function createTestState(
@@ -30,6 +30,7 @@ export function createTestState(
             name: `Purchase ${i}`,
             cost: i,
             date: '2020-03-22T11:00:00.000Z',
+            tagId: `${i % 10}`,
         });
     }
 
@@ -45,11 +46,21 @@ export function createTestState(
         validated: false,
     };
 
+    const tags: Tag[] = [];
+    for (let i = 0; i < 10; i++) {
+        tags.push({
+            id: `${i}`,
+            name: `Tag ${i}`,
+            color: habbajetColors[i % habbajetColors.length],
+        });
+    }
+
     return {
         habbajets,
         purchases,
         budget,
         habbajetEditor,
+        tags,
     };
 }
 
