@@ -22,7 +22,9 @@ export async function loadState(): Promise<State> {
     let savedState: State;
     if (state !== undefined && state !== null) {
         savedState = JSON.parse(state) as State;
-        savedState.purchases = createTestState(0, 10, 0).purchases;
+        const testState = createTestState(0, 10, 0);
+        savedState.purchases = testState.purchases;
+        savedState.tags = testState.tags;
         return savedState;
     }
     return defaultState;

@@ -88,13 +88,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#8066C2",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 0
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -162,13 +187,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#E04747",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 1
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -236,13 +286,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#2AAD5E",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 2
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -310,13 +385,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#B1B952",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 3
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -384,13 +484,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#7F90EC",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 4
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -458,13 +583,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#37353C",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 5
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -532,13 +682,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#E64CE9",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 6
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -606,13 +781,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#EB712D",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 7
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -680,13 +880,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#8066C2",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 8
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -754,13 +979,38 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
               "fontFamily": "Abel",
               "fontSize": 20,
               "padding": 3,
-              "textAlign": "right",
+              "paddingVertical": 3,
             }
           }
         >
           23/03/2020
         </Text>
-        <View />
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 5,
+              },
+              Object {
+                "backgroundColor": "#E04747",
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "paddingHorizontal": 10,
+                "paddingVertical": 3,
+              }
+            }
+          >
+            Tag 9
+          </Text>
+        </View>
       </View>
     </View>
   </View>

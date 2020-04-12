@@ -23,16 +23,17 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'Abel',
         color: grey,
-        textAlign: 'right',
+        paddingVertical: 3,
     },
     tagWrapper: {
         borderRadius: 5,
-        padding: 3,
     },
     tagText: {
         fontSize: 20,
         fontFamily: 'Abel',
         color: white,
+        paddingHorizontal: 10,
+        paddingVertical: 3,
     },
 });
 

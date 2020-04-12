@@ -66,7 +66,7 @@ exports[`PurchaseRow Component can render a purchase row 1`] = `
           "fontFamily": "Abel",
           "fontSize": 20,
           "padding": 3,
-          "textAlign": "right",
+          "paddingVertical": 3,
         }
       }
     >
@@ -77,7 +77,6 @@ exports[`PurchaseRow Component can render a purchase row 1`] = `
         Array [
           Object {
             "borderRadius": 5,
-            "padding": 3,
           },
           Object {
             "backgroundColor": "#8066C2",
@@ -91,6 +90,8 @@ exports[`PurchaseRow Component can render a purchase row 1`] = `
             "color": "#ffffff",
             "fontFamily": "Abel",
             "fontSize": 20,
+            "paddingHorizontal": 10,
+            "paddingVertical": 3,
           }
         }
       >
@@ -167,7 +168,7 @@ exports[`PurchaseRow Component can render a purchase row without a tag 1`] = `
           "fontFamily": "Abel",
           "fontSize": 20,
           "padding": 3,
-          "textAlign": "right",
+          "paddingVertical": 3,
         }
       }
     >
