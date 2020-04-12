@@ -48,6 +48,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -56,7 +57,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -67,25 +67,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $0.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -112,6 +122,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -120,7 +131,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -131,25 +141,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $1.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -176,6 +196,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -184,7 +205,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -195,25 +215,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $2.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -240,6 +270,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -248,7 +279,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -259,25 +289,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $3.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -304,6 +344,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -312,7 +353,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -323,25 +363,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $4.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -368,6 +418,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -376,7 +427,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -387,25 +437,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $5.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -432,6 +492,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -440,7 +501,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -451,25 +511,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $6.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -496,6 +566,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -504,7 +575,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -515,25 +585,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $7.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -560,6 +640,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -568,7 +649,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -579,25 +659,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $8.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
     <View
       accessible={true}
@@ -624,6 +714,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
         style={
           Object {
             "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
@@ -632,7 +723,6 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "width": "50%",
             }
           }
         >
@@ -643,25 +733,35 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
             Object {
               "fontFamily": "Abel",
               "fontSize": 30,
-              "textAlign": "right",
-              "width": "50%",
             }
           }
         >
           $9.00
         </Text>
       </View>
-      <Text
+      <View
         style={
           Object {
-            "color": "#959595",
-            "fontFamily": "Abel",
-            "fontSize": 20,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
           }
         }
       >
-        23/03/2020
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "padding": 3,
+              "textAlign": "right",
+            }
+          }
+        >
+          23/03/2020
+        </Text>
+        <View />
+      </View>
     </View>
   </View>
 </RCTScrollView>

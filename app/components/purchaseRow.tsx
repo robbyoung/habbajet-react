@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {grey, lightGrey} from '../colors';
+import {grey, lightGrey, white} from '../colors';
 import {FormattedPurchase} from '../selectors';
 
 const styles = StyleSheet.create({
@@ -12,22 +12,27 @@ const styles = StyleSheet.create({
     },
     row: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
     },
-    name: {
+    largeText: {
         fontSize: 30,
         fontFamily: 'Abel',
-        width: '50%',
     },
-    cost: {
-        fontSize: 30,
-        fontFamily: 'Abel',
-        textAlign: 'right',
-        width: '50%',
-    },
-    date: {
+    dateText: {
+        padding: 3,
         fontSize: 20,
         fontFamily: 'Abel',
         color: grey,
+        textAlign: 'right',
+    },
+    tagWrapper: {
+        borderRadius: 5,
+        padding: 3,
+    },
+    tagText: {
+        fontSize: 20,
+        fontFamily: 'Abel',
+        color: white,
     },
 });
 
@@ -36,13 +41,29 @@ interface PurchaseRowProps {
     onPress: () => void;
 }
 const PurchaseRow = (props: PurchaseRowProps) => {
+    const tag =
+        props.purchase.tagText !== '' ? (
+            <View
+                style={[
+                    styles.tagWrapper,
+                    {backgroundColor: props.purchase.tagColor},
+                ]}>
+                <Text style={styles.tagText}>{props.purchase.tagText}</Text>
+            </View>
+        ) : (
+            <View />
+        );
+
     return (
         <TouchableOpacity style={styles.container}>
             <View style={styles.row}>
-                <Text style={styles.name}>{props.purchase.name}</Text>
-                <Text style={styles.cost}>{props.purchase.cost}</Text>
+                <Text style={styles.largeText}>{props.purchase.name}</Text>
+                <Text style={styles.largeText}>{props.purchase.cost}</Text>
             </View>
-            <Text style={styles.date}>{props.purchase.date}</Text>
+            <View style={styles.row}>
+                <Text style={styles.dateText}>{props.purchase.date}</Text>
+                {tag}
+            </View>
         </TouchableOpacity>
     );
 };
