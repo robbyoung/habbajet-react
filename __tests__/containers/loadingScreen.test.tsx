@@ -25,6 +25,7 @@ jest.mock('../../app/storage', () => ({
             purchases: [],
             habbajets: [],
             budget: 0,
+            tags: [],
         };
     },
 }));
