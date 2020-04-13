@@ -1,6 +1,6 @@
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
-import {Habbajet, State, Purchase} from '../state';
+import {Habbajet, State, Purchase, Tag} from '../state';
 
 export interface LoadStateAction extends Action {
     type: ActionType.LOAD_STATE;
@@ -30,4 +30,8 @@ export function loadPurchases(
 
 export function loadBudget(state: number, action: LoadStateAction): number {
     return action.state.budget;
+}
+
+export function loadTags(state: Tag[], action: LoadStateAction): Tag[] {
+    return action.state.tags;
 }

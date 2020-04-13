@@ -16,6 +16,7 @@ export interface Purchase {
     name: string;
     cost: number;
     date: string;
+    tagId: string;
 }
 
 export interface EditorField {
@@ -31,9 +32,16 @@ export interface HabbajetEditor {
     validated: boolean;
 }
 
+export interface Tag {
+    id: string;
+    name: string;
+    color: string;
+}
+
 export interface State {
     habbajets: Habbajet[];
     purchases: Purchase[];
+    tags: Tag[];
     habbajetEditor: HabbajetEditor;
     budget: number;
 }
