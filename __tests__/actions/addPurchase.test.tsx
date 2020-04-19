@@ -19,13 +19,13 @@ describe('Add Purchase Action', () => {
         expect(state).toEqual([]);
     });
 
-    it('will add purchases to the end of the list', () => {
+    it('will add purchases to the front of the list', () => {
         const action = addPurchaseAction('Test Purchase', 80, 'tagId');
         const state = createTestState(0, 20, 0).purchases;
         const newState = purchasesReducer(state, action);
         expect(newState).toEqual([
-            ...createTestState(0, 20, 0).purchases,
             action.newPurchase,
+            ...createTestState(0, 20, 0).purchases,
         ]);
         expect(state).toEqual(createTestState(0, 20, 0).purchases);
     });

@@ -227,7 +227,7 @@ export const goToPurchases = () => {
                             component: {
                                 name: 'topBar.addPurchaseButton',
                                 passProps: {
-                                    preNavigation: () => goToNewPurchase(),
+                                    preNavigation: () => undefined,
                                 },
                             },
                         },

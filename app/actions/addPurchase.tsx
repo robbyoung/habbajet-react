@@ -28,5 +28,5 @@ export function addPurchase(
     state: Purchase[],
     action: AddPurchaseAction,
 ): Purchase[] {
-    return [...state, action.newPurchase];
+    return [action.newPurchase, ...state];
 }
