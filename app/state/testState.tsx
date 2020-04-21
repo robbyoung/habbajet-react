@@ -56,7 +56,7 @@ export function createTestState(
     const purchaseEditor: PurchaseEditor = {
         name: {...EMPTY_FIELD},
         cost: {...EMPTY_FIELD},
-        tagId: '0',
+        tagId: '',
         validated: false,
     };
 

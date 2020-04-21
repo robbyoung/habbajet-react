@@ -1,5 +1,10 @@
 import {Action} from 'redux';
 import {PurchaseEditor} from '../state';
+import {
+    updatePurchaseEditor,
+    UpdatePurchaseEditorAction,
+    ActionType,
+} from '../actions';
 
 const EMPTY_FIELD = {
     value: '',
@@ -14,7 +19,14 @@ export const DEFAULT_PURCHASE_EDITOR_STATE: PurchaseEditor = {
 
 export default function purchaseEditorReducer(
     state: PurchaseEditor = DEFAULT_PURCHASE_EDITOR_STATE,
-    _action: Action,
+    action: Action,
 ): PurchaseEditor {
+    switch (action.type) {
+        case ActionType.UPDATE_PURCHASE_EDITOR:
+            return updatePurchaseEditor(
+                state,
+                action as UpdatePurchaseEditorAction,
+            );
+    }
     return state;
 }

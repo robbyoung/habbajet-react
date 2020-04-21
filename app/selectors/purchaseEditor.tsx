@@ -9,8 +9,8 @@ export function getPurchaseCostField(state: State) {
 }
 
 export function getValuesForNewPurchase(state: State) {
-    const name = state.habbajetEditor.name.value;
-    const cost = parseFloat(state.habbajetEditor.value.value);
+    const name = state.purchaseEditor.name.value;
+    const cost = parseFloat(state.purchaseEditor.cost.value);
     const tagId = '0';
 
     return {

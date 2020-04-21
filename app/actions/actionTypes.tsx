@@ -9,4 +9,5 @@ export enum ActionType {
     VALIDATE_EDITOR = 'Validate Editor',
     CLEAR_EDITOR = 'Clear Editor',
     ADD_PURCHASE = 'Add Purchase',
+    UPDATE_PURCHASE_EDITOR = 'Update Purchase Editor',
 }
