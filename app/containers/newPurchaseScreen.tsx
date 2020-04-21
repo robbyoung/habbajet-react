@@ -11,6 +11,7 @@ import {
     getValuesForNewPurchase,
 } from '../selectors/purchaseEditor';
 import FormField from '../components/formField';
+import {saveState} from '../storage';
 
 const styles = StyleSheet.create({
     container: {
@@ -56,6 +57,7 @@ const NewPurchaseScreen = () => {
                         ),
                     );
                     goBack();
+                    saveState();
                 }}
             />
         </ScrollView>
