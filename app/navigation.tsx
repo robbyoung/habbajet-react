@@ -10,7 +10,7 @@ import NewHabbajetScreen from './containers/newHabbajetScreen';
 import PurchasesScreen from './containers/purchasesScreen';
 import IconButton from './components/iconButton';
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
-import NewPurchaseScreen from './containers/newPurchase';
+import NewPurchaseScreen from './containers/newPurchaseScreen';
 
 enum Screens {
     Loading = 'Loading',
@@ -83,7 +83,7 @@ Navigation.registerComponent(
     () => NewPurchaseScreen,
 );
 
-const PlusButton = (props: {preNavigation: () => void}) => (
+const PlusButton = () => (
     <IconButton
         size={25}
         color={white}
@@ -91,7 +91,6 @@ const PlusButton = (props: {preNavigation: () => void}) => (
         // eslint-disable-next-line react-native/no-inline-styles
         containerStyle={{paddingRight: 15}}
         onPress={() => {
-            props.preNavigation();
             goToNewPurchase();
         }}
     />
@@ -226,9 +225,6 @@ export const goToPurchases = () => {
                             id: 'addPurchaseButton',
                             component: {
                                 name: 'topBar.addPurchaseButton',
-                                passProps: {
-                                    preNavigation: () => undefined,
-                                },
                             },
                         },
                     ],
