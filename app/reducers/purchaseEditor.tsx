@@ -4,6 +4,8 @@ import {
     updatePurchaseEditor,
     UpdatePurchaseEditorAction,
     ActionType,
+    clearPurchaseEditor,
+    ClearPurchaseEditorAction,
 } from '../actions';
 
 const EMPTY_FIELD = {
@@ -26,6 +28,11 @@ export default function purchaseEditorReducer(
             return updatePurchaseEditor(
                 state,
                 action as UpdatePurchaseEditorAction,
+            );
+        case ActionType.CLEAR_PURCHASE_EDITOR:
+            return clearPurchaseEditor(
+                state,
+                action as ClearPurchaseEditorAction,
             );
     }
     return state;

@@ -10,3 +10,4 @@ export * from './validateEditor';
 export * from './clearEditor';
 export * from './addPurchase';
 export * from './updatePurchaseEditor';
+export * from './clearPurchaseEditor';

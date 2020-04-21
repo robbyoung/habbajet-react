@@ -11,6 +11,7 @@ import PurchasesScreen from './containers/purchasesScreen';
 import IconButton from './components/iconButton';
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
 import NewPurchaseScreen from './containers/newPurchaseScreen';
+import {clearPurchaseEditorAction} from './actions';
 
 enum Screens {
     Loading = 'Loading',
@@ -91,6 +92,7 @@ const PlusButton = () => (
         // eslint-disable-next-line react-native/no-inline-styles
         containerStyle={{paddingRight: 15}}
         onPress={() => {
+            store.dispatch(clearPurchaseEditorAction());
             goToNewPurchase();
         }}
     />
