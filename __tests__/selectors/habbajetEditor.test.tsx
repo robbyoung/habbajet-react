@@ -9,7 +9,7 @@ import {
 import {EditorField} from '../../app/state';
 import {habbajetColors} from '../../app/colors';
 
-describe('HabbaajetEditor Selectors', () => {
+describe('HabbajetEditor Selectors', () => {
     describe('Get Editor Name Field', () => {
         it('will return the name field value and message', () => {
             const state = createTestState(0, 0, 0);
@@ -102,6 +102,7 @@ describe('HabbaajetEditor Selectors', () => {
         it('will return false if there are error messages', () => {
             const state = createTestState(0, 0, 0);
             state.habbajetEditor.modifier.errorMessage = 'Invalid';
+            state.habbajetEditor.validated = true;
 
             const result = getValidationStateForNewHabbajet(state);
             expect(result).toEqual(false);

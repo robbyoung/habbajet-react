@@ -1,4 +1,11 @@
-import {State, Habbajet, Purchase, HabbajetEditor, Tag} from '.';
+import {
+    State,
+    Habbajet,
+    Purchase,
+    HabbajetEditor,
+    Tag,
+    PurchaseEditor,
+} from '.';
 import {habbajetColors} from '../colors';
 
 export function createTestState(
@@ -46,6 +53,13 @@ export function createTestState(
         validated: false,
     };
 
+    const purchaseEditor: PurchaseEditor = {
+        name: {...EMPTY_FIELD},
+        cost: {...EMPTY_FIELD},
+        tagId: '',
+        validated: false,
+    };
+
     const tags: Tag[] = [];
     for (let i = 0; i < 10; i++) {
         tags.push({
@@ -60,6 +74,7 @@ export function createTestState(
         purchases,
         budget,
         habbajetEditor,
+        purchaseEditor,
         tags,
     };
 }
@@ -84,6 +99,25 @@ export function createTestEditor(
             errorMessage: '',
         },
         color: habbajetColors[0],
+        validated,
+    };
+}
+
+export function createTestPurchaseEditor(
+    name: string,
+    value: string,
+    validated = false,
+): PurchaseEditor {
+    return {
+        name: {
+            value: name,
+            errorMessage: '',
+        },
+        cost: {
+            value,
+            errorMessage: '',
+        },
+        tagId: '0',
         validated,
     };
 }

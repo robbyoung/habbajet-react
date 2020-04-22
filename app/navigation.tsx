@@ -8,6 +8,10 @@ import HomeScreen from './containers/homeScreen';
 import {grey, white} from './colors';
 import NewHabbajetScreen from './containers/newHabbajetScreen';
 import PurchasesScreen from './containers/purchasesScreen';
+import IconButton from './components/iconButton';
+import {faPlus} from '@fortawesome/free-solid-svg-icons';
+import NewPurchaseScreen from './containers/newPurchaseScreen';
+import {clearPurchaseEditorAction} from './actions';
 
 enum Screens {
     Loading = 'Loading',
@@ -15,6 +19,7 @@ enum Screens {
     Habbajet = 'Habbajet',
     NewHabbajet = 'NewHabbajet',
     Purchases = 'Purchases',
+    NewPurchase = 'NewPurchase',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -69,6 +74,31 @@ Navigation.registerComponent(
     () => PurchasesScreen,
 );
 
+Navigation.registerComponent(
+    Screens.NewPurchase,
+    () => () => (
+        <Provider store={store}>
+            <NewPurchaseScreen />
+        </Provider>
+    ),
+    () => NewPurchaseScreen,
+);
+
+const PlusButton = () => (
+    <IconButton
+        size={25}
+        color={white}
+        icon={faPlus}
+        // eslint-disable-next-line react-native/no-inline-styles
+        containerStyle={{paddingRight: 15}}
+        onPress={() => {
+            store.dispatch(clearPurchaseEditorAction());
+            goToNewPurchase();
+        }}
+    />
+);
+Navigation.registerComponent('topBar.addPurchaseButton', () => PlusButton);
+
 export const goBack = () => Navigation.pop(STACK_NAVIGATOR);
 
 export const goToLoading = () => {
@@ -113,6 +143,7 @@ export const goToHome = () => {
                                     background: {
                                         color: grey,
                                     },
+                                    rightButtons: [],
                                 },
                             },
                         },
@@ -141,6 +172,7 @@ export const goToHabbajet = () => {
                     background: {
                         color: grey,
                     },
+                    rightButtons: [],
                 },
             },
         },
@@ -165,6 +197,7 @@ export const goToNewHabbajet = () => {
                     background: {
                         color: grey,
                     },
+                    rightButtons: [],
                 },
             },
         },
@@ -182,6 +215,38 @@ export const goToPurchases = () => {
                     },
                     title: {
                         text: 'Purchases',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                    rightButtons: [
+                        {
+                            id: 'addPurchaseButton',
+                            component: {
+                                name: 'topBar.addPurchaseButton',
+                            },
+                        },
+                    ],
+                },
+            },
+        },
+    });
+};
+
+export const goToNewPurchase = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.NewPurchase,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'New Purchase',
                         fontFamily: 'Abel',
                         fontSize: 30,
                         color: white,

@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
 
 const PurchasesScreen = () => {
     const purchases = useSelector(getPurchaseListFormatted);
+
     return (
         <ScrollView style={styles.background}>
             {purchases.map((purchase, index) => (
