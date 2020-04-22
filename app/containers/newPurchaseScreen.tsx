@@ -3,7 +3,11 @@ import {ScrollView, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import WideButton from '../components/wideButton';
 import {grey, white} from '../colors';
-import {addPurchaseAction, updatePurchaseEditorAction, updateBudgetAction} from '../actions';
+import {
+    addPurchaseAction,
+    updatePurchaseEditorAction,
+    updateBudgetAction,
+} from '../actions';
 import {goBack} from '../navigation';
 import {
     getPurchaseNameField,

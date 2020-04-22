@@ -11,7 +11,7 @@ export function getPurchaseCostField(state: State) {
 export function getValuesForNewPurchase(state: State) {
     const name = state.purchaseEditor.name.value;
     const cost = parseFloat(state.purchaseEditor.cost.value);
-    const tagId = '';
+    const tagId = state.purchaseEditor.tagId;
 
     return {
         name,
