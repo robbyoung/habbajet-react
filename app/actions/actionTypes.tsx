@@ -11,4 +11,5 @@ export enum ActionType {
     ADD_PURCHASE = 'Add Purchase',
     UPDATE_PURCHASE_EDITOR = 'Update Purchase Editor',
     CLEAR_PURCHASE_EDITOR = 'Clear Purchase Editor',
+    VALIDATE_PURCHASE_EDITOR = 'Validate Purchase Editor',
 }

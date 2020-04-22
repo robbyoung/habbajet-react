@@ -102,3 +102,22 @@ export function createTestEditor(
         validated,
     };
 }
+
+export function createTestPurchaseEditor(
+    name: string,
+    value: string,
+    validated = false,
+): PurchaseEditor {
+    return {
+        name: {
+            value: name,
+            errorMessage: '',
+        },
+        cost: {
+            value,
+            errorMessage: '',
+        },
+        tagId: '0',
+        validated,
+    };
+}

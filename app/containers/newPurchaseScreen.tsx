@@ -7,12 +7,15 @@ import {
     addPurchaseAction,
     updatePurchaseEditorAction,
     updateBudgetAction,
+    clearPurchaseEditorAction,
+    validatePurchaseEditorAction,
 } from '../actions';
 import {goBack} from '../navigation';
 import {
     getPurchaseNameField,
     getPurchaseCostField,
     getValuesForNewPurchase,
+    getValidationStateForNewPurchase,
 } from '../selectors/purchaseEditor';
 import FormField from '../components/formField';
 import {saveState} from '../storage';
@@ -31,6 +34,21 @@ const NewPurchaseScreen = () => {
     const nameField = useSelector(getPurchaseNameField);
     const costField = useSelector(getPurchaseCostField);
     const newPurchase = useSelector(getValuesForNewPurchase);
+    const isValid = useSelector(getValidationStateForNewPurchase);
+
+    if (isValid) {
+        dispatch(clearPurchaseEditorAction());
+        dispatch(
+            addPurchaseAction(
+                newPurchase.name,
+                newPurchase.cost,
+                newPurchase.tagId,
+            ),
+        );
+        dispatch(updateBudgetAction(-newPurchase.cost));
+        goBack();
+        saveState();
+    }
 
     return (
         <ScrollView style={styles.container}>
@@ -53,16 +71,7 @@ const NewPurchaseScreen = () => {
                 text="Done"
                 color={grey}
                 onPress={() => {
-                    dispatch(
-                        addPurchaseAction(
-                            newPurchase.name,
-                            newPurchase.cost,
-                            newPurchase.tagId,
-                        ),
-                    );
-                    dispatch(updateBudgetAction(-newPurchase.cost));
-                    goBack();
-                    saveState();
+                    dispatch(validatePurchaseEditorAction());
                 }}
             />
         </ScrollView>
