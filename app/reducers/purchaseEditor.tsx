@@ -17,7 +17,7 @@ const EMPTY_FIELD = {
 export const DEFAULT_PURCHASE_EDITOR_STATE: PurchaseEditor = {
     name: EMPTY_FIELD,
     cost: EMPTY_FIELD,
-    tagId: '0',
+    tagId: '',
     validated: false,
 };
 

@@ -94,6 +94,32 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
       />
       <View />
     </View>
+    <View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "margin": 0,
+              "padding": 0,
+            },
+          ]
+        }
+      >
+        Tag
+      </Text>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+            "marginBottom": 10,
+          }
+        }
+      />
+    </View>
     <View
       accessible={true}
       focusable={true}

@@ -30,6 +30,16 @@ describe('Update Purchase Editor Action', () => {
         expect(state).toEqual(createTestState(0, 0, 0).purchaseEditor);
     });
 
+    it('will reset the tagId on duplicate values', () => {
+        const state = createTestState(0, 0, 0).purchaseEditor;
+        state.tagId = 'Tag 8';
+        const action = updatePurchaseEditorAction('TagId', 'Tag 8');
+        const newState = purchaseEditorReducer(state, action);
+
+        expect(newState.tagId).toEqual('');
+        expect(state.tagId).toEqual('Tag 8');
+    });
+
     it('will return state unchanged for invalid field names', () => {
         const state = createTestState(0, 0, 0).purchaseEditor;
         const action = updatePurchaseEditorAction('Invalid Name', 'asdfasdf');
