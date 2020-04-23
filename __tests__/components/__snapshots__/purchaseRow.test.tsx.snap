@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PurchaseRow Component can render a purchase row 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "borderColor": "#f5f5f5",
+      "borderWidth": 2,
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 30,
+        }
+      }
+    >
+      Test Purchase
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 30,
+        }
+      }
+    >
+      $87.40
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "padding": 3,
+          "paddingVertical": 3,
+        }
+      }
+    >
+      12/04/2020
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+          },
+          Object {
+            "backgroundColor": "#8066C2",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#ffffff",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "paddingHorizontal": 10,
+            "paddingVertical": 3,
+          }
+        }
+      >
+        Tag
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`PurchaseRow Component can render a purchase row without a tag 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "borderColor": "#f5f5f5",
+      "borderWidth": 2,
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 30,
+        }
+      }
+    >
+      Test Purchase
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 30,
+        }
+      }
+    >
+      $87.40
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "padding": 3,
+          "paddingVertical": 3,
+        }
+      }
+    >
+      12/04/2020
+    </Text>
+    <View />
+  </View>
+</View>
+`;

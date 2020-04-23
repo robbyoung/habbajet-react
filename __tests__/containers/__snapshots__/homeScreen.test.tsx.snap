@@ -11,40 +11,92 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
         }
       }
     >
-      <View>
-        <Text
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Abel",
+                  "fontSize": 20,
+                  "margin": 0,
+                  "padding": 0,
+                },
+                Object {
+                  "color": "#959595",
+                },
+              ]
+            }
+          >
+            My Budget
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Abel",
+                  "marginTop": -10,
+                  "padding": 0,
+                },
+                Object {
+                  "fontSize": 50,
+                },
+              ]
+            }
+          >
+            $200.00
+          </Text>
+        </View>
+        <View
           style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-                "margin": 0,
-                "padding": 0,
-              },
-              Object {
-                "color": "#959595",
-              },
-            ]
+            Object {
+              "marginLeft": 20,
+              "marginTop": 20,
+            }
           }
         >
-          My Budget
-        </Text>
-        <Text
-          style={
-            Array [
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
               Object {
-                "fontFamily": "Abel",
-                "marginTop": -10,
-                "padding": 0,
-              },
-              Object {
-                "fontSize": 50,
-              },
-            ]
-          }
-        >
-          $200.00
-        </Text>
+                "opacity": 1,
+              }
+            }
+          >
+            <
+              color="#959595"
+              icon={
+                Object {
+                  "icon": Array [
+                    512,
+                    512,
+                    Array [],
+                    "f0a9",
+                    "M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z",
+                  ],
+                  "iconName": "arrow-circle-right",
+                  "prefix": "fas",
+                }
+              }
+              size={40}
+            />
+          </View>
+        </View>
       </View>
       <View
         style={

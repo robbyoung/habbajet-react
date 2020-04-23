@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity} from 'react-native';
+import {TouchableOpacity, StyleProp, ViewStyle} from 'react-native';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 
@@ -9,12 +9,14 @@ interface IconButtonProps {
     color: string;
     onPress?: () => void;
     onLongPress?: () => void;
+    containerStyle?: StyleProp<ViewStyle>;
 }
 const IconButton = (props: IconButtonProps) => {
     return (
         <TouchableOpacity
             onPress={props.onPress || undefined}
-            onLongPress={props.onLongPress || undefined}>
+            onLongPress={props.onLongPress || undefined}
+            style={props.containerStyle}>
             <FontAwesomeIcon
                 icon={props.icon}
                 size={props.size}

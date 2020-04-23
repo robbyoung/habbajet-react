@@ -1,0 +1,782 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagPicker Component can render a tag picker 1`] = `
+<View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+    Tag
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#8066C2",
+          "borderColor": "#959595",
+          "borderRadius": 4,
+          "borderStyle": "dotted",
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 0
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E04747",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 1
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#2AAD5E",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 2
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#B1B952",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 3
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#7F90EC",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 4
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#37353C",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 5
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E64CE9",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 6
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#EB712D",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 7
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#8066C2",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 8
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E04747",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 9
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TagPicker Component can render a tag picker with no selected tag 1`] = `
+<View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#959595",
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+      ]
+    }
+  >
+    Tag
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "marginBottom": 10,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#8066C2",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 0
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E04747",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 1
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#2AAD5E",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 2
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#B1B952",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 3
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#7F90EC",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 4
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#37353C",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 5
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E64CE9",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 6
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#EB712D",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 7
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#8066C2",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 8
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#E04747",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        Tag 9
+      </Text>
+    </View>
+  </View>
+</View>
+`;

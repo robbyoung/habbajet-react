@@ -2,7 +2,7 @@ import {updateEditorFieldAction} from '../../app/actions';
 import {createTestState} from '../../app/state/testState';
 import habbajetEditorReducer from '../../app/reducers/habbajetEditor';
 
-describe('Update Budget Action', () => {
+describe('Update Editor Field Action', () => {
     it('can update the name field', () => {
         const state = createTestState(0, 0, 0).habbajetEditor;
         const action = updateEditorFieldAction('Name', 'Test Text');
