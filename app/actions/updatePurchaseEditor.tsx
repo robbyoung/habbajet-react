@@ -38,7 +38,11 @@ export function updatePurchaseEditor(
             fieldToUpdate = newState.cost;
             break;
         case 'TagId':
-            newState.tagId = action.newValue;
+            if (newState.tagId === action.newValue) {
+                newState.tagId = '';
+            } else {
+                newState.tagId = action.newValue;
+            }
             newState.validated = false;
             return newState;
         default:
