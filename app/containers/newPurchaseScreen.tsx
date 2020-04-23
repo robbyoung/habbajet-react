@@ -19,6 +19,8 @@ import {
 } from '../selectors/purchaseEditor';
 import FormField from '../components/formField';
 import {saveState} from '../storage';
+import TagPicker from '../components/tagPicker';
+import {getAllTags} from '../selectors/tags';
 
 const styles = StyleSheet.create({
     container: {
@@ -33,6 +35,7 @@ const NewPurchaseScreen = () => {
     const dispatch = useDispatch();
     const nameField = useSelector(getPurchaseNameField);
     const costField = useSelector(getPurchaseCostField);
+    const tags = useSelector(getAllTags);
     const newPurchase = useSelector(getValuesForNewPurchase);
     const isValid = useSelector(getValidationStateForNewPurchase);
 
@@ -65,6 +68,13 @@ const NewPurchaseScreen = () => {
                 numeric={true}
                 onValueChange={value =>
                     dispatch(updatePurchaseEditorAction('Cost', value))
+                }
+            />
+            <TagPicker
+                tags={tags}
+                selected={newPurchase.tagId}
+                onSelect={tagId =>
+                    dispatch(updatePurchaseEditorAction('TagId', tagId))
                 }
             />
             <WideButton
