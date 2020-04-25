@@ -137,6 +137,48 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
       />
       <View />
     </View>
+    <View
+      style={
+        Object {
+          "marginBottom": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+              "margin": 0,
+              "padding": 0,
+            },
+          ]
+        }
+      >
+        Slack Days
+      </Text>
+      <TextInput
+        allowFontScaling={true}
+        keyboardType="numeric"
+        onChangeText={[Function]}
+        placeholder="0"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "borderColor": "#959595",
+            "borderWidth": 1,
+            "fontFamily": "Abel",
+            "fontSize": 30,
+            "paddingLeft": 10,
+          }
+        }
+        underlineColorAndroid="transparent"
+        value=""
+      />
+      <View />
+    </View>
     <View>
       <Text
         style={

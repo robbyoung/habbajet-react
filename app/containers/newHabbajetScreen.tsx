@@ -13,12 +13,10 @@ import {goBack} from '../navigation';
 import {saveState} from '../storage';
 import FormField from '../components/formField';
 import {
-    getEditorNameField,
-    getEditorValueField,
-    getValuesForNewHabbajet,
-    getEditorModifierField,
+    getHabbajetEditorFields,
     getValidationStateForNewHabbajet,
     getHabbajetNames,
+    getValuesForNewHabbajet,
 } from '../selectors';
 import ColorPicker from '../components/colorPicker';
 
@@ -33,9 +31,7 @@ const styles = StyleSheet.create({
 
 const NewHabbajetScreen = () => {
     const dispatch = useDispatch();
-    const nameField = useSelector(getEditorNameField);
-    const valueField = useSelector(getEditorValueField);
-    const modifierField = useSelector(getEditorModifierField);
+    const fields = useSelector(getHabbajetEditorFields);
     const isValid = useSelector(getValidationStateForNewHabbajet);
     const newHabbajet = useSelector(getValuesForNewHabbajet);
     const habbajetNames = useSelector(getHabbajetNames);
@@ -47,7 +43,7 @@ const NewHabbajetScreen = () => {
                 newHabbajet.name,
                 newHabbajet.value,
                 newHabbajet.modifier,
-                0,
+                newHabbajet.slack,
                 newHabbajet.color,
             ),
         );
@@ -58,14 +54,14 @@ const NewHabbajetScreen = () => {
     return (
         <ScrollView style={styles.container}>
             <FormField
-                field={nameField}
+                field={fields.name}
                 title="Name"
                 onValueChange={value =>
                     dispatch(updateEditorFieldAction('Name', value))
                 }
             />
             <FormField
-                field={valueField}
+                field={fields.value}
                 title="Value"
                 placeholder={'50'}
                 numeric={true}
@@ -74,12 +70,21 @@ const NewHabbajetScreen = () => {
                 }
             />
             <FormField
-                field={modifierField}
+                field={fields.modifier}
                 title="Modifier"
                 placeholder={'2'}
                 numeric={true}
                 onValueChange={value =>
                     dispatch(updateEditorFieldAction('Modifier', value))
+                }
+            />
+            <FormField
+                field={fields.slack}
+                title="Slack Days"
+                placeholder={'0'}
+                numeric={true}
+                onValueChange={value =>
+                    dispatch(updateEditorFieldAction('Slack', value))
                 }
             />
             <ColorPicker
