@@ -10,6 +10,8 @@ export interface Habbajet {
     selected: boolean;
     currentStreak: number;
     bestStreak: number;
+    totalSlack: number;
+    remainingSlack: number;
 }
 
 export interface Purchase {

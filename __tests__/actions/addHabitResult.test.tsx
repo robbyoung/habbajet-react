@@ -77,4 +77,28 @@ describe('Add Habit Result Action', () => {
         expect(newState[0].bestStreak).toEqual(newState[0].currentStreak);
         expect(newState[0].currentStreak).toEqual(state[0].currentStreak + 1);
     });
+
+    it('will count slack days toward successes', () => {
+        const state = createTestState(1, 0, 0).habbajets;
+        state[0].remainingSlack = 1;
+        state[0].totalSlack = 1;
+
+        const action = addHabitResultAction(state[0].name, false);
+        const newState = habbajetsReducer(state, action);
+        expect(newState[0].results[0]).toEqual(true);
+        expect(newState[0].currentStreak).toEqual(1);
+        expect(newState[0].remainingSlack).toEqual(0);
+        expect(newState[0].totalSlack).toEqual(1);
+    });
+
+    it('will fail days that have run out of slack days', () => {
+        const state = createTestState(1, 0, 0).habbajets;
+        state[0].remainingSlack = 0;
+        state[0].totalSlack = 1;
+
+        const action = addHabitResultAction(state[0].name, false);
+        const newState = habbajetsReducer(state, action);
+        expect(newState[0].results[0]).toEqual(false);
+        expect(newState[0].currentStreak).toEqual(0);
+    });
 });

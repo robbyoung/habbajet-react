@@ -47,6 +47,7 @@ const NewHabbajetScreen = () => {
                 newHabbajet.name,
                 newHabbajet.value,
                 newHabbajet.modifier,
+                0,
                 newHabbajet.color,
             ),
         );

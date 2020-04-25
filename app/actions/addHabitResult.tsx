@@ -41,12 +41,16 @@ export function addHabitResult(
     }
 
     edited.date = date.toISOString();
-    edited.results = [...edited.results, action.result];
-    if (action.result) {
+    const isSuccess = action.result || edited.remainingSlack > 0;
+    edited.results = [...edited.results, isSuccess];
+    if (isSuccess) {
         edited.currentValue *= edited.modifier;
         edited.currentStreak++;
         if (edited.currentStreak > edited.bestStreak) {
             edited.bestStreak = edited.currentStreak;
+        }
+        if (!action.result) {
+            edited.remainingSlack--;
         }
     } else {
         edited.currentStreak = 0;

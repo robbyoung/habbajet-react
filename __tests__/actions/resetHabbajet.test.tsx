@@ -8,6 +8,8 @@ describe('Reset Habbajet Action', () => {
         toReset.currentValue = 20;
         toReset.toClaim = true;
         toReset.results = [true, true, false, true, true, true, true];
+        toReset.totalSlack = 3;
+        toReset.remainingSlack = 1;
         const state = [toReset];
         const action = resetHabbajetAction(toReset.name);
 
@@ -18,6 +20,7 @@ describe('Reset Habbajet Action', () => {
         );
         expect(result.toClaim).toEqual(false);
         expect(result.results).toEqual([]);
+        expect(result.remainingSlack).toEqual(3);
         expect(state).toEqual([toReset]);
     });
 
