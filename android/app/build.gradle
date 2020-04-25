@@ -121,10 +121,20 @@ def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-
+    flavorDimensions "default"
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    productFlavors {
+        development {
+            applicationIdSuffix ''
+            resValue "string", "build_config_package", "com.habbajet"
+        }
+        production {
+            applicationIdSuffix '.release'
+            resValue "string", "build_config_package", "com.habbajet"
+        }
     }
 
     defaultConfig {

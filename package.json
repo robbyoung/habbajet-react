@@ -3,7 +3,8 @@
   "version": "0.3.0",
   "private": true,
   "scripts": {
-    "start": "react-native run-android",
+    "start": "react-native run-android --variant=developmentDebug",
+    "release": "react-native run-android --variant=productionRelease",
     "tsc": "tsc -p tsconfig.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "test": "jest",
