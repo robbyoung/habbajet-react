@@ -2,15 +2,28 @@ import {validateEditorAction} from '../../app/actions';
 import {createTestEditor} from '../../app/state/testState';
 import habbajetEditorReducer from '../../app/reducers/habbajetEditor';
 
+function testInvalidSlackField(slack: string) {
+    const state = createTestEditor('Valid', '200', '', slack);
+    const action = validateEditorAction([]);
+    const newState = habbajetEditorReducer(state, action);
+
+    expect(newState.slack.errorMessage).toEqual(
+        'Must be an integer between zero and six',
+    );
+    expect(state).toEqual(createTestEditor('Valid', '200', '', slack));
+}
+
 describe('Validate Editor Action', () => {
     it('will pass valid editor values', () => {
-        const state = createTestEditor('Valid', '200', '4');
+        const state = createTestEditor('Valid', '200', '4', '2');
 
         const action = validateEditorAction([]);
         const newState = habbajetEditorReducer(state, action);
 
-        expect(newState).toEqual(createTestEditor('Valid', '200', '4', true));
-        expect(state).toEqual(createTestEditor('Valid', '200', '4'));
+        expect(newState).toEqual(
+            createTestEditor('Valid', '200', '4', '2', true),
+        );
+        expect(state).toEqual(createTestEditor('Valid', '200', '4', '2'));
     });
 
     it('will reject empty name fields', () => {
@@ -50,13 +63,13 @@ describe('Validate Editor Action', () => {
         expect(state).toEqual(createTestEditor('Duplicate', '', ''));
     });
 
-    it('will pass empty value or modifier fields', () => {
-        const state = createTestEditor('Valid', '', '');
+    it('will pass empty value, modifier, and slack fields', () => {
+        const state = createTestEditor('Valid', '', '', '');
         const action = validateEditorAction([]);
         const newState = habbajetEditorReducer(state, action);
 
-        expect(newState).toEqual(createTestEditor('Valid', '', '', true));
-        expect(state).toEqual(createTestEditor('Valid', '', ''));
+        expect(newState).toEqual(createTestEditor('Valid', '', '', '', true));
+        expect(state).toEqual(createTestEditor('Valid', '', '', ''));
     });
 
     it('will fail small values', () => {
@@ -103,8 +116,20 @@ describe('Validate Editor Action', () => {
         expect(state).toEqual(createTestEditor('Valid', '200', 'nope'));
     });
 
+    it('will fail non-integer slack days', () => {
+        testInvalidSlackField('3.2');
+    });
+
+    it('will fail negative slack days', () => {
+        testInvalidSlackField('-8');
+    });
+
+    it('will fail too-large slack days', () => {
+        testInvalidSlackField('7');
+    });
+
     it('can reject multiple problems', () => {
-        const state = createTestEditor('', 'nope', 'nope');
+        const state = createTestEditor('', 'nope', 'nope', '1.4');
         const action = validateEditorAction([]);
         const newState = habbajetEditorReducer(state, action);
 
@@ -117,6 +142,9 @@ describe('Validate Editor Action', () => {
         expect(newState.modifier.errorMessage).toEqual(
             'Must be a number greater than one',
         );
-        expect(state).toEqual(createTestEditor('', 'nope', 'nope'));
+        expect(newState.slack.errorMessage).toEqual(
+            'Must be an integer between zero and six',
+        );
+        expect(state).toEqual(createTestEditor('', 'nope', 'nope', '1.4'));
     });
 });
