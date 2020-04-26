@@ -1,11 +1,11 @@
-import tagsReducer from '../../app/reducers/tags';
+import tagsReducer, {DEFAULT_TAGS} from '../../app/reducers/tags';
 import {createTestState} from '../../app/state/testState';
 
 describe('Tags Reducer', () => {
     it('sets the initial state', () => {
         const action = {type: 'test action'};
         const newState = tagsReducer(undefined, action);
-        expect(newState).toEqual([]);
+        expect(newState).toEqual(DEFAULT_TAGS);
     });
 
     it('will not change state for unknown actions', () => {
