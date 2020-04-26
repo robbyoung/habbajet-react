@@ -30,6 +30,7 @@ export function resetHabbajet(
     edited.currentValue = edited.maxValue / Math.pow(edited.modifier, 7);
     edited.toClaim = false;
     edited.results = [];
+    edited.remainingSlack = edited.totalSlack;
     newState[index] = edited;
 
     return newState;

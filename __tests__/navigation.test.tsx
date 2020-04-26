@@ -22,6 +22,10 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
 }));
 
+jest.mock('react-native-splash-screen', () => ({
+    hide: () => undefined,
+}));
+
 jest.mock('../app/storage', () => ({
     saveState: () => undefined,
     loadState: () => undefined,

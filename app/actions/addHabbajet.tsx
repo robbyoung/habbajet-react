@@ -12,6 +12,7 @@ export function addHabbajetAction(
     name: string,
     value: number,
     modifier: number,
+    slack: number,
     color: string,
 ): AddHabbajetAction {
     const monday = moment()
@@ -31,6 +32,8 @@ export function addHabbajetAction(
             selected: false,
             currentStreak: 0,
             bestStreak: 0,
+            totalSlack: slack,
+            remainingSlack: slack,
         },
     };
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {
     addHabbajetAction,
     updateEditorFieldAction,
@@ -13,12 +13,10 @@ import {goBack} from '../navigation';
 import {saveState} from '../storage';
 import FormField from '../components/formField';
 import {
-    getEditorNameField,
-    getEditorValueField,
-    getValuesForNewHabbajet,
-    getEditorModifierField,
+    getHabbajetEditorFields,
     getValidationStateForNewHabbajet,
     getHabbajetNames,
+    getValuesForNewHabbajet,
 } from '../selectors';
 import ColorPicker from '../components/colorPicker';
 
@@ -29,13 +27,14 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: white,
     },
+    bottomPadding: {
+        height: 20,
+    },
 });
 
 const NewHabbajetScreen = () => {
     const dispatch = useDispatch();
-    const nameField = useSelector(getEditorNameField);
-    const valueField = useSelector(getEditorValueField);
-    const modifierField = useSelector(getEditorModifierField);
+    const fields = useSelector(getHabbajetEditorFields);
     const isValid = useSelector(getValidationStateForNewHabbajet);
     const newHabbajet = useSelector(getValuesForNewHabbajet);
     const habbajetNames = useSelector(getHabbajetNames);
@@ -47,6 +46,7 @@ const NewHabbajetScreen = () => {
                 newHabbajet.name,
                 newHabbajet.value,
                 newHabbajet.modifier,
+                newHabbajet.slack,
                 newHabbajet.color,
             ),
         );
@@ -55,45 +55,56 @@ const NewHabbajetScreen = () => {
     }
 
     return (
-        <ScrollView style={styles.container}>
-            <FormField
-                field={nameField}
-                title="Name"
-                onValueChange={value =>
-                    dispatch(updateEditorFieldAction('Name', value))
-                }
-            />
-            <FormField
-                field={valueField}
-                title="Value"
-                placeholder={'50'}
-                numeric={true}
-                onValueChange={value =>
-                    dispatch(updateEditorFieldAction('Value', value))
-                }
-            />
-            <FormField
-                field={modifierField}
-                title="Modifier"
-                placeholder={'2'}
-                numeric={true}
-                onValueChange={value =>
-                    dispatch(updateEditorFieldAction('Modifier', value))
-                }
-            />
-            <ColorPicker
-                selected={newHabbajet.color}
-                onSelect={color =>
-                    dispatch(updateEditorFieldAction('Color', color))
-                }
-            />
-            <WideButton
-                text="Done"
-                onPress={() => {
-                    dispatch(validateEditorAction(habbajetNames));
-                }}
-                color={grey}
-            />
+        <ScrollView>
+            <View style={styles.container}>
+                <FormField
+                    field={fields.name}
+                    title="Name"
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Name', value))
+                    }
+                />
+                <FormField
+                    field={fields.value}
+                    title="Value"
+                    placeholder={'50'}
+                    numeric={true}
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Value', value))
+                    }
+                />
+                <FormField
+                    field={fields.modifier}
+                    title="Modifier"
+                    placeholder={'2'}
+                    numeric={true}
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Modifier', value))
+                    }
+                />
+                <FormField
+                    field={fields.slack}
+                    title="Slack Days"
+                    placeholder={'0'}
+                    numeric={true}
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Slack', value))
+                    }
+                />
+                <ColorPicker
+                    selected={newHabbajet.color}
+                    onSelect={color =>
+                        dispatch(updateEditorFieldAction('Color', color))
+                    }
+                />
+                <WideButton
+                    text="Done"
+                    onPress={() => {
+                        dispatch(validateEditorAction(habbajetNames));
+                    }}
+                    color={grey}
+                />
+            </View>
         </ScrollView>
     );
 };

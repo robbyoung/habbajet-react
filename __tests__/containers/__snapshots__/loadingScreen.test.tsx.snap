@@ -1,3 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loading Screen Component will redirect to home screen 1`] = `<View />`;
+exports[`Loading Screen Component will redirect to home screen 1`] = `
+<View>
+  <Text>
+    Loading
+  </Text>
+</View>
+`;

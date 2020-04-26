@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlackDays Component hides if there are no slack days 1`] = `<View />`;
+
+exports[`SlackDays Component renders circles to represent slack days 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+      "marginTop": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+        Object {
+          "color": "#8066C2",
+        },
+      ]
+    }
+  >
+    Slack Days
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#8066C2",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#8066C2",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#8066C2",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#8066C2",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#8066C2",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#8066C2",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`SlackDays Component renders grey circles for used slack days 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 10,
+      "marginTop": 10,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+        Object {
+          "color": "#E04747",
+        },
+      ]
+    }
+  >
+    Slack Days
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#6E6E6E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#6E6E6E",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "borderRadius": 15,
+            "height": 30,
+            "marginRight": 5,
+            "width": 30,
+          },
+          Object {
+            "backgroundColor": "#6E6E6E",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;

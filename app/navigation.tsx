@@ -12,6 +12,7 @@ import IconButton from './components/iconButton';
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
 import NewPurchaseScreen from './containers/newPurchaseScreen';
 import {clearPurchaseEditorAction} from './actions';
+import SplashScreen from 'react-native-splash-screen';
 
 enum Screens {
     Loading = 'Loading',
@@ -152,6 +153,7 @@ export const goToHome = () => {
             },
         },
     });
+    SplashScreen.hide();
 };
 
 export const goToHabbajet = () => {
