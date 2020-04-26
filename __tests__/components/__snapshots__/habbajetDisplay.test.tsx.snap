@@ -6,6 +6,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
     Object {
       "backgroundColor": "#ffffff",
       "height": "100%",
+      "marginBottom": 10,
     }
   }
 >

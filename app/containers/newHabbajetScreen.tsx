@@ -1,6 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {
     addHabbajetAction,
     updateEditorFieldAction,
@@ -27,6 +27,9 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: white,
     },
+    bottomPadding: {
+        height: 20,
+    },
 });
 
 const NewHabbajetScreen = () => {
@@ -52,54 +55,56 @@ const NewHabbajetScreen = () => {
     }
 
     return (
-        <ScrollView style={styles.container}>
-            <FormField
-                field={fields.name}
-                title="Name"
-                onValueChange={value =>
-                    dispatch(updateEditorFieldAction('Name', value))
-                }
-            />
-            <FormField
-                field={fields.value}
-                title="Value"
-                placeholder={'50'}
-                numeric={true}
-                onValueChange={value =>
-                    dispatch(updateEditorFieldAction('Value', value))
-                }
-            />
-            <FormField
-                field={fields.modifier}
-                title="Modifier"
-                placeholder={'2'}
-                numeric={true}
-                onValueChange={value =>
-                    dispatch(updateEditorFieldAction('Modifier', value))
-                }
-            />
-            <FormField
-                field={fields.slack}
-                title="Slack Days"
-                placeholder={'0'}
-                numeric={true}
-                onValueChange={value =>
-                    dispatch(updateEditorFieldAction('Slack', value))
-                }
-            />
-            <ColorPicker
-                selected={newHabbajet.color}
-                onSelect={color =>
-                    dispatch(updateEditorFieldAction('Color', color))
-                }
-            />
-            <WideButton
-                text="Done"
-                onPress={() => {
-                    dispatch(validateEditorAction(habbajetNames));
-                }}
-                color={grey}
-            />
+        <ScrollView>
+            <View style={styles.container}>
+                <FormField
+                    field={fields.name}
+                    title="Name"
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Name', value))
+                    }
+                />
+                <FormField
+                    field={fields.value}
+                    title="Value"
+                    placeholder={'50'}
+                    numeric={true}
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Value', value))
+                    }
+                />
+                <FormField
+                    field={fields.modifier}
+                    title="Modifier"
+                    placeholder={'2'}
+                    numeric={true}
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Modifier', value))
+                    }
+                />
+                <FormField
+                    field={fields.slack}
+                    title="Slack Days"
+                    placeholder={'0'}
+                    numeric={true}
+                    onValueChange={value =>
+                        dispatch(updateEditorFieldAction('Slack', value))
+                    }
+                />
+                <ColorPicker
+                    selected={newHabbajet.color}
+                    onSelect={color =>
+                        dispatch(updateEditorFieldAction('Color', color))
+                    }
+                />
+                <WideButton
+                    text="Done"
+                    onPress={() => {
+                        dispatch(validateEditorAction(habbajetNames));
+                    }}
+                    color={grey}
+                />
+            </View>
         </ScrollView>
     );
 };
