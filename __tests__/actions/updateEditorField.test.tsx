@@ -30,6 +30,15 @@ describe('Update Editor Field Action', () => {
         expect(state).toEqual(createTestState(0, 0, 0).habbajetEditor);
     });
 
+    it('can update the slack field', () => {
+        const state = createTestState(0, 0, 0).habbajetEditor;
+        const action = updateEditorFieldAction('Slack', '2');
+        const newState = habbajetEditorReducer(state, action);
+
+        expect(newState.slack.value).toEqual('2');
+        expect(state).toEqual(createTestState(0, 0, 0).habbajetEditor);
+    });
+
     it('can update the color field', () => {
         const state = createTestState(0, 0, 0).habbajetEditor;
         const action = updateEditorFieldAction('Color', '#000000');
@@ -37,6 +46,18 @@ describe('Update Editor Field Action', () => {
 
         expect(newState.color).toEqual('#000000');
         expect(state).toEqual(createTestState(0, 0, 0).habbajetEditor);
+    });
+
+    it('reset the validated field and any error messages', () => {
+        const state = createTestState(0, 0, 0).habbajetEditor;
+        state.validated = true;
+        state.name.errorMessage = 'Invalid';
+
+        const action = updateEditorFieldAction('Name', 'Test Text');
+        const newState = habbajetEditorReducer(state, action);
+
+        expect(newState.name.errorMessage).toEqual('');
+        expect(newState.validated).toBe(false);
     });
 
     it('will return state unchanged for invalid field names', () => {

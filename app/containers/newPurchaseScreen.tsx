@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import WideButton from '../components/wideButton';
 import {grey, white} from '../colors';
@@ -54,36 +54,38 @@ const NewPurchaseScreen = () => {
     }
 
     return (
-        <ScrollView style={styles.container}>
-            <FormField
-                title="Name"
-                field={nameField}
-                onValueChange={value =>
-                    dispatch(updatePurchaseEditorAction('Name', value))
-                }
-            />
-            <FormField
-                title="Cost"
-                field={costField}
-                numeric={true}
-                onValueChange={value =>
-                    dispatch(updatePurchaseEditorAction('Cost', value))
-                }
-            />
-            <TagPicker
-                tags={tags}
-                selected={newPurchase.tagId}
-                onSelect={tagId =>
-                    dispatch(updatePurchaseEditorAction('TagId', tagId))
-                }
-            />
-            <WideButton
-                text="Done"
-                color={grey}
-                onPress={() => {
-                    dispatch(validatePurchaseEditorAction());
-                }}
-            />
+        <ScrollView>
+            <View style={styles.container}>
+                <FormField
+                    title="Name"
+                    field={nameField}
+                    onValueChange={value =>
+                        dispatch(updatePurchaseEditorAction('Name', value))
+                    }
+                />
+                <FormField
+                    title="Cost"
+                    field={costField}
+                    numeric={true}
+                    onValueChange={value =>
+                        dispatch(updatePurchaseEditorAction('Cost', value))
+                    }
+                />
+                <TagPicker
+                    tags={tags}
+                    selected={newPurchase.tagId}
+                    onSelect={tagId =>
+                        dispatch(updatePurchaseEditorAction('TagId', tagId))
+                    }
+                />
+                <WideButton
+                    text="Done"
+                    color={grey}
+                    onPress={() => {
+                        dispatch(validatePurchaseEditorAction());
+                    }}
+                />
+            </View>
         </ScrollView>
     );
 };

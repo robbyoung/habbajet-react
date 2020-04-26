@@ -41,6 +41,10 @@ export function updateEditorField(
             newState.modifier = {...state.modifier};
             fieldToUpdate = newState.modifier;
             break;
+        case 'Slack':
+            newState.slack = {...state.slack};
+            fieldToUpdate = newState.slack;
+            break;
         case 'Color':
             newState.color = action.newValue;
             newState.validated = false;

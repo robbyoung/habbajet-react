@@ -28,6 +28,8 @@ export function createTestState(
             selected: i === selectedIndex,
             currentStreak: 0,
             bestStreak: 5,
+            totalSlack: 0,
+            remainingSlack: 0,
         });
     }
 
@@ -49,6 +51,7 @@ export function createTestState(
         name: {...EMPTY_FIELD},
         value: {...EMPTY_FIELD},
         modifier: {...EMPTY_FIELD},
+        slack: {...EMPTY_FIELD},
         color: habbajetColors[0],
         validated: false,
     };
@@ -83,6 +86,7 @@ export function createTestEditor(
     name: string,
     value: string,
     modifier: string,
+    slack = '0',
     validated = false,
 ): HabbajetEditor {
     return {
@@ -96,6 +100,10 @@ export function createTestEditor(
         },
         modifier: {
             value: modifier,
+            errorMessage: '',
+        },
+        slack: {
+            value: slack,
             errorMessage: '',
         },
         color: habbajetColors[0],

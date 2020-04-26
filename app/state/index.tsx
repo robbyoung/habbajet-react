@@ -10,6 +10,8 @@ export interface Habbajet {
     selected: boolean;
     currentStreak: number;
     bestStreak: number;
+    totalSlack: number;
+    remainingSlack: number;
 }
 
 export interface Purchase {
@@ -28,6 +30,7 @@ export interface HabbajetEditor {
     name: EditorField;
     value: EditorField;
     modifier: EditorField;
+    slack: EditorField;
     color: string;
     validated: boolean;
 }

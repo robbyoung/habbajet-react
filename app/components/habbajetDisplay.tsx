@@ -7,11 +7,13 @@ import HabitResultPicker from './habitResultPicker';
 import HabbajetClaimer from './habbajetClaimer';
 import {white} from '../colors';
 import HabitStreak from './habitStreak';
+import SlackDays from './slackDays';
 
 const styles = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: white,
+        marginBottom: 10,
     },
     details: {
         marginLeft: '20%',
@@ -42,6 +44,11 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                     <HabitStreak
                         best={props.habbajet.bestStreak}
                         current={props.habbajet.currentStreak}
+                        color={props.habbajet.color}
+                    />
+                    <SlackDays
+                        total={props.habbajet.totalSlack}
+                        remaining={props.habbajet.remainingSlack}
                         color={props.habbajet.color}
                     />
                 </View>

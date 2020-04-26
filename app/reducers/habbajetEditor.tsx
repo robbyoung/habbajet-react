@@ -19,6 +19,7 @@ export const DEFAULT_EDITOR_STATE: HabbajetEditor = {
     name: EMPTY_FIELD,
     value: EMPTY_FIELD,
     modifier: EMPTY_FIELD,
+    slack: EMPTY_FIELD,
     color: habbajetColors[0],
     validated: false,
 };

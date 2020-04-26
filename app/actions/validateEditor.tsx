@@ -59,5 +59,15 @@ export function validateEditor(
         }
     }
 
+    if (newState.slack.value.length > 0) {
+        const slack = parseFloat(state.slack.value);
+        if ([0, 1, 2, 3, 4, 5, 6].indexOf(slack) === -1) {
+            newState.slack = {
+                value: state.slack.value,
+                errorMessage: 'Must be an integer between zero and six',
+            };
+        }
+    }
+
     return newState;
 }
