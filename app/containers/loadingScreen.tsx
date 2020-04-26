@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 import {goToHome} from '../navigation';
 import {loadState} from '../storage';
 import {useDispatch} from 'react-redux';
@@ -16,7 +16,11 @@ const LoadingScreen = () => {
         loadAndRedirect();
     });
 
-    return <View />;
+    return (
+        <View>
+            <Text>Loading</Text>
+        </View>
+    );
 };
 
 export default LoadingScreen;
