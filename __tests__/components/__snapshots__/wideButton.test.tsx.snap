@@ -1,5 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`WideButton Component can render an extra circle to hightlight the button 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  isTVSelectable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#DDDDDD",
+      "borderRadius": 10,
+      "marginBottom": 10,
+      "opacity": 1,
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "alignSelf": "center",
+          "color": "#ffffff",
+          "fontFamily": "Abel",
+          "fontSize": 30,
+          "padding": 10,
+          "textAlign": "center",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    Test Button
+  </Text>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "borderRadius": 10,
+        "height": 20,
+        "position": "absolute",
+        "right": 17,
+        "top": 17,
+        "width": 20,
+      }
+    }
+  />
+</View>
+`;
+
 exports[`WideButton Component will render a button with specified color and text 1`] = `
 <View
   accessible={true}
