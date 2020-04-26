@@ -17,4 +17,16 @@ describe('WideButton Component', () => {
         );
         expect(component.toJSON()).toMatchSnapshot();
     });
+
+    it('can render an extra circle to hightlight the button', () => {
+        const component = renderer.create(
+            <WideButton
+                text="Test Button"
+                color="#DDDDDD"
+                highlight={true}
+                onPress={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
 });

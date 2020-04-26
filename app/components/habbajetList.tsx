@@ -3,6 +3,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import {Habbajet} from '../state';
 import WideButton from './wideButton';
 import {grey} from '../colors';
+import moment from 'moment';
 
 const styles = StyleSheet.create({
     container: {
@@ -22,10 +23,12 @@ interface HabbajetListProps {
     onSelect: (name: string) => void;
 }
 const HabbajetList = (props: HabbajetListProps) => {
+    const today = moment().valueOf();
     const buttons = props.habbajets.map(habbajet => (
         <WideButton
             text={habbajet.name}
             color={habbajet.color}
+            highlight={today > moment(habbajet.date).valueOf()}
             key={habbajet.name}
             onPress={() => props.onSelect(habbajet.name)}
         />
