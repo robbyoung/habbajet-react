@@ -486,6 +486,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
             </Text>
           </View>
         </View>
+        <View />
       </View>
     </View>
   </RCTScrollView>
