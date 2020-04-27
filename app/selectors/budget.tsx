@@ -6,3 +6,7 @@ export function getBudgetFormatted(state: State) {
 
     return negative ? `-${formatted}` : formatted;
 }
+
+export function getBudgetDeficit(state: State) {
+    return state.budget < 0;
+}

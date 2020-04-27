@@ -5,7 +5,11 @@ export function getHabbajets(state: State) {
 }
 
 export function getSelectedHabbajet(state: State) {
-    return state.habbajets.find(habbajet => habbajet.selected);
+    let habbajet = state.habbajets.find(h => h.selected);
+    if (habbajet !== undefined && state.budget < 0) {
+        habbajet = {...habbajet, currentValue: habbajet.currentValue * 0.9};
+    }
+    return habbajet;
 }
 
 export function getHabbajetNames(state: State) {
