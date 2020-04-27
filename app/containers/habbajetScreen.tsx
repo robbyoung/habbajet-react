@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import HabbajetDisplay from '../components/habbajetDisplay';
 import {useSelector, useDispatch} from 'react-redux';
-import {getSelectedHabbajet} from '../selectors';
+import {getSelectedHabbajet, getBudgetDeficit} from '../selectors';
 import {
     addHabitResultAction,
     updateBudgetAction,
@@ -14,6 +14,7 @@ import {View} from 'react-native';
 
 const HabbajetScreen = () => {
     const habbajet = useSelector(getSelectedHabbajet);
+    const hasDeficit = useSelector(getBudgetDeficit);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -36,6 +37,7 @@ const HabbajetScreen = () => {
     return (
         <HabbajetDisplay
             habbajet={habbajet}
+            hasDeficit={hasDeficit}
             onSuccess={() => {
                 dispatch(addHabitResultAction(habbajet.name, true));
                 saveState();

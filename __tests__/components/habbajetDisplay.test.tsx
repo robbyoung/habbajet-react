@@ -13,6 +13,21 @@ describe('HabbajetDisplay Component', () => {
         const component = renderer.create(
             <HabbajetDisplay
                 habbajet={habbajet}
+                hasDeficit={false}
+                onSuccess={() => undefined}
+                onFailure={() => undefined}
+                onClaim={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('will add a penalty warning for budget deficits', () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        const component = renderer.create(
+            <HabbajetDisplay
+                habbajet={habbajet}
+                hasDeficit={true}
                 onSuccess={() => undefined}
                 onFailure={() => undefined}
                 onClaim={() => undefined}
