@@ -29,6 +29,14 @@ describe('Habbajet Selectors', () => {
 
             expect(result).toBeUndefined();
         });
+
+        it('will decrease current value if budget is negative', () => {
+            const state = createTestState(3, 10, -10, 2);
+            state.habbajets[2].currentValue = 100;
+            const result = getSelectedHabbajet(state);
+
+            expect(result!.currentValue).toBe(90);
+        });
     });
 
     describe('Get Habbajet Names', () => {
