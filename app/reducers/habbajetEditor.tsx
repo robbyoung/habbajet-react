@@ -8,6 +8,8 @@ import {
     validateEditor,
     clearEditor,
     ClearEditorAction,
+    setHabbajetToEdit,
+    SetHabbajetToEditAction,
 } from '../actions';
 import {habbajetColors} from '../colors';
 
@@ -35,6 +37,8 @@ export default function habbajetEditorReducer(
             return validateEditor(state, action as ValidateEditorAction);
         case ActionType.CLEAR_EDITOR:
             return clearEditor(state, action as ClearEditorAction);
+        case ActionType.SET_HABBAJET_TO_EDIT:
+            return setHabbajetToEdit(state, action as SetHabbajetToEditAction);
     }
     return state;
 }

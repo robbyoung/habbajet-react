@@ -18,7 +18,6 @@ const HabbajetScreen = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.dir(habbajet);
         Navigation.mergeOptions(STACK_NAVIGATOR, {
             topBar: {
                 title: {
