@@ -11,8 +11,9 @@ import PurchasesScreen from './containers/purchasesScreen';
 import IconButton from './components/iconButton';
 import {faPlus, faPencilAlt} from '@fortawesome/free-solid-svg-icons';
 import NewPurchaseScreen from './containers/newPurchaseScreen';
-import {clearPurchaseEditorAction, clearEditorAction} from './actions';
+import {clearPurchaseEditorAction} from './actions';
 import SplashScreen from 'react-native-splash-screen';
+import EditHabbajetScreen from './containers/editHabbajetScreen';
 
 enum Screens {
     Loading = 'Loading',
@@ -21,6 +22,7 @@ enum Screens {
     NewHabbajet = 'NewHabbajet',
     Purchases = 'Purchases',
     NewPurchase = 'NewPurchase',
+    EditHabbajet = 'EditHabbajet',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -85,6 +87,16 @@ Navigation.registerComponent(
     () => NewPurchaseScreen,
 );
 
+Navigation.registerComponent(
+    Screens.EditHabbajet,
+    () => () => (
+        <Provider store={store}>
+            <EditHabbajetScreen />
+        </Provider>
+    ),
+    () => EditHabbajetScreen,
+);
+
 const PlusButton = () => (
     <IconButton
         size={25}
@@ -108,8 +120,7 @@ const PencilButton = () => (
         // eslint-disable-next-line react-native/no-inline-styles
         containerStyle={{paddingRight: 15}}
         onPress={() => {
-            store.dispatch(clearEditorAction());
-            goToNewHabbajet();
+            goToEditHabbajet();
         }}
     />
 );
@@ -275,6 +286,31 @@ export const goToNewPurchase = () => {
                     background: {
                         color: grey,
                     },
+                },
+            },
+        },
+    });
+};
+
+export const goToEditHabbajet = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.EditHabbajet,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'Edit Habbajet',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                    rightButtons: [],
                 },
             },
         },

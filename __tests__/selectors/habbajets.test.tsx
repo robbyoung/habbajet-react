@@ -3,6 +3,7 @@ import {
     getHabbajets,
     getSelectedHabbajet,
     getHabbajetNames,
+    getUnselectedHabbajetNames,
 } from '../../app/selectors';
 
 describe('Habbajet Selectors', () => {
@@ -43,6 +44,34 @@ describe('Habbajet Selectors', () => {
         it('will return a list of habbajet names', () => {
             const state = createTestState(4, 1, 100);
             const result = getHabbajetNames(state);
+
+            expect(result).toEqual([
+                'Habbajet 0',
+                'Habbajet 1',
+                'Habbajet 2',
+                'Habbajet 3',
+            ]);
+        });
+
+        it('will return an empty list for no habbajets', () => {
+            const state = createTestState(0, 1, 100);
+            const result = getHabbajetNames(state);
+
+            expect(result).toEqual([]);
+        });
+    });
+
+    describe('Get Unselected Habbajet Names', () => {
+        it('will return a list of unselected habbajet names', () => {
+            const state = createTestState(4, 1, 100, 1);
+            const result = getUnselectedHabbajetNames(state);
+
+            expect(result).toEqual(['Habbajet 0', 'Habbajet 2', 'Habbajet 3']);
+        });
+
+        it('will return all names if nothing is selected', () => {
+            const state = createTestState(4, 1, 100);
+            const result = getUnselectedHabbajetNames(state);
 
             expect(result).toEqual([
                 'Habbajet 0',

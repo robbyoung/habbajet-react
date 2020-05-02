@@ -15,3 +15,9 @@ export function getSelectedHabbajet(state: State) {
 export function getHabbajetNames(state: State) {
     return state.habbajets.map(habbajet => habbajet.name);
 }
+
+export function getUnselectedHabbajetNames(state: State) {
+    return state.habbajets
+        .filter(habbajet => !habbajet.selected)
+        .map(habbajet => habbajet.name);
+}
