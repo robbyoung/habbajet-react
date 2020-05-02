@@ -58,7 +58,15 @@ describe('Add Habbajet Action', () => {
         const action = addHabbajetAction(state[1].name, 80, 2, 0, white);
         const newState = habbajetsReducer(state, action);
 
-        expect(newState[1]).toEqual(action.newHabbajet);
+        expect(newState[1]).toEqual({
+            ...state[1],
+            name: action.newHabbajet.name,
+            maxValue: action.newHabbajet.maxValue,
+            modifier: action.newHabbajet.modifier,
+            totalSlack: action.newHabbajet.totalSlack,
+            color: action.newHabbajet.color,
+            selected: true,
+        });
         expect(state).toEqual(createTestState(3, 0, 0).habbajets);
     });
 });

@@ -51,6 +51,18 @@ export function addHabbajet(
     }
 
     const newState = [...state];
-    newState[replaceIndex] = action.newHabbajet;
+    const edited = action.newHabbajet;
+    const original = state[replaceIndex];
+
+    newState[replaceIndex] = {
+        ...original,
+        name: edited.name,
+        maxValue: edited.maxValue,
+        modifier: edited.modifier,
+        totalSlack: edited.totalSlack,
+        color: edited.color,
+        selected: true,
+    };
+
     return newState;
 }
