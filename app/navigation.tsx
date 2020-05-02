@@ -191,12 +191,6 @@ export const goToHabbajet = () => {
                     backButton: {
                         color: white,
                     },
-                    title: {
-                        text: ' ',
-                        fontFamily: 'Abel',
-                        fontSize: 30,
-                        color: white,
-                    },
                     rightButtons: [
                         {
                             id: 'addPurchaseButton',
