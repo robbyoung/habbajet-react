@@ -42,5 +42,15 @@ export function addHabbajet(
     state: Habbajet[],
     action: AddHabbajetAction,
 ): Habbajet[] {
-    return [...state, action.newHabbajet];
+    const replaceIndex = state.findIndex(
+        habbajet => habbajet.name === action.newHabbajet.name,
+    );
+
+    if (replaceIndex === -1) {
+        return [...state, action.newHabbajet];
+    }
+
+    const newState = [...state];
+    newState[replaceIndex] = action.newHabbajet;
+    return newState;
 }
