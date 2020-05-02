@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 
 interface HabbajetListProps {
     habbajets: Habbajet[];
-    onSelect: (name: string) => void;
+    onSelect: (habbajet: Habbajet) => void;
 }
 const HabbajetList = (props: HabbajetListProps) => {
     const today = moment().valueOf();
@@ -30,7 +30,7 @@ const HabbajetList = (props: HabbajetListProps) => {
             color={habbajet.color}
             highlight={today > moment(habbajet.date).valueOf()}
             key={habbajet.name}
-            onPress={() => props.onSelect(habbajet.name)}
+            onPress={() => props.onSelect(habbajet)}
         />
     ));
     return (

@@ -11,17 +11,17 @@ import {saveState} from '../storage';
 import {
     getHabbajetEditorFields,
     getValidationStateForNewHabbajet,
-    getHabbajetNames,
     getValuesForNewHabbajet,
+    getUnselectedHabbajetNames,
 } from '../selectors';
 import HabbajetForm from '../components/habbajetForm';
 
-const NewHabbajetScreen = () => {
+const EditHabbajetScreen = () => {
     const dispatch = useDispatch();
     const fields = useSelector(getHabbajetEditorFields);
     const isValid = useSelector(getValidationStateForNewHabbajet);
     const newHabbajet = useSelector(getValuesForNewHabbajet);
-    const habbajetNames = useSelector(getHabbajetNames);
+    const habbajetNames = useSelector(getUnselectedHabbajetNames);
 
     if (isValid) {
         dispatch(clearEditorAction());
@@ -55,4 +55,4 @@ const NewHabbajetScreen = () => {
     );
 };
 
-export default NewHabbajetScreen;
+export default EditHabbajetScreen;

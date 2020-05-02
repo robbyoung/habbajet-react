@@ -1,7 +1,11 @@
-import React, {useEffect} from 'react';
+import React, {useMemo} from 'react';
 import HabbajetDisplay from '../components/habbajetDisplay';
 import {useSelector, useDispatch} from 'react-redux';
-import {getSelectedHabbajet, getBudgetDeficit} from '../selectors';
+import {
+    getSelectedHabbajet,
+    getBudgetDeficit,
+    checkHabbajetEquality,
+} from '../selectors';
 import {
     addHabitResultAction,
     updateBudgetAction,
@@ -11,17 +15,21 @@ import {Navigation} from 'react-native-navigation';
 import {STACK_NAVIGATOR} from '../navigation';
 import {saveState} from '../storage';
 import {View} from 'react-native';
+import {white} from '../colors';
 
 const HabbajetScreen = () => {
-    const habbajet = useSelector(getSelectedHabbajet);
+    const habbajet = useSelector(getSelectedHabbajet, checkHabbajetEquality);
     const hasDeficit = useSelector(getBudgetDeficit);
     const dispatch = useDispatch();
 
-    useEffect(() => {
+    useMemo(() => {
         Navigation.mergeOptions(STACK_NAVIGATOR, {
             topBar: {
                 title: {
                     text: habbajet ? habbajet.name : '',
+                    fontFamily: 'Abel',
+                    fontSize: 30,
+                    color: white,
                 },
                 background: {
                     color: habbajet ? habbajet.color : '',

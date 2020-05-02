@@ -4,7 +4,11 @@ import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import HabbajetList from '../components/habbajetList';
 import {goToHabbajet, goToNewHabbajet, goToPurchases} from '../navigation';
-import {selectHabbajetAction, clearEditorAction} from '../actions';
+import {
+    selectHabbajetAction,
+    clearEditorAction,
+    setHabbajetToEditAction,
+} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 import BudgetDisplay from '../components/budgetDisplay';
@@ -27,8 +31,9 @@ const HomeScreen = () => {
                 <BudgetDisplay budget={budget} onPress={goToPurchases} />
                 <HabbajetList
                     habbajets={habbajets}
-                    onSelect={name => {
-                        dispatch(selectHabbajetAction(name));
+                    onSelect={habbajet => {
+                        dispatch(setHabbajetToEditAction(habbajet));
+                        dispatch(selectHabbajetAction(habbajet.name));
                         goToHabbajet();
                     }}
                 />
