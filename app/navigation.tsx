@@ -9,11 +9,12 @@ import {grey, white} from './colors';
 import NewHabbajetScreen from './containers/newHabbajetScreen';
 import PurchasesScreen from './containers/purchasesScreen';
 import IconButton from './components/iconButton';
-import {faPlus, faPencilAlt} from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faPencilAlt, faTrash} from '@fortawesome/free-solid-svg-icons';
 import NewPurchaseScreen from './containers/newPurchaseScreen';
-import {clearPurchaseEditorAction} from './actions';
+import {clearPurchaseEditorAction, deleteHabbajetAction} from './actions';
 import SplashScreen from 'react-native-splash-screen';
 import EditHabbajetScreen from './containers/editHabbajetScreen';
+import {saveState} from './storage';
 
 enum Screens {
     Loading = 'Loading',
@@ -125,6 +126,22 @@ const PencilButton = () => (
     />
 );
 Navigation.registerComponent('topBar.editHabbajetButton', () => PencilButton);
+
+const TrashButton = () => (
+    <IconButton
+        size={25}
+        color={white}
+        icon={faTrash}
+        // eslint-disable-next-line react-native/no-inline-styles
+        containerStyle={{paddingRight: 15}}
+        onPress={() => {
+            goToHome();
+            store.dispatch(deleteHabbajetAction());
+            saveState();
+        }}
+    />
+);
+Navigation.registerComponent('topBar.deleteHabbajetButton', () => TrashButton);
 
 export const goBack = () => Navigation.pop(STACK_NAVIGATOR);
 
@@ -304,7 +321,14 @@ export const goToEditHabbajet = () => {
                     background: {
                         color: grey,
                     },
-                    rightButtons: [],
+                    rightButtons: [
+                        {
+                            id: 'deleteHabbajetButton',
+                            component: {
+                                name: 'topBar.deleteHabbajetButton',
+                            },
+                        },
+                    ],
                 },
             },
         },
