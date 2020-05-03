@@ -1,4 +1,5 @@
 export interface Habbajet {
+    id: string;
     name: string;
     maxValue: number;
     currentValue: number;

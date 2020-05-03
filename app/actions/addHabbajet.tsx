@@ -2,6 +2,7 @@ import moment from 'moment';
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
 import {Habbajet} from '../state';
+import * as uuid from 'uuid';
 
 export interface AddHabbajetAction extends Action {
     type: ActionType.ADD_HABBAJET;
@@ -14,6 +15,7 @@ export function addHabbajetAction(
     modifier: number,
     slack: number,
     color: string,
+    id: string = uuid.v4().valueOf(),
 ): AddHabbajetAction {
     const monday = moment()
         .startOf('isoWeek')
@@ -21,6 +23,7 @@ export function addHabbajetAction(
     return {
         type: ActionType.ADD_HABBAJET,
         newHabbajet: {
+            id,
             name,
             maxValue: value,
             currentValue: value / Math.pow(modifier, 7),
@@ -43,7 +46,7 @@ export function addHabbajet(
     action: AddHabbajetAction,
 ): Habbajet[] {
     const replaceIndex = state.findIndex(
-        habbajet => habbajet.name === action.newHabbajet.name,
+        habbajet => habbajet.id === action.newHabbajet.id,
     );
 
     if (replaceIndex === -1) {
@@ -61,7 +64,6 @@ export function addHabbajet(
         modifier: edited.modifier,
         totalSlack: edited.totalSlack,
         color: edited.color,
-        selected: true,
     };
 
     return newState;
