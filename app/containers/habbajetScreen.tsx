@@ -10,6 +10,7 @@ import {
     addHabitResultAction,
     updateBudgetAction,
     resetHabbajetAction,
+    setHabbajetToEditAction,
 } from '../actions';
 import {Navigation} from 'react-native-navigation';
 import {STACK_NAVIGATOR} from '../navigation';
@@ -23,6 +24,9 @@ const HabbajetScreen = () => {
     const dispatch = useDispatch();
 
     useMemo(() => {
+        if (habbajet) {
+            dispatch(setHabbajetToEditAction(habbajet));
+        }
         Navigation.mergeOptions(STACK_NAVIGATOR, {
             topBar: {
                 title: {
@@ -36,7 +40,7 @@ const HabbajetScreen = () => {
                 },
             },
         });
-    }, [habbajet]);
+    }, [habbajet, dispatch]);
 
     if (habbajet === undefined) {
         return <View />;

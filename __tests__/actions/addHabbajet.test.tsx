@@ -53,19 +53,25 @@ describe('Add Habbajet Action', () => {
         expect(state).toEqual([]);
     });
 
-    it('will replace a habbajet with a matching name', () => {
+    it('will replace a habbajet with a matching id', () => {
         const state: Habbajet[] = createTestState(3, 0, 0).habbajets;
-        const action = addHabbajetAction(state[1].name, 80, 2, 0, white);
+        const action = addHabbajetAction(
+            'Test Edit',
+            80,
+            2,
+            3,
+            white,
+            state[1].id,
+        );
         const newState = habbajetsReducer(state, action);
 
         expect(newState[1]).toEqual({
             ...state[1],
-            name: action.newHabbajet.name,
-            maxValue: action.newHabbajet.maxValue,
-            modifier: action.newHabbajet.modifier,
-            totalSlack: action.newHabbajet.totalSlack,
-            color: action.newHabbajet.color,
-            selected: true,
+            name: 'Test Edit',
+            maxValue: 80,
+            modifier: 2,
+            totalSlack: 3,
+            color: white,
         });
         expect(state).toEqual(createTestState(3, 0, 0).habbajets);
     });

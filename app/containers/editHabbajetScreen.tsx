@@ -13,6 +13,7 @@ import {
     getValidationStateForNewHabbajet,
     getValuesForNewHabbajet,
     getUnselectedHabbajetNames,
+    getSelectedHabbajet,
 } from '../selectors';
 import HabbajetForm from '../components/habbajetForm';
 
@@ -21,6 +22,7 @@ const EditHabbajetScreen = () => {
     const fields = useSelector(getHabbajetEditorFields);
     const isValid = useSelector(getValidationStateForNewHabbajet);
     const newHabbajet = useSelector(getValuesForNewHabbajet);
+    const selectedHabbajet = useSelector(getSelectedHabbajet);
     const habbajetNames = useSelector(getUnselectedHabbajetNames);
 
     if (isValid) {
@@ -32,6 +34,7 @@ const EditHabbajetScreen = () => {
                 newHabbajet.modifier,
                 newHabbajet.slack,
                 newHabbajet.color,
+                selectedHabbajet ? selectedHabbajet.id : undefined,
             ),
         );
         goBack();
