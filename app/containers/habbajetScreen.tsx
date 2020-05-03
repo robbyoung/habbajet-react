@@ -60,7 +60,7 @@ const HabbajetScreen = () => {
             }}
             onClaim={() => {
                 dispatch(updateBudgetAction(habbajet.currentValue));
-                dispatch(resetHabbajetAction(habbajet.name));
+                dispatch(resetHabbajetAction());
                 saveState();
             }}
         />

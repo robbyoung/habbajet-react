@@ -4,19 +4,17 @@ import {Habbajet} from '../state';
 
 export interface DeleteHabbajetAction extends Action {
     type: ActionType.DELETE_HABBAJET;
-    habbajetId: string;
 }
 
-export function deleteHabbajetAction(habbajetId: string): DeleteHabbajetAction {
+export function deleteHabbajetAction(): DeleteHabbajetAction {
     return {
         type: ActionType.DELETE_HABBAJET,
-        habbajetId,
     };
 }
 
 export function deleteHabbajet(
     state: Habbajet[],
-    action: DeleteHabbajetAction,
+    _action: DeleteHabbajetAction,
 ): Habbajet[] {
-    return state.filter(habbajet => habbajet.id !== action.habbajetId);
+    return state.filter(habbajet => !habbajet.selected);
 }
