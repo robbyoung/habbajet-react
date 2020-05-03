@@ -2,6 +2,7 @@ import moment from 'moment';
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
 import {Habbajet} from '../state';
+import * as uuid from 'uuid';
 
 export interface AddHabbajetAction extends Action {
     type: ActionType.ADD_HABBAJET;
@@ -21,6 +22,7 @@ export function addHabbajetAction(
     return {
         type: ActionType.ADD_HABBAJET,
         newHabbajet: {
+            id: uuid.v4().valueOf(),
             name,
             maxValue: value,
             currentValue: value / Math.pow(modifier, 7),

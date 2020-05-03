@@ -17,6 +17,7 @@ export function createTestState(
     const habbajets: Habbajet[] = [];
     for (let i = 0; i < numHabbajets; i++) {
         habbajets.push({
+            id: `${i}`,
             name: `Habbajet ${i}`,
             maxValue: 100,
             currentValue: 100 / Math.pow(2, 7),
