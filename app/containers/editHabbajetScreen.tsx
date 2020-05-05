@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {
     addHabbajetAction,
@@ -7,7 +7,7 @@ import {
     clearEditorAction,
     deleteHabbajetAction,
 } from '../actions';
-import {goBack, goToHome, STACK_NAVIGATOR} from '../navigation';
+import {goBack, goToHome} from '../navigation';
 import {saveState} from '../storage';
 import {
     getHabbajetEditorFields,
@@ -19,7 +19,6 @@ import {
 import HabbajetForm from '../components/habbajetForm';
 import ConfirmationModal from '../components/confirmationModal';
 import {View} from 'react-native';
-import {Navigation} from 'react-native-navigation';
 
 const EditHabbajetScreen = () => {
     const dispatch = useDispatch();
@@ -28,29 +27,7 @@ const EditHabbajetScreen = () => {
     const newHabbajet = useSelector(getValuesForNewHabbajet);
     const selectedHabbajet = useSelector(getSelectedHabbajet);
     const habbajetNames = useSelector(getUnselectedHabbajetNames);
-    const [modalVisibility, setModalVisibility] = useState(true);
-
-    useMemo(() => {
-        console.log('applying buttons');
-        Navigation.mergeOptions(STACK_NAVIGATOR, {
-            topBar: {
-                rightButtons: [
-                    {
-                        id: 'deleteHabbajetButton',
-                        component: {
-                            name: 'topBar.deleteHabbajetButton',
-                            passProps: {
-                                onPress: () => {
-                                    console.log('showing modal');
-                                    setModalVisibility(true);
-                                },
-                            },
-                        },
-                    },
-                ],
-            },
-        });
-    }, [setModalVisibility]);
+    const [modalVisibility, setModalVisibility] = useState(false);
 
     if (isValid) {
         dispatch(clearEditorAction());
@@ -94,6 +71,7 @@ const EditHabbajetScreen = () => {
                 onSubmit={() => {
                     dispatch(validateEditorAction(habbajetNames));
                 }}
+                onDelete={() => setModalVisibility(true)}
             />
         </View>
     );

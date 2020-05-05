@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
-import {grey, white} from '../colors';
+import {grey, white, errorRed} from '../colors';
 import {EditorField} from '../state';
 import FormField from './formField';
 import ColorPicker from './colorPicker';
@@ -13,9 +13,6 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         backgroundColor: white,
     },
-    bottomPadding: {
-        height: 20,
-    },
 });
 
 interface HabbajetFormProps {
@@ -26,6 +23,7 @@ interface HabbajetFormProps {
     selectedColor: string;
     onUpdate: (key: string, value: string) => void;
     onSubmit: () => void;
+    onDelete?: () => void;
 }
 const HabbajetForm = (props: HabbajetFormProps) => {
     return (
@@ -66,6 +64,13 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                     onPress={() => props.onSubmit()}
                     color={grey}
                 />
+                {props.onDelete ? (
+                    <WideButton
+                        text={'Delete'}
+                        onPress={() => (props.onDelete as () => void)()}
+                        color={errorRed}
+                    />
+                ) : null}
             </View>
         </ScrollView>
     );

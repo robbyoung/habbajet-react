@@ -316,7 +316,6 @@ export const goToEditHabbajet = () => {
                     background: {
                         color: grey,
                     },
-                    rightButtons: [],
                 },
             },
         },
