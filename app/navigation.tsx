@@ -14,6 +14,7 @@ import NewPurchaseScreen from './containers/newPurchaseScreen';
 import {clearPurchaseEditorAction} from './actions';
 import SplashScreen from 'react-native-splash-screen';
 import EditHabbajetScreen from './containers/editHabbajetScreen';
+import ConfirmationModal from './components/confirmationModal';
 
 enum Screens {
     Loading = 'Loading',
@@ -137,6 +138,8 @@ const TrashButton = (props: {onPress: () => void}) => (
     />
 );
 Navigation.registerComponent('topBar.deleteHabbajetButton', () => TrashButton);
+
+Navigation.registerComponent('modal.confirmation', () => ConfirmationModal);
 
 export const goBack = () => Navigation.pop(STACK_NAVIGATOR);
 
