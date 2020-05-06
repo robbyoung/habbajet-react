@@ -17,7 +17,10 @@ import {
     getSelectedHabbajet,
 } from '../selectors';
 import HabbajetForm from '../components/habbajetForm';
-import {Navigation} from 'react-native-navigation';
+import {
+    Navigation,
+    OptionsModalPresentationStyle,
+} from 'react-native-navigation';
 
 const EditHabbajetScreen = () => {
     const dispatch = useDispatch();
@@ -70,6 +73,10 @@ const EditHabbajetScreen = () => {
                                 dispatch(deleteHabbajetAction());
                                 saveState();
                             },
+                        },
+                        options: {
+                            modalPresentationStyle:
+                                OptionsModalPresentationStyle.overCurrentContext,
                         },
                     },
                 })
