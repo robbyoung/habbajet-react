@@ -4,23 +4,19 @@ import {Habbajet} from '../state';
 
 export interface ResetHabbajetAction extends Action {
     type: ActionType.RESET_HABBAJET;
-    habbajetName: string;
 }
 
-export function resetHabbajetAction(habbajetName: string): ResetHabbajetAction {
+export function resetHabbajetAction(): ResetHabbajetAction {
     return {
         type: ActionType.RESET_HABBAJET,
-        habbajetName,
     };
 }
 
 export function resetHabbajet(
     state: Habbajet[],
-    action: ResetHabbajetAction,
+    _action: ResetHabbajetAction,
 ): Habbajet[] {
-    const index = state.findIndex(
-        habbajet => habbajet.name === action.habbajetName,
-    );
+    const index = state.findIndex(habbajet => habbajet.selected);
     if (index === undefined) {
         return state;
     }

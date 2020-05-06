@@ -35,4 +35,21 @@ describe('ColorPicker Component', () => {
         state.slack.errorMessage = 'Bad slack';
         testForm(state);
     });
+
+    it('can render a delete button', () => {
+        const state = createTestEditor('Name', '200', '10', '1');
+        const component = renderer.create(
+            <HabbajetForm
+                nameField={state.name}
+                valueField={state.value}
+                modifierField={state.modifier}
+                slackField={state.slack}
+                selectedColor={habbajetColors[0]}
+                onUpdate={() => undefined}
+                onSubmit={() => undefined}
+                onDelete={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
 });
