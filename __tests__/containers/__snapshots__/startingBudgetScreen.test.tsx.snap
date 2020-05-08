@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Starting Budget Screen Component can render a starting budget form 1`] = `
+<RCTScrollView>
+  <View>
+    <View
+      style={
+        Object {
+          "margin": 20,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontFamily": "Abel",
+            "fontSize": 30,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Welcome to Habbajet!
+      </Text>
+      <Text
+        style={
+          Object {
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Before you start tracking your habits, you'll need to set your starting budget.
+      </Text>
+      <View
+        style={
+          Object {
+            "marginBottom": 15,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#959595",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "margin": 0,
+                "padding": 0,
+              },
+            ]
+          }
+        >
+          Starting Budget
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          keyboardType="numeric"
+          onChangeText={[Function]}
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "borderColor": "#959595",
+              "borderWidth": 1,
+              "fontFamily": "Abel",
+              "fontSize": 30,
+              "paddingLeft": 10,
+            }
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+        <View />
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#959595",
+            "borderRadius": 10,
+            "marginBottom": 10,
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "padding": 10,
+                "textAlign": "center",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          Done
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
