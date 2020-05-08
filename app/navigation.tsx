@@ -15,6 +15,7 @@ import {clearPurchaseEditorAction} from './actions';
 import SplashScreen from 'react-native-splash-screen';
 import EditHabbajetScreen from './containers/editHabbajetScreen';
 import ConfirmationModal from './components/confirmationModal';
+import StartingBudgetScreen from './containers/startingBudgetScreen';
 
 enum Screens {
     Loading = 'Loading',
@@ -24,6 +25,7 @@ enum Screens {
     Purchases = 'Purchases',
     NewPurchase = 'NewPurchase',
     EditHabbajet = 'EditHabbajet',
+    StartingBudget = 'StartingBudget',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -96,6 +98,16 @@ Navigation.registerComponent(
         </Provider>
     ),
     () => EditHabbajetScreen,
+);
+
+Navigation.registerComponent(
+    Screens.StartingBudget,
+    () => () => (
+        <Provider store={store}>
+            <StartingBudgetScreen />
+        </Provider>
+    ),
+    () => StartingBudgetScreen,
 );
 
 const PlusButton = () => (
@@ -323,4 +335,38 @@ export const goToEditHabbajet = () => {
             },
         },
     });
+};
+
+export const goToStartingBudget = () => {
+    Navigation.setRoot({
+        root: {
+            stack: {
+                id: STACK_NAVIGATOR,
+                children: [
+                    {
+                        component: {
+                            name: Screens.StartingBudget,
+                            options: {
+                                topBar: {
+                                    backButton: {
+                                        color: white,
+                                    },
+                                    title: {
+                                        text: 'Getting Started',
+                                        fontFamily: 'Abel',
+                                        fontSize: 30,
+                                        color: white,
+                                    },
+                                    background: {
+                                        color: grey,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    SplashScreen.hide();
 };
