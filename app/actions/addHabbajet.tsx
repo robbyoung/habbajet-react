@@ -1,7 +1,7 @@
 import moment from 'moment';
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
-import {Habbajet} from '../state';
+import {Habbajet, HabitResult} from '../state';
 import * as uuid from 'uuid';
 
 export interface AddHabbajetAction extends Action {
@@ -96,15 +96,21 @@ function redoWeek(habbajet: Habbajet) {
     habbajet.bestStreak = habbajet.oldStreaks[1];
 
     for (let result of daysToReset) {
-        const isSuccess = result || habbajet.remainingSlack > 0;
-        habbajet.results = [...habbajet.results, isSuccess];
+        const passed = result === HabitResult.Success;
+        let newResult = passed ? HabitResult.Success : HabitResult.Failure;
+        if (habbajet.remainingSlack > 0 && !passed) {
+            newResult = HabitResult.SlackSuccess;
+        }
+        habbajet.results = [...habbajet.results, newResult];
+
+        const isSuccess = passed || habbajet.remainingSlack > 0;
         if (isSuccess) {
             habbajet.currentValue *= habbajet.modifier;
             habbajet.currentStreak++;
             if (habbajet.currentStreak > habbajet.bestStreak) {
                 habbajet.bestStreak = habbajet.currentStreak;
             }
-            if (!result) {
+            if (!passed) {
                 habbajet.remainingSlack--;
             }
         } else {

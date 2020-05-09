@@ -91,7 +91,6 @@ describe('Add Habbajet Action', () => {
                 totalSlack: 3,
                 remainingSlack: 3,
                 color: white,
-                bestStreak: 5,
             });
             expect(state).toEqual(createTestState(3, 0, 0, 1).habbajets);
         });
@@ -121,7 +120,6 @@ describe('Add Habbajet Action', () => {
                 totalSlack: 3,
                 remainingSlack: 3,
                 color: white,
-                bestStreak: 5,
             });
             expect(state).toEqual(
                 addDays([true, true], createTestState(3, 0, 0, 1).habbajets),
@@ -139,7 +137,7 @@ describe('Add Habbajet Action', () => {
                 80,
                 2,
                 3,
-                white,
+                state[1].color,
                 state[1].id,
             );
             const newState = habbajetsReducer(state, action);
@@ -152,9 +150,8 @@ describe('Add Habbajet Action', () => {
                 modifier: 2,
                 totalSlack: 3,
                 remainingSlack: 1,
-                color: white,
-                bestStreak: 5,
                 currentStreak: 3,
+                results: [1, 1, 0],
             });
             expect(state).toEqual(
                 addDays(
@@ -162,6 +159,131 @@ describe('Add Habbajet Action', () => {
                     createTestState(3, 0, 0, 1).habbajets,
                 ),
             );
+        });
+
+        it('will retract past slack days if the slack total is decreased', () => {
+            let state = createTestState(3, 0, 0, 1).habbajets;
+            state[1].totalSlack = 3;
+            state[1].remainingSlack = 3;
+            state = addDays([false, false, true, true, false, true], state);
+
+            const action = addHabbajetAction(
+                state[1].name,
+                300,
+                5,
+                0,
+                state[1].color,
+                state[1].id,
+            );
+            const newState = habbajetsReducer(state, action);
+
+            expect(newState[1]).toEqual({
+                ...state[1],
+                maxValue: 300,
+                currentValue: 300 / Math.pow(5, 4),
+                modifier: 5,
+                totalSlack: 0,
+                remainingSlack: 0,
+                currentStreak: 1,
+                bestStreak: 5,
+                results: [2, 2, 0, 0, 2, 0],
+            });
+        });
+
+        it('will not trigger redo if only name or color change', () => {
+            const state: Habbajet[] = addDays(
+                [false, false, true],
+                createTestState(3, 0, 0, 1).habbajets,
+            );
+
+            const action = addHabbajetAction(
+                'Test Edit',
+                state[1].maxValue,
+                state[1].modifier,
+                state[1].totalSlack,
+                white,
+                state[1].id,
+            );
+            const newState = habbajetsReducer(state, action);
+
+            expect(newState[1]).toEqual({
+                ...state[1],
+                name: 'Test Edit',
+                color: white,
+            });
+            expect(state).toEqual(
+                addDays(
+                    [false, false, true],
+                    createTestState(3, 0, 0, 1).habbajets,
+                ),
+            );
+        });
+
+        it('can rework week with new modifier', () => {
+            const state: Habbajet[] = addDays(
+                [true, false, true],
+                createTestState(3, 0, 0, 1).habbajets,
+            );
+
+            const action = addHabbajetAction(
+                'Test Edit',
+                state[1].maxValue,
+                4,
+                state[1].totalSlack,
+                white,
+                state[1].id,
+            );
+            const newState = habbajetsReducer(state, action);
+
+            expect(newState[1]).toEqual({
+                ...state[1],
+                name: 'Test Edit',
+                modifier: 4,
+                currentValue: 100 / Math.pow(4, 5),
+                color: white,
+            });
+            expect(state).toEqual(
+                addDays(
+                    [true, false, true],
+                    createTestState(3, 0, 0, 1).habbajets,
+                ),
+            );
+        });
+
+        it('will persist the toClaim state and preserve history', () => {
+            const state: Habbajet[] = addDays(
+                [true, false],
+                createTestState(3, 0, 0, 1).habbajets,
+            );
+            state[1].toClaim = true;
+            state[1].results = [0, 0, 0, 0, 0, 0, 0, 0, 2];
+            state[1].oldStreaks = [7, 7];
+            state[1].bestStreak = 7;
+
+            const action = addHabbajetAction(
+                'Test Edit',
+                200,
+                3,
+                1,
+                white,
+                state[1].id,
+            );
+            const newState = habbajetsReducer(state, action);
+
+            expect(newState[1]).toEqual({
+                ...state[1],
+                name: 'Test Edit',
+                maxValue: 200,
+                currentValue: 200 / Math.pow(3, 5),
+                modifier: 3,
+                totalSlack: 1,
+                remainingSlack: 0,
+                color: white,
+                bestStreak: 9,
+                currentStreak: 9,
+                results: [0, 0, 0, 0, 0, 0, 0, 0, 1],
+                toClaim: true,
+            });
         });
     });
 });
