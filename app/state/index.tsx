@@ -11,6 +11,7 @@ export interface Habbajet {
     selected: boolean;
     currentStreak: number;
     bestStreak: number;
+    oldStreaks: [number, number];
     totalSlack: number;
     remainingSlack: number;
 }

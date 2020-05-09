@@ -29,6 +29,7 @@ export function createTestState(
             selected: i === selectedIndex,
             currentStreak: 0,
             bestStreak: 5,
+            oldStreaks: [0, 5],
             totalSlack: 0,
             remainingSlack: 0,
         });

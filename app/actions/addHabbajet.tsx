@@ -35,6 +35,7 @@ export function addHabbajetAction(
             selected: false,
             currentStreak: 0,
             bestStreak: 0,
+            oldStreaks: [0, 0],
             totalSlack: slack,
             remainingSlack: slack,
         },
@@ -64,7 +65,50 @@ export function addHabbajet(
         modifier: edited.modifier,
         totalSlack: edited.totalSlack,
         color: edited.color,
+        selected: true,
     };
 
+    const needsRedoing =
+        original.maxValue !== edited.maxValue ||
+        original.modifier !== edited.modifier ||
+        original.totalSlack !== edited.totalSlack;
+    if (needsRedoing) {
+        redoWeek(newState[replaceIndex]);
+    }
+
     return newState;
+}
+
+function redoWeek(habbajet: Habbajet) {
+    const daysCompleted = habbajet.results.length % 7;
+    const pastResults = habbajet.results.slice(
+        0,
+        habbajet.results.length - daysCompleted,
+    );
+    const daysToReset = habbajet.results.slice(
+        habbajet.results.length - daysCompleted,
+    );
+
+    habbajet.currentValue = habbajet.maxValue / Math.pow(habbajet.modifier, 7);
+    habbajet.results = pastResults;
+    habbajet.remainingSlack = habbajet.totalSlack;
+    habbajet.currentStreak = habbajet.oldStreaks[0];
+    habbajet.bestStreak = habbajet.oldStreaks[1];
+
+    for (let result of daysToReset) {
+        const isSuccess = result || habbajet.remainingSlack > 0;
+        habbajet.results = [...habbajet.results, isSuccess];
+        if (isSuccess) {
+            habbajet.currentValue *= habbajet.modifier;
+            habbajet.currentStreak++;
+            if (habbajet.currentStreak > habbajet.bestStreak) {
+                habbajet.bestStreak = habbajet.currentStreak;
+            }
+            if (!result) {
+                habbajet.remainingSlack--;
+            }
+        } else {
+            habbajet.currentStreak = 0;
+        }
+    }
 }
