@@ -52,6 +52,7 @@ const FormField = (props: FormFieldProps) => {
                 keyboardType={props.numeric ? 'numeric' : 'default'}
                 onChangeText={value => props.onValueChange(value)}
                 style={styles.input}
+                testID={`input-${props.title.replace(' ', '-')}`}
             />
             {errorMessage}
         </View>

@@ -44,6 +44,7 @@ const ColorPicker = (props: ColorPickerProps) => {
                 color === props.selected ? styles.selectedColor : {},
             ]}
             onPress={() => props.onSelect(color)}
+            testID={`color-${color}`}
         />
     ));
 

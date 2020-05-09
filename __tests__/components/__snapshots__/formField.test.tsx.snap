@@ -38,6 +38,7 @@ exports[`FormField Component can render a form field with a placeholder 1`] = `
         "paddingLeft": 10,
       }
     }
+    testID="input-Test-Field"
     underlineColorAndroid="transparent"
     value=""
   />
@@ -83,6 +84,7 @@ exports[`FormField Component can render a form field with a value 1`] = `
         "paddingLeft": 10,
       }
     }
+    testID="input-Test-Field"
     underlineColorAndroid="transparent"
     value="value"
   />
@@ -128,6 +130,7 @@ exports[`FormField Component can render a form field with error text 1`] = `
         "paddingLeft": 10,
       }
     }
+    testID="input-Test-Field"
     underlineColorAndroid="transparent"
     value="124"
   />
@@ -189,6 +192,7 @@ exports[`FormField Component can render an empty form field 1`] = `
         "paddingLeft": 10,
       }
     }
+    testID="input-Test-Field"
     underlineColorAndroid="transparent"
     value=""
   />

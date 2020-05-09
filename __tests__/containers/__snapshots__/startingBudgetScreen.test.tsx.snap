@@ -68,6 +68,7 @@ exports[`Starting Budget Screen Component can render a starting budget form 1`] 
               "paddingLeft": 10,
             }
           }
+          testID="input-Starting-Budget"
           underlineColorAndroid="transparent"
           value=""
         />

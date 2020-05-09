@@ -49,6 +49,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Name"
           underlineColorAndroid="transparent"
           value="Name"
         />
@@ -91,6 +92,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Value"
           underlineColorAndroid="transparent"
           value="200"
         />
@@ -133,6 +135,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Modifier"
           underlineColorAndroid="transparent"
           value="10"
         />
@@ -175,6 +178,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Slack-Days"
           underlineColorAndroid="transparent"
           value="1"
         />
@@ -231,6 +235,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#8066C2"
           />
           <View
             accessible={true}
@@ -254,6 +259,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E04747"
           />
           <View
             accessible={true}
@@ -277,6 +283,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#2AAD5E"
           />
           <View
             accessible={true}
@@ -300,6 +307,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#B1B952"
           />
           <View
             accessible={true}
@@ -323,6 +331,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#7F90EC"
           />
           <View
             accessible={true}
@@ -346,6 +355,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#37353C"
           />
           <View
             accessible={true}
@@ -369,6 +379,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E64CE9"
           />
           <View
             accessible={true}
@@ -392,6 +403,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#EB712D"
           />
         </View>
       </View>
@@ -527,6 +539,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Name"
           underlineColorAndroid="transparent"
           value="Name"
         />
@@ -569,6 +582,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Value"
           underlineColorAndroid="transparent"
           value="200"
         />
@@ -611,6 +625,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Modifier"
           underlineColorAndroid="transparent"
           value="10"
         />
@@ -653,6 +668,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Slack-Days"
           underlineColorAndroid="transparent"
           value="1"
         />
@@ -709,6 +725,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#8066C2"
           />
           <View
             accessible={true}
@@ -732,6 +749,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E04747"
           />
           <View
             accessible={true}
@@ -755,6 +773,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#2AAD5E"
           />
           <View
             accessible={true}
@@ -778,6 +797,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#B1B952"
           />
           <View
             accessible={true}
@@ -801,6 +821,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#7F90EC"
           />
           <View
             accessible={true}
@@ -824,6 +845,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#37353C"
           />
           <View
             accessible={true}
@@ -847,6 +869,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E64CE9"
           />
           <View
             accessible={true}
@@ -870,6 +893,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#EB712D"
           />
         </View>
       </View>
@@ -966,6 +990,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Name"
           underlineColorAndroid="transparent"
           value="Name"
         />
@@ -1008,6 +1033,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Value"
           underlineColorAndroid="transparent"
           value="0"
         />
@@ -1067,6 +1093,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Modifier"
           underlineColorAndroid="transparent"
           value="10"
         />
@@ -1109,6 +1136,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Slack-Days"
           underlineColorAndroid="transparent"
           value="-1"
         />
@@ -1182,6 +1210,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#8066C2"
           />
           <View
             accessible={true}
@@ -1205,6 +1234,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E04747"
           />
           <View
             accessible={true}
@@ -1228,6 +1258,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#2AAD5E"
           />
           <View
             accessible={true}
@@ -1251,6 +1282,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#B1B952"
           />
           <View
             accessible={true}
@@ -1274,6 +1306,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#7F90EC"
           />
           <View
             accessible={true}
@@ -1297,6 +1330,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#37353C"
           />
           <View
             accessible={true}
@@ -1320,6 +1354,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E64CE9"
           />
           <View
             accessible={true}
@@ -1343,6 +1378,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#EB712D"
           />
         </View>
       </View>
@@ -1439,6 +1475,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Name"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -1481,6 +1518,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Value"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -1523,6 +1561,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Modifier"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -1565,6 +1604,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
               "paddingLeft": 10,
             }
           }
+          testID="input-Slack-Days"
           underlineColorAndroid="transparent"
           value="0"
         />
@@ -1621,6 +1661,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#8066C2"
           />
           <View
             accessible={true}
@@ -1644,6 +1685,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E04747"
           />
           <View
             accessible={true}
@@ -1667,6 +1709,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#2AAD5E"
           />
           <View
             accessible={true}
@@ -1690,6 +1733,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#B1B952"
           />
           <View
             accessible={true}
@@ -1713,6 +1757,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#7F90EC"
           />
           <View
             accessible={true}
@@ -1736,6 +1781,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#37353C"
           />
           <View
             accessible={true}
@@ -1759,6 +1805,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#E64CE9"
           />
           <View
             accessible={true}
@@ -1782,6 +1829,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
                 "width": 60,
               }
             }
+            testID="color-#EB712D"
           />
         </View>
       </View>
