@@ -28,7 +28,9 @@ const HabbajetList = (props: HabbajetListProps) => {
         <WideButton
             text={habbajet.name}
             color={habbajet.color}
-            highlight={today > moment(habbajet.date).valueOf()}
+            highlight={
+                today > moment(habbajet.date).valueOf() || habbajet.toClaim
+            }
             key={habbajet.name}
             onPress={() => props.onSelect(habbajet)}
         />

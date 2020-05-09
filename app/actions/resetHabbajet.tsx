@@ -27,6 +27,7 @@ export function resetHabbajet(
     edited.toClaim = false;
     edited.results = [];
     edited.remainingSlack = edited.totalSlack;
+    edited.oldStreaks = [edited.currentStreak, edited.bestStreak];
     newState[index] = edited;
 
     return newState;

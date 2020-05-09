@@ -12,7 +12,7 @@ describe('HabitWheel Component', () => {
     });
 
     it('renders a half-full circle with some successes', () => {
-        const results = [true, false, true, true];
+        const results = [0, 2, 0, 0];
         const component = renderer.create(
             <HabitWheel color={habbajetColors[1]} results={results} />,
         );
@@ -20,9 +20,17 @@ describe('HabitWheel Component', () => {
     });
 
     it('renders a full circle with all successes', () => {
-        const results = [true, true, true, true, true, true, true];
+        const results = [0, 0, 0, 0, 0, 0, 0];
         const component = renderer.create(
             <HabitWheel color={habbajetColors[2]} results={results} />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('will a count slack days as successes', () => {
+        const results = [1, 1, 1, 1, 1];
+        const component = renderer.create(
+            <HabitWheel color={habbajetColors[3]} results={results} />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });

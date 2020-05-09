@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import Pie from 'react-native-pie';
 import {lightGrey, complementColors} from '../colors';
+import {HabitResult} from '../state';
 
 const CHART_MARGINS = 30;
 const TRANSPARENCY = 'BF';
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
 });
 
 interface HabitWheelProps {
-    results: boolean[];
+    results: HabitResult[];
     color: string;
 }
 const HabitWheel = (props: HabitWheelProps) => {
@@ -24,10 +25,11 @@ const HabitWheel = (props: HabitWheelProps) => {
     for (let i = 0; i < 7; i++) {
         let color: string;
         switch (results[i]) {
-            case true:
+            case HabitResult.Success:
+            case HabitResult.SlackSuccess:
                 color = props.color + TRANSPARENCY;
                 break;
-            case false:
+            case HabitResult.Failure:
                 color = complementColors[props.color] + TRANSPARENCY;
                 break;
             default:
