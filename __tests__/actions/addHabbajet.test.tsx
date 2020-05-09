@@ -62,7 +62,10 @@ describe('Add Habbajet Action', () => {
     describe('Edit habbajet', () => {
         function addDays(daysToRedo: boolean[], state: Habbajet[]) {
             for (let day of daysToRedo) {
-                addHabitResult(state, addHabitResultAction(state[1].name, day));
+                state = addHabitResult(
+                    state,
+                    addHabitResultAction(state[1].name, day),
+                );
             }
             return state;
         }
@@ -82,6 +85,7 @@ describe('Add Habbajet Action', () => {
             expect(newState[1]).toEqual({
                 ...state[1],
                 name: 'Test Edit',
+                currentValue: 80 / Math.pow(2, 7),
                 maxValue: 80,
                 modifier: 2,
                 totalSlack: 3,
@@ -112,7 +116,7 @@ describe('Add Habbajet Action', () => {
                 ...state[1],
                 name: 'Test Edit',
                 maxValue: 80,
-                currentValue: 2.5,
+                currentValue: 80 / Math.pow(2, 5),
                 modifier: 2,
                 totalSlack: 3,
                 remainingSlack: 3,
@@ -121,6 +125,42 @@ describe('Add Habbajet Action', () => {
             });
             expect(state).toEqual(
                 addDays([true, true], createTestState(3, 0, 0, 1).habbajets),
+            );
+        });
+
+        it('will include slack in the redo calculation', () => {
+            const state: Habbajet[] = addDays(
+                [false, false, true],
+                createTestState(3, 0, 0, 1).habbajets,
+            );
+
+            const action = addHabbajetAction(
+                'Test Edit',
+                80,
+                2,
+                3,
+                white,
+                state[1].id,
+            );
+            const newState = habbajetsReducer(state, action);
+
+            expect(newState[1]).toEqual({
+                ...state[1],
+                name: 'Test Edit',
+                maxValue: 80,
+                currentValue: 80 / Math.pow(2, 4),
+                modifier: 2,
+                totalSlack: 3,
+                remainingSlack: 1,
+                color: white,
+                bestStreak: 5,
+                currentStreak: 3,
+            });
+            expect(state).toEqual(
+                addDays(
+                    [false, false, true],
+                    createTestState(3, 0, 0, 1).habbajets,
+                ),
             );
         });
     });
