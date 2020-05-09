@@ -7,7 +7,7 @@ import {
 } from '../../app/actions';
 import {Habbajet} from '../../app/state';
 import moment from 'moment';
-import {white} from '../../app/colors';
+import {white, grey} from '../../app/colors';
 
 describe('Add Habbajet Action', () => {
     describe('Add new habbajet', () => {
@@ -250,12 +250,11 @@ describe('Add Habbajet Action', () => {
             );
         });
 
-        it('will persist the toClaim state and preserve history', () => {
+        it('will preserve history and rework streaks', () => {
             const state: Habbajet[] = addDays(
                 [true, false],
                 createTestState(3, 0, 0, 1).habbajets,
             );
-            state[1].toClaim = true;
             state[1].results = [0, 0, 0, 0, 0, 0, 0, 0, 2];
             state[1].oldStreaks = [7, 7];
             state[1].bestStreak = 7;
@@ -282,8 +281,43 @@ describe('Add Habbajet Action', () => {
                 bestStreak: 9,
                 currentStreak: 9,
                 results: [0, 0, 0, 0, 0, 0, 0, 0, 1],
-                toClaim: true,
             });
+        });
+
+        it('can rework weeks about to be claimed', () => {
+            const state: Habbajet[] = addDays(
+                [true, true, false, true, false, true, true],
+                createTestState(3, 0, 0, 1).habbajets,
+            );
+
+            const action = addHabbajetAction(
+                state[1].name,
+                80,
+                4,
+                1,
+                grey,
+                state[1].id,
+            );
+            const newState = habbajetsReducer(state, action);
+
+            expect(newState[1]).toEqual({
+                ...state[1],
+                maxValue: 80,
+                currentValue: 80 / Math.pow(4, 1),
+                modifier: 4,
+                totalSlack: 1,
+                remainingSlack: 0,
+                color: grey,
+                currentStreak: 2,
+                toClaim: true,
+                results: [0, 0, 1, 0, 2, 0, 0],
+            });
+            expect(state).toEqual(
+                addDays(
+                    [true, true, false, true, false, true, true],
+                    createTestState(3, 0, 0, 1).habbajets,
+                ),
+            );
         });
     });
 });

@@ -80,7 +80,7 @@ export function addHabbajet(
 }
 
 function redoWeek(habbajet: Habbajet) {
-    const daysCompleted = habbajet.results.length % 7;
+    const daysCompleted = habbajet.toClaim ? 7 : habbajet.results.length % 7;
     const pastResults = habbajet.results.slice(
         0,
         habbajet.results.length - daysCompleted,
