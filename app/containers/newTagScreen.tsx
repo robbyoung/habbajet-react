@@ -25,10 +25,10 @@ const NewTagScreen = () => {
     const [error, setError] = useState('');
     const [validated, setValidated] = useState(false);
 
-    if (validated) {
+    if (validated && error === '') {
         const action = addTagAction(name, color);
         dispatch(action);
-        dispatch(updatePurchaseEditorAction('Tag', action.newTag.id));
+        dispatch(updatePurchaseEditorAction('TagId', action.newTag.id));
         goBack();
         saveState();
     }

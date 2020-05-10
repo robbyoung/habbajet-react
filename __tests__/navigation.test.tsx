@@ -8,6 +8,7 @@ import {
     goToNewPurchase,
     goToEditHabbajet,
     goToStartingBudget,
+    goToNewTag,
 } from '../app/navigation';
 
 let layoutRoot: LayoutRoot;
@@ -78,5 +79,9 @@ describe('Navigation', () => {
 
     it('goToStartingBudget correctly navigates to the starting budget screen', () => {
         testStackReset(goToStartingBudget, 'StartingBudget');
+    });
+
+    it('goToNewTag correctly navigates to the new tag screen', () => {
+        testStackPush(goToNewTag, 'NewTag');
     });
 });

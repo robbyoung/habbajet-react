@@ -387,6 +387,42 @@ exports[`TagPicker Component can render a tag picker 1`] = `
         Tag 9
       </Text>
     </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#959595",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        New Tag
+      </Text>
+    </View>
   </View>
 </View>
 `;
@@ -775,6 +811,42 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
         }
       >
         Tag 9
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#959595",
+          "borderColor": "transparent",
+          "borderRadius": 8,
+          "borderWidth": 4,
+          "marginBottom": 5,
+          "marginRight": 5,
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#ffffff",
+            "fontSize": 20,
+            "padding": 5,
+          }
+        }
+      >
+        New Tag
       </Text>
     </View>
   </View>

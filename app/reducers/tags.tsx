@@ -11,7 +11,7 @@ import {
 
 export const DEFAULT_TAGS: Tag[] = [
     {name: 'Living', color: habbajetColors[0], id: '0'},
-    {name: 'Groceries', color: habbajetColors[1], id: '1'},
+    {name: 'Groceries', color: habbajetColors[2], id: '1'},
 ];
 
 export default function tagReducer(
