@@ -27,8 +27,8 @@ const HomeScreen = () => {
                 <BudgetDisplay budget={budget} onPress={goToPurchases} />
                 <HabbajetList
                     habbajets={habbajets}
-                    onSelect={name => {
-                        dispatch(selectHabbajetAction(name));
+                    onSelect={habbajet => {
+                        dispatch(selectHabbajetAction(habbajet.name));
                         goToHabbajet();
                     }}
                 />

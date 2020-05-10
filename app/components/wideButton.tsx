@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {white} from '../colors';
 
 const styles = StyleSheet.create({
@@ -17,11 +17,21 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         padding: 10,
     },
+    highlight: {
+        position: 'absolute',
+        top: 17,
+        right: 17,
+        height: 20,
+        width: 20,
+        borderRadius: 10,
+        backgroundColor: white,
+    },
 });
 
 interface WideButton {
     text: string;
     color: string;
+    highlight?: boolean;
     onPress: () => void;
 }
 const WideButton = (props: WideButton) => {
@@ -30,6 +40,7 @@ const WideButton = (props: WideButton) => {
             onPress={() => props.onPress()}
             style={[styles.container, {backgroundColor: props.color}]}>
             <Text style={[styles.text]}>{props.text}</Text>
+            {props.highlight ? <View style={styles.highlight} /> : null}
         </TouchableOpacity>
     );
 };

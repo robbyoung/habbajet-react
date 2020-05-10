@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
 
 interface HabbajetDisplayProps {
     habbajet: Habbajet;
+    hasDeficit: boolean;
     onSuccess: () => void;
     onFailure: () => void;
     onClaim: () => void;
@@ -36,7 +37,11 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                 />
                 <View style={styles.details}>
                     <Label
-                        title="Current Value"
+                        title={
+                            props.hasDeficit
+                                ? 'Current Value (-10%)'
+                                : 'Current Value'
+                        }
                         content={`$${props.habbajet.currentValue.toFixed(2)}`}
                         color={props.habbajet.color}
                         contentSize={50}

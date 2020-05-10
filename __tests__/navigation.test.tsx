@@ -6,6 +6,9 @@ import {
     goToNewHabbajet,
     goToPurchases,
     goToNewPurchase,
+    goToEditHabbajet,
+    goToStartingBudget,
+    goToNewTag,
 } from '../app/navigation';
 
 let layoutRoot: LayoutRoot;
@@ -68,5 +71,17 @@ describe('Navigation', () => {
 
     it('goToNewPurchase correctly navigates to the new purchase screen', () => {
         testStackPush(goToNewPurchase, 'NewPurchase');
+    });
+
+    it('goToEditHabbajet correctly navigates to the edit habbajet screen', () => {
+        testStackPush(goToEditHabbajet, 'EditHabbajet');
+    });
+
+    it('goToStartingBudget correctly navigates to the starting budget screen', () => {
+        testStackReset(goToStartingBudget, 'StartingBudget');
+    });
+
+    it('goToNewTag correctly navigates to the new tag screen', () => {
+        testStackPush(goToNewTag, 'NewTag');
     });
 });

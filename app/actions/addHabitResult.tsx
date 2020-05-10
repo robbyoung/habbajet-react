@@ -1,7 +1,7 @@
 import moment from 'moment';
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
-import {Habbajet} from '../state';
+import {Habbajet, HabitResult} from '../state';
 
 export interface AddHabitResultAction extends Action {
     type: ActionType.ADD_HABIT_RESULT;
@@ -39,10 +39,15 @@ export function addHabitResult(
     if (date.day() === 1) {
         edited.toClaim = true;
     }
-
     edited.date = date.toISOString();
+
+    let newResult = action.result ? HabitResult.Success : HabitResult.Failure;
+    if (edited.remainingSlack > 0 && !action.result) {
+        newResult = HabitResult.SlackSuccess;
+    }
+    edited.results = [...edited.results, newResult];
+
     const isSuccess = action.result || edited.remainingSlack > 0;
-    edited.results = [...edited.results, isSuccess];
     if (isSuccess) {
         edited.currentValue *= edited.modifier;
         edited.currentStreak++;

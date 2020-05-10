@@ -12,4 +12,7 @@ export enum ActionType {
     UPDATE_PURCHASE_EDITOR = 'Update Purchase Editor',
     CLEAR_PURCHASE_EDITOR = 'Clear Purchase Editor',
     VALIDATE_PURCHASE_EDITOR = 'Validate Purchase Editor',
+    SET_HABBAJET_TO_EDIT = 'Set Habbajet To Edit',
+    DELETE_HABBAJET = 'Delete Habbajet',
+    ADD_TAG = 'Add Tag',
 }

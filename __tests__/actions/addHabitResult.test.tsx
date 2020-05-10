@@ -2,6 +2,7 @@ import habbajetsReducer from '../../app/reducers/habbajets';
 import {createTestState} from '../../app/state/testState';
 import {addHabitResultAction} from '../../app/actions';
 import moment from 'moment';
+import {HabitResult} from '../../app/state';
 
 describe('Add Habit Result Action', () => {
     it('can update a habbajet with a successful habit outcome', () => {
@@ -11,7 +12,7 @@ describe('Add Habit Result Action', () => {
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
-        expect(result.results).toEqual([true]);
+        expect(result.results).toEqual([HabitResult.Success]);
         expect(result.currentValue).toEqual(state[0].currentValue * 2);
         expect(result.currentStreak).toEqual(state[0].currentStreak + 1);
         expect(result.bestStreak).toEqual(state[0].bestStreak);
@@ -28,7 +29,7 @@ describe('Add Habit Result Action', () => {
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
-        expect(result.results).toEqual([false]);
+        expect(result.results).toEqual([HabitResult.Failure]);
         expect(result.currentValue).toEqual(state[0].currentValue);
 
         const date = moment(state[0].date);
@@ -50,12 +51,12 @@ describe('Add Habit Result Action', () => {
         state[0].date = moment(state[0].date)
             .add(6, 'days')
             .toISOString();
-        state[0].results = [true, true, true, true, true, true];
+        state[0].results = [0, 0, 0, 0, 0, 0];
         const action = addHabitResultAction(state[0].name, false);
 
         const newState = habbajetsReducer(state, action);
         expect(newState[0].toClaim).toEqual(true);
-        expect(newState[0].results[6]).toEqual(false);
+        expect(newState[0].results[6]).toEqual(HabitResult.Failure);
     });
 
     it('will reset habit streak on an unsuccessful habit outcome', () => {
@@ -85,7 +86,7 @@ describe('Add Habit Result Action', () => {
 
         const action = addHabitResultAction(state[0].name, false);
         const newState = habbajetsReducer(state, action);
-        expect(newState[0].results[0]).toEqual(true);
+        expect(newState[0].results[0]).toEqual(HabitResult.SlackSuccess);
         expect(newState[0].currentStreak).toEqual(1);
         expect(newState[0].remainingSlack).toEqual(0);
         expect(newState[0].totalSlack).toEqual(1);
@@ -98,7 +99,7 @@ describe('Add Habit Result Action', () => {
 
         const action = addHabitResultAction(state[0].name, false);
         const newState = habbajetsReducer(state, action);
-        expect(newState[0].results[0]).toEqual(false);
+        expect(newState[0].results[0]).toEqual(HabitResult.Failure);
         expect(newState[0].currentStreak).toEqual(0);
     });
 });

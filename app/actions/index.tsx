@@ -12,3 +12,6 @@ export * from './addPurchase';
 export * from './updatePurchaseEditor';
 export * from './clearPurchaseEditor';
 export * from './validatePurchaseEditor';
+export * from './setHabbajetToEdit';
+export * from './deleteHabbajet';
+export * from './addTag';

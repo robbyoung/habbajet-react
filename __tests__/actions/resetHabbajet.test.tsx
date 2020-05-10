@@ -3,15 +3,16 @@ import {createTestState} from '../../app/state/testState';
 import {resetHabbajetAction} from '../../app/actions';
 
 describe('Reset Habbajet Action', () => {
-    it('will reset the weekly state of a habbajet', () => {
-        const toReset = createTestState(1, 0, 0).habbajets[0];
+    it('will reset the weekly state of the selected habbajet', () => {
+        const toReset = createTestState(1, 0, 0, 0).habbajets[0];
         toReset.currentValue = 20;
         toReset.toClaim = true;
-        toReset.results = [true, true, false, true, true, true, true];
+        toReset.results = [0, 0, 2, 0, 0, 0, 0];
         toReset.totalSlack = 3;
         toReset.remainingSlack = 1;
+        toReset.currentStreak = 2;
         const state = [toReset];
-        const action = resetHabbajetAction(toReset.name);
+        const action = resetHabbajetAction();
 
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
@@ -21,12 +22,13 @@ describe('Reset Habbajet Action', () => {
         expect(result.toClaim).toEqual(false);
         expect(result.results).toEqual([]);
         expect(result.remainingSlack).toEqual(3);
+        expect(result.oldStreaks).toEqual([2, 5]);
         expect(state).toEqual([toReset]);
     });
 
-    it('will return state unchanged for invalid habbajet names', () => {
+    it('will return state unchanged if nothing is selected', () => {
         const state = createTestState(5, 1, 10).habbajets;
-        const action = resetHabbajetAction('invalid');
+        const action = resetHabbajetAction();
 
         const newState = habbajetsReducer(state, action);
         expect([...newState]).toEqual(createTestState(5, 1, 10).habbajets);

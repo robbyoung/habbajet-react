@@ -169,7 +169,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "#E04747",
+                "backgroundColor": "#2AAD5E",
                 "borderColor": "transparent",
                 "borderRadius": 8,
                 "borderWidth": 4,
@@ -205,7 +205,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "#2AAD5E",
+                "backgroundColor": "#959595",
                 "borderColor": "transparent",
                 "borderRadius": 8,
                 "borderWidth": 4,
@@ -225,115 +225,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
                 }
               }
             >
-              Food
-            </Text>
-          </View>
-          <View
-            accessible={true}
-            focusable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "backgroundColor": "#B1B952",
-                "borderColor": "transparent",
-                "borderRadius": 8,
-                "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
-                "opacity": 1,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
-              }
-            >
-              Gaming
-            </Text>
-          </View>
-          <View
-            accessible={true}
-            focusable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "backgroundColor": "#7F90EC",
-                "borderColor": "transparent",
-                "borderRadius": 8,
-                "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
-                "opacity": 1,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
-              }
-            >
-              Books
-            </Text>
-          </View>
-          <View
-            accessible={true}
-            focusable={true}
-            isTVSelectable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "backgroundColor": "#37353C",
-                "borderColor": "transparent",
-                "borderRadius": 8,
-                "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
-                "opacity": 1,
-              }
-            }
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
-              }
-            >
-              Tech
+              New Tag
             </Text>
           </View>
         </View>

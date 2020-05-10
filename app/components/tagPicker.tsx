@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
 interface TagPickerProps {
     selected: string;
     onSelect: (tagId: string) => void;
+    onNewTag: () => void;
     tags: Tag[];
 }
 const TagPicker = (props: TagPickerProps) => {
@@ -58,7 +59,15 @@ const TagPicker = (props: TagPickerProps) => {
     return (
         <View>
             <Text style={[styles.title]}>Tag</Text>
-            <View style={styles.tagList}>{tagButtons}</View>
+            <View style={styles.tagList}>
+                {tagButtons}
+                <TouchableOpacity
+                    key="new-tag"
+                    style={[styles.tag, {backgroundColor: grey}]}
+                    onPress={() => props.onNewTag()}>
+                    <Text style={styles.tagText}>New Tag</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 };

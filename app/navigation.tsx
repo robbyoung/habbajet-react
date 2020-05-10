@@ -9,10 +9,14 @@ import {grey, white} from './colors';
 import NewHabbajetScreen from './containers/newHabbajetScreen';
 import PurchasesScreen from './containers/purchasesScreen';
 import IconButton from './components/iconButton';
-import {faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faPlus, faPencilAlt, faTrash} from '@fortawesome/free-solid-svg-icons';
 import NewPurchaseScreen from './containers/newPurchaseScreen';
 import {clearPurchaseEditorAction} from './actions';
 import SplashScreen from 'react-native-splash-screen';
+import EditHabbajetScreen from './containers/editHabbajetScreen';
+import ConfirmationModal from './components/confirmationModal';
+import StartingBudgetScreen from './containers/startingBudgetScreen';
+import NewTagScreen from './containers/newTagScreen';
 
 enum Screens {
     Loading = 'Loading',
@@ -21,6 +25,9 @@ enum Screens {
     NewHabbajet = 'NewHabbajet',
     Purchases = 'Purchases',
     NewPurchase = 'NewPurchase',
+    EditHabbajet = 'EditHabbajet',
+    StartingBudget = 'StartingBudget',
+    NewTag = 'NewTag',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -85,6 +92,36 @@ Navigation.registerComponent(
     () => NewPurchaseScreen,
 );
 
+Navigation.registerComponent(
+    Screens.EditHabbajet,
+    () => () => (
+        <Provider store={store}>
+            <EditHabbajetScreen />
+        </Provider>
+    ),
+    () => EditHabbajetScreen,
+);
+
+Navigation.registerComponent(
+    Screens.StartingBudget,
+    () => () => (
+        <Provider store={store}>
+            <StartingBudgetScreen />
+        </Provider>
+    ),
+    () => StartingBudgetScreen,
+);
+
+Navigation.registerComponent(
+    Screens.NewTag,
+    () => () => (
+        <Provider store={store}>
+            <NewTagScreen />
+        </Provider>
+    ),
+    () => NewTagScreen,
+);
+
 const PlusButton = () => (
     <IconButton
         size={25}
@@ -99,6 +136,34 @@ const PlusButton = () => (
     />
 );
 Navigation.registerComponent('topBar.addPurchaseButton', () => PlusButton);
+
+const PencilButton = () => (
+    <IconButton
+        size={25}
+        color={white}
+        icon={faPencilAlt}
+        // eslint-disable-next-line react-native/no-inline-styles
+        containerStyle={{paddingRight: 15}}
+        onPress={() => {
+            goToEditHabbajet();
+        }}
+    />
+);
+Navigation.registerComponent('topBar.editHabbajetButton', () => PencilButton);
+
+const TrashButton = (props: {onPress: () => void}) => (
+    <IconButton
+        size={25}
+        color={white}
+        icon={faTrash}
+        // eslint-disable-next-line react-native/no-inline-styles
+        containerStyle={{paddingRight: 15}}
+        onPress={() => props.onPress()}
+    />
+);
+Navigation.registerComponent('topBar.deleteHabbajetButton', () => TrashButton);
+
+Navigation.registerComponent('modal.confirmation', () => ConfirmationModal);
 
 export const goBack = () => Navigation.pop(STACK_NAVIGATOR);
 
@@ -165,16 +230,14 @@ export const goToHabbajet = () => {
                     backButton: {
                         color: white,
                     },
-                    title: {
-                        text: ' ',
-                        fontFamily: 'Abel',
-                        fontSize: 30,
-                        color: white,
-                    },
-                    background: {
-                        color: grey,
-                    },
-                    rightButtons: [],
+                    rightButtons: [
+                        {
+                            id: 'addPurchaseButton',
+                            component: {
+                                name: 'topBar.editHabbajetButton',
+                            },
+                        },
+                    ],
                 },
             },
         },
@@ -249,6 +312,88 @@ export const goToNewPurchase = () => {
                     },
                     title: {
                         text: 'New Purchase',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};
+
+export const goToEditHabbajet = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.EditHabbajet,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'Edit Habbajet',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};
+
+export const goToStartingBudget = () => {
+    Navigation.setRoot({
+        root: {
+            stack: {
+                id: STACK_NAVIGATOR,
+                children: [
+                    {
+                        component: {
+                            name: Screens.StartingBudget,
+                            options: {
+                                topBar: {
+                                    backButton: {
+                                        color: white,
+                                    },
+                                    title: {
+                                        text: 'Getting Started',
+                                        fontFamily: 'Abel',
+                                        fontSize: 30,
+                                        color: white,
+                                    },
+                                    background: {
+                                        color: grey,
+                                    },
+                                },
+                            },
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    SplashScreen.hide();
+};
+
+export const goToNewTag = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.NewTag,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'New Tag',
                         fontFamily: 'Abel',
                         fontSize: 30,
                         color: white,

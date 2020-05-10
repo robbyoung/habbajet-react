@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loading Screen Component will redirect to home screen 1`] = `
+exports[`Loading Screen Component will redirect to home screen if store is populated 1`] = `
+<View>
+  <Text>
+    Loading
+  </Text>
+</View>
+`;
+
+exports[`Loading Screen Component will redirect to starting budget screen for empty stores 1`] = `
 <View>
   <Text>
     Loading

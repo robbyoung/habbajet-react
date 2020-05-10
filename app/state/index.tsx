@@ -1,15 +1,23 @@
+export enum HabitResult {
+    Success,
+    SlackSuccess,
+    Failure,
+}
+
 export interface Habbajet {
+    id: string;
     name: string;
     maxValue: number;
     currentValue: number;
     modifier: number;
-    results: boolean[];
+    results: HabitResult[];
     color: string;
     date: string;
     toClaim: boolean;
     selected: boolean;
     currentStreak: number;
     bestStreak: number;
+    oldStreaks: [number, number];
     totalSlack: number;
     remainingSlack: number;
 }

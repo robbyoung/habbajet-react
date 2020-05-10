@@ -17,6 +17,7 @@ export function createTestState(
     const habbajets: Habbajet[] = [];
     for (let i = 0; i < numHabbajets; i++) {
         habbajets.push({
+            id: `${i}`,
             name: `Habbajet ${i}`,
             maxValue: 100,
             currentValue: 100 / Math.pow(2, 7),
@@ -28,6 +29,7 @@ export function createTestState(
             selected: i === selectedIndex,
             currentStreak: 0,
             bestStreak: 5,
+            oldStreaks: [0, 5],
             totalSlack: 0,
             remainingSlack: 0,
         });

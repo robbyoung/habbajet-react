@@ -17,21 +17,45 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
 }));
 
-let stateLoaded = false;
+let mockStatePopulated = false;
+let stateLoaded: Boolean = false;
 jest.mock('../../app/storage', () => ({
     loadState: () => {
         stateLoaded = true;
-        return {
-            purchases: [],
-            habbajets: [],
-            budget: 0,
-            tags: [],
-        };
+        return mockStatePopulated
+            ? {
+                  purchases: [],
+                  habbajets: [],
+                  budget: 0,
+                  tags: [],
+              }
+            : undefined;
     },
 }));
 
 describe('Loading Screen Component', () => {
-    it('will redirect to home screen', async () => {
+    it('will redirect to starting budget screen for empty stores', async () => {
+        mockStatePopulated = false;
+        stateLoaded = false;
+        const component = renderer.create(
+            <Provider store={store}>
+                <LoadingScreen />
+            </Provider>,
+        );
+        await waitForLoad();
+
+        // @ts-ignore
+        expect(layout.root.stack.children[0].component.name).toEqual(
+            'StartingBudget',
+        );
+        expect(stateLoaded).toEqual(true);
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('will redirect to home screen if store is populated', async () => {
+        mockStatePopulated = true;
+        stateLoaded = false;
+
         const component = renderer.create(
             <Provider store={store}>
                 <LoadingScreen />
