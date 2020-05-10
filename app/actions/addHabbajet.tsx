@@ -2,7 +2,7 @@ import moment from 'moment';
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
 import {Habbajet, HabitResult} from '../state';
-import * as uuid from 'uuid';
+import uuid from 'react-native-uuid';
 
 export interface AddHabbajetAction extends Action {
     type: ActionType.ADD_HABBAJET;

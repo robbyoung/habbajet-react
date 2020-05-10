@@ -7,7 +7,12 @@ describe('TagPicker Component', () => {
     it('can render a tag picker', () => {
         const tags = createTestState(0, 0, 0).tags;
         const component = renderer.create(
-            <TagPicker tags={tags} selected="0" onSelect={() => undefined} />,
+            <TagPicker
+                tags={tags}
+                selected="0"
+                onNewTag={() => undefined}
+                onSelect={() => undefined}
+            />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });
@@ -15,7 +20,12 @@ describe('TagPicker Component', () => {
     it('can render a tag picker with no selected tag', () => {
         const tags = createTestState(0, 0, 0).tags;
         const component = renderer.create(
-            <TagPicker tags={tags} selected="" onSelect={() => undefined} />,
+            <TagPicker
+                tags={tags}
+                selected=""
+                onNewTag={() => undefined}
+                onSelect={() => undefined}
+            />,
         );
         expect(component.toJSON()).toMatchSnapshot();
     });

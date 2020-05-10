@@ -16,6 +16,7 @@ import SplashScreen from 'react-native-splash-screen';
 import EditHabbajetScreen from './containers/editHabbajetScreen';
 import ConfirmationModal from './components/confirmationModal';
 import StartingBudgetScreen from './containers/startingBudgetScreen';
+import NewTagScreen from './containers/newTagScreen';
 
 enum Screens {
     Loading = 'Loading',
@@ -26,6 +27,7 @@ enum Screens {
     NewPurchase = 'NewPurchase',
     EditHabbajet = 'EditHabbajet',
     StartingBudget = 'StartingBudget',
+    NewTag = 'NewTag',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -108,6 +110,16 @@ Navigation.registerComponent(
         </Provider>
     ),
     () => StartingBudgetScreen,
+);
+
+Navigation.registerComponent(
+    Screens.NewTag,
+    () => () => (
+        <Provider store={store}>
+            <NewTagScreen />
+        </Provider>
+    ),
+    () => NewTagScreen,
 );
 
 const PlusButton = () => (
@@ -369,4 +381,28 @@ export const goToStartingBudget = () => {
         },
     });
     SplashScreen.hide();
+};
+
+export const goToNewTag = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.NewTag,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'New Tag',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
 };

@@ -1,7 +1,7 @@
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
 import {Tag} from '../state';
-import * as uuid from 'uuid';
+import uuid from 'react-native-uuid';
 
 export interface AddTagAction extends Action {
     type: ActionType.ADD_TAG;
