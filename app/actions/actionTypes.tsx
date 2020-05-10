@@ -14,4 +14,5 @@ export enum ActionType {
     VALIDATE_PURCHASE_EDITOR = 'Validate Purchase Editor',
     SET_HABBAJET_TO_EDIT = 'Set Habbajet To Edit',
     DELETE_HABBAJET = 'Delete Habbajet',
+    ADD_TAG = 'Add Tag',
 }
