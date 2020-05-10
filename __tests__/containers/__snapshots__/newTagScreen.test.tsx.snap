@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`New Purchase Screen Component will map state to a purchase creation form 1`] = `
+exports[`New Tag Screen Component will map state to a tag creation form 1`] = `
 <RCTScrollView>
   <View>
     <View
@@ -54,47 +54,6 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
         />
         <View />
       </View>
-      <View
-        style={
-          Object {
-            "marginBottom": 15,
-          }
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#959595",
-                "fontFamily": "Abel",
-                "fontSize": 20,
-                "margin": 0,
-                "padding": 0,
-              },
-            ]
-          }
-        >
-          Cost
-        </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="numeric"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
-          style={
-            Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
-            }
-          }
-          underlineColorAndroid="transparent"
-          value=""
-        />
-        <View />
-      </View>
       <View>
         <Text
           style={
@@ -109,13 +68,14 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
             ]
           }
         >
-          Tag
+          Color
         </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
               "flexWrap": "wrap",
+              "justifyContent": "space-between",
               "marginBottom": 10,
             }
           }
@@ -134,28 +94,41 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
             style={
               Object {
                 "backgroundColor": "#8066C2",
-                "borderColor": "transparent",
-                "borderRadius": 8,
+                "borderColor": "#959595",
+                "borderRadius": 4,
+                "borderStyle": "dotted",
                 "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "width": 60,
               }
             }
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#E04747",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
               }
-            >
-              Living
-            </Text>
-          </View>
+            }
+          />
           <View
             accessible={true}
             focusable={true}
@@ -170,28 +143,15 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
             style={
               Object {
                 "backgroundColor": "#2AAD5E",
-                "borderColor": "transparent",
-                "borderRadius": 8,
-                "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "width": 60,
               }
             }
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
-              }
-            >
-              Groceries
-            </Text>
-          </View>
+          />
           <View
             accessible={true}
             focusable={true}
@@ -205,29 +165,108 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "#959595",
-                "borderColor": "transparent",
-                "borderRadius": 8,
-                "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
+                "backgroundColor": "#B1B952",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "width": 60,
               }
             }
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#7F90EC",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
               }
-            >
-              New Tag
-            </Text>
-          </View>
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#37353C",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#E64CE9",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#EB712D",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+          />
         </View>
       </View>
       <View

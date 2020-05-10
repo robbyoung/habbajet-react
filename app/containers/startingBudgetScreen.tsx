@@ -67,7 +67,6 @@ const StartingBudgetScreen = () => {
                     color={grey}
                     onPress={() => {
                         const budgetValue = parseFloat(budget);
-                        console.log(budgetValue);
                         if (isNaN(budgetValue) || budgetValue < 0) {
                             setError('Must be a positive number');
                         }

@@ -10,7 +10,7 @@ import {
     clearPurchaseEditorAction,
     validatePurchaseEditorAction,
 } from '../actions';
-import {goBack} from '../navigation';
+import {goBack, goToNewTag} from '../navigation';
 import {
     getPurchaseNameField,
     getPurchaseCostField,
@@ -77,6 +77,7 @@ const NewPurchaseScreen = () => {
                     onSelect={tagId =>
                         dispatch(updatePurchaseEditorAction('TagId', tagId))
                     }
+                    onNewTag={() => goToNewTag()}
                 />
                 <WideButton
                     text="Done"
