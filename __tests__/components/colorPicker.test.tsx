@@ -15,7 +15,7 @@ describe('ColorPicker Component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
-    it('will run the onSelect event if a color is selected', async () => {
+    it('will run the onSelect callback if a color is selected', async () => {
         const onSelect = jest.fn();
         const {getByTestId} = render(
             <ColorPicker selected={habbajetColors[0]} onSelect={onSelect} />,

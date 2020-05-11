@@ -19,6 +19,7 @@ exports[`HabbajetClaimer Component renders a claim button with the habbajet valu
       "opacity": 1,
     }
   }
+  testID="button-claim"
 >
   <View
     style={
