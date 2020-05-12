@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ColorPicker Component can render a delete button 1`] = `
+exports[`Habbajet Form Component can render a delete button 1`] = `
 <RCTScrollView>
   <View>
     <View
@@ -427,6 +427,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
             "width": "100%",
           }
         }
+        testID="button-submit"
       >
         <Text
           style={
@@ -466,6 +467,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
             "width": "100%",
           }
         }
+        testID="button-delete"
       >
         <Text
           style={
@@ -490,7 +492,7 @@ exports[`ColorPicker Component can render a delete button 1`] = `
 </RCTScrollView>
 `;
 
-exports[`ColorPicker Component can render a filled-out form 1`] = `
+exports[`Habbajet Form Component can render a filled-out form 1`] = `
 <RCTScrollView>
   <View>
     <View
@@ -917,6 +919,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
             "width": "100%",
           }
         }
+        testID="button-submit"
       >
         <Text
           style={
@@ -941,7 +944,7 @@ exports[`ColorPicker Component can render a filled-out form 1`] = `
 </RCTScrollView>
 `;
 
-exports[`ColorPicker Component can render a form with invalid entries 1`] = `
+exports[`Habbajet Form Component can render a form with invalid entries 1`] = `
 <RCTScrollView>
   <View>
     <View
@@ -1402,6 +1405,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
             "width": "100%",
           }
         }
+        testID="button-submit"
       >
         <Text
           style={
@@ -1426,7 +1430,7 @@ exports[`ColorPicker Component can render a form with invalid entries 1`] = `
 </RCTScrollView>
 `;
 
-exports[`ColorPicker Component can render an empty habbajet form 1`] = `
+exports[`Habbajet Form Component can render an empty habbajet form 1`] = `
 <RCTScrollView>
   <View>
     <View
@@ -1853,6 +1857,7 @@ exports[`ColorPicker Component can render an empty habbajet form 1`] = `
             "width": "100%",
           }
         }
+        testID="button-submit"
       >
         <Text
           style={

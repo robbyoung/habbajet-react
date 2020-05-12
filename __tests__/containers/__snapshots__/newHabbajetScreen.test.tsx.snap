@@ -427,6 +427,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
             "width": "100%",
           }
         }
+        testID="button-submit"
       >
         <Text
           style={

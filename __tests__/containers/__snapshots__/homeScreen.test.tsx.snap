@@ -139,6 +139,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               "width": "100%",
             }
           }
+          testID="button-habbajet-0"
         >
           <Text
             style={
@@ -191,6 +192,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               "width": "100%",
             }
           }
+          testID="button-habbajet-1"
         >
           <Text
             style={
@@ -243,6 +245,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               "width": "100%",
             }
           }
+          testID="button-habbajet-2"
         >
           <Text
             style={
@@ -295,6 +298,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               "width": "100%",
             }
           }
+          testID="button-habbajet-3"
         >
           <Text
             style={
@@ -347,6 +351,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               "width": "100%",
             }
           }
+          testID="button-habbajet-4"
         >
           <Text
             style={

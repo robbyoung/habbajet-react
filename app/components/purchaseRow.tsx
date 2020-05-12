@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
 
 interface PurchaseRowProps {
     purchase: FormattedPurchase;
+    testID?: string;
     onPress: () => void;
 }
 const PurchaseRow = (props: PurchaseRowProps) => {
@@ -56,7 +57,10 @@ const PurchaseRow = (props: PurchaseRowProps) => {
         );
 
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity
+            style={styles.container}
+            testID={props.testID}
+            onPress={() => props.onPress()}>
             <View style={styles.row}>
                 <Text style={styles.largeText}>{props.purchase.name}</Text>
                 <Text style={styles.largeText}>{props.purchase.cost}</Text>

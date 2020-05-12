@@ -25,7 +25,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
   <View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -124,7 +124,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -223,7 +223,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -322,7 +322,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -421,7 +421,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -520,7 +520,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -619,7 +619,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -718,7 +718,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -817,7 +817,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -916,7 +916,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
