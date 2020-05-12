@@ -61,6 +61,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
           "opacity": 1,
         }
       }
+      testID="button-success"
     >
       <
         color="#ffffff"
@@ -96,6 +97,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
           "opacity": 1,
         }
       }
+      testID="button-failure"
     >
       <
         color="#ffffff"

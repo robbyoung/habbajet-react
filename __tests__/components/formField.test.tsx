@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import FormField from '../../app/components/formField';
+import {render, fireEvent, wait} from '@testing-library/react-native';
 
 describe('FormField Component', () => {
     it('can render an empty form field', () => {
@@ -61,5 +62,23 @@ describe('FormField Component', () => {
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('will run the onValueChange event if text changes', async () => {
+        const onValueChange = jest.fn();
+        const {getByTestId} = render(
+            <FormField
+                field={{
+                    value: 'marco',
+                    errorMessage: '',
+                }}
+                title="Test Field"
+                onValueChange={onValueChange}
+            />,
+        );
+
+        const input = getByTestId('input-Test-Field');
+        fireEvent.changeText(input, 'polo');
+        await wait(() => expect(onValueChange).toBeCalledWith('polo'));
     });
 });

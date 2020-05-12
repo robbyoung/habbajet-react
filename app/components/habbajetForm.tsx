@@ -61,12 +61,14 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                 />
                 <WideButton
                     text="Done"
+                    testID="button-submit"
                     onPress={() => props.onSubmit()}
                     color={grey}
                 />
                 {props.onDelete ? (
                     <WideButton
-                        text={'Delete'}
+                        text="Delete"
+                        testID="button-delete"
                         onPress={() => (props.onDelete as () => void)()}
                         color={errorRed}
                     />

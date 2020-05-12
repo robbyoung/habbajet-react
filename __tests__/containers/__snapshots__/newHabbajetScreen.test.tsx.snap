@@ -49,6 +49,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
               "paddingLeft": 10,
             }
           }
+          testID="input-Name"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -91,6 +92,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
               "paddingLeft": 10,
             }
           }
+          testID="input-Value"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -133,6 +135,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
               "paddingLeft": 10,
             }
           }
+          testID="input-Modifier"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -175,6 +178,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
               "paddingLeft": 10,
             }
           }
+          testID="input-Slack-Days"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -231,6 +235,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#8066C2"
           />
           <View
             accessible={true}
@@ -254,6 +259,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#E04747"
           />
           <View
             accessible={true}
@@ -277,6 +283,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#2AAD5E"
           />
           <View
             accessible={true}
@@ -300,6 +307,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#B1B952"
           />
           <View
             accessible={true}
@@ -323,6 +331,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#7F90EC"
           />
           <View
             accessible={true}
@@ -346,6 +355,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#37353C"
           />
           <View
             accessible={true}
@@ -369,6 +379,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#E64CE9"
           />
           <View
             accessible={true}
@@ -392,6 +403,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
                 "width": 60,
               }
             }
+            testID="color-#EB712D"
           />
         </View>
       </View>
@@ -415,6 +427,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
             "width": "100%",
           }
         }
+        testID="button-submit"
       >
         <Text
           style={

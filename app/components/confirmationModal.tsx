@@ -34,6 +34,7 @@ interface ConfirmationModalProps {
 const ConfirmationModal = (props: ConfirmationModalProps) => {
     return (
         <TouchableWithoutFeedback
+            testID={'modal-background'}
             onPress={() => Navigation.dismissModal(props.id)}>
             <View style={styles.background}>
                 <TouchableWithoutFeedback>
@@ -42,11 +43,13 @@ const ConfirmationModal = (props: ConfirmationModalProps) => {
                         <View>
                             <WideButton
                                 text="Yes"
+                                testID="button-yes"
                                 color={grey}
                                 onPress={() => props.onConfirm()}
                             />
                             <WideButton
                                 text="No"
+                                testID="button-no"
                                 color={grey}
                                 onPress={() =>
                                     Navigation.dismissModal(props.id)

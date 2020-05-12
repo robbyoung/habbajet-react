@@ -49,6 +49,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
               "paddingLeft": 10,
             }
           }
+          testID="input-Name"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -90,6 +91,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
               "paddingLeft": 10,
             }
           }
+          testID="input-Cost"
           underlineColorAndroid="transparent"
           value=""
         />
@@ -142,6 +144,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
                 "opacity": 1,
               }
             }
+            testID="Living-tag"
           >
             <Text
               style={
@@ -178,6 +181,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
                 "opacity": 1,
               }
             }
+            testID="Groceries-tag"
           >
             <Text
               style={
@@ -214,6 +218,7 @@ exports[`New Purchase Screen Component will map state to a purchase creation for
                 "opacity": 1,
               }
             }
+            testID="new-tag"
           >
             <Text
               style={

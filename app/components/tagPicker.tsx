@@ -46,6 +46,7 @@ const TagPicker = (props: TagPickerProps) => {
     const tagButtons = props.tags.map(tag => (
         <TouchableOpacity
             key={tag.id}
+            testID={`${tag.name.replace(' ', '-')}-tag`}
             style={[
                 styles.tag,
                 {backgroundColor: tag.color},
@@ -62,7 +63,7 @@ const TagPicker = (props: TagPickerProps) => {
             <View style={styles.tagList}>
                 {tagButtons}
                 <TouchableOpacity
-                    key="new-tag"
+                    testID="new-tag"
                     style={[styles.tag, {backgroundColor: grey}]}
                     onPress={() => props.onNewTag()}>
                     <Text style={styles.tagText}>New Tag</Text>

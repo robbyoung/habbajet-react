@@ -67,6 +67,7 @@ exports[`Budget Display Component can render a budget display for the home scree
           "opacity": 1,
         }
       }
+      testID="button-arrow"
     >
       <
         color="#959595"

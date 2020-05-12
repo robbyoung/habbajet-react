@@ -49,6 +49,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-0-tag"
     >
       <Text
         style={
@@ -85,6 +86,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-1-tag"
     >
       <Text
         style={
@@ -121,6 +123,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-2-tag"
     >
       <Text
         style={
@@ -157,6 +160,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-3-tag"
     >
       <Text
         style={
@@ -193,6 +197,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-4-tag"
     >
       <Text
         style={
@@ -229,6 +234,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-5-tag"
     >
       <Text
         style={
@@ -265,6 +271,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-6-tag"
     >
       <Text
         style={
@@ -301,6 +308,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-7-tag"
     >
       <Text
         style={
@@ -337,6 +345,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-8-tag"
     >
       <Text
         style={
@@ -373,6 +382,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="Tag-9-tag"
     >
       <Text
         style={
@@ -409,6 +419,7 @@ exports[`TagPicker Component can render a tag picker 1`] = `
           "opacity": 1,
         }
       }
+      testID="new-tag"
     >
       <Text
         style={
@@ -475,6 +486,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-0-tag"
     >
       <Text
         style={
@@ -511,6 +523,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-1-tag"
     >
       <Text
         style={
@@ -547,6 +560,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-2-tag"
     >
       <Text
         style={
@@ -583,6 +597,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-3-tag"
     >
       <Text
         style={
@@ -619,6 +634,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-4-tag"
     >
       <Text
         style={
@@ -655,6 +671,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-5-tag"
     >
       <Text
         style={
@@ -691,6 +708,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-6-tag"
     >
       <Text
         style={
@@ -727,6 +745,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-7-tag"
     >
       <Text
         style={
@@ -763,6 +782,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-8-tag"
     >
       <Text
         style={
@@ -799,6 +819,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="Tag-9-tag"
     >
       <Text
         style={
@@ -835,6 +856,7 @@ exports[`TagPicker Component can render a tag picker with no selected tag 1`] = 
           "opacity": 1,
         }
       }
+      testID="new-tag"
     >
       <Text
         style={

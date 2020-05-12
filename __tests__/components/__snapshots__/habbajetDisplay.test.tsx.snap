@@ -547,6 +547,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
             "opacity": 1,
           }
         }
+        testID="button-success"
       >
         <
           color="#ffffff"
@@ -582,6 +583,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
             "opacity": 1,
           }
         }
+        testID="button-failure"
       >
         <
           color="#ffffff"
@@ -1154,6 +1156,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
             "opacity": 1,
           }
         }
+        testID="button-success"
       >
         <
           color="#ffffff"
@@ -1189,6 +1192,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
             "opacity": 1,
           }
         }
+        testID="button-failure"
       >
         <
           color="#ffffff"

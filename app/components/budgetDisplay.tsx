@@ -33,6 +33,7 @@ const BudgetDisplay = (props: BudgetDisplayProps) => {
                     icon={faArrowCircleRight}
                     color={grey}
                     size={40}
+                    testID="button-arrow"
                     onPress={() => props.onPress()}
                 />
             </View>

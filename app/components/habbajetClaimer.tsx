@@ -28,7 +28,7 @@ const HabbajetClaimer = (props: HabbajetClaimerProps) => {
     }
 
     return (
-        <TouchableOpacity onPress={() => props.onClaim()}>
+        <TouchableOpacity onPress={() => props.onClaim()} testID="button-claim">
             <View
                 style={[
                     styles.container,
