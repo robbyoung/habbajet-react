@@ -9,7 +9,7 @@ import {render, fireEvent, wait} from '@testing-library/react-native';
 
 const mockGoToEditPurchase = jest.fn();
 jest.mock('../../app/navigation', () => ({
-    goToEditPurchase: mockGoToEditPurchase,
+    goToEditPurchase: () => mockGoToEditPurchase(),
 }));
 
 jest.mock('@fortawesome/react-native-fontawesome', () => ({
