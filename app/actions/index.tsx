@@ -15,3 +15,4 @@ export * from './validatePurchaseEditor';
 export * from './setHabbajetToEdit';
 export * from './deleteHabbajet';
 export * from './addTag';
+export * from './setPurchaseToEdit';

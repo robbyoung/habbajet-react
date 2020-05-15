@@ -8,6 +8,8 @@ import {
     ClearPurchaseEditorAction,
     ValidatePurchaseEditorAction,
     validatePurchaseEditor,
+    SetPurchaseToEditAction,
+    setPurchaseToEdit,
 } from '../actions';
 
 const EMPTY_FIELD = {
@@ -41,6 +43,8 @@ export default function purchaseEditorReducer(
                 state,
                 action as ValidatePurchaseEditorAction,
             );
+        case ActionType.SET_PURCHASE_TO_EDIT:
+            return setPurchaseToEdit(state, action as SetPurchaseToEditAction);
     }
     return state;
 }
