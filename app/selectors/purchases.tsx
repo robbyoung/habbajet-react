@@ -1,4 +1,4 @@
-import {State} from '../state';
+import {State, Purchase} from '../state';
 import moment from 'moment';
 
 export interface FormattedPurchase {
@@ -7,6 +7,7 @@ export interface FormattedPurchase {
     date: string;
     tagText: string;
     tagColor: string;
+    unformatted: Purchase;
 }
 
 const DATE_FORMAT = 'DD/MM/YYYY';
@@ -24,6 +25,7 @@ export function getPurchaseListFormatted(state: State): FormattedPurchase[] {
             date,
             tagText: tag ? tag.name : '',
             tagColor: tag ? tag.color : '',
+            unformatted: purchase,
         };
     });
 }

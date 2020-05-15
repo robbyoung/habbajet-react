@@ -17,6 +17,7 @@ import EditHabbajetScreen from './containers/editHabbajetScreen';
 import ConfirmationModal from './components/confirmationModal';
 import StartingBudgetScreen from './containers/startingBudgetScreen';
 import NewTagScreen from './containers/newTagScreen';
+import EditPurchaseScreen from './containers/editPurchaseScreen';
 
 enum Screens {
     Loading = 'Loading',
@@ -28,6 +29,7 @@ enum Screens {
     EditHabbajet = 'EditHabbajet',
     StartingBudget = 'StartingBudget',
     NewTag = 'NewTag',
+    EditPurchase = 'EditPurchase',
 }
 
 export const STACK_NAVIGATOR = 'StackNavigator';
@@ -117,6 +119,16 @@ Navigation.registerComponent(
     () => () => (
         <Provider store={store}>
             <NewTagScreen />
+        </Provider>
+    ),
+    () => NewTagScreen,
+);
+
+Navigation.registerComponent(
+    Screens.EditPurchase,
+    () => () => (
+        <Provider store={store}>
+            <EditPurchaseScreen />
         </Provider>
     ),
     () => NewTagScreen,
@@ -394,6 +406,30 @@ export const goToNewTag = () => {
                     },
                     title: {
                         text: 'New Tag',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};
+
+export const goToEditPurchase = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.EditPurchase,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'Edit Purchase',
                         fontFamily: 'Abel',
                         fontSize: 30,
                         color: white,

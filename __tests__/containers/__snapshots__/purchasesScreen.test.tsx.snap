@@ -43,6 +43,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-0"
     >
       <View
         style={
@@ -142,6 +143,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-1"
     >
       <View
         style={
@@ -241,6 +243,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-2"
     >
       <View
         style={
@@ -340,6 +343,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-3"
     >
       <View
         style={
@@ -439,6 +443,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-4"
     >
       <View
         style={
@@ -538,6 +543,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-5"
     >
       <View
         style={
@@ -637,6 +643,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-6"
     >
       <View
         style={
@@ -736,6 +743,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-7"
     >
       <View
         style={
@@ -835,6 +843,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-8"
     >
       <View
         style={
@@ -934,6 +943,7 @@ exports[`New Purchases Screen Component will map state to a list of purchases 1`
           "paddingVertical": 10,
         }
       }
+      testID="purchase-9"
     >
       <View
         style={
