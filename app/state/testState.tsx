@@ -20,7 +20,7 @@ export function createTestState(
             id: `${i}`,
             name: `Habbajet ${i}`,
             maxValue: 100,
-            currentValue: 100 / Math.pow(2, 7),
+            currentValue: 100,
             modifier: 2,
             results: [],
             color: habbajetColors[i % habbajetColors.length],

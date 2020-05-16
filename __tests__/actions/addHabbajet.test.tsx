@@ -85,7 +85,7 @@ describe('Add Habbajet Action', () => {
             expect(newState[1]).toEqual({
                 ...state[1],
                 name: 'Test Edit',
-                currentValue: 80 / Math.pow(2, 7),
+                currentValue: 80,
                 maxValue: 80,
                 modifier: 2,
                 totalSlack: 3,
@@ -115,7 +115,7 @@ describe('Add Habbajet Action', () => {
                 ...state[1],
                 name: 'Test Edit',
                 maxValue: 80,
-                currentValue: 80 / Math.pow(2, 5),
+                currentValue: 80,
                 modifier: 2,
                 totalSlack: 3,
                 remainingSlack: 3,
@@ -146,7 +146,7 @@ describe('Add Habbajet Action', () => {
                 ...state[1],
                 name: 'Test Edit',
                 maxValue: 80,
-                currentValue: 80 / Math.pow(2, 4),
+                currentValue: 80,
                 modifier: 2,
                 totalSlack: 3,
                 remainingSlack: 1,
@@ -180,7 +180,7 @@ describe('Add Habbajet Action', () => {
             expect(newState[1]).toEqual({
                 ...state[1],
                 maxValue: 300,
-                currentValue: 300 / Math.pow(5, 4),
+                currentValue: 300 / Math.pow(5, 3),
                 modifier: 5,
                 totalSlack: 0,
                 remainingSlack: 0,
@@ -239,7 +239,7 @@ describe('Add Habbajet Action', () => {
                 ...state[1],
                 name: 'Test Edit',
                 modifier: 4,
-                currentValue: 100 / Math.pow(4, 5),
+                currentValue: 25,
                 color: white,
             });
             expect(state).toEqual(
@@ -273,7 +273,7 @@ describe('Add Habbajet Action', () => {
                 ...state[1],
                 name: 'Test Edit',
                 maxValue: 200,
-                currentValue: 200 / Math.pow(3, 5),
+                currentValue: 200,
                 modifier: 3,
                 totalSlack: 1,
                 remainingSlack: 0,

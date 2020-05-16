@@ -49,7 +49,7 @@ exports[`HabbajetClaimer Component renders a claim button with the habbajet valu
       }
     >
       Claim $
-      0.78
+      100.00
     </Text>
   </View>
 </View>

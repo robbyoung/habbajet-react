@@ -49,7 +49,6 @@ export function addHabitResult(
 
     const isSuccess = action.result || edited.remainingSlack > 0;
     if (isSuccess) {
-        edited.currentValue *= edited.modifier;
         edited.currentStreak++;
         if (edited.currentStreak > edited.bestStreak) {
             edited.bestStreak = edited.currentStreak;
@@ -58,6 +57,7 @@ export function addHabitResult(
             edited.remainingSlack--;
         }
     } else {
+        edited.currentValue /= edited.modifier;
         edited.currentStreak = 0;
     }
 

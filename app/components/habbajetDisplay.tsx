@@ -39,8 +39,8 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                     <Label
                         title={
                             props.hasDeficit
-                                ? 'Current Value (-10%)'
-                                : 'Current Value'
+                                ? 'Expected Output (-10%)'
+                                : 'Expected Output'
                         }
                         content={`$${props.habbajet.currentValue.toFixed(2)}`}
                         color={props.habbajet.color}
