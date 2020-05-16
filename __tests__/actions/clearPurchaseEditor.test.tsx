@@ -15,6 +15,7 @@ describe('Clear Purchase Editor Action', () => {
 
         expect(newState).toEqual(DEFAULT_PURCHASE_EDITOR_STATE);
         expect(state.validated).toEqual(true);
+        expect(state.id).toBeUndefined();
         expect(state.name.value).toEqual('Test Name');
     });
 });

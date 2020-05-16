@@ -3,7 +3,7 @@ import {createTestState} from '../../app/state/testState';
 import habbajetEditorReducer from '../../app/reducers/habbajetEditor';
 
 describe('Set Habbajet To Edit Action', () => {
-    it('will reset the editor to its default state', () => {
+    it('will set the editor up to edit a given habbajet', () => {
         const state = createTestState(1, 0, 0);
         const action = setHabbajetToEditAction(state.habbajets[0]);
         const newState = habbajetEditorReducer(state.habbajetEditor, action);

@@ -14,6 +14,13 @@ describe('PurchaseRow Component', () => {
                     date: '12/04/2020',
                     tagText: 'Tag',
                     tagColor: habbajetColors[0],
+                    unformatted: {
+                        id: '0',
+                        name: 'Test Purchase',
+                        cost: 87.4,
+                        date: 'date',
+                        tagId: '0',
+                    },
                 }}
                 onPress={() => undefined}
             />,
@@ -30,6 +37,13 @@ describe('PurchaseRow Component', () => {
                     date: '12/04/2020',
                     tagText: '',
                     tagColor: '',
+                    unformatted: {
+                        id: '0',
+                        name: 'Test Purchase',
+                        cost: 87.4,
+                        date: 'date',
+                        tagId: '0',
+                    },
                 }}
                 onPress={() => undefined}
             />,
@@ -47,6 +61,13 @@ describe('PurchaseRow Component', () => {
                     date: '12/04/2020',
                     tagText: 'Tag',
                     tagColor: habbajetColors[0],
+                    unformatted: {
+                        id: '0',
+                        name: 'Test Purchase',
+                        cost: 87.4,
+                        date: 'date',
+                        tagId: '0',
+                    },
                 }}
                 testID="test-purchase"
                 onPress={onPress}

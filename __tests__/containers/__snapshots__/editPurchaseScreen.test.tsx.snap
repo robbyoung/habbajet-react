@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`New Purchase Screen Component will map state to a purchase creation form 1`] = `
+exports[`Edit Purchase Screen Component will map state to a purchase edit form 1`] = `
 <RCTScrollView>
   <View>
     <View

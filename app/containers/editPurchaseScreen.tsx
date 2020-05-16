@@ -11,31 +11,32 @@ import {goBack, goToNewTag} from '../navigation';
 import {
     getPurchaseNameField,
     getPurchaseCostField,
-    getValuesForNewPurchase,
     getValidationStateForNewPurchase,
+    getValuesForEditedPurchase,
 } from '../selectors/purchaseEditor';
 import {saveState} from '../storage';
 import {getAllTags} from '../selectors/tags';
 import PurchaseForm from '../components/purchaseForm';
 
-const NewPurchaseScreen = () => {
+const EditPurchaseScreen = () => {
     const dispatch = useDispatch();
     const nameField = useSelector(getPurchaseNameField);
     const costField = useSelector(getPurchaseCostField);
     const tags = useSelector(getAllTags);
-    const newPurchase = useSelector(getValuesForNewPurchase);
+    const edited = useSelector(getValuesForEditedPurchase);
     const isValid = useSelector(getValidationStateForNewPurchase);
 
     if (isValid) {
         dispatch(clearPurchaseEditorAction());
         dispatch(
             addPurchaseAction(
-                newPurchase.name,
-                newPurchase.cost,
-                newPurchase.tagId,
+                edited.name,
+                edited.cost,
+                edited.tagId,
+                edited.id,
             ),
         );
-        dispatch(updateBudgetAction(-newPurchase.cost));
+        dispatch(updateBudgetAction(-edited.difference));
         goBack();
         saveState();
     }
@@ -44,7 +45,7 @@ const NewPurchaseScreen = () => {
         <PurchaseForm
             nameField={nameField}
             costField={costField}
-            selectedTagId={newPurchase.tagId}
+            selectedTagId={edited.tagId}
             tags={tags}
             onNewTag={() => goToNewTag()}
             onUpdate={(key, value) =>
@@ -55,4 +56,4 @@ const NewPurchaseScreen = () => {
     );
 };
 
-export default NewPurchaseScreen;
+export default EditPurchaseScreen;
