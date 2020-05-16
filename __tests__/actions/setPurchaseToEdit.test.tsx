@@ -17,6 +17,7 @@ describe('Set Purchase To Edit Action', () => {
         const newState = purchaseEditorReducer(state, action);
 
         expect(newState).toEqual({
+            id: '0',
             name: {
                 value: 'New Name',
                 errorMessage: '',
@@ -49,6 +50,7 @@ describe('Set Purchase To Edit Action', () => {
         const newState = purchaseEditorReducer(state, action);
 
         expect(newState).toEqual({
+            id: '0',
             name: {
                 value: 'New Name',
                 errorMessage: '',

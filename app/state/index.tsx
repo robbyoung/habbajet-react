@@ -49,6 +49,7 @@ export interface PurchaseEditor {
     cost: EditorField;
     tagId: string;
     validated: boolean;
+    id?: string;
 }
 
 export interface Tag {

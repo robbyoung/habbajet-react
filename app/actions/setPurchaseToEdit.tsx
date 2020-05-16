@@ -30,6 +30,7 @@ export function setPurchaseToEdit(
             errorMessage: '',
         },
         tagId: action.purchase.tagId,
+        id: action.purchase.id,
         validated: false,
     };
 }
