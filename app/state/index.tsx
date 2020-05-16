@@ -23,6 +23,7 @@ export interface Habbajet {
 }
 
 export interface Purchase {
+    id: string;
     name: string;
     cost: number;
     date: string;

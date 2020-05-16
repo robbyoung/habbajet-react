@@ -15,6 +15,7 @@ describe('PurchaseRow Component', () => {
                     tagText: 'Tag',
                     tagColor: habbajetColors[0],
                     unformatted: {
+                        id: '0',
                         name: 'Test Purchase',
                         cost: 87.4,
                         date: 'date',
@@ -37,6 +38,7 @@ describe('PurchaseRow Component', () => {
                     tagText: '',
                     tagColor: '',
                     unformatted: {
+                        id: '0',
                         name: 'Test Purchase',
                         cost: 87.4,
                         date: 'date',
@@ -60,6 +62,7 @@ describe('PurchaseRow Component', () => {
                     tagText: 'Tag',
                     tagColor: habbajetColors[0],
                     unformatted: {
+                        id: '0',
                         name: 'Test Purchase',
                         cost: 87.4,
                         date: 'date',
