@@ -10,7 +10,7 @@ import {
     goToStartingBudget,
     goToNewTag,
     goToEditPurchase,
-} from '../app/navigation';
+} from '../app/navigation/navigation';
 
 let layoutRoot: LayoutRoot;
 let layout: Layout;

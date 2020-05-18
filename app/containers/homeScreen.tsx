@@ -3,7 +3,11 @@ import {useSelector, useDispatch} from 'react-redux';
 import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import HabbajetList from '../components/habbajetList';
-import {goToHabbajet, goToNewHabbajet, goToPurchases} from '../navigation';
+import {
+    goToHabbajet,
+    goToNewHabbajet,
+    goToPurchases,
+} from '../navigation/navigation';
 import {selectHabbajetAction, clearEditorAction} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';

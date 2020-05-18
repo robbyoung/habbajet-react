@@ -13,7 +13,7 @@ import {
     setHabbajetToEditAction,
 } from '../actions';
 import {Navigation} from 'react-native-navigation';
-import {STACK_NAVIGATOR} from '../navigation';
+import {STACK_NAVIGATOR} from '../navigation/navigation';
 import {saveState} from '../storage';
 import {View} from 'react-native';
 import {white} from '../colors';
