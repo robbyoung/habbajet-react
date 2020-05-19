@@ -1,7 +1,6 @@
-import habbajetEditorReducer, {
-    DEFAULT_EDITOR_STATE,
-} from '../../app/reducers/habbajetEditor';
+import habbajetEditorReducer from '../../app/reducers/habbajetEditor';
 import {createTestState} from '../../app/state/testState';
+import {DEFAULT_EDITOR_STATE} from '../../app/state/defaults';
 
 describe('Habbajet Editor Reducer', () => {
     it('sets the initial state', () => {

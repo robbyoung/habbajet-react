@@ -1,18 +1,14 @@
 import React from 'react';
-import IconButton from '../components/iconButton';
-import {white} from '../colors';
 import {faPlus, faPencilAlt, faTrash} from '@fortawesome/free-solid-svg-icons';
 import store from '../store';
 import {clearPurchaseEditorAction} from '../actions';
 import {goToNewPurchase, goToEditHabbajet} from './navigation';
+import NavigationButton from '../components/navigationButton';
 
 export const PlusButton = () => (
-    <IconButton
-        size={25}
-        color={white}
+    <NavigationButton
         icon={faPlus}
-        // eslint-disable-next-line react-native/no-inline-styles
-        containerStyle={{paddingRight: 15}}
+        testID="button-plus"
         onPress={() => {
             store.dispatch(clearPurchaseEditorAction());
             goToNewPurchase();
@@ -21,12 +17,9 @@ export const PlusButton = () => (
 );
 
 export const PencilButton = () => (
-    <IconButton
-        size={25}
-        color={white}
+    <NavigationButton
         icon={faPencilAlt}
-        // eslint-disable-next-line react-native/no-inline-styles
-        containerStyle={{paddingRight: 15}}
+        testID="button-pencil"
         onPress={() => {
             goToEditHabbajet();
         }}
@@ -34,12 +27,9 @@ export const PencilButton = () => (
 );
 
 export const TrashButton = (props: {onPress: () => void}) => (
-    <IconButton
-        size={25}
-        color={white}
+    <NavigationButton
         icon={faTrash}
-        // eslint-disable-next-line react-native/no-inline-styles
-        containerStyle={{paddingRight: 15}}
+        testID="button-trash"
         onPress={() => props.onPress()}
     />
 );

@@ -1,8 +1,7 @@
 import {clearPurchaseEditorAction} from '../../app/actions';
 import {createTestState} from '../../app/state/testState';
-import purchaseEditorReducer, {
-    DEFAULT_PURCHASE_EDITOR_STATE,
-} from '../../app/reducers/purchaseEditor';
+import purchaseEditorReducer from '../../app/reducers/purchaseEditor';
+import {DEFAULT_PURCHASE_EDITOR_STATE} from '../../app/state/defaults';
 
 describe('Clear Purchase Editor Action', () => {
     it('will reset the editor to its default state', () => {

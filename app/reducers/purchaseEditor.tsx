@@ -11,17 +11,7 @@ import {
     SetPurchaseToEditAction,
     setPurchaseToEdit,
 } from '../actions';
-
-const EMPTY_FIELD = {
-    value: '',
-    errorMessage: '',
-};
-export const DEFAULT_PURCHASE_EDITOR_STATE: PurchaseEditor = {
-    name: EMPTY_FIELD,
-    cost: EMPTY_FIELD,
-    tagId: '',
-    validated: false,
-};
+import {DEFAULT_PURCHASE_EDITOR_STATE} from '../state/defaults';
 
 export default function purchaseEditorReducer(
     state: PurchaseEditor = DEFAULT_PURCHASE_EDITOR_STATE,
