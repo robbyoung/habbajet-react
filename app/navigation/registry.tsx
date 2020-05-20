@@ -15,6 +15,7 @@ import NewTagScreen from '../containers/newTagScreen';
 import EditPurchaseScreen from '../containers/editPurchaseScreen';
 import {PlusButton, PencilButton, TrashButton} from './buttons';
 import ConfirmationModal from '../components/confirmationModal';
+import HelpModal from '../components/helpModal';
 
 Navigation.registerComponent(
     Screens.Loading,
@@ -123,3 +124,5 @@ Navigation.registerComponent('topBar.editHabbajetButton', () => PencilButton);
 Navigation.registerComponent('topBar.deleteHabbajetButton', () => TrashButton);
 
 Navigation.registerComponent('modal.confirmation', () => ConfirmationModal);
+
+Navigation.registerComponent('modal.help', () => HelpModal);
