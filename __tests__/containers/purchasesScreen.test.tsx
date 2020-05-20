@@ -8,7 +8,7 @@ import {loadStateAction} from '../../app/actions';
 import {render, fireEvent, wait} from '@testing-library/react-native';
 
 const mockGoToEditPurchase = jest.fn();
-jest.mock('../../app/navigation', () => ({
+jest.mock('../../app/navigation/navigation', () => ({
     goToEditPurchase: () => mockGoToEditPurchase(),
 }));
 

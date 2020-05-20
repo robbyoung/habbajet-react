@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 import WideButton from '../components/wideButton';
 import {grey, white, habbajetColors} from '../colors';
 import {updatePurchaseEditorAction, addTagAction} from '../actions';
-import {goBack} from '../navigation';
+import {goBack} from '../navigation/navigation';
 import FormField from '../components/formField';
 import {saveState} from '../storage';
 import ColorPicker from '../components/colorPicker';

@@ -7,7 +7,7 @@ import {
     clearPurchaseEditorAction,
     validatePurchaseEditorAction,
 } from '../actions';
-import {goBack, goToNewTag} from '../navigation';
+import {goBack, goToNewTag} from '../navigation/navigation';
 import {
     getPurchaseNameField,
     getPurchaseCostField,

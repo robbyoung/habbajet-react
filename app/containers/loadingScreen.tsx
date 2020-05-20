@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
-import {goToHome, goToStartingBudget} from '../navigation';
+import {goToStartingBudget, goToHome} from '../navigation/navigation';
 import {loadState} from '../storage';
 import {useDispatch} from 'react-redux';
 import {loadStateAction} from '../actions';

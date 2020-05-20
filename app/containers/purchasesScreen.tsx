@@ -5,7 +5,7 @@ import PurchaseRow from '../components/purchaseRow';
 import {useSelector, useDispatch} from 'react-redux';
 import {getPurchaseListFormatted} from '../selectors';
 import {setPurchaseToEditAction} from '../actions';
-import {goToEditPurchase} from '../navigation';
+import {goToEditPurchase} from '../navigation/navigation';
 
 const styles = StyleSheet.create({
     background: {

@@ -1,7 +1,6 @@
 import {createTestState} from '../../app/state/testState';
-import purchaseEditorReducer, {
-    DEFAULT_PURCHASE_EDITOR_STATE,
-} from '../../app/reducers/purchaseEditor';
+import purchaseEditorReducer from '../../app/reducers/purchaseEditor';
+import {DEFAULT_PURCHASE_EDITOR_STATE} from '../../app/state/defaults';
 
 describe('Purchase Editor Reducer', () => {
     it('sets the initial state', () => {

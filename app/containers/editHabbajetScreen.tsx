@@ -7,7 +7,7 @@ import {
     clearEditorAction,
     deleteHabbajetAction,
 } from '../actions';
-import {goBack, goToHome} from '../navigation';
+import {goBack, goToHome} from '../navigation/navigation';
 import {saveState} from '../storage';
 import {
     getHabbajetEditorFields,

@@ -6,7 +6,7 @@ import {grey} from '../colors';
 import {View, Text, ScrollView, StyleSheet} from 'react-native';
 import FormField from '../components/formField';
 import {updateBudgetAction} from '../actions';
-import {goToHome} from '../navigation';
+import {goToHome} from '../navigation/navigation';
 import {saveState} from '../storage';
 
 const WELCOME_TEXT = 'Welcome to Habbajet!';
