@@ -6,6 +6,16 @@ import {createTestEditor} from '../../app/state/testState';
 import {HabbajetEditor} from '../../app/state';
 import {render, fireEvent, wait} from '@testing-library/react-native';
 
+jest.mock('react-native-navigation', () => ({
+    Navigation: {
+        showModal: () => undefined,
+    },
+}));
+
+jest.mock('@fortawesome/react-native-fontawesome', () => ({
+    FontAwesomeIcon: '',
+}));
+
 function testFormSnapshot(state: HabbajetEditor) {
     const component = renderer.create(
         <HabbajetForm

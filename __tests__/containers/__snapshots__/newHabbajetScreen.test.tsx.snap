@@ -35,24 +35,33 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
         >
           Name
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="default"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Name"
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="default"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Name"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
         <View />
       </View>
       <View
@@ -77,25 +86,34 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
         >
           Value
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="numeric"
-          onChangeText={[Function]}
-          placeholder="50"
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Value"
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            placeholder="50"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Value"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
         <View />
       </View>
       <View
@@ -120,25 +138,34 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
         >
           Modifier
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="numeric"
-          onChangeText={[Function]}
-          placeholder="2"
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Modifier"
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            placeholder="2"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Modifier"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
         <View />
       </View>
       <View
@@ -163,25 +190,34 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
         >
           Slack Days
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="numeric"
-          onChangeText={[Function]}
-          placeholder="0"
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Slack-Days"
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            placeholder="0"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Slack-Days"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
         <View />
       </View>
       <View>

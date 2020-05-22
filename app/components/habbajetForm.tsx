@@ -5,10 +5,6 @@ import {EditorField} from '../state';
 import FormField from './formField';
 import ColorPicker from './colorPicker';
 import WideButton from './wideButton';
-import {
-    OptionsModalPresentationStyle,
-    Navigation,
-} from 'react-native-navigation';
 
 const styles = StyleSheet.create({
     container: {
@@ -30,24 +26,6 @@ interface HabbajetFormProps {
     onDelete?: () => void;
 }
 const HabbajetForm = (props: HabbajetFormProps) => {
-    const onHelp = (title: string, content: string) => {
-        Navigation.showModal({
-            component: {
-                name: 'modal.help',
-                id: 'helpModal',
-                passProps: {
-                    id: 'helpModal',
-                    title,
-                    content,
-                },
-                options: {
-                    modalPresentationStyle:
-                        OptionsModalPresentationStyle.overCurrentContext,
-                },
-            },
-        });
-    };
-
     return (
         <ScrollView>
             <View style={styles.container}>
@@ -84,13 +62,7 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                 <WideButton
                     text="Done"
                     testID="button-submit"
-                    // onPress={() => props.onSubmit()}
-                    onPress={() =>
-                        onHelp(
-                            'Help',
-                            'This is help text. It will guide you on your way to better habit-tracking.',
-                        )
-                    }
+                    onPress={() => props.onSubmit()}
                     color={grey}
                 />
                 {props.onDelete ? (
