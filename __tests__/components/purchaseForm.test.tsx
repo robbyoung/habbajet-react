@@ -8,6 +8,14 @@ import {PurchaseEditor} from '../../app/state';
 import {render, fireEvent, wait} from '@testing-library/react-native';
 import PurchaseForm from '../../app/components/purchaseForm';
 
+jest.mock('react-native-navigation', () => ({
+    Navigation: {},
+}));
+
+jest.mock('@fortawesome/react-native-fontawesome', () => ({
+    FontAwesomeIcon: '',
+}));
+
 function testFormSnapshot(state: PurchaseEditor) {
     const component = renderer.create(
         <PurchaseForm

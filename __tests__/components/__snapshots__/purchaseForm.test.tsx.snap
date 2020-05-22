@@ -35,24 +35,33 @@ exports[`Purchase Form Component can render a filled-out form 1`] = `
         >
           Name
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="default"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Name"
-          underlineColorAndroid="transparent"
-          value="New Name"
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="default"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Name"
+            underlineColorAndroid="transparent"
+            value="New Name"
+          />
+        </View>
         <View />
       </View>
       <View
@@ -77,24 +86,33 @@ exports[`Purchase Form Component can render a filled-out form 1`] = `
         >
           Cost
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="numeric"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Cost"
-          underlineColorAndroid="transparent"
-          value="2.5"
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Cost"
+            underlineColorAndroid="transparent"
+            value="2.5"
+          />
+        </View>
         <View />
       </View>
       <View>
@@ -612,24 +630,33 @@ exports[`Purchase Form Component can render a form with invalid entries 1`] = `
         >
           Name
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="default"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Name"
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="default"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Name"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
         <Text
           style={
             Array [
@@ -671,24 +698,33 @@ exports[`Purchase Form Component can render a form with invalid entries 1`] = `
         >
           Cost
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="numeric"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Cost"
-          underlineColorAndroid="transparent"
-          value="-2.5"
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Cost"
+            underlineColorAndroid="transparent"
+            value="-2.5"
+          />
+        </View>
         <Text
           style={
             Array [
@@ -1223,24 +1259,33 @@ exports[`Purchase Form Component can render an empty purchase form 1`] = `
         >
           Name
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="default"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Name"
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="default"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Name"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
         <View />
       </View>
       <View
@@ -1265,24 +1310,33 @@ exports[`Purchase Form Component can render an empty purchase form 1`] = `
         >
           Cost
         </Text>
-        <TextInput
-          allowFontScaling={true}
-          keyboardType="numeric"
-          onChangeText={[Function]}
-          rejectResponderTermination={true}
+        <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderWidth": 1,
-              "fontFamily": "Abel",
-              "fontSize": 30,
-              "paddingLeft": 10,
+              "flexDirection": "row",
             }
           }
-          testID="input-Cost"
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Cost"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
         <View />
       </View>
       <View>

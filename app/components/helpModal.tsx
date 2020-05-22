@@ -15,8 +15,17 @@ const styles = StyleSheet.create({
         marginTop: '20%',
         backgroundColor: white,
         width: '70%',
-        padding: 20,
         borderRadius: 20,
+    },
+    title: {
+        color: white,
+        backgroundColor: grey,
+        paddingVertical: 10,
+        fontSize: 30,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        textAlign: 'center',
+        fontFamily: 'Abel',
     },
     text: {
         fontSize: 24,
@@ -24,15 +33,21 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: black,
         fontFamily: 'Abel',
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+    },
+    button: {
+        marginHorizontal: 20,
+        marginBottom: 10,
     },
 });
 
-interface ConfirmationModalProps {
+interface HelpModalProps {
     id: string;
-    text: string;
-    onConfirm: () => void;
+    title: string;
+    content: string;
 }
-const ConfirmationModal = (props: ConfirmationModalProps) => {
+const HelpModal = (props: HelpModalProps) => {
     return (
         <TouchableWithoutFeedback
             testID={'modal-background'}
@@ -40,17 +55,12 @@ const ConfirmationModal = (props: ConfirmationModalProps) => {
             <View style={styles.background}>
                 <TouchableWithoutFeedback>
                     <View style={styles.modal}>
-                        <Text style={styles.text}>{props.text}</Text>
-                        <View>
+                        <Text style={styles.title}>{props.title}</Text>
+                        <Text style={styles.text}>{props.content}</Text>
+                        <View style={styles.button}>
                             <WideButton
-                                text="Yes"
-                                testID="button-yes"
-                                color={grey}
-                                onPress={() => props.onConfirm()}
-                            />
-                            <WideButton
-                                text="No"
-                                testID="button-no"
+                                text="OK"
+                                testID="button-ok"
                                 color={grey}
                                 onPress={() =>
                                     Navigation.dismissModal(props.id)
@@ -64,4 +74,4 @@ const ConfirmationModal = (props: ConfirmationModalProps) => {
     );
 };
 
-export default ConfirmationModal;
+export default HelpModal;
