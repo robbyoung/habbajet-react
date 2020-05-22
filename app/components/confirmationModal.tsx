@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
         textAlign: 'center',
         color: black,
+        fontFamily: 'Abel',
     },
 });
 
