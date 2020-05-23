@@ -7,12 +7,17 @@ import {
     goToHabbajet,
     goToNewHabbajet,
     goToPurchases,
+    goToNewPurchase,
 } from '../navigation/navigation';
-import {selectHabbajetAction, clearEditorAction} from '../actions';
+import {
+    selectHabbajetAction,
+    clearEditorAction,
+    clearPurchaseEditorAction,
+} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 import BudgetDisplay from '../components/budgetDisplay';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faPlus} from '@fortawesome/free-solid-svg-icons';
 
 const styles = StyleSheet.create({
     container: {
@@ -32,6 +37,13 @@ const HomeScreen = () => {
                 <BudgetDisplay
                     budget={budget}
                     buttons={[
+                        {
+                            icon: faPlus,
+                            onPress: () => {
+                                dispatch(clearPurchaseEditorAction());
+                                goToNewPurchase();
+                            },
+                        },
                         {
                             icon: faBars,
                             onPress: () => goToPurchases(),
