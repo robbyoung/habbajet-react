@@ -1,16 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`New Purchases Screen Component can be empty if there are no purchases 1`] = `
-<RCTScrollView
+exports[`New Purchases Screen Component display a message if there are no purchases 1`] = `
+<Text
   style={
     Object {
-      "backgroundColor": "#ffffff",
-      "height": "100%",
+      "color": "#959595",
+      "fontFamily": "Abel",
+      "fontSize": 30,
+      "marginTop": 50,
+      "textAlign": "center",
+      "width": "100%",
     }
   }
 >
-  <View />
-</RCTScrollView>
+  No Purchases Yet
+</Text>
 `;
 
 exports[`New Purchases Screen Component will map state to a list of purchases 1`] = `

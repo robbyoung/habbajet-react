@@ -31,7 +31,7 @@ describe('New Purchases Screen Component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
-    it('can be empty if there are no purchases', () => {
+    it('display a message if there are no purchases', () => {
         act(() => {
             const state = createTestState(5, 0, 200);
             store.dispatch(loadStateAction(state));
