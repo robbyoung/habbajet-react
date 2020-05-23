@@ -15,10 +15,18 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
         style={
           Object {
             "flexDirection": "row",
+            "marginBottom": 10,
+            "width": "100%",
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
           <Text
             style={
               Array [
@@ -56,7 +64,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
         <View
           style={
             Object {
-              "marginLeft": 20,
+              "marginLeft": 25,
               "marginTop": 20,
             }
           }
@@ -77,20 +85,65 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
                 "opacity": 1,
               }
             }
-            testID="button-arrow"
+            testID="button-budget-0"
           >
             <
               color="#959595"
               icon={
                 Object {
                   "icon": Array [
-                    512,
+                    448,
                     512,
                     Array [],
-                    "f0a9",
-                    "M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z",
+                    "f067",
+                    "M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z",
                   ],
-                  "iconName": "arrow-circle-right",
+                  "iconName": "plus",
+                  "prefix": "fas",
+                }
+              }
+              size={40}
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginLeft": 25,
+              "marginTop": 20,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+            testID="button-budget-1"
+          >
+            <
+              color="#959595"
+              icon={
+                Object {
+                  "icon": Array [
+                    448,
+                    512,
+                    Array [],
+                    "f0c9",
+                    "M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z",
+                  ],
+                  "iconName": "bars",
                   "prefix": "fas",
                 }
               }

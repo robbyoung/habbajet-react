@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label Component can take a larger font size 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <Text
     style={
       Array [
@@ -39,7 +45,13 @@ exports[`Label Component can take a larger font size 1`] = `
 `;
 
 exports[`Label Component will render a label with a title and content 1`] = `
-<View>
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <Text
     style={
       Array [
