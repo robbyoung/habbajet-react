@@ -332,7 +332,13 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
           <Text
             style={
               Array [
@@ -941,7 +947,13 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
           <Text
             style={
               Array [

@@ -12,6 +12,7 @@ import {selectHabbajetAction, clearEditorAction} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 import BudgetDisplay from '../components/budgetDisplay';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
 
 const styles = StyleSheet.create({
     container: {
@@ -28,7 +29,15 @@ const HomeScreen = () => {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <BudgetDisplay budget={budget} onPress={goToPurchases} />
+                <BudgetDisplay
+                    budget={budget}
+                    buttons={[
+                        {
+                            icon: faBars,
+                            onPress: () => goToPurchases(),
+                        },
+                    ]}
+                />
                 <HabbajetList
                     habbajets={habbajets}
                     onSelect={habbajet => {
