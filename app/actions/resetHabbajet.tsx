@@ -23,7 +23,7 @@ export function resetHabbajet(
 
     const newState = [...state];
     const edited: Habbajet = {...newState[index]};
-    edited.currentValue = edited.maxValue / Math.pow(edited.modifier, 7);
+    edited.currentValue = edited.maxValue;
     edited.toClaim = false;
     edited.results = [];
     edited.remainingSlack = edited.totalSlack;

@@ -1,8 +1,7 @@
 import {clearPurchaseEditorAction} from '../../app/actions';
 import {createTestState} from '../../app/state/testState';
-import purchaseEditorReducer, {
-    DEFAULT_PURCHASE_EDITOR_STATE,
-} from '../../app/reducers/purchaseEditor';
+import purchaseEditorReducer from '../../app/reducers/purchaseEditor';
+import {DEFAULT_PURCHASE_EDITOR_STATE} from '../../app/state/defaults';
 
 describe('Clear Purchase Editor Action', () => {
     it('will reset the editor to its default state', () => {
@@ -15,6 +14,7 @@ describe('Clear Purchase Editor Action', () => {
 
         expect(newState).toEqual(DEFAULT_PURCHASE_EDITOR_STATE);
         expect(state.validated).toEqual(true);
+        expect(state.id).toBeUndefined();
         expect(state.name.value).toEqual('Test Name');
     });
 });

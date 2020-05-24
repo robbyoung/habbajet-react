@@ -2,24 +2,41 @@ import React from 'react';
 import Label from '../components/label';
 import {StyleSheet, View} from 'react-native';
 import IconButton from './iconButton';
-import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
+import {IconDefinition} from '@fortawesome/free-solid-svg-icons';
 import {grey} from '../colors';
 
 const styles = StyleSheet.create({
     row: {
         flexDirection: 'row',
+        width: '100%',
+        marginBottom: 10,
     },
-    arrowButton: {
+    roundButton: {
         marginTop: 20,
-        marginLeft: 20,
+        marginLeft: 25,
     },
 });
 
 interface BudgetDisplayProps {
     budget: string;
-    onPress: () => void;
+    buttons: {icon: IconDefinition; onPress: () => void}[];
 }
 const BudgetDisplay = (props: BudgetDisplayProps) => {
+    const buttons = props.buttons.map((button, index) => {
+        return (
+            <View style={styles.roundButton}>
+                <IconButton
+                    icon={button.icon}
+                    color={grey}
+                    size={40}
+                    key={index}
+                    testID={`button-budget-${index}`}
+                    onPress={() => button.onPress()}
+                />
+            </View>
+        );
+    });
+
     return (
         <View style={styles.row}>
             <Label
@@ -28,14 +45,8 @@ const BudgetDisplay = (props: BudgetDisplayProps) => {
                 color="#959595"
                 contentSize={50}
             />
-            <View style={styles.arrowButton}>
-                <IconButton
-                    icon={faArrowCircleRight}
-                    color={grey}
-                    size={40}
-                    onPress={() => props.onPress()}
-                />
-            </View>
+
+            {buttons}
         </View>
     );
 };

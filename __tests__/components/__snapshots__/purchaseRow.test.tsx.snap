@@ -3,7 +3,7 @@
 exports[`PurchaseRow Component can render a purchase row 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  focusable={true}
   isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
@@ -105,7 +105,7 @@ exports[`PurchaseRow Component can render a purchase row 1`] = `
 exports[`PurchaseRow Component can render a purchase row without a tag 1`] = `
 <View
   accessible={true}
-  focusable={false}
+  focusable={true}
   isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}

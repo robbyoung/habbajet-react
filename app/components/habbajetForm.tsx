@@ -40,6 +40,7 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                     placeholder={'50'}
                     numeric={true}
                     onValueChange={value => props.onUpdate('Value', value)}
+                    helpText="You'd get this much reward money for a perfect habit week."
                 />
                 <FormField
                     field={props.modifierField}
@@ -47,6 +48,7 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                     placeholder={'2'}
                     numeric={true}
                     onValueChange={value => props.onUpdate('Modifier', value)}
+                    helpText="Your reward money is divided by this amount for every habit failure."
                 />
                 <FormField
                     field={props.slackField}
@@ -54,6 +56,7 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                     placeholder={'0'}
                     numeric={true}
                     onValueChange={value => props.onUpdate('Slack', value)}
+                    helpText="Determines how many habit failures you won't be penalized for. Resets each week."
                 />
                 <ColorPicker
                     selected={props.selectedColor}
@@ -61,12 +64,14 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                 />
                 <WideButton
                     text="Done"
+                    testID="button-submit"
                     onPress={() => props.onSubmit()}
                     color={grey}
                 />
                 {props.onDelete ? (
                     <WideButton
-                        text={'Delete'}
+                        text="Delete"
+                        testID="button-delete"
                         onPress={() => (props.onDelete as () => void)()}
                         color={errorRed}
                     />

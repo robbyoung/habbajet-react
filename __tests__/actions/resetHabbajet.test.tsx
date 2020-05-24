@@ -16,9 +16,7 @@ describe('Reset Habbajet Action', () => {
 
         const newState = habbajetsReducer(state, action);
         const result = newState[0];
-        expect(result.currentValue).toEqual(
-            result.maxValue / Math.pow(result.modifier, 7),
-        );
+        expect(result.currentValue).toEqual(result.maxValue);
         expect(result.toClaim).toEqual(false);
         expect(result.results).toEqual([]);
         expect(result.remainingSlack).toEqual(3);

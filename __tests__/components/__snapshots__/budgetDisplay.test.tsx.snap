@@ -1,14 +1,166 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Budget Display Component can render a budget display for the home screen 1`] = `
+exports[`Budget Display Component can render a budget display with buttons 1`] = `
 <View
   style={
     Object {
       "flexDirection": "row",
+      "marginBottom": 10,
+      "width": "100%",
     }
   }
 >
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "margin": 0,
+            "padding": 0,
+          },
+          Object {
+            "color": "#959595",
+          },
+        ]
+      }
+    >
+      My Budget
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "marginTop": -10,
+            "padding": 0,
+          },
+          Object {
+            "fontSize": 50,
+          },
+        ]
+      }
+    >
+      $212.12
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "marginLeft": 25,
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID="button-budget-0"
+    >
+      <
+        color="#959595"
+        icon={
+          Object {
+            "icon": Array [
+              640,
+              512,
+              Array [],
+              "f236",
+              "M176 256c44.11 0 80-35.89 80-80s-35.89-80-80-80-80 35.89-80 80 35.89 80 80 80zm352-128H304c-8.84 0-16 7.16-16 16v144H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v352c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h512v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V240c0-61.86-50.14-112-112-112z",
+            ],
+            "iconName": "bed",
+            "prefix": "fas",
+          }
+        }
+        size={40}
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginLeft": 25,
+        "marginTop": 20,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+      testID="button-budget-1"
+    >
+      <
+        color="#959595"
+        icon={
+          Object {
+            "icon": Array [
+              320,
+              512,
+              Array [],
+              "f644",
+              "M296 256h-44.62C272.46 222.01 288 181.65 288 144 288 55.63 230.69 0 160 0S32 55.63 32 144c0 37.65 15.54 78.01 36.62 112H24c-13.25 0-24 10.74-24 24v32c0 13.25 10.75 24 24 24h96v152c0 13.25 10.75 24 24 24h32c13.25 0 24-10.75 24-24V336h96c13.25 0 24-10.75 24-24v-32c0-13.26-10.75-24-24-24zM160 80c29.61 0 48 24.52 48 64 0 34.66-27.14 78.14-48 100.87-20.86-22.72-48-66.21-48-100.87 0-39.48 18.39-64 48-64z",
+            ],
+            "iconName": "ankh",
+            "prefix": "fas",
+          }
+        }
+        size={40}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Budget Display Component can render a budget display without buttons 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "marginBottom": 10,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
     <Text
       style={
         Array [
@@ -42,50 +194,6 @@ exports[`Budget Display Component can render a budget display for the home scree
     >
       $56.43
     </Text>
-  </View>
-  <View
-    style={
-      Object {
-        "marginLeft": 20,
-        "marginTop": 20,
-      }
-    }
-  >
-    <View
-      accessible={true}
-      focusable={true}
-      isTVSelectable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <
-        color="#959595"
-        icon={
-          Object {
-            "icon": Array [
-              512,
-              512,
-              Array [],
-              "f0a9",
-              "M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z",
-            ],
-            "iconName": "arrow-circle-right",
-            "prefix": "fas",
-          }
-        }
-        size={40}
-      />
-    </View>
   </View>
 </View>
 `;

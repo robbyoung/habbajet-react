@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import WideButton from '../../app/components/wideButton';
+import {render, fireEvent, wait} from '@testing-library/react-native';
 
 jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
@@ -28,5 +29,21 @@ describe('WideButton Component', () => {
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('will run the onPress callback if the button is pressed', async () => {
+        const onPress = jest.fn();
+        const {getByTestId} = render(
+            <WideButton
+                text="Button"
+                testID="test-button"
+                color="#ffffff"
+                onPress={onPress}
+            />,
+        );
+
+        const button = getByTestId('test-button');
+        fireEvent.press(button);
+        await wait(() => expect(onPress).toBeCalled());
     });
 });

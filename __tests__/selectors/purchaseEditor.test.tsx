@@ -4,6 +4,7 @@ import {
     getPurchaseCostField,
     getValidationStateForNewPurchase,
     getValuesForNewPurchase,
+    getValuesForEditedPurchase,
 } from '../../app/selectors';
 import {EditorField} from '../../app/state';
 
@@ -48,6 +49,42 @@ describe('PurchaseEditor Selectors', () => {
                 name: 'Test',
                 cost: 123,
                 tagId: '0',
+            });
+        });
+    });
+
+    describe('Get Values For Edited Purchase', () => {
+        it('will parse and return from values and calculate cost difference', () => {
+            const state = createTestState(0, 10, 0);
+            state.purchaseEditor.name.value = 'Test';
+            state.purchaseEditor.cost.value = '10';
+            state.purchaseEditor.tagId = '0';
+            state.purchaseEditor.id = state.purchases[5].id;
+
+            const result = getValuesForEditedPurchase(state);
+            expect(result).toEqual({
+                name: 'Test',
+                cost: 10,
+                tagId: '0',
+                id: state.purchases[5].id,
+                difference: 5,
+            });
+        });
+
+        it('will use default values if nothing is being edited', () => {
+            const state = createTestState(0, 10, 0);
+            state.purchaseEditor.name.value = 'Test';
+            state.purchaseEditor.cost.value = '46.82';
+            state.purchaseEditor.tagId = '0';
+            state.purchaseEditor.id = 'invalid';
+
+            const result = getValuesForEditedPurchase(state);
+            expect(result).toEqual({
+                name: 'Test',
+                cost: 46.82,
+                tagId: '0',
+                id: undefined,
+                difference: 46.82,
             });
         });
     });

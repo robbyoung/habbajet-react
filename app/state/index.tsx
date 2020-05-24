@@ -23,6 +23,7 @@ export interface Habbajet {
 }
 
 export interface Purchase {
+    id: string;
     name: string;
     cost: number;
     date: string;
@@ -48,6 +49,7 @@ export interface PurchaseEditor {
     cost: EditorField;
     tagId: string;
     validated: boolean;
+    id?: string;
 }
 
 export interface Tag {

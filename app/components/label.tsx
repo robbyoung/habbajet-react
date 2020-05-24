@@ -2,6 +2,9 @@ import React from 'react';
 import {Text, StyleSheet, View} from 'react-native';
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
     title: {
         fontSize: 20,
         margin: 0,
@@ -25,7 +28,7 @@ interface LabelProps {
 }
 const Label = (props: LabelProps) => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={[styles.title, {color: props.color}]}>
                 {props.title}
             </Text>

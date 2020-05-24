@@ -14,6 +14,7 @@ describe('Purchase Selectors', () => {
                 date: '23/03/2020',
                 tagText: 'Tag 0',
                 tagColor: habbajetColors[0],
+                unformatted: state.purchases[0],
             });
         });
 
@@ -28,6 +29,7 @@ describe('Purchase Selectors', () => {
                 date: '23/03/2020',
                 tagText: '',
                 tagColor: '',
+                unformatted: state.purchases[0],
             });
         });
     });

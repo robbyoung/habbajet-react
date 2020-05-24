@@ -24,7 +24,7 @@ interface HabbajetListProps {
 }
 const HabbajetList = (props: HabbajetListProps) => {
     const today = moment().valueOf();
-    const buttons = props.habbajets.map(habbajet => (
+    const buttons = props.habbajets.map((habbajet, index) => (
         <WideButton
             text={habbajet.name}
             color={habbajet.color}
@@ -32,6 +32,7 @@ const HabbajetList = (props: HabbajetListProps) => {
                 today > moment(habbajet.date).valueOf() || habbajet.toClaim
             }
             key={habbajet.name}
+            testID={`button-habbajet-${index}`}
             onPress={() => props.onSelect(habbajet)}
         />
     ));

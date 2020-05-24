@@ -26,7 +26,7 @@ export function addHabbajetAction(
             id,
             name,
             maxValue: value,
-            currentValue: value / Math.pow(modifier, 7),
+            currentValue: value,
             modifier,
             results: [],
             color,
@@ -89,7 +89,7 @@ function redoWeek(habbajet: Habbajet) {
         habbajet.results.length - daysCompleted,
     );
 
-    habbajet.currentValue = habbajet.maxValue / Math.pow(habbajet.modifier, 7);
+    habbajet.currentValue = habbajet.maxValue;
     habbajet.results = pastResults;
     habbajet.remainingSlack = habbajet.totalSlack;
     habbajet.currentStreak = habbajet.oldStreaks[0];
@@ -105,7 +105,6 @@ function redoWeek(habbajet: Habbajet) {
 
         const isSuccess = passed || habbajet.remainingSlack > 0;
         if (isSuccess) {
-            habbajet.currentValue *= habbajet.modifier;
             habbajet.currentStreak++;
             if (habbajet.currentStreak > habbajet.bestStreak) {
                 habbajet.bestStreak = habbajet.currentStreak;
@@ -114,6 +113,7 @@ function redoWeek(habbajet: Habbajet) {
                 habbajet.remainingSlack--;
             }
         } else {
+            habbajet.currentValue /= habbajet.modifier;
             habbajet.currentStreak = 0;
         }
     }

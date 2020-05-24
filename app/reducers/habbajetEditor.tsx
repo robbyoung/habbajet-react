@@ -11,20 +11,7 @@ import {
     setHabbajetToEdit,
     SetHabbajetToEditAction,
 } from '../actions';
-import {habbajetColors} from '../colors';
-
-const EMPTY_FIELD = {
-    value: '',
-    errorMessage: '',
-};
-export const DEFAULT_EDITOR_STATE: HabbajetEditor = {
-    name: EMPTY_FIELD,
-    value: EMPTY_FIELD,
-    modifier: EMPTY_FIELD,
-    slack: EMPTY_FIELD,
-    color: habbajetColors[0],
-    validated: false,
-};
+import {DEFAULT_EDITOR_STATE} from '../state/defaults';
 
 export default function habbajetEditorReducer(
     state: HabbajetEditor = DEFAULT_EDITOR_STATE,

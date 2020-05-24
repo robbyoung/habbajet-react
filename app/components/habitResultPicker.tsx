@@ -57,12 +57,14 @@ const HabitResultPicker = (props: HabitResultPickerProps) => {
                     icon={faCheck}
                     size={ICON_SIZE}
                     color={white}
+                    testID="button-success"
                     onLongPress={() => props.onSuccess()}
                 />
                 <IconButton
                     icon={faTimes}
                     size={ICON_SIZE}
                     color={white}
+                    testID="button-failure"
                     onLongPress={() => props.onFailure()}
                 />
             </View>

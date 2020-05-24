@@ -1,8 +1,7 @@
 import {clearEditorAction} from '../../app/actions';
 import {createTestState} from '../../app/state/testState';
-import habbajetEditorReducer, {
-    DEFAULT_EDITOR_STATE,
-} from '../../app/reducers/habbajetEditor';
+import habbajetEditorReducer from '../../app/reducers/habbajetEditor';
+import {DEFAULT_EDITOR_STATE} from '../../app/state/defaults';
 
 describe('Clear Editor Action', () => {
     it('will reset the editor to its default state', () => {

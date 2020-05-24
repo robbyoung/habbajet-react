@@ -13,7 +13,7 @@ describe('Add Habit Result Action', () => {
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
         expect(result.results).toEqual([HabitResult.Success]);
-        expect(result.currentValue).toEqual(state[0].currentValue * 2);
+        expect(result.currentValue).toEqual(state[0].currentValue);
         expect(result.currentStreak).toEqual(state[0].currentStreak + 1);
         expect(result.bestStreak).toEqual(state[0].bestStreak);
 
@@ -30,7 +30,7 @@ describe('Add Habit Result Action', () => {
         const result = newState[0];
         expect(newState.length).toEqual(state.length);
         expect(result.results).toEqual([HabitResult.Failure]);
-        expect(result.currentValue).toEqual(state[0].currentValue);
+        expect(result.currentValue).toEqual(state[0].currentValue / 2);
 
         const date = moment(state[0].date);
         expect(moment(result.date).day()).toEqual(date.day() + 1);

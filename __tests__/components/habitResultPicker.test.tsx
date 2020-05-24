@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import HabitResultPicker from '../../app/components/habitResultPicker';
 import {createTestState} from '../../app/state/testState';
+import {render, fireEvent, wait} from '@testing-library/react-native';
 
 jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
@@ -45,5 +46,37 @@ describe('HabitResultPicker Component', () => {
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('will run the onSuccess callback if the success button is long-pressed', async () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        const onSuccess = jest.fn();
+        const {getByTestId} = render(
+            <HabitResultPicker
+                habbajet={habbajet}
+                onFailure={() => undefined}
+                onSuccess={onSuccess}
+            />,
+        );
+
+        const button = getByTestId('button-success');
+        fireEvent.longPress(button);
+        await wait(() => expect(onSuccess).toBeCalled());
+    });
+
+    it('will run the onFailure callback if the failure button is long-pressed', async () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        const onFailure = jest.fn();
+        const {getByTestId} = render(
+            <HabitResultPicker
+                habbajet={habbajet}
+                onFailure={onFailure}
+                onSuccess={() => undefined}
+            />,
+        );
+
+        const button = getByTestId('button-failure');
+        fireEvent.longPress(button);
+        await wait(() => expect(onFailure).toBeCalled());
     });
 });

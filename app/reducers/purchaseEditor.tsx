@@ -8,18 +8,10 @@ import {
     ClearPurchaseEditorAction,
     ValidatePurchaseEditorAction,
     validatePurchaseEditor,
+    SetPurchaseToEditAction,
+    setPurchaseToEdit,
 } from '../actions';
-
-const EMPTY_FIELD = {
-    value: '',
-    errorMessage: '',
-};
-export const DEFAULT_PURCHASE_EDITOR_STATE: PurchaseEditor = {
-    name: EMPTY_FIELD,
-    cost: EMPTY_FIELD,
-    tagId: '',
-    validated: false,
-};
+import {DEFAULT_PURCHASE_EDITOR_STATE} from '../state/defaults';
 
 export default function purchaseEditorReducer(
     state: PurchaseEditor = DEFAULT_PURCHASE_EDITOR_STATE,
@@ -41,6 +33,8 @@ export default function purchaseEditorReducer(
                 state,
                 action as ValidatePurchaseEditorAction,
             );
+        case ActionType.SET_PURCHASE_TO_EDIT:
+            return setPurchaseToEdit(state, action as SetPurchaseToEditAction);
     }
     return state;
 }

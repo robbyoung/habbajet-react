@@ -332,7 +332,13 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
           <Text
             style={
               Array [
@@ -348,7 +354,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
               ]
             }
           >
-            Current Value (-10%)
+            Expected Output (-10%)
           </Text>
           <Text
             style={
@@ -364,7 +370,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
               ]
             }
           >
-            $0.78
+            $100.00
           </Text>
         </View>
         <View
@@ -547,6 +553,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
             "opacity": 1,
           }
         }
+        testID="button-success"
       >
         <
           color="#ffffff"
@@ -582,6 +589,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
             "opacity": 1,
           }
         }
+        testID="button-failure"
       >
         <
           color="#ffffff"
@@ -939,7 +947,13 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
           <Text
             style={
               Array [
@@ -955,7 +969,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
               ]
             }
           >
-            Current Value
+            Expected Output
           </Text>
           <Text
             style={
@@ -971,7 +985,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
               ]
             }
           >
-            $0.78
+            $100.00
           </Text>
         </View>
         <View
@@ -1154,6 +1168,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
             "opacity": 1,
           }
         }
+        testID="button-success"
       >
         <
           color="#ffffff"
@@ -1189,6 +1204,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
             "opacity": 1,
           }
         }
+        testID="button-failure"
       >
         <
           color="#ffffff"

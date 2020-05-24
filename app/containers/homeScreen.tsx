@@ -3,11 +3,21 @@ import {useSelector, useDispatch} from 'react-redux';
 import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
 import HabbajetList from '../components/habbajetList';
-import {goToHabbajet, goToNewHabbajet, goToPurchases} from '../navigation';
-import {selectHabbajetAction, clearEditorAction} from '../actions';
+import {
+    goToHabbajet,
+    goToNewHabbajet,
+    goToPurchases,
+    goToNewPurchase,
+} from '../navigation/navigation';
+import {
+    selectHabbajetAction,
+    clearEditorAction,
+    clearPurchaseEditorAction,
+} from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 import BudgetDisplay from '../components/budgetDisplay';
+import {faBars, faPlus} from '@fortawesome/free-solid-svg-icons';
 
 const styles = StyleSheet.create({
     container: {
@@ -24,7 +34,22 @@ const HomeScreen = () => {
     return (
         <ScrollView>
             <View style={styles.container}>
-                <BudgetDisplay budget={budget} onPress={goToPurchases} />
+                <BudgetDisplay
+                    budget={budget}
+                    buttons={[
+                        {
+                            icon: faPlus,
+                            onPress: () => {
+                                dispatch(clearPurchaseEditorAction());
+                                goToNewPurchase();
+                            },
+                        },
+                        {
+                            icon: faBars,
+                            onPress: () => goToPurchases(),
+                        },
+                    ]}
+                />
                 <HabbajetList
                     habbajets={habbajets}
                     onSelect={habbajet => {

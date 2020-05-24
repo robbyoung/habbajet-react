@@ -52,6 +52,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#8066C2"
     />
     <View
       accessible={true}
@@ -75,6 +76,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#E04747"
     />
     <View
       accessible={true}
@@ -98,6 +100,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#2AAD5E"
     />
     <View
       accessible={true}
@@ -121,6 +124,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#B1B952"
     />
     <View
       accessible={true}
@@ -144,6 +148,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#7F90EC"
     />
     <View
       accessible={true}
@@ -167,6 +172,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#37353C"
     />
     <View
       accessible={true}
@@ -190,6 +196,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#E64CE9"
     />
     <View
       accessible={true}
@@ -213,6 +220,7 @@ exports[`ColorPicker Component can render a color picker 1`] = `
           "width": 60,
         }
       }
+      testID="color-#EB712D"
     />
   </View>
 </View>

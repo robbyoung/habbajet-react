@@ -20,7 +20,7 @@ export function createTestState(
             id: `${i}`,
             name: `Habbajet ${i}`,
             maxValue: 100,
-            currentValue: 100 / Math.pow(2, 7),
+            currentValue: 100,
             modifier: 2,
             results: [],
             color: habbajetColors[i % habbajetColors.length],
@@ -38,6 +38,7 @@ export function createTestState(
     const purchases: Purchase[] = [];
     for (let i = 0; i < numPurchases; i++) {
         purchases.push({
+            id: `${i}`,
             name: `Purchase ${i}`,
             cost: i,
             date: '2020-03-22T11:00:00.000Z',

@@ -1,6 +1,6 @@
 {
     "name": "Habbajet",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "private": true,
     "scripts": {
         "start": "react-native run-android --variant=developmentDebug",
@@ -36,6 +36,7 @@
         "@babel/core": "^7.6.2",
         "@babel/runtime": "^7.6.2",
         "@react-native-community/eslint-config": "^0.0.5",
+        "@testing-library/react-native": "^5.0.3",
         "@types/jest": "^24.0.24",
         "@types/react-native": "^0.60.25",
         "@types/react-test-renderer": "16.9.1",

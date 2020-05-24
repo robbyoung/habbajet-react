@@ -1,7 +1,7 @@
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
 import {HabbajetEditor} from '../state';
-import {DEFAULT_EDITOR_STATE} from '../reducers/habbajetEditor';
+import {DEFAULT_EDITOR_STATE} from '../state/defaults';
 
 export interface ClearEditorAction extends Action {
     type: ActionType.CLEAR_EDITOR;

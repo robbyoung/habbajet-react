@@ -332,7 +332,13 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
           }
         }
       >
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
           <Text
             style={
               Array [
@@ -348,7 +354,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
               ]
             }
           >
-            Current Value
+            Expected Output
           </Text>
           <Text
             style={
@@ -364,7 +370,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
               ]
             }
           >
-            $0.78
+            $100.00
           </Text>
         </View>
         <View
@@ -547,6 +553,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
             "opacity": 1,
           }
         }
+        testID="button-success"
       >
         <
           color="#ffffff"
@@ -582,6 +589,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
             "opacity": 1,
           }
         }
+        testID="button-failure"
       >
         <
           color="#ffffff"

@@ -18,6 +18,7 @@ exports[`Confirmation Modal Component can render a confirmation modal 1`] = `
       "width": "100%",
     }
   }
+  testID="modal-background"
 >
   <View
     accessible={true}
@@ -44,6 +45,7 @@ exports[`Confirmation Modal Component can render a confirmation modal 1`] = `
       style={
         Object {
           "color": "#000000",
+          "fontFamily": "Abel",
           "fontSize": 24,
           "paddingBottom": 20,
           "textAlign": "center",
@@ -73,6 +75,7 @@ exports[`Confirmation Modal Component can render a confirmation modal 1`] = `
             "width": "100%",
           }
         }
+        testID="button-yes"
       >
         <Text
           style={
@@ -112,6 +115,7 @@ exports[`Confirmation Modal Component can render a confirmation modal 1`] = `
             "width": "100%",
           }
         }
+        testID="button-no"
       >
         <Text
           style={
