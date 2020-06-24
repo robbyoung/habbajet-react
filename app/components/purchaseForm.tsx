@@ -7,11 +7,13 @@ import WideButton from './wideButton';
 import TagPicker from './tagPicker';
 
 const styles = StyleSheet.create({
-    container: {
+    scroller: {
         height: '100%',
+        backgroundColor: white,
+    },
+    container: {
         paddingHorizontal: 20,
         paddingVertical: 10,
-        backgroundColor: white,
     },
 });
 
@@ -26,7 +28,7 @@ interface PurchaseFormProps {
 }
 const PurchaseForm = (props: PurchaseFormProps) => {
     return (
-        <ScrollView>
+        <ScrollView style={styles.scroller}>
             <View style={styles.container}>
                 <FormField
                     field={props.nameField}
