@@ -140,3 +140,17 @@ export function createTestPurchaseEditor(
         validated,
     };
 }
+
+export function createTestTagEditor(
+    name: string,
+    validated = false,
+): TagEditor {
+    return {
+        name: {
+            value: name,
+            errorMessage: '',
+        },
+        color: '#000000',
+        validated,
+    };
+}
