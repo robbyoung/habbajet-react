@@ -16,4 +16,8 @@ export enum ActionType {
     DELETE_HABBAJET = 'Delete Habbajet',
     ADD_TAG = 'Add Tag',
     SET_PURCHASE_TO_EDIT = 'Set Purchase To Edit',
+    SET_TAG_TO_EDIT = 'Set Tag To Edit',
+    UPDATE_TAG_EDITOR = 'Update Tag Editor',
+    CLEAR_TAG_EDITOR = 'Clear Tag Editor',
+    VALIDATE_TAG_EDITOR = 'Validate Tag Editor',
 }

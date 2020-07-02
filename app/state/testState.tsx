@@ -5,6 +5,7 @@ import {
     HabbajetEditor,
     Tag,
     PurchaseEditor,
+    TagEditor,
 } from '.';
 import {habbajetColors} from '../colors';
 
@@ -46,6 +47,15 @@ export function createTestState(
         });
     }
 
+    const tags: Tag[] = [];
+    for (let i = 0; i < 10; i++) {
+        tags.push({
+            id: `${i}`,
+            name: `Tag ${i}`,
+            color: habbajetColors[i % habbajetColors.length],
+        });
+    }
+
     const EMPTY_FIELD = {
         value: '',
         errorMessage: '',
@@ -66,14 +76,11 @@ export function createTestState(
         validated: false,
     };
 
-    const tags: Tag[] = [];
-    for (let i = 0; i < 10; i++) {
-        tags.push({
-            id: `${i}`,
-            name: `Tag ${i}`,
-            color: habbajetColors[i % habbajetColors.length],
-        });
-    }
+    const tagEditor: TagEditor = {
+        name: {...EMPTY_FIELD},
+        color: habbajetColors[0],
+        validated: false,
+    };
 
     return {
         habbajets,
@@ -81,6 +88,7 @@ export function createTestState(
         budget,
         habbajetEditor,
         purchaseEditor,
+        tagEditor,
         tags,
     };
 }
