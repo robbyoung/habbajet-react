@@ -1,8 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import WideButton from '../components/wideButton';
-import {grey, white} from '../colors';
 import {
     updatePurchaseEditorAction,
     addTagAction,
@@ -11,23 +8,13 @@ import {
     clearTagEditorAction,
 } from '../actions';
 import {goBack} from '../navigation/navigation';
-import FormField from '../components/formField';
 import {saveState} from '../storage';
-import ColorPicker from '../components/colorPicker';
 import {
     getValuesForNewTag,
     getValidationStateForNewTag,
     getTagNameField,
 } from '../selectors/tagEditor';
-
-const styles = StyleSheet.create({
-    container: {
-        height: '100%',
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        backgroundColor: white,
-    },
-});
+import TagForm from '../components/tagForm';
 
 const NewTagScreen = () => {
     const dispatch = useDispatch();
@@ -45,28 +32,14 @@ const NewTagScreen = () => {
     }
 
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                <FormField
-                    title="Name"
-                    field={nameField}
-                    onValueChange={value => {
-                        dispatch(updateTagEditorAction('Name', value));
-                    }}
-                />
-                <ColorPicker
-                    selected={newTag.color}
-                    onSelect={selected =>
-                        dispatch(updateTagEditorAction('Color', selected))
-                    }
-                />
-                <WideButton
-                    text="Done"
-                    color={grey}
-                    onPress={() => dispatch(validateTagEditorAction())}
-                />
-            </View>
-        </ScrollView>
+        <TagForm
+            nameField={nameField}
+            selectedColor={newTag.color}
+            onUpdate={(key, value) =>
+                dispatch(updateTagEditorAction(key, value))
+            }
+            onSubmit={() => dispatch(validateTagEditorAction())}
+        />
     );
 };
 
