@@ -1,13 +1,24 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import WideButton from '../components/wideButton';
-import {grey, white, habbajetColors} from '../colors';
-import {updatePurchaseEditorAction, addTagAction} from '../actions';
+import {grey, white} from '../colors';
+import {
+    updatePurchaseEditorAction,
+    addTagAction,
+    updateTagEditorAction,
+    validateTagEditorAction,
+    clearTagEditorAction,
+} from '../actions';
 import {goBack} from '../navigation/navigation';
 import FormField from '../components/formField';
 import {saveState} from '../storage';
 import ColorPicker from '../components/colorPicker';
+import {
+    getValuesForNewTag,
+    getValidationStateForNewTag,
+    getTagNameField,
+} from '../selectors/tagEditor';
 
 const styles = StyleSheet.create({
     container: {
@@ -20,15 +31,15 @@ const styles = StyleSheet.create({
 
 const NewTagScreen = () => {
     const dispatch = useDispatch();
-    const [name, setName] = useState('');
-    const [color, setColor] = useState(habbajetColors[0]);
-    const [error, setError] = useState('');
-    const [validated, setValidated] = useState(false);
+    const newTag = useSelector(getValuesForNewTag);
+    const nameField = useSelector(getTagNameField);
+    const validated = useSelector(getValidationStateForNewTag);
 
-    if (validated && error === '') {
-        const action = addTagAction(name, color);
-        dispatch(action);
-        dispatch(updatePurchaseEditorAction('TagId', action.newTag.id));
+    if (validated) {
+        const newTagAction = addTagAction(newTag.name, newTag.color);
+        dispatch(clearTagEditorAction());
+        dispatch(newTagAction);
+        dispatch(updatePurchaseEditorAction('TagId', newTagAction.newTag.id));
         goBack();
         saveState();
     }
@@ -38,30 +49,21 @@ const NewTagScreen = () => {
             <View style={styles.container}>
                 <FormField
                     title="Name"
-                    field={{
-                        value: name,
-                        errorMessage: error,
-                    }}
+                    field={nameField}
                     onValueChange={value => {
-                        setName(value);
-                        setError('');
-                        setValidated(false);
+                        dispatch(updateTagEditorAction('Name', value));
                     }}
                 />
                 <ColorPicker
-                    selected={color}
-                    onSelect={selected => setColor(selected)}
+                    selected={newTag.color}
+                    onSelect={selected =>
+                        dispatch(updateTagEditorAction('Color', selected))
+                    }
                 />
                 <WideButton
                     text="Done"
                     color={grey}
-                    onPress={() => {
-                        const nameValue = name.trim();
-                        if (nameValue.length === 0) {
-                            setError('Tag must have a name');
-                        }
-                        setValidated(true);
-                    }}
+                    onPress={() => dispatch(validateTagEditorAction())}
                 />
             </View>
         </ScrollView>
