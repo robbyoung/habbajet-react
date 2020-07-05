@@ -24,12 +24,11 @@ interface BudgetDisplayProps {
 const BudgetDisplay = (props: BudgetDisplayProps) => {
     const buttons = props.buttons.map((button, index) => {
         return (
-            <View style={styles.roundButton}>
+            <View style={styles.roundButton} key={index}>
                 <IconButton
                     icon={button.icon}
                     color={grey}
                     size={40}
-                    key={index}
                     testID={`button-budget-${index}`}
                     onPress={() => button.onPress()}
                 />

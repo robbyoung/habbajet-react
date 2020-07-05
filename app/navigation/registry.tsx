@@ -16,6 +16,7 @@ import EditPurchaseScreen from '../containers/editPurchaseScreen';
 import {PlusButton, PencilButton, TrashButton} from './buttons';
 import ConfirmationModal from '../components/confirmationModal';
 import HelpModal from '../components/helpModal';
+import EditTagScreen from '../containers/editTagScreen';
 
 Navigation.registerComponent(
     Screens.Loading,
@@ -115,6 +116,16 @@ Navigation.registerComponent(
         </Provider>
     ),
     () => EditPurchaseScreen,
+);
+
+Navigation.registerComponent(
+    Screens.EditTag,
+    () => () => (
+        <Provider store={store}>
+            <EditTagScreen />
+        </Provider>
+    ),
+    () => EditTagScreen,
 );
 
 Navigation.registerComponent('topBar.addPurchaseButton', () => PlusButton);

@@ -16,14 +16,18 @@ import {
 } from '../selectors/tagEditor';
 import TagForm from '../components/tagForm';
 
-const NewTagScreen = () => {
+const EditTagScreen = () => {
     const dispatch = useDispatch();
-    const newTag = useSelector(getValuesForNewTag);
+    const editedTag = useSelector(getValuesForNewTag);
     const nameField = useSelector(getTagNameField);
     const validated = useSelector(getValidationStateForNewTag);
 
     if (validated) {
-        const newTagAction = addTagAction(newTag.name, newTag.color);
+        const newTagAction = addTagAction(
+            editedTag.name,
+            editedTag.color,
+            editedTag.id,
+        );
         dispatch(clearTagEditorAction());
         dispatch(newTagAction);
         dispatch(updatePurchaseEditorAction('TagId', newTagAction.newTag.id));
@@ -34,7 +38,7 @@ const NewTagScreen = () => {
     return (
         <TagForm
             nameField={nameField}
-            selectedColor={newTag.color}
+            selectedColor={editedTag.color}
             onUpdate={(key, value) =>
                 dispatch(updateTagEditorAction(key, value))
             }
@@ -43,4 +47,4 @@ const NewTagScreen = () => {
     );
 };
 
-export default NewTagScreen;
+export default EditTagScreen;

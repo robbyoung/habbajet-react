@@ -30,6 +30,12 @@ export interface Purchase {
     tagId: string;
 }
 
+export interface Tag {
+    id: string;
+    name: string;
+    color: string;
+}
+
 export interface EditorField {
     value: string;
     errorMessage: string;
@@ -52,10 +58,11 @@ export interface PurchaseEditor {
     id?: string;
 }
 
-export interface Tag {
-    id: string;
-    name: string;
+export interface TagEditor {
+    name: EditorField;
     color: string;
+    validated: boolean;
+    id?: string;
 }
 
 export interface State {
@@ -64,5 +71,6 @@ export interface State {
     tags: Tag[];
     habbajetEditor: HabbajetEditor;
     purchaseEditor: PurchaseEditor;
+    tagEditor: TagEditor;
     budget: number;
 }

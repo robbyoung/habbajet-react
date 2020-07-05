@@ -8,17 +8,30 @@ export interface AddTagAction extends Action {
     newTag: Tag;
 }
 
-export function addTagAction(name: string, color: string): AddTagAction {
+export function addTagAction(
+    name: string,
+    color: string,
+    id: string = uuid.v4(),
+): AddTagAction {
     return {
         type: ActionType.ADD_TAG,
         newTag: {
             name,
             color,
-            id: uuid.v4(),
+            id,
         },
     };
 }
 
 export function addTag(state: Tag[], action: AddTagAction): Tag[] {
-    return [...state, action.newTag];
+    const newState = [...state];
+
+    const editIndex = newState.findIndex(tag => tag.id === action.newTag.id);
+    if (editIndex !== -1) {
+        newState[editIndex] = action.newTag;
+    } else {
+        newState.push(action.newTag);
+    }
+
+    return newState;
 }

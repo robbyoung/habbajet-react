@@ -10,6 +10,7 @@ import {
     goToStartingBudget,
     goToNewTag,
     goToEditPurchase,
+    goToEditTag,
 } from '../app/navigation/navigation';
 
 let layoutRoot: LayoutRoot;
@@ -88,5 +89,9 @@ describe('Navigation', () => {
 
     it('goToEditPurchase correctly navigates to the edit purchase screen', () => {
         testStackPush(goToEditPurchase, 'EditPurchase');
+    });
+
+    it('goToEditTag correctly navigates to the edit tag screen', () => {
+        testStackPush(goToEditTag, 'EditTag');
     });
 });
