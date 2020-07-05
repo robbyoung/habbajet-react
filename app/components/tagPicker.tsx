@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
 interface TagPickerProps {
     selected: string;
     onSelect: (tagId: string) => void;
+    onLongPress: (tagId: string) => void;
     onNewTag: () => void;
     tags: Tag[];
 }
@@ -52,7 +53,8 @@ const TagPicker = (props: TagPickerProps) => {
                 {backgroundColor: tag.color},
                 tag.id === props.selected ? styles.selectedTag : {},
             ]}
-            onPress={() => props.onSelect(tag.id)}>
+            onPress={() => props.onSelect(tag.id)}
+            onLongPress={() => props.onLongPress(tag.id)}>
             <Text style={styles.tagText}>{tag.name}</Text>
         </TouchableOpacity>
     ));

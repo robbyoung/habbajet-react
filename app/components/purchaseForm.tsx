@@ -23,6 +23,7 @@ interface PurchaseFormProps {
     tags: Tag[];
     selectedTagId: string;
     onNewTag: () => void;
+    onTagEdit: (tagId: string) => void;
     onUpdate: (key: string, value: string) => void;
     onSubmit: () => void;
 }
@@ -45,6 +46,7 @@ const PurchaseForm = (props: PurchaseFormProps) => {
                     tags={props.tags}
                     selected={props.selectedTagId}
                     onSelect={value => props.onUpdate('TagId', value)}
+                    onLongPress={tagId => props.onTagEdit(tagId)}
                     onNewTag={props.onNewTag}
                 />
                 <WideButton

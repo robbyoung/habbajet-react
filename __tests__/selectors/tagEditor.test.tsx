@@ -33,6 +33,20 @@ describe('TagEditor Selectors', () => {
                 color: '#ffffff',
             });
         });
+
+        it('will return the edited tags ID where applicable', () => {
+            const state = createTestState(0, 0, 0);
+            state.tagEditor.name.value = 'Test';
+            state.tagEditor.color = '#ffffff';
+            state.tagEditor.id = 'Test ID';
+
+            const result = getValuesForNewTag(state);
+            expect(result).toEqual({
+                name: 'Test',
+                color: '#ffffff',
+                id: 'Test ID',
+            });
+        });
     });
 
     describe('Get Validation State For New Tag', () => {

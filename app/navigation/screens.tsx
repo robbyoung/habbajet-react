@@ -9,4 +9,5 @@ export enum Screens {
     StartingBudget = 'StartingBudget',
     NewTag = 'NewTag',
     EditPurchase = 'EditPurchase',
+    EditTag = 'EditTag',
 }

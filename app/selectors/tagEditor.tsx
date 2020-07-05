@@ -7,10 +7,12 @@ export function getTagNameField(state: State) {
 export function getValuesForNewTag(state: State) {
     const name = state.tagEditor.name.value;
     const color = state.tagEditor.color;
+    const id = state.tagEditor.id;
 
     return {
         name,
         color,
+        id,
     };
 }
 
