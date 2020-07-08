@@ -20,4 +20,5 @@ export enum ActionType {
     UPDATE_TAG_EDITOR = 'Update Tag Editor',
     CLEAR_TAG_EDITOR = 'Clear Tag Editor',
     VALIDATE_TAG_EDITOR = 'Validate Tag Editor',
+    DELETE_TAG = 'Delete Tag',
 }

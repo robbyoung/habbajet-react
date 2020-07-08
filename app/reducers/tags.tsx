@@ -7,6 +7,8 @@ import {
     AddTagAction,
     LoadStateAction,
     loadTags,
+    DeleteTagAction,
+    deleteTag,
 } from '../actions';
 
 export const DEFAULT_TAGS: Tag[] = [
@@ -23,6 +25,8 @@ export default function tagReducer(
             return addTag(state, action as AddTagAction);
         case ActionType.LOAD_STATE:
             return loadTags(state, action as LoadStateAction);
+        case ActionType.DELETE_TAG:
+            return deleteTag(state, action as DeleteTagAction);
     }
     return state;
 }
