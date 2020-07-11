@@ -334,6 +334,380 @@ exports[`Tag Form Component can render a filled-out form 1`] = `
 </RCTScrollView>
 `;
 
+exports[`Tag Form Component can render a form with a delete button 1`] = `
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#ffffff",
+      "height": "100%",
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "paddingHorizontal": 20,
+          "paddingVertical": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "marginBottom": 15,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#959595",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "margin": 0,
+                "padding": 0,
+              },
+            ]
+          }
+        >
+          Name
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="default"
+            onChangeText={[Function]}
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "borderColor": "#959595",
+                "borderWidth": 1,
+                "flex": 1,
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "paddingLeft": 10,
+              }
+            }
+            testID="input-Name"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
+        <View />
+      </View>
+      <View>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#959595",
+                "fontFamily": "Abel",
+                "fontSize": 20,
+                "margin": 0,
+                "padding": 0,
+              },
+            ]
+          }
+        >
+          Color
+        </Text>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "marginBottom": 10,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#8066C2",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#8066C2"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#E04747",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#E04747"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#2AAD5E",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#2AAD5E"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#B1B952",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#B1B952"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#7F90EC",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#7F90EC"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#37353C",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#37353C"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#E64CE9",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#E64CE9"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#EB712D",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#EB712D"
+          />
+        </View>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#959595",
+            "borderRadius": 10,
+            "marginBottom": 10,
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="button-submit"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "padding": 10,
+                "textAlign": "center",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          Done
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#b02f1e",
+            "borderRadius": 10,
+            "marginBottom": 10,
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="button-delete"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "padding": 10,
+                "textAlign": "center",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          Delete
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
 exports[`Tag Form Component can render a form with invalid entries 1`] = `
 <RCTScrollView
   style={

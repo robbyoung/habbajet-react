@@ -14,13 +14,14 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
 }));
 
-function testFormSnapshot(state: TagEditor) {
+function testFormSnapshot(state: TagEditor, deleteButton: boolean = false) {
     const component = renderer.create(
         <TagForm
             nameField={state.name}
             selectedColor={state.color}
             onUpdate={() => undefined}
             onSubmit={() => undefined}
+            onDelete={deleteButton ? () => undefined : undefined}
         />,
     );
     expect(component.toJSON()).toMatchSnapshot();
@@ -52,6 +53,10 @@ describe('Tag Form Component', () => {
 
     it('can render a filled-out form', () => {
         testFormSnapshot(createTestTagEditor('New Name', false));
+    });
+
+    it('can render a form with a delete button', () => {
+        testFormSnapshot(createTestTagEditor('', false), true);
     });
 
     it('can render a form with invalid entries', () => {
@@ -99,5 +104,23 @@ describe('Tag Form Component', () => {
         const newTagButton = getByTestId('button-submit');
         fireEvent.press(newTagButton);
         await wait(() => expect(onSubmit).toBeCalled());
+    });
+
+    it('will run the onDelete callback if the delete button is pressed', async () => {
+        const state = createTestTagEditor('', true);
+        const onDelete = jest.fn();
+        const {getByTestId} = render(
+            <TagForm
+                nameField={state.name}
+                selectedColor={state.color}
+                onUpdate={() => undefined}
+                onSubmit={() => undefined}
+                onDelete={() => onDelete()}
+            />,
+        );
+
+        const newTagButton = getByTestId('button-delete');
+        fireEvent.press(newTagButton);
+        await wait(() => expect(onDelete).toBeCalled());
     });
 });

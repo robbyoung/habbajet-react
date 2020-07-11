@@ -6,6 +6,7 @@ import {
     updateTagEditorAction,
     validateTagEditorAction,
     clearTagEditorAction,
+    deleteTagAction,
 } from '../actions';
 import {goBack} from '../navigation/navigation';
 import {saveState} from '../storage';
@@ -15,6 +16,10 @@ import {
     getTagNameField,
 } from '../selectors/tagEditor';
 import TagForm from '../components/tagForm';
+import {
+    Navigation,
+    OptionsModalPresentationStyle,
+} from 'react-native-navigation';
 
 const EditTagScreen = () => {
     const dispatch = useDispatch();
@@ -43,6 +48,28 @@ const EditTagScreen = () => {
                 dispatch(updateTagEditorAction(key, value))
             }
             onSubmit={() => dispatch(validateTagEditorAction())}
+            onDelete={() =>
+                Navigation.showModal({
+                    component: {
+                        name: 'modal.confirmation',
+                        id: 'deleteModal',
+                        passProps: {
+                            id: 'deleteModal',
+                            text: 'Are you sure you want to delete this tag?',
+                            onConfirm: () => {
+                                goBack();
+                                dispatch(deleteTagAction(editedTag.id || ''));
+                                saveState();
+                                Navigation.dismissModal('deleteModal');
+                            },
+                        },
+                        options: {
+                            modalPresentationStyle:
+                                OptionsModalPresentationStyle.overCurrentContext,
+                        },
+                    },
+                })
+            }
         />
     );
 };
