@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
-import {grey, white} from '../colors';
+import {grey, white, errorRed} from '../colors';
 import {EditorField} from '../state';
 import FormField from './formField';
 import WideButton from './wideButton';
@@ -22,6 +22,7 @@ interface TagFormProps {
     selectedColor: string;
     onUpdate: (key: string, value: string) => void;
     onSubmit: () => void;
+    onDelete?: () => void;
 }
 const TagForm = (props: TagFormProps) => {
     return (
@@ -42,6 +43,14 @@ const TagForm = (props: TagFormProps) => {
                     onPress={() => props.onSubmit()}
                     color={grey}
                 />
+                {props.onDelete ? (
+                    <WideButton
+                        text="Delete"
+                        testID="button-delete"
+                        onPress={() => (props.onDelete as () => void)()}
+                        color={errorRed}
+                    />
+                ) : null}
             </View>
         </ScrollView>
     );
