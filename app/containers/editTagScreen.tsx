@@ -19,12 +19,14 @@ import {
     Navigation,
     OptionsModalPresentationStyle,
 } from 'react-native-navigation';
+import {getUnavailableTagNames} from '../selectors/tags';
 
 const EditTagScreen = () => {
     const dispatch = useDispatch();
     const editedTag = useSelector(getValuesForNewTag);
     const nameField = useSelector(getTagNameField);
     const validated = useSelector(getValidationStateForNewTag);
+    const unavailableNames = useSelector(getUnavailableTagNames);
 
     if (validated) {
         const newTagAction = addTagAction(
@@ -45,7 +47,7 @@ const EditTagScreen = () => {
             onUpdate={(key, value) =>
                 dispatch(updateTagEditorAction(key, value))
             }
-            onSubmit={() => dispatch(validateTagEditorAction())}
+            onSubmit={() => dispatch(validateTagEditorAction(unavailableNames))}
             onDelete={() =>
                 Navigation.showModal({
                     component: {

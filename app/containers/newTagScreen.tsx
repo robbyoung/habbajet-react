@@ -15,12 +15,14 @@ import {
     getTagNameField,
 } from '../selectors/tagEditor';
 import TagForm from '../components/tagForm';
+import {getUnavailableTagNames} from '../selectors/tags';
 
 const NewTagScreen = () => {
     const dispatch = useDispatch();
     const newTag = useSelector(getValuesForNewTag);
     const nameField = useSelector(getTagNameField);
     const validated = useSelector(getValidationStateForNewTag);
+    const unavailableNames = useSelector(getUnavailableTagNames);
 
     if (validated) {
         const newTagAction = addTagAction(newTag.name, newTag.color);
@@ -38,7 +40,7 @@ const NewTagScreen = () => {
             onUpdate={(key, value) =>
                 dispatch(updateTagEditorAction(key, value))
             }
-            onSubmit={() => dispatch(validateTagEditorAction())}
+            onSubmit={() => dispatch(validateTagEditorAction(unavailableNames))}
         />
     );
 };
