@@ -1,7 +1,6 @@
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {
-    updatePurchaseEditorAction,
     addTagAction,
     updateTagEditorAction,
     validateTagEditorAction,
@@ -35,7 +34,6 @@ const EditTagScreen = () => {
         );
         dispatch(clearTagEditorAction());
         dispatch(newTagAction);
-        dispatch(updatePurchaseEditorAction('TagId', newTagAction.newTag.id));
         goBack();
         saveState();
     }
