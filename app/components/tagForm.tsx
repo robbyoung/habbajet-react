@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
-import {grey, white} from '../colors';
-import {EditorField, Tag} from '../state';
+import {grey, white, errorRed} from '../colors';
+import {EditorField} from '../state';
 import FormField from './formField';
 import WideButton from './wideButton';
-import TagPicker from './tagPicker';
+import ColorPicker from './colorPicker';
 
 const styles = StyleSheet.create({
     scroller: {
@@ -17,17 +17,14 @@ const styles = StyleSheet.create({
     },
 });
 
-interface PurchaseFormProps {
+interface TagFormProps {
     nameField: EditorField;
-    costField: EditorField;
-    tags: Tag[];
-    selectedTagId: string;
-    onNewTag: () => void;
-    onTagEdit: (tagId: string) => void;
+    selectedColor: string;
     onUpdate: (key: string, value: string) => void;
     onSubmit: () => void;
+    onDelete?: () => void;
 }
-const PurchaseForm = (props: PurchaseFormProps) => {
+const TagForm = (props: TagFormProps) => {
     return (
         <ScrollView style={styles.scroller}>
             <View style={styles.container}>
@@ -36,18 +33,9 @@ const PurchaseForm = (props: PurchaseFormProps) => {
                     title="Name"
                     onValueChange={value => props.onUpdate('Name', value)}
                 />
-                <FormField
-                    title="Cost"
-                    field={props.costField}
-                    numeric={true}
-                    onValueChange={value => props.onUpdate('Cost', value)}
-                />
-                <TagPicker
-                    tags={props.tags}
-                    selected={props.selectedTagId}
-                    onSelect={value => props.onUpdate('TagId', value)}
-                    onLongPress={tagId => props.onTagEdit(tagId)}
-                    onNewTag={props.onNewTag}
+                <ColorPicker
+                    selected={props.selectedColor}
+                    onSelect={selected => props.onUpdate('Color', selected)}
                 />
                 <WideButton
                     text="Done"
@@ -55,9 +43,17 @@ const PurchaseForm = (props: PurchaseFormProps) => {
                     onPress={() => props.onSubmit()}
                     color={grey}
                 />
+                {props.onDelete ? (
+                    <WideButton
+                        text="Delete"
+                        testID="button-delete"
+                        onPress={() => (props.onDelete as () => void)()}
+                        color={errorRed}
+                    />
+                ) : null}
             </View>
         </ScrollView>
     );
 };
 
-export default PurchaseForm;
+export default TagForm;

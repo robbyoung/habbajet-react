@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Edit Purchase Screen Component will map state to a purchase edit form 1`] = `
+exports[`Edit Tag Screen Component will map state to a tag editing form 1`] = `
 <RCTScrollView
   style={
     Object {
@@ -69,57 +69,6 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
         </View>
         <View />
       </View>
-      <View
-        style={
-          Object {
-            "marginBottom": 15,
-          }
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "color": "#959595",
-                "fontFamily": "Abel",
-                "fontSize": 20,
-                "margin": 0,
-                "padding": 0,
-              },
-            ]
-          }
-        >
-          Cost
-        </Text>
-        <View
-          style={
-            Object {
-              "flexDirection": "row",
-            }
-          }
-        >
-          <TextInput
-            allowFontScaling={true}
-            keyboardType="numeric"
-            onChangeText={[Function]}
-            rejectResponderTermination={true}
-            style={
-              Object {
-                "borderColor": "#959595",
-                "borderWidth": 1,
-                "flex": 1,
-                "fontFamily": "Abel",
-                "fontSize": 30,
-                "paddingLeft": 10,
-              }
-            }
-            testID="input-Cost"
-            underlineColorAndroid="transparent"
-            value=""
-          />
-        </View>
-        <View />
-      </View>
       <View>
         <Text
           style={
@@ -134,13 +83,14 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
             ]
           }
         >
-          Tag
+          Color
         </Text>
         <View
           style={
             Object {
               "flexDirection": "row",
               "flexWrap": "wrap",
+              "justifyContent": "space-between",
               "marginBottom": 10,
             }
           }
@@ -159,29 +109,43 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
             style={
               Object {
                 "backgroundColor": "#8066C2",
-                "borderColor": "transparent",
-                "borderRadius": 8,
+                "borderColor": "#959595",
+                "borderRadius": 4,
+                "borderStyle": "dotted",
                 "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "width": 60,
               }
             }
-            testID="Living-tag"
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
+            testID="color-#8066C2"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#E04747",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
               }
-            >
-              Living
-            </Text>
-          </View>
+            }
+            testID="color-#E04747"
+          />
           <View
             accessible={true}
             focusable={true}
@@ -196,29 +160,16 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
             style={
               Object {
                 "backgroundColor": "#2AAD5E",
-                "borderColor": "transparent",
-                "borderRadius": 8,
-                "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "width": 60,
               }
             }
-            testID="Groceries-tag"
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
-              }
-            >
-              Groceries
-            </Text>
-          </View>
+            testID="color-#2AAD5E"
+          />
           <View
             accessible={true}
             focusable={true}
@@ -232,30 +183,113 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
             onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "backgroundColor": "#959595",
-                "borderColor": "transparent",
-                "borderRadius": 8,
-                "borderWidth": 4,
-                "marginBottom": 5,
-                "marginRight": 5,
+                "backgroundColor": "#B1B952",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
                 "opacity": 1,
+                "width": 60,
               }
             }
-            testID="new-tag"
-          >
-            <Text
-              style={
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontSize": 20,
-                  "padding": 5,
-                }
+            testID="color-#B1B952"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#7F90EC",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
               }
-            >
-              New Tag
-            </Text>
-          </View>
+            }
+            testID="color-#7F90EC"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#37353C",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#37353C"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#E64CE9",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#E64CE9"
+          />
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#EB712D",
+                "borderRadius": 4,
+                "height": 60,
+                "marginBottom": 10,
+                "marginRight": 10,
+                "opacity": 1,
+                "width": 60,
+              }
+            }
+            testID="color-#EB712D"
+          />
         </View>
       </View>
       <View

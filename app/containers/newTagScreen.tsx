@@ -1,70 +1,47 @@
-import React, {useState} from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
-import {useDispatch} from 'react-redux';
-import WideButton from '../components/wideButton';
-import {grey, white, habbajetColors} from '../colors';
-import {updatePurchaseEditorAction, addTagAction} from '../actions';
+import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {
+    updatePurchaseEditorAction,
+    addTagAction,
+    updateTagEditorAction,
+    validateTagEditorAction,
+    clearTagEditorAction,
+} from '../actions';
 import {goBack} from '../navigation/navigation';
-import FormField from '../components/formField';
 import {saveState} from '../storage';
-import ColorPicker from '../components/colorPicker';
-
-const styles = StyleSheet.create({
-    container: {
-        height: '100%',
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        backgroundColor: white,
-    },
-});
+import {
+    getValuesForNewTag,
+    getValidationStateForNewTag,
+    getTagNameField,
+} from '../selectors/tagEditor';
+import TagForm from '../components/tagForm';
+import {getUnavailableTagNames} from '../selectors/tags';
 
 const NewTagScreen = () => {
     const dispatch = useDispatch();
-    const [name, setName] = useState('');
-    const [color, setColor] = useState(habbajetColors[0]);
-    const [error, setError] = useState('');
-    const [validated, setValidated] = useState(false);
+    const newTag = useSelector(getValuesForNewTag);
+    const nameField = useSelector(getTagNameField);
+    const validated = useSelector(getValidationStateForNewTag);
+    const unavailableNames = useSelector(getUnavailableTagNames);
 
-    if (validated && error === '') {
-        const action = addTagAction(name, color);
-        dispatch(action);
-        dispatch(updatePurchaseEditorAction('TagId', action.newTag.id));
+    if (validated) {
+        const newTagAction = addTagAction(newTag.name, newTag.color);
+        dispatch(clearTagEditorAction());
+        dispatch(newTagAction);
+        dispatch(updatePurchaseEditorAction('TagId', newTagAction.newTag.id));
         goBack();
         saveState();
     }
 
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                <FormField
-                    title="Name"
-                    field={{
-                        value: name,
-                        errorMessage: error,
-                    }}
-                    onValueChange={value => {
-                        setName(value);
-                        setError('');
-                        setValidated(false);
-                    }}
-                />
-                <ColorPicker
-                    selected={color}
-                    onSelect={selected => setColor(selected)}
-                />
-                <WideButton
-                    text="Done"
-                    color={grey}
-                    onPress={() => {
-                        const nameValue = name.trim();
-                        if (nameValue.length === 0) {
-                            setError('Tag must have a name');
-                        }
-                        setValidated(true);
-                    }}
-                />
-            </View>
-        </ScrollView>
+        <TagForm
+            nameField={nameField}
+            selectedColor={newTag.color}
+            onUpdate={(key, value) =>
+                dispatch(updateTagEditorAction(key, value))
+            }
+            onSubmit={() => dispatch(validateTagEditorAction(unavailableNames))}
+        />
     );
 };
 

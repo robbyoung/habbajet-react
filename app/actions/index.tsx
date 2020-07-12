@@ -16,3 +16,8 @@ export * from './setHabbajetToEdit';
 export * from './deleteHabbajet';
 export * from './addTag';
 export * from './setPurchaseToEdit';
+export * from './updateTagEditor';
+export * from './validateTagEditor';
+export * from './setTagToEdit';
+export * from './clearTagEditor';
+export * from './deleteTag';

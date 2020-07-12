@@ -13,6 +13,7 @@ describe('TagPicker Component', () => {
                 selected="0"
                 onNewTag={() => undefined}
                 onSelect={() => undefined}
+                onLongPress={() => undefined}
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
@@ -26,6 +27,7 @@ describe('TagPicker Component', () => {
                 selected=""
                 onNewTag={() => undefined}
                 onSelect={() => undefined}
+                onLongPress={() => undefined}
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
@@ -40,6 +42,9 @@ describe('TagPicker Component', () => {
                 selected=""
                 onSelect={onSelect}
                 onNewTag={() => undefined}
+                onLongPress={() => {
+                    throw 'onLongPress Event Not Expected';
+                }}
             />,
         );
 
@@ -50,6 +55,28 @@ describe('TagPicker Component', () => {
         await wait(() => expect(onSelect).toBeCalledWith(tags[0].id));
     });
 
+    it('will run the onLongPress callback if a tag is selected', async () => {
+        const tags = createTestState(0, 0, 0).tags;
+        const onLongPress = jest.fn();
+        const {getByTestId} = render(
+            <TagPicker
+                tags={tags}
+                selected=""
+                onSelect={() => {
+                    throw 'onSelect Event Not Expected';
+                }}
+                onNewTag={() => undefined}
+                onLongPress={onLongPress}
+            />,
+        );
+
+        const tagToSelect = getByTestId(
+            `${tags[0].name.replace(' ', '-')}-tag`,
+        );
+        fireEvent.longPress(tagToSelect);
+        await wait(() => expect(onLongPress).toBeCalledWith(tags[0].id));
+    });
+
     it('will run the onNewTag callback if the new tag button is selected', async () => {
         const tags = createTestState(0, 0, 0).tags;
         const onCreate = jest.fn();
@@ -58,6 +85,7 @@ describe('TagPicker Component', () => {
                 tags={tags}
                 selected=""
                 onSelect={() => undefined}
+                onLongPress={() => undefined}
                 onNewTag={onCreate}
             />,
         );

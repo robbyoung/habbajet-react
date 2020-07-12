@@ -24,6 +24,7 @@ function testFormSnapshot(state: PurchaseEditor) {
             selectedTagId={state.tagId}
             tags={createTestState(0, 0, 0).tags}
             onNewTag={() => undefined}
+            onTagEdit={() => undefined}
             onUpdate={() => undefined}
             onSubmit={() => undefined}
         />,
@@ -43,6 +44,7 @@ async function testFormUpdate(testID: string, fieldName: string) {
             onNewTag={() => {
                 throw new Error('onNewTag not expected');
             }}
+            onTagEdit={() => undefined}
             onUpdate={onUpdate}
             onSubmit={() => {
                 throw new Error('onSubmit not expected');
@@ -92,6 +94,7 @@ describe('Purchase Form Component', () => {
                 onNewTag={() => {
                     throw new Error('onNewTag not expected');
                 }}
+                onTagEdit={() => undefined}
                 onUpdate={onUpdate}
                 onSubmit={() => {
                     throw new Error('onSubmit not expected');
@@ -106,6 +109,36 @@ describe('Purchase Form Component', () => {
         await wait(() => expect(onUpdate).toBeCalledWith('TagId', tags[0].id));
     });
 
+    it('will run the onTagEdit callback if a tag is selected', async () => {
+        const state = createTestPurchaseEditor('', '-2.5', true);
+        const tags = createTestState(0, 0, 0).tags;
+        const onTagEdit = jest.fn();
+        const {getByTestId} = render(
+            <PurchaseForm
+                nameField={state.name}
+                costField={state.cost}
+                selectedTagId={state.tagId}
+                tags={tags}
+                onNewTag={() => {
+                    throw new Error('onNewTag not expected');
+                }}
+                onTagEdit={onTagEdit}
+                onUpdate={() => {
+                    throw new Error('onUpdate not expected');
+                }}
+                onSubmit={() => {
+                    throw new Error('onSubmit not expected');
+                }}
+            />,
+        );
+
+        const tagToSelect = getByTestId(
+            `${tags[0].name.replace(' ', '-')}-tag`,
+        );
+        fireEvent.longPress(tagToSelect);
+        await wait(() => expect(onTagEdit).toBeCalledWith(tags[0].id));
+    });
+
     it('will run the onNewTag callback if the new tag button is pressed', async () => {
         const state = createTestPurchaseEditor('', '-2.5', true);
         const tags = createTestState(0, 0, 0).tags;
@@ -117,6 +150,7 @@ describe('Purchase Form Component', () => {
                 selectedTagId={state.tagId}
                 tags={tags}
                 onNewTag={onNewTag}
+                onTagEdit={() => undefined}
                 onUpdate={() => {
                     throw new Error('onUpdate not expected');
                 }}
@@ -144,6 +178,7 @@ describe('Purchase Form Component', () => {
                 onNewTag={() => {
                     throw new Error('onNewTag not expected');
                 }}
+                onTagEdit={() => undefined}
                 onUpdate={() => {
                     throw new Error('onUpdate not expected');
                 }}

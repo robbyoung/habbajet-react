@@ -270,3 +270,27 @@ export const goToEditPurchase = () => {
         },
     });
 };
+
+export const goToEditTag = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.EditTag,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'Edit Tag',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};

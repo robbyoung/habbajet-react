@@ -6,8 +6,10 @@ import {
     updateBudgetAction,
     clearPurchaseEditorAction,
     validatePurchaseEditorAction,
+    setTagToEditAction,
+    clearTagEditorAction,
 } from '../actions';
-import {goBack, goToNewTag} from '../navigation/navigation';
+import {goBack, goToNewTag, goToEditTag} from '../navigation/navigation';
 import {
     getPurchaseNameField,
     getPurchaseCostField,
@@ -47,7 +49,15 @@ const EditPurchaseScreen = () => {
             costField={costField}
             selectedTagId={edited.tagId}
             tags={tags}
-            onNewTag={() => goToNewTag()}
+            onNewTag={() => {
+                dispatch(clearTagEditorAction());
+                goToNewTag();
+            }}
+            onTagEdit={tagId => {
+                const tagIndex = tags.findIndex(tag => tag.id === tagId);
+                dispatch(setTagToEditAction(tags[tagIndex]));
+                goToEditTag();
+            }}
             onUpdate={(key, value) =>
                 dispatch(updatePurchaseEditorAction(key, value))
             }
