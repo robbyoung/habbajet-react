@@ -21,3 +21,4 @@ export * from './validateTagEditor';
 export * from './setTagToEdit';
 export * from './clearTagEditor';
 export * from './deleteTag';
+export * from './rewindHabbajet';
