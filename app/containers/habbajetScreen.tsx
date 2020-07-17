@@ -11,8 +11,12 @@ import {
     updateBudgetAction,
     resetHabbajetAction,
     setHabbajetToEditAction,
+    rewindHabbajetAction,
 } from '../actions';
-import {Navigation} from 'react-native-navigation';
+import {
+    Navigation,
+    OptionsModalPresentationStyle,
+} from 'react-native-navigation';
 import {STACK_NAVIGATOR} from '../navigation/navigation';
 import {saveState} from '../storage';
 import {View} from 'react-native';
@@ -63,6 +67,28 @@ const HabbajetScreen = () => {
                 dispatch(resetHabbajetAction());
                 saveState();
             }}
+            onReset={() =>
+                Navigation.showModal({
+                    component: {
+                        name: 'modal.confirmation',
+                        id: 'resetModal',
+                        passProps: {
+                            id: 'resetModal',
+                            text:
+                                'Are you sure you want to reset this habit? All progress for the week will be lost.',
+                            onConfirm: () => {
+                                dispatch(rewindHabbajetAction());
+                                saveState();
+                                Navigation.dismissModal('resetModal');
+                            },
+                        },
+                        options: {
+                            modalPresentationStyle:
+                                OptionsModalPresentationStyle.overCurrentContext,
+                        },
+                    },
+                })
+            }
         />
     );
 };

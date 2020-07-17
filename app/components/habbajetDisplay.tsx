@@ -5,9 +5,10 @@ import Label from './label';
 import HabitWheel from './habitWheel';
 import HabitResultPicker from './habitResultPicker';
 import HabbajetClaimer from './habbajetClaimer';
-import {white} from '../colors';
+import {white, grey} from '../colors';
 import HabitStreak from './habitStreak';
 import SlackDays from './slackDays';
+import WideButton from './wideButton';
 
 const styles = StyleSheet.create({
     container: {
@@ -18,6 +19,10 @@ const styles = StyleSheet.create({
     details: {
         marginLeft: '20%',
     },
+    resetButton: {
+        marginTop: 20,
+        marginHorizontal: '10%',
+    },
 });
 
 interface HabbajetDisplayProps {
@@ -26,6 +31,7 @@ interface HabbajetDisplayProps {
     onSuccess: () => void;
     onFailure: () => void;
     onClaim: () => void;
+    onReset: () => void;
 }
 const HabbajetDisplay = (props: HabbajetDisplayProps) => {
     return (
@@ -55,6 +61,14 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                         total={props.habbajet.totalSlack}
                         remaining={props.habbajet.remainingSlack}
                         color={props.habbajet.color}
+                    />
+                </View>
+                <View style={styles.resetButton}>
+                    <WideButton
+                        text="Reset Week"
+                        color={grey}
+                        testID={'button-reset'}
+                        onPress={() => props.onReset()}
                     />
                 </View>
             </ScrollView>

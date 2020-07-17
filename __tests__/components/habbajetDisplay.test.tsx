@@ -18,6 +18,7 @@ describe('HabbajetDisplay Component', () => {
                 onSuccess={() => undefined}
                 onFailure={() => undefined}
                 onClaim={() => undefined}
+                onReset={() => undefined}
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
@@ -32,6 +33,7 @@ describe('HabbajetDisplay Component', () => {
                 onSuccess={() => undefined}
                 onFailure={() => undefined}
                 onClaim={() => undefined}
+                onReset={() => undefined}
             />,
         );
         expect(component.toJSON()).toMatchSnapshot();
@@ -47,6 +49,7 @@ describe('HabbajetDisplay Component', () => {
                 onSuccess={onSuccess}
                 onFailure={() => undefined}
                 onClaim={() => undefined}
+                onReset={() => undefined}
             />,
         );
 
@@ -65,6 +68,7 @@ describe('HabbajetDisplay Component', () => {
                 onSuccess={() => undefined}
                 onFailure={onFailure}
                 onClaim={() => undefined}
+                onReset={() => undefined}
             />,
         );
 
@@ -84,11 +88,32 @@ describe('HabbajetDisplay Component', () => {
                 onSuccess={() => undefined}
                 onFailure={() => undefined}
                 onClaim={onClaim}
+                onReset={() => undefined}
             />,
         );
 
         const button = getByTestId('button-claim');
         fireEvent.press(button);
         await wait(() => expect(onClaim).toBeCalledTimes(1));
+    });
+
+    it('will run the onReset callback if the claim button is pressed', async () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        habbajet.toClaim = true;
+        const onReset = jest.fn();
+        const {getByTestId} = render(
+            <HabbajetDisplay
+                habbajet={habbajet}
+                hasDeficit={false}
+                onSuccess={() => undefined}
+                onFailure={() => undefined}
+                onClaim={() => undefined}
+                onReset={onReset}
+            />,
+        );
+
+        const button = getByTestId('button-reset');
+        fireEvent.press(button);
+        await wait(() => expect(onReset).toBeCalledTimes(1));
     });
 });
