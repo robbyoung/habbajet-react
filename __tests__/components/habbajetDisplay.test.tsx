@@ -39,6 +39,22 @@ describe('HabbajetDisplay Component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
+    it('will show a reset button on non-Mondays', () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        habbajet.date = '2020-08-20T11:00:00.000Z';
+        const component = renderer.create(
+            <HabbajetDisplay
+                habbajet={habbajet}
+                hasDeficit={true}
+                onSuccess={() => undefined}
+                onFailure={() => undefined}
+                onClaim={() => undefined}
+                onReset={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
     it('will run the onSuccess callback if the success button is long-pressed', async () => {
         const habbajet = createTestState(1, 0, 0).habbajets[0];
         const onSuccess = jest.fn();
@@ -97,9 +113,9 @@ describe('HabbajetDisplay Component', () => {
         await wait(() => expect(onClaim).toBeCalledTimes(1));
     });
 
-    it('will run the onReset callback if the claim button is pressed', async () => {
+    it('will run the onReset callback if the reset button is pressed', async () => {
         const habbajet = createTestState(1, 0, 0).habbajets[0];
-        habbajet.toClaim = true;
+        habbajet.date = '2020-08-20T11:00:00.000Z';
         const onReset = jest.fn();
         const {getByTestId} = render(
             <HabbajetDisplay

@@ -106,7 +106,7 @@ exports[`HabitStreak Component renders a sliver bar for zero-value current strea
           },
           Object {
             "backgroundColor": "#2AAD5E",
-            "width": 375,
+            "width": 450,
           },
         ]
       }
@@ -182,7 +182,7 @@ exports[`HabitStreak Component renders bars for the current and best streak 1`] 
           },
           Object {
             "backgroundColor": "#8066C2",
-            "width": 56.25,
+            "width": 67.5,
           },
         ]
       }
@@ -229,7 +229,7 @@ exports[`HabitStreak Component renders bars for the current and best streak 1`] 
           },
           Object {
             "backgroundColor": "#8066C2",
-            "width": 375,
+            "width": 450,
           },
         ]
       }
@@ -305,7 +305,7 @@ exports[`HabitStreak Component renders identical bars for equal current and best
           },
           Object {
             "backgroundColor": "#E04747",
-            "width": 375,
+            "width": 450,
           },
         ]
       }
@@ -352,7 +352,7 @@ exports[`HabitStreak Component renders identical bars for equal current and best
           },
           Object {
             "backgroundColor": "#E04747",
-            "width": 375,
+            "width": 450,
           },
         ]
       }
