@@ -328,7 +328,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
       <View
         style={
           Object {
-            "marginLeft": "20%",
+            "marginLeft": "10%",
           }
         }
       >
@@ -474,7 +474,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
                   },
                   Object {
                     "backgroundColor": "#E04747",
-                    "width": 375,
+                    "width": 450,
                   },
                 ]
               }
