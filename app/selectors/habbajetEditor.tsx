@@ -3,6 +3,7 @@ import {State} from '../state';
 export function getHabbajetEditorFields(state: State) {
     return {
         name: state.habbajetEditor.name,
+        description: state.habbajetEditor.description,
         value: state.habbajetEditor.value,
         modifier: state.habbajetEditor.modifier,
         slack: state.habbajetEditor.slack,
@@ -11,6 +12,7 @@ export function getHabbajetEditorFields(state: State) {
 
 export function getValuesForNewHabbajet(state: State) {
     const name = state.habbajetEditor.name.value;
+    const description = state.habbajetEditor.description.value;
     const value = parseFloat(state.habbajetEditor.value.value) || 50;
     const modifier = parseFloat(state.habbajetEditor.modifier.value) || 2;
     const slack = parseFloat(state.habbajetEditor.slack.value) || 0;
@@ -18,6 +20,7 @@ export function getValuesForNewHabbajet(state: State) {
 
     return {
         name,
+        description,
         value,
         modifier,
         slack,

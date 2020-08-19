@@ -20,6 +20,7 @@ export interface Habbajet {
     oldStreaks: [number, number];
     totalSlack: number;
     remainingSlack: number;
+    description: string;
 }
 
 export interface Purchase {
@@ -43,6 +44,7 @@ export interface EditorField {
 
 export interface HabbajetEditor {
     name: EditorField;
+    description: EditorField;
     value: EditorField;
     modifier: EditorField;
     slack: EditorField;
