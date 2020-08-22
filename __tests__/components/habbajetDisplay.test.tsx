@@ -72,6 +72,22 @@ describe('HabbajetDisplay Component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
+    it('will show a reset button if the habbajet can be claimed', () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        habbajet.toClaim = true;
+        const component = renderer.create(
+            <HabbajetDisplay
+                habbajet={habbajet}
+                hasDeficit={true}
+                onSuccess={() => undefined}
+                onFailure={() => undefined}
+                onClaim={() => undefined}
+                onReset={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
     it('will run the onSuccess callback if the success button is long-pressed', async () => {
         const habbajet = createTestState(1, 0, 0).habbajets[0];
         const onSuccess = jest.fn();

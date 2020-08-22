@@ -34,7 +34,8 @@ interface HabbajetDisplayProps {
     onReset: () => void;
 }
 const HabbajetDisplay = (props: HabbajetDisplayProps) => {
-    const isMonday = moment(props.habbajet.date).day() === 1;
+    const canReset =
+        props.habbajet.toClaim || moment(props.habbajet.date).day() !== 1;
     return (
         <View style={styles.container}>
             <ScrollView>
@@ -73,9 +74,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                     ) : (
                         undefined
                     )}
-                    {isMonday ? (
-                        undefined
-                    ) : (
+                    {canReset ? (
                         <View style={styles.resetButton}>
                             <WideButton
                                 text="Reset Week"
@@ -84,6 +83,8 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                                 onPress={() => props.onReset()}
                             />
                         </View>
+                    ) : (
+                        undefined
                     )}
                 </View>
             </ScrollView>
