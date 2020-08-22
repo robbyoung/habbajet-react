@@ -64,6 +64,16 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                         remaining={props.habbajet.remainingSlack}
                         color={props.habbajet.color}
                     />
+                    {props.habbajet.description !== '' ? (
+                        <Label
+                            title="Description"
+                            content={props.habbajet.description}
+                            color={props.habbajet.color}
+                            contentSize={20}
+                        />
+                    ) : (
+                        undefined
+                    )}
                 </View>
                 {isMonday ? (
                     undefined

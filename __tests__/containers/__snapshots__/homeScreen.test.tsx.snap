@@ -49,7 +49,7 @@ exports[`Home Screen Component will map state to a budget display and habbajet l
               Array [
                 Object {
                   "fontFamily": "Abel",
-                  "marginTop": -10,
+                  "marginTop": -5,
                   "padding": 0,
                 },
                 Object {

@@ -39,7 +39,7 @@ exports[`Budget Display Component can render a budget display with buttons 1`] =
         Array [
           Object {
             "fontFamily": "Abel",
-            "marginTop": -10,
+            "marginTop": -5,
             "padding": 0,
           },
           Object {
@@ -183,7 +183,7 @@ exports[`Budget Display Component can render a budget display without buttons 1`
         Array [
           Object {
             "fontFamily": "Abel",
-            "marginTop": -10,
+            "marginTop": -5,
             "padding": 0,
           },
           Object {
