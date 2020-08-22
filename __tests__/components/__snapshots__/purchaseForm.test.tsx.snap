@@ -50,6 +50,7 @@ exports[`Purchase Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -101,6 +102,7 @@ exports[`Purchase Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -650,6 +652,7 @@ exports[`Purchase Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -718,6 +721,7 @@ exports[`Purchase Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -1284,6 +1288,7 @@ exports[`Purchase Form Component can render an empty purchase form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -1335,6 +1340,7 @@ exports[`Purchase Form Component can render an empty purchase form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={

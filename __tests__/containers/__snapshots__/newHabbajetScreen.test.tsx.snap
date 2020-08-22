@@ -45,6 +45,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -96,6 +97,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={true}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -147,6 +149,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="50"
             rejectResponderTermination={true}
@@ -237,6 +240,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="2"
             rejectResponderTermination={true}
@@ -327,6 +331,7 @@ exports[`New Habbajet Screen Component will map state to a habbajet creation for
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="0"
             rejectResponderTermination={true}

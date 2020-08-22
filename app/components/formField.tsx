@@ -86,7 +86,7 @@ const FormField = (props: FormFieldProps) => {
                     value={props.field.value}
                     placeholder={props.placeholder}
                     keyboardType={props.numeric ? 'numeric' : 'default'}
-                    // multiline={props.multiline || false}
+                    multiline={props.multiline || false}
                     onChangeText={value => props.onValueChange(value)}
                     style={styles.input}
                     testID={`input-${hyphenatedTitle}`}

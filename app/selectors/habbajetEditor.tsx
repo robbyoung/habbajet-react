@@ -31,6 +31,7 @@ export function getValuesForNewHabbajet(state: State) {
 export function getValidationStateForNewHabbajet(state: State) {
     return (
         state.habbajetEditor.name.errorMessage === '' &&
+        state.habbajetEditor.description.errorMessage === '' &&
         state.habbajetEditor.value.errorMessage === '' &&
         state.habbajetEditor.modifier.errorMessage === '' &&
         state.habbajetEditor.slack.errorMessage === '' &&

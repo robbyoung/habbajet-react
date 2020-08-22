@@ -39,6 +39,13 @@ export function validateEditor(
         };
     }
 
+    if (newState.description.value.length > 300) {
+        newState.description = {
+            value: state.description.value,
+            errorMessage: 'Can be at most 300 characters',
+        };
+    }
+
     if (newState.value.value.length > 0) {
         const value = parseFloat(state.value.value);
         if (isNaN(value) || value <= 0) {

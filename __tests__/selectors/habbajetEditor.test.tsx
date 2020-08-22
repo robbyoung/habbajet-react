@@ -89,5 +89,14 @@ describe('HabbajetEditor Selectors', () => {
             const result = getValidationStateForNewHabbajet(state);
             expect(result).toEqual(false);
         });
+
+        it('will return false if there is a description error message', () => {
+            const state = createTestState(0, 0, 0);
+            state.habbajetEditor.description.errorMessage = 'Invalid';
+            state.habbajetEditor.validated = true;
+
+            const result = getValidationStateForNewHabbajet(state);
+            expect(result).toEqual(false);
+        });
     });
 });

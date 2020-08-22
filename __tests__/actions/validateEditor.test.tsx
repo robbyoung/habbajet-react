@@ -63,6 +63,48 @@ describe('Validate Editor Action', () => {
         expect(state).toEqual(createTestEditor('Duplicate', '', ''));
     });
 
+    it('will pass valid habbajet descriptions', () => {
+        const state = createTestEditor('', '', '');
+        state.description.value = 'This is a description';
+        const action = validateEditorAction(['']);
+        const newState = habbajetEditorReducer(state, action);
+
+        expect(newState.validated).toBe(true);
+        expect(newState.description.errorMessage).toEqual('');
+    });
+
+    it('will reject massive description values', () => {
+        const state = createTestEditor('Test', '', '');
+        state.description.value = `
+            My friend Goo has a real tattoo
+            She always knows just what to do
+            She looks through her hair like she doesn't care
+            What she does best is stand and stare
+            She can play the drums set too
+            And the boys say, "hey Goo what's new?"
+            My friend Goo just says, "Hey you"
+            My friend Goo just says, "Hey you"
+            I know a secret or two about Goo
+            She won't mind if I tell you
+            She likes to wear green underwear
+            And lays down most anywhere
+            She doesn't have nothing to do
+            And the boys say, "hey Goo what's new?"
+            My friend Goo goes, "Hey you"
+            My friend Goo goes, "Hey you"
+            I know a secret or two about Goo
+            She won't mind if I tell you
+            I know a secret or two about Goo
+            I know a secret…`;
+        const action = validateEditorAction([]);
+        const newState = habbajetEditorReducer(state, action);
+
+        expect(newState.description.errorMessage).toEqual(
+            'Can be at most 300 characters',
+        );
+        expect(state.description.errorMessage).toEqual('');
+    });
+
     it('will pass empty value, modifier, and slack fields', () => {
         const state = createTestEditor('Valid', '', '', '');
         const action = validateEditorAction([]);

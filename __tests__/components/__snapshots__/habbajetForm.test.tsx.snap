@@ -45,6 +45,7 @@ exports[`Habbajet Form Component can render a delete button 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -96,6 +97,7 @@ exports[`Habbajet Form Component can render a delete button 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={true}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -147,6 +149,7 @@ exports[`Habbajet Form Component can render a delete button 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="50"
             rejectResponderTermination={true}
@@ -237,6 +240,7 @@ exports[`Habbajet Form Component can render a delete button 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="2"
             rejectResponderTermination={true}
@@ -327,6 +331,7 @@ exports[`Habbajet Form Component can render a delete button 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="0"
             rejectResponderTermination={true}
@@ -738,6 +743,7 @@ exports[`Habbajet Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -789,6 +795,7 @@ exports[`Habbajet Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={true}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -840,6 +847,7 @@ exports[`Habbajet Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="50"
             rejectResponderTermination={true}
@@ -930,6 +938,7 @@ exports[`Habbajet Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="2"
             rejectResponderTermination={true}
@@ -1020,6 +1029,7 @@ exports[`Habbajet Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="0"
             rejectResponderTermination={true}
@@ -1391,6 +1401,7 @@ exports[`Habbajet Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -1442,6 +1453,7 @@ exports[`Habbajet Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={true}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -1493,6 +1505,7 @@ exports[`Habbajet Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="50"
             rejectResponderTermination={true}
@@ -1600,6 +1613,7 @@ exports[`Habbajet Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="2"
             rejectResponderTermination={true}
@@ -1690,6 +1704,7 @@ exports[`Habbajet Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="0"
             rejectResponderTermination={true}
@@ -2078,6 +2093,7 @@ exports[`Habbajet Form Component can render an empty habbajet form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -2129,6 +2145,7 @@ exports[`Habbajet Form Component can render an empty habbajet form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={true}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -2180,6 +2197,7 @@ exports[`Habbajet Form Component can render an empty habbajet form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="50"
             rejectResponderTermination={true}
@@ -2270,6 +2288,7 @@ exports[`Habbajet Form Component can render an empty habbajet form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="2"
             rejectResponderTermination={true}
@@ -2360,6 +2379,7 @@ exports[`Habbajet Form Component can render an empty habbajet form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             placeholder="0"
             rejectResponderTermination={true}
