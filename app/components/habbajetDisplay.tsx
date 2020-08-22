@@ -15,14 +15,13 @@ const styles = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: white,
-        marginBottom: 10,
     },
     details: {
-        marginLeft: '10%',
+        marginHorizontal: '10%',
+        marginBottom: 15,
     },
     resetButton: {
         marginTop: 10,
-        marginHorizontal: '10%',
     },
 });
 
@@ -64,7 +63,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                         remaining={props.habbajet.remainingSlack}
                         color={props.habbajet.color}
                     />
-                    {props.habbajet.description !== '' ? (
+                    {props.habbajet.description ? (
                         <Label
                             title="Description"
                             content={props.habbajet.description}
@@ -74,19 +73,19 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                     ) : (
                         undefined
                     )}
+                    {isMonday ? (
+                        undefined
+                    ) : (
+                        <View style={styles.resetButton}>
+                            <WideButton
+                                text="Reset Week"
+                                color={props.habbajet.color}
+                                testID={'button-reset'}
+                                onPress={() => props.onReset()}
+                            />
+                        </View>
+                    )}
                 </View>
-                {isMonday ? (
-                    undefined
-                ) : (
-                    <View style={styles.resetButton}>
-                        <WideButton
-                            text="Reset Week"
-                            color={props.habbajet.color}
-                            testID={'button-reset'}
-                            onPress={() => props.onReset()}
-                        />
-                    </View>
-                )}
             </ScrollView>
             <HabitResultPicker
                 habbajet={props.habbajet}

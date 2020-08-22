@@ -6,7 +6,6 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
     Object {
       "backgroundColor": "#ffffff",
       "height": "100%",
-      "marginBottom": 10,
     }
   }
 >
@@ -328,7 +327,8 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
       <View
         style={
           Object {
-            "marginLeft": "10%",
+            "marginBottom": 15,
+            "marginHorizontal": "10%",
           }
         }
       >
@@ -621,7 +621,6 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
     Object {
       "backgroundColor": "#ffffff",
       "height": "100%",
-      "marginBottom": 10,
     }
   }
 >
@@ -943,7 +942,8 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
       <View
         style={
           Object {
-            "marginLeft": "10%",
+            "marginBottom": 15,
+            "marginHorizontal": "10%",
           }
         }
       >
@@ -1236,7 +1236,6 @@ exports[`HabbajetDisplay Component will show a multi-line habit description if o
     Object {
       "backgroundColor": "#ffffff",
       "height": "100%",
-      "marginBottom": 10,
     }
   }
 >
@@ -1558,7 +1557,8 @@ exports[`HabbajetDisplay Component will show a multi-line habit description if o
       <View
         style={
           Object {
-            "marginLeft": "10%",
+            "marginBottom": 15,
+            "marginHorizontal": "10%",
           }
         }
       >
@@ -1892,7 +1892,6 @@ exports[`HabbajetDisplay Component will show a reset button on non-Mondays 1`] =
     Object {
       "backgroundColor": "#ffffff",
       "height": "100%",
-      "marginBottom": 10,
     }
   }
 >
@@ -2214,7 +2213,8 @@ exports[`HabbajetDisplay Component will show a reset button on non-Mondays 1`] =
       <View
         style={
           Object {
-            "marginLeft": "10%",
+            "marginBottom": 15,
+            "marginHorizontal": "10%",
           }
         }
       >
@@ -2380,54 +2380,53 @@ exports[`HabbajetDisplay Component will show a reset button on non-Mondays 1`] =
           </View>
         </View>
         <View />
-      </View>
-      <View
-        style={
-          Object {
-            "marginHorizontal": "10%",
-            "marginTop": 10,
-          }
-        }
-      >
         <View
-          accessible={true}
-          focusable={true}
-          isTVSelectable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#8066C2",
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "opacity": 1,
-              "width": "100%",
+              "marginTop": 10,
             }
           }
-          testID="button-reset"
         >
-          <Text
+          <View
+            accessible={true}
+            focusable={true}
+            isTVSelectable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
             style={
-              Array [
-                Object {
-                  "alignSelf": "center",
-                  "color": "#ffffff",
-                  "fontFamily": "Abel",
-                  "fontSize": 30,
-                  "padding": 10,
-                  "textAlign": "center",
-                  "width": "100%",
-                },
-              ]
+              Object {
+                "backgroundColor": "#8066C2",
+                "borderRadius": 10,
+                "marginBottom": 10,
+                "opacity": 1,
+                "width": "100%",
+              }
             }
+            testID="button-reset"
           >
-            Reset Week
-          </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "alignSelf": "center",
+                    "color": "#ffffff",
+                    "fontFamily": "Abel",
+                    "fontSize": 30,
+                    "padding": 10,
+                    "textAlign": "center",
+                    "width": "100%",
+                  },
+                ]
+              }
+            >
+              Reset Week
+            </Text>
+          </View>
         </View>
       </View>
     </View>
