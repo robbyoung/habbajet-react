@@ -50,6 +50,7 @@ exports[`Edit Tag Screen Component will map state to a tag editing form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={

@@ -49,6 +49,7 @@ describe('Rewind Habbajet Action', () => {
             oldStreaks: [10, 11],
             totalSlack: 2,
             remainingSlack: 1,
+            description: '',
         };
 
         testRewind(habbajet, [], '2020-03-22T11:00:00.000Z');
@@ -71,6 +72,7 @@ describe('Rewind Habbajet Action', () => {
             oldStreaks: [10, 11],
             totalSlack: 4,
             remainingSlack: 0,
+            description: '',
         };
 
         testRewind(habbajet, [2, 1, 1, 0, 0, 0, 1], '2020-03-22T11:00:00.000Z');

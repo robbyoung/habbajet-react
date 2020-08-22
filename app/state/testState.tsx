@@ -33,6 +33,7 @@ export function createTestState(
             oldStreaks: [0, 5],
             totalSlack: 0,
             remainingSlack: 0,
+            description: '',
         });
     }
 
@@ -62,6 +63,7 @@ export function createTestState(
     };
     const habbajetEditor: HabbajetEditor = {
         name: {...EMPTY_FIELD},
+        description: {...EMPTY_FIELD},
         value: {...EMPTY_FIELD},
         modifier: {...EMPTY_FIELD},
         slack: {...EMPTY_FIELD},
@@ -103,6 +105,10 @@ export function createTestEditor(
     return {
         name: {
             value: name,
+            errorMessage: '',
+        },
+        description: {
+            value: '',
             errorMessage: '',
         },
         value: {

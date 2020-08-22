@@ -12,11 +12,11 @@ import {white, grey} from '../../app/colors';
 describe('Add Habbajet Action', () => {
     describe('Add new habbajet', () => {
         it('can add a habbajet to the empty state', () => {
-            const action = addHabbajetAction('Test Habbajet', 80, 2, 1, white);
+            const action = addHabbajetAction('Test', '', 80, 2, 1, white);
             const state: Habbajet[] = [];
             const newState = habbajetsReducer(state, action);
             expect(newState).toEqual([action.newHabbajet]);
-            expect(newState[0].name).toBe('Test Habbajet');
+            expect(newState[0].name).toBe('Test');
             expect(newState[0].maxValue).toBe(80);
             expect(newState[0].remainingSlack).toBe(1);
             expect(newState[0].totalSlack).toBe(1);
@@ -24,7 +24,7 @@ describe('Add Habbajet Action', () => {
         });
 
         it('will add habbajets to the end of the list', () => {
-            const action = addHabbajetAction('Test Habbajet', 80, 2, 0, white);
+            const action = addHabbajetAction('Test', '', 80, 2, 0, white);
             const state = createTestState(10, 1, 20).habbajets;
             const newState = habbajetsReducer(state, action);
             expect(newState).toEqual([
@@ -35,7 +35,7 @@ describe('Add Habbajet Action', () => {
         });
 
         it('will set the date to a timestamp of the most recent Monday', () => {
-            const action = addHabbajetAction('Test Habbajet', 80, 2, 0, white);
+            const action = addHabbajetAction('Test', '', 80, 2, 0, white);
             const state: Habbajet[] = [];
             const newState = habbajetsReducer(state, action);
             const date = moment(newState[0].date);
@@ -49,7 +49,7 @@ describe('Add Habbajet Action', () => {
         });
 
         it('will set the streak values to zero', () => {
-            const action = addHabbajetAction('Test Habbajet', 80, 2, 0, white);
+            const action = addHabbajetAction('Test', '', 80, 2, 0, white);
             const state: Habbajet[] = [];
             const newState = habbajetsReducer(state, action);
 
@@ -74,6 +74,7 @@ describe('Add Habbajet Action', () => {
             const state: Habbajet[] = createTestState(3, 0, 0, 1).habbajets;
             const action = addHabbajetAction(
                 'Test Edit',
+                '',
                 80,
                 2,
                 3,
@@ -103,6 +104,7 @@ describe('Add Habbajet Action', () => {
 
             const action = addHabbajetAction(
                 'Test Edit',
+                '',
                 80,
                 2,
                 3,
@@ -134,6 +136,7 @@ describe('Add Habbajet Action', () => {
 
             const action = addHabbajetAction(
                 'Test Edit',
+                '',
                 80,
                 2,
                 3,
@@ -169,6 +172,7 @@ describe('Add Habbajet Action', () => {
 
             const action = addHabbajetAction(
                 state[1].name,
+                '',
                 300,
                 5,
                 0,
@@ -198,6 +202,7 @@ describe('Add Habbajet Action', () => {
 
             const action = addHabbajetAction(
                 'Test Edit',
+                '',
                 state[1].maxValue,
                 state[1].modifier,
                 state[1].totalSlack,
@@ -227,6 +232,7 @@ describe('Add Habbajet Action', () => {
 
             const action = addHabbajetAction(
                 'Test Edit',
+                '',
                 state[1].maxValue,
                 4,
                 state[1].totalSlack,
@@ -261,6 +267,7 @@ describe('Add Habbajet Action', () => {
 
             const action = addHabbajetAction(
                 'Test Edit',
+                '',
                 200,
                 3,
                 1,
@@ -292,6 +299,7 @@ describe('Add Habbajet Action', () => {
 
             const action = addHabbajetAction(
                 state[1].name,
+                '',
                 80,
                 4,
                 1,

@@ -33,6 +33,7 @@ exports[`FormField Component can render a form field with a help button 1`] = `
     <TextInput
       allowFontScaling={true}
       keyboardType="default"
+      multiline={false}
       onChangeText={[Function]}
       placeholder="placeholder"
       rejectResponderTermination={true}
@@ -126,6 +127,7 @@ exports[`FormField Component can render a form field with a placeholder 1`] = `
     <TextInput
       allowFontScaling={true}
       keyboardType="default"
+      multiline={false}
       onChangeText={[Function]}
       placeholder="placeholder"
       rejectResponderTermination={true}
@@ -181,6 +183,7 @@ exports[`FormField Component can render a form field with a value 1`] = `
     <TextInput
       allowFontScaling={true}
       keyboardType="default"
+      multiline={false}
       onChangeText={[Function]}
       placeholder="placeholder"
       rejectResponderTermination={true}
@@ -236,6 +239,7 @@ exports[`FormField Component can render a form field with error text 1`] = `
     <TextInput
       allowFontScaling={true}
       keyboardType="numeric"
+      multiline={false}
       onChangeText={[Function]}
       placeholder="placeholder"
       rejectResponderTermination={true}
@@ -308,6 +312,7 @@ exports[`FormField Component can render an empty form field 1`] = `
     <TextInput
       allowFontScaling={true}
       keyboardType="default"
+      multiline={false}
       onChangeText={[Function]}
       rejectResponderTermination={true}
       style={

@@ -39,9 +39,42 @@ describe('HabbajetDisplay Component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
+    it('will show a multi-line habit description if one exists', () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        habbajet.description =
+            'This is a habit description. It describes the habit in the display.';
+        const component = renderer.create(
+            <HabbajetDisplay
+                habbajet={habbajet}
+                hasDeficit={false}
+                onSuccess={() => undefined}
+                onFailure={() => undefined}
+                onClaim={() => undefined}
+                onReset={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
     it('will show a reset button on non-Mondays', () => {
         const habbajet = createTestState(1, 0, 0).habbajets[0];
         habbajet.date = '2020-08-20T11:00:00.000Z';
+        const component = renderer.create(
+            <HabbajetDisplay
+                habbajet={habbajet}
+                hasDeficit={true}
+                onSuccess={() => undefined}
+                onFailure={() => undefined}
+                onClaim={() => undefined}
+                onReset={() => undefined}
+            />,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
+    it('will show a reset button if the habbajet can be claimed', () => {
+        const habbajet = createTestState(1, 0, 0).habbajets[0];
+        habbajet.toClaim = true;
         const component = renderer.create(
             <HabbajetDisplay
                 habbajet={habbajet}

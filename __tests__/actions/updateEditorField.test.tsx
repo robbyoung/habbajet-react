@@ -12,6 +12,18 @@ describe('Update Editor Field Action', () => {
         expect(state).toEqual(createTestState(0, 0, 0).habbajetEditor);
     });
 
+    it('can update the description field', () => {
+        const state = createTestState(0, 0, 0).habbajetEditor;
+        const action = updateEditorFieldAction(
+            'Description',
+            'This is a description',
+        );
+        const newState = habbajetEditorReducer(state, action);
+
+        expect(newState.description.value).toEqual('This is a description');
+        expect(state).toEqual(createTestState(0, 0, 0).habbajetEditor);
+    });
+
     it('can update the value field', () => {
         const state = createTestState(0, 0, 0).habbajetEditor;
         const action = updateEditorFieldAction('Value', '1234');

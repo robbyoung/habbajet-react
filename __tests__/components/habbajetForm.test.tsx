@@ -20,6 +20,7 @@ function testFormSnapshot(state: HabbajetEditor) {
     const component = renderer.create(
         <HabbajetForm
             nameField={state.name}
+            descriptionField={state.description}
             valueField={state.value}
             modifierField={state.modifier}
             slackField={state.slack}
@@ -37,6 +38,7 @@ async function testFormUpdate(testID: string, fieldName: string) {
     const {getByTestId} = render(
         <HabbajetForm
             nameField={state.name}
+            descriptionField={state.description}
             valueField={state.value}
             modifierField={state.modifier}
             slackField={state.slack}
@@ -73,6 +75,7 @@ describe('Habbajet Form Component', () => {
         const component = renderer.create(
             <HabbajetForm
                 nameField={state.name}
+                descriptionField={state.description}
                 valueField={state.value}
                 modifierField={state.modifier}
                 slackField={state.slack}
@@ -107,6 +110,7 @@ describe('Habbajet Form Component', () => {
         const {getByTestId} = render(
             <HabbajetForm
                 nameField={state.name}
+                descriptionField={state.description}
                 valueField={state.value}
                 modifierField={state.modifier}
                 slackField={state.slack}
@@ -130,6 +134,7 @@ describe('Habbajet Form Component', () => {
         const {getByTestId} = render(
             <HabbajetForm
                 nameField={state.name}
+                descriptionField={state.description}
                 valueField={state.value}
                 modifierField={state.modifier}
                 slackField={state.slack}
@@ -151,6 +156,7 @@ describe('Habbajet Form Component', () => {
         const {getByTestId} = render(
             <HabbajetForm
                 nameField={state.name}
+                descriptionField={state.description}
                 valueField={state.value}
                 modifierField={state.modifier}
                 slackField={state.slack}
