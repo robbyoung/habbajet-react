@@ -50,6 +50,7 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -101,6 +102,7 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={

@@ -64,6 +64,7 @@ exports[`Starting Budget Screen Component can render a starting budget form 1`] 
           <TextInput
             allowFontScaling={true}
             keyboardType="numeric"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={

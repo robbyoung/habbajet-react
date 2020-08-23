@@ -50,6 +50,7 @@ exports[`Tag Form Component can render a filled-out form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -384,6 +385,7 @@ exports[`Tag Form Component can render a form with a delete button 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -758,6 +760,7 @@ exports[`Tag Form Component can render a form with invalid entries 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={
@@ -1109,6 +1112,7 @@ exports[`Tag Form Component can render an empty tag form 1`] = `
           <TextInput
             allowFontScaling={true}
             keyboardType="default"
+            multiline={false}
             onChangeText={[Function]}
             rejectResponderTermination={true}
             style={

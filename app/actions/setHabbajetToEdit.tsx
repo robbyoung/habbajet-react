@@ -25,6 +25,10 @@ export function setHabbajetToEdit(
             value: action.habbajet.name,
             errorMessage: '',
         },
+        description: {
+            value: action.habbajet.description,
+            errorMessage: '',
+        },
         value: {
             value: `${action.habbajet.maxValue}`,
             errorMessage: '',

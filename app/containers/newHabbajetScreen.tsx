@@ -28,6 +28,7 @@ const NewHabbajetScreen = () => {
         dispatch(
             addHabbajetAction(
                 newHabbajet.name,
+                newHabbajet.description,
                 newHabbajet.value,
                 newHabbajet.modifier,
                 newHabbajet.slack,
@@ -41,6 +42,7 @@ const NewHabbajetScreen = () => {
     return (
         <HabbajetForm
             nameField={fields.name}
+            descriptionField={fields.description}
             valueField={fields.value}
             modifierField={fields.modifier}
             slackField={fields.slack}

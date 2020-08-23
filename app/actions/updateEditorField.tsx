@@ -33,6 +33,10 @@ export function updateEditorField(
             newState.name = {...state.name};
             fieldToUpdate = newState.name;
             break;
+        case 'Description':
+            newState.description = {...state.description};
+            fieldToUpdate = newState.description;
+            break;
         case 'Value':
             newState.value = {...state.value};
             fieldToUpdate = newState.value;

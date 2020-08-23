@@ -11,6 +11,7 @@ export interface AddHabbajetAction extends Action {
 
 export function addHabbajetAction(
     name: string,
+    description: string,
     value: number,
     modifier: number,
     slack: number,
@@ -38,6 +39,7 @@ export function addHabbajetAction(
             oldStreaks: [0, 0],
             totalSlack: slack,
             remainingSlack: slack,
+            description,
         },
     };
 }

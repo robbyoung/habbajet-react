@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import {View, StyleSheet, ScrollView} from 'react-native';
 import {Habbajet} from '../state';
 import Label from './label';
@@ -8,15 +9,19 @@ import HabbajetClaimer from './habbajetClaimer';
 import {white} from '../colors';
 import HabitStreak from './habitStreak';
 import SlackDays from './slackDays';
+import WideButton from './wideButton';
 
 const styles = StyleSheet.create({
     container: {
         height: '100%',
         backgroundColor: white,
-        marginBottom: 10,
     },
     details: {
-        marginLeft: '20%',
+        marginHorizontal: '10%',
+        marginBottom: 15,
+    },
+    resetButton: {
+        marginTop: 10,
     },
 });
 
@@ -26,8 +31,11 @@ interface HabbajetDisplayProps {
     onSuccess: () => void;
     onFailure: () => void;
     onClaim: () => void;
+    onReset: () => void;
 }
 const HabbajetDisplay = (props: HabbajetDisplayProps) => {
+    const canReset =
+        props.habbajet.toClaim || moment(props.habbajet.date).day() !== 1;
     return (
         <View style={styles.container}>
             <ScrollView>
@@ -56,6 +64,28 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                         remaining={props.habbajet.remainingSlack}
                         color={props.habbajet.color}
                     />
+                    {props.habbajet.description ? (
+                        <Label
+                            title="Description"
+                            content={props.habbajet.description}
+                            color={props.habbajet.color}
+                            contentSize={20}
+                        />
+                    ) : (
+                        undefined
+                    )}
+                    {canReset ? (
+                        <View style={styles.resetButton}>
+                            <WideButton
+                                text="Reset Week"
+                                color={props.habbajet.color}
+                                testID={'button-reset'}
+                                onPress={() => props.onReset()}
+                            />
+                        </View>
+                    ) : (
+                        undefined
+                    )}
                 </View>
             </ScrollView>
             <HabitResultPicker

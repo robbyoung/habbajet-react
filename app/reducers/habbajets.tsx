@@ -14,6 +14,8 @@ import {
     selectHabbajet,
     deleteHabbajet,
     DeleteHabbajetAction,
+    RewindHabbajetAction,
+    rewindHabbajet,
 } from '../actions';
 
 export default function habbajetsReducer(
@@ -31,6 +33,8 @@ export default function habbajetsReducer(
             return selectHabbajet(state, action as SelectHabbajetAction);
         case ActionType.DELETE_HABBAJET:
             return deleteHabbajet(state, action as DeleteHabbajetAction);
+        case ActionType.REWIND_HABBAJET:
+            return rewindHabbajet(state, action as RewindHabbajetAction);
         case ActionType.LOAD_STATE:
             return loadHabbajets(state, action as LoadStateAction);
     }

@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
 
 interface HabbajetFormProps {
     nameField: EditorField;
+    descriptionField: EditorField;
     valueField: EditorField;
     modifierField: EditorField;
     slackField: EditorField;
@@ -33,6 +34,14 @@ const HabbajetForm = (props: HabbajetFormProps) => {
                     field={props.nameField}
                     title="Name"
                     onValueChange={value => props.onUpdate('Name', value)}
+                />
+                <FormField
+                    field={props.descriptionField}
+                    title="Description (optional)"
+                    multiline={true}
+                    onValueChange={value =>
+                        props.onUpdate('Description', value)
+                    }
                 />
                 <FormField
                     field={props.valueField}

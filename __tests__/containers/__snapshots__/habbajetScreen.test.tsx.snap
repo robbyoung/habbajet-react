@@ -6,7 +6,6 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
     Object {
       "backgroundColor": "#ffffff",
       "height": "100%",
-      "marginBottom": 10,
     }
   }
 >
@@ -328,7 +327,8 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
       <View
         style={
           Object {
-            "marginLeft": "20%",
+            "marginBottom": 15,
+            "marginHorizontal": "10%",
           }
         }
       >
@@ -361,7 +361,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
               Array [
                 Object {
                   "fontFamily": "Abel",
-                  "marginTop": -10,
+                  "marginTop": -5,
                   "padding": 0,
                 },
                 Object {
@@ -474,7 +474,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
                   },
                   Object {
                     "backgroundColor": "#E04747",
-                    "width": 375,
+                    "width": 450,
                   },
                 ]
               }
@@ -539,7 +539,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
     >
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -575,7 +575,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
       </View>
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}

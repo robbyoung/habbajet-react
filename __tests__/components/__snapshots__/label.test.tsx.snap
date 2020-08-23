@@ -30,7 +30,7 @@ exports[`Label Component can take a larger font size 1`] = `
       Array [
         Object {
           "fontFamily": "Abel",
-          "marginTop": -10,
+          "marginTop": -5,
           "padding": 0,
         },
         Object {
@@ -74,7 +74,7 @@ exports[`Label Component will render a label with a title and content 1`] = `
       Array [
         Object {
           "fontFamily": "Abel",
-          "marginTop": -10,
+          "marginTop": -5,
           "padding": 0,
         },
         Object {

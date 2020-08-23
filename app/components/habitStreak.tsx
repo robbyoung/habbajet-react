@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet, Dimensions} from 'react-native';
 
-const MAX_WIDTH = Dimensions.get('window').width * 0.5;
+const MAX_WIDTH = Dimensions.get('window').width * 0.6;
 const styles = StyleSheet.create({
     container: {
         marginBottom: 10,

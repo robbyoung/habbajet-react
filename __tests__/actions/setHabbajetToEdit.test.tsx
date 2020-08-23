@@ -13,6 +13,10 @@ describe('Set Habbajet To Edit Action', () => {
                 value: state.habbajets[0].name,
                 errorMessage: '',
             },
+            description: {
+                value: state.habbajets[0].description,
+                errorMessage: '',
+            },
             value: {
                 value: `${state.habbajets[0].maxValue}`,
                 errorMessage: '',

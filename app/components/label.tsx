@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Abel',
     },
     content: {
-        marginTop: -10,
+        marginTop: -5,
         padding: 0,
         fontFamily: 'Abel',
     },

@@ -8,6 +8,7 @@ const EMPTY_FIELD = {
 
 export const DEFAULT_EDITOR_STATE: HabbajetEditor = {
     name: EMPTY_FIELD,
+    description: EMPTY_FIELD,
     value: EMPTY_FIELD,
     modifier: EMPTY_FIELD,
     slack: EMPTY_FIELD,
