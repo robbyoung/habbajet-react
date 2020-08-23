@@ -88,7 +88,7 @@ describe('HabbajetDisplay Component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
-    it('will run the onSuccess callback if the success button is long-pressed', async () => {
+    it('will run the onSuccess callback if the success button is pressed', async () => {
         const habbajet = createTestState(1, 0, 0).habbajets[0];
         const onSuccess = jest.fn();
         const {getByTestId} = render(
@@ -103,11 +103,11 @@ describe('HabbajetDisplay Component', () => {
         );
 
         const button = getByTestId('button-success');
-        fireEvent.longPress(button);
+        fireEvent.press(button);
         await wait(() => expect(onSuccess).toBeCalledTimes(1));
     });
 
-    it('will run the onFailure callback if the failure button is long-pressed', async () => {
+    it('will run the onFailure callback if the failure button is pressed', async () => {
         const habbajet = createTestState(1, 0, 0).habbajets[0];
         const onFailure = jest.fn();
         const {getByTestId} = render(
@@ -122,7 +122,7 @@ describe('HabbajetDisplay Component', () => {
         );
 
         const button = getByTestId('button-failure');
-        fireEvent.longPress(button);
+        fireEvent.press(button);
         await wait(() => expect(onFailure).toBeCalledTimes(1));
     });
 

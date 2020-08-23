@@ -47,7 +47,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
   >
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
@@ -83,7 +83,7 @@ exports[`HabitResultPicker Component renders buttons and the specified day of th
     </View>
     <View
       accessible={true}
-      focusable={false}
+      focusable={true}
       isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}

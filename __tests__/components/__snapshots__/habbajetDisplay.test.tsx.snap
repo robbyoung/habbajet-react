@@ -539,7 +539,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
     >
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -575,7 +575,7 @@ exports[`HabbajetDisplay Component will add a penalty warning for budget deficit
       </View>
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -1154,7 +1154,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
     >
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -1190,7 +1190,7 @@ exports[`HabbajetDisplay Component will hook various components up to a habbajet
       </View>
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -1810,7 +1810,7 @@ exports[`HabbajetDisplay Component will show a multi-line habit description if o
     >
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -1846,7 +1846,7 @@ exports[`HabbajetDisplay Component will show a multi-line habit description if o
       </View>
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -3072,7 +3072,7 @@ exports[`HabbajetDisplay Component will show a reset button on non-Mondays 1`] =
     >
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -3108,7 +3108,7 @@ exports[`HabbajetDisplay Component will show a reset button on non-Mondays 1`] =
       </View>
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}

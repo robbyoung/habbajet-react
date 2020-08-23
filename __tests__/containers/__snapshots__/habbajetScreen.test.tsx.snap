@@ -539,7 +539,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
     >
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
@@ -575,7 +575,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
       </View>
       <View
         accessible={true}
-        focusable={false}
+        focusable={true}
         isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
