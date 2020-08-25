@@ -1,5 +1,7 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View, Text} from 'react-native';
+import {useSelector} from 'react-redux';
+import {getPurchaseStatsForAllTime} from '../selectors/stats';
 
 const styles = StyleSheet.create({
     container: {
@@ -9,10 +11,12 @@ const styles = StyleSheet.create({
 });
 
 const PurchaseStatsScreen = () => {
+    const stats = useSelector(getPurchaseStatsForAllTime);
+
     return (
         <ScrollView>
             <View style={styles.container}>
-                <Text>Todo</Text>
+                <Text>{JSON.stringify(stats)}</Text>
             </View>
         </ScrollView>
     );
