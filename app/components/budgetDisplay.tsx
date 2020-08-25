@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     roundButton: {
-        marginTop: 20,
-        marginLeft: 25,
+        marginTop: 30,
+        marginLeft: 15,
     },
 });
 
@@ -28,7 +28,7 @@ const BudgetDisplay = (props: BudgetDisplayProps) => {
                 <IconButton
                     icon={button.icon}
                     color={grey}
-                    size={40}
+                    size={30}
                     testID={`button-budget-${index}`}
                     onPress={() => button.onPress()}
                 />

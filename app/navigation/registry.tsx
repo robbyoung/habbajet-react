@@ -17,6 +17,7 @@ import {PlusButton, PencilButton, TrashButton} from './buttons';
 import ConfirmationModal from '../components/confirmationModal';
 import HelpModal from '../components/helpModal';
 import EditTagScreen from '../containers/editTagScreen';
+import PurchaseStatsScreen from '../containers/purchaseStatsScreen';
 
 Navigation.registerComponent(
     Screens.Loading,
@@ -123,6 +124,16 @@ Navigation.registerComponent(
     () => () => (
         <Provider store={store}>
             <EditTagScreen />
+        </Provider>
+    ),
+    () => EditTagScreen,
+);
+
+Navigation.registerComponent(
+    Screens.PurchaseStats,
+    () => () => (
+        <Provider store={store}>
+            <PurchaseStatsScreen />
         </Provider>
     ),
     () => EditTagScreen,

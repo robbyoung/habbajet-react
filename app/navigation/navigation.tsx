@@ -294,3 +294,27 @@ export const goToEditTag = () => {
         },
     });
 };
+
+export const goToPurchaseStats = () => {
+    Navigation.push(STACK_NAVIGATOR, {
+        component: {
+            name: Screens.PurchaseStats,
+            options: {
+                topBar: {
+                    backButton: {
+                        color: white,
+                    },
+                    title: {
+                        text: 'Purchase Stats',
+                        fontFamily: 'Abel',
+                        fontSize: 30,
+                        color: white,
+                    },
+                    background: {
+                        color: grey,
+                    },
+                },
+            },
+        },
+    });
+};
