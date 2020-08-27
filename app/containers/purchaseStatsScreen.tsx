@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux';
 import {getPurchaseStatsForAllTime} from '../selectors/stats';
 import {white} from '../colors';
 import PieChart from '../components/pieChart';
+import StatsEntry from '../components/statsEntry';
 
 const styles = StyleSheet.create({
     background: {
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
         backgroundColor: white,
     },
     container: {
-        marginVertical: 20,
+        marginVertical: 10,
         marginHorizontal: '10%',
     },
 });
@@ -23,6 +24,10 @@ const PurchaseStatsScreen = () => {
         <ScrollView style={styles.background}>
             <View style={styles.container}>
                 <PieChart sections={stats} />
+
+                {stats.map((data, index) => (
+                    <StatsEntry stats={data} key={index} />
+                ))}
             </View>
         </ScrollView>
     );
