@@ -1,8 +1,8 @@
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View, Text} from 'react-native';
 import {useSelector} from 'react-redux';
 import {getPurchaseStatsForAllTime} from '../selectors/stats';
-import {white} from '../colors';
+import {white, grey} from '../colors';
 import PieChart from '../components/pieChart';
 import StatsEntry from '../components/statsEntry';
 
@@ -15,10 +15,22 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         marginHorizontal: '10%',
     },
+    empty: {
+        width: '100%',
+        fontFamily: 'Abel',
+        textAlign: 'center',
+        fontSize: 30,
+        color: grey,
+        marginTop: 50,
+    },
 });
 
 const PurchaseStatsScreen = () => {
     const stats = useSelector(getPurchaseStatsForAllTime);
+
+    if (stats.length === 0) {
+        return <Text style={styles.empty}>No Stats Yet</Text>;
+    }
 
     return (
         <ScrollView style={styles.background}>
