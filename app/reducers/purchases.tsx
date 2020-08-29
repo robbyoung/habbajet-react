@@ -6,6 +6,8 @@ import {
     LoadStateAction,
     AddPurchaseAction,
     addPurchase,
+    DeletePurchaseAction,
+    deletePurchase,
 } from '../actions';
 
 export default function purchasesReducer(
@@ -17,6 +19,8 @@ export default function purchasesReducer(
             return loadPurchases(state, action as LoadStateAction);
         case ActionType.ADD_PURCHASE:
             return addPurchase(state, action as AddPurchaseAction);
+        case ActionType.DELETE_PURCHASE:
+            return deletePurchase(state, action as DeletePurchaseAction);
     }
     return state;
 }
