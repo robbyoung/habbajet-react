@@ -300,6 +300,46 @@ exports[`Edit Purchase Screen Component will map state to a purchase edit form 1
           Done
         </Text>
       </View>
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#b02f1e",
+            "borderRadius": 10,
+            "marginBottom": 10,
+            "opacity": 1,
+            "width": "100%",
+          }
+        }
+        testID="button-delete"
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "color": "#ffffff",
+                "fontFamily": "Abel",
+                "fontSize": 30,
+                "padding": 10,
+                "textAlign": "center",
+                "width": "100%",
+              },
+            ]
+          }
+        >
+          Delete
+        </Text>
+      </View>
     </View>
   </View>
 </RCTScrollView>

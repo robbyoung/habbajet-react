@@ -21,5 +21,6 @@ export enum ActionType {
     CLEAR_TAG_EDITOR = 'Clear Tag Editor',
     VALIDATE_TAG_EDITOR = 'Validate Tag Editor',
     DELETE_TAG = 'Delete Tag',
-    REWIND_HABBAJET = 'Rewing Habbajet',
+    REWIND_HABBAJET = 'Rewind Habbajet',
+    DELETE_PURCHASE = 'Delete Purchase',
 }
