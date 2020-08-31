@@ -1,6 +1,11 @@
 import {State, Tag} from '../state';
 import {grey} from '../colors';
 
+export enum TimePeriod {
+    ThisWeek = 'This Week',
+    AllTime = 'All Time',
+}
+
 export interface PurchaseStatistic {
     tagName: string;
     total: number;
