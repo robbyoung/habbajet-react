@@ -36,6 +36,63 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
       }
     >
       <View
+        style={Object {}}
+      >
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+            }
+          }
+        >
+          Time Period
+        </Text>
+        <View
+          style={
+            Object {
+              "borderColor": "#959595",
+              "borderRadius": 5,
+              "borderWidth": 1,
+            }
+          }
+        >
+          <View>
+            <RNCPicker
+              items={
+                Array [
+                  Object {
+                    "label": "This Week",
+                    "textColor": undefined,
+                    "value": "This Week",
+                  },
+                  Object {
+                    "label": "All Time",
+                    "textColor": undefined,
+                    "value": "All Time",
+                  },
+                ]
+              }
+              onChange={[Function]}
+              selectedIndex={0}
+              style={
+                Array [
+                  Object {
+                    "height": 216,
+                  },
+                  Object {
+                    "backgroundColor": "#959595",
+                    "fontFamily": "Abel",
+                    "fontSize": 20,
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
         style={
           Object {
             "marginVertical": 10,
