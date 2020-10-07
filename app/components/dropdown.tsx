@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 interface DropdownProps {
     title: string;
     options: {key: string; value: string}[];
-    selected: string | undefined;
+    selected?: string;
     onValueChange: (value: string) => void;
 }
 const Dropdown = (props: DropdownProps) => {

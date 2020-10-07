@@ -1004,6 +1004,11 @@
     eslint-plugin-react-native "3.6.0"
     prettier "1.16.4"
 
+"@react-native-community/picker@1.4":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@react-native-community/picker/-/picker-1.4.0.tgz#69579f0f2627d12cbcdd12078d2383b340988a6b"
+  integrity sha512-ggkL+WbTJacTsGSgCTPblMwMHvQiSWS5xog/8bGHqtwcc9WhUNjHuxZ7PPVmmT3SkUhpkb+Tl0o4k7jXSXO4SA==
+
 "@testing-library/react-native@^5.0.3":
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/@testing-library/react-native/-/react-native-5.0.3.tgz#8821dcf7fe7364bc7f427d853cd96e4407d88a4f"
