@@ -16,7 +16,10 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
     FontAwesomeIcon: '',
 }));
 
-function testFormSnapshot(state: PurchaseEditor) {
+function testFormSnapshot(
+    state: PurchaseEditor,
+    enableDelete: boolean = false,
+) {
     const component = renderer.create(
         <PurchaseForm
             nameField={state.name}
@@ -27,6 +30,7 @@ function testFormSnapshot(state: PurchaseEditor) {
             onTagEdit={() => undefined}
             onUpdate={() => undefined}
             onSubmit={() => undefined}
+            onDelete={enableDelete ? () => undefined : undefined}
         />,
     );
     expect(component.toJSON()).toMatchSnapshot();
@@ -71,6 +75,13 @@ describe('Purchase Form Component', () => {
         state.name.errorMessage = 'Bad name';
         state.cost.errorMessage = 'Bad cost';
         testFormSnapshot(state);
+    });
+
+    it('can render a delete button', () => {
+        testFormSnapshot(
+            createTestPurchaseEditor('To Delete', '100', false),
+            true,
+        );
     });
 
     it('will run the onUpdate callback if the name field is changed', async () => {
@@ -186,8 +197,37 @@ describe('Purchase Form Component', () => {
             />,
         );
 
-        const newTagButton = getByTestId('button-submit');
-        fireEvent.press(newTagButton);
+        const submitButton = getByTestId('button-submit');
+        fireEvent.press(submitButton);
         await wait(() => expect(onSubmit).toBeCalled());
+    });
+
+    it('will run the onDelete callback if the delete button is pressed', async () => {
+        const state = createTestPurchaseEditor('', '-2.5', true);
+        const tags = createTestState(0, 0, 0).tags;
+        const onDelete = jest.fn();
+        const {getByTestId} = render(
+            <PurchaseForm
+                nameField={state.name}
+                costField={state.cost}
+                selectedTagId={state.tagId}
+                tags={tags}
+                onNewTag={() => {
+                    throw new Error('onNewTag not expected');
+                }}
+                onTagEdit={() => undefined}
+                onUpdate={() => {
+                    throw new Error('onUpdate not expected');
+                }}
+                onSubmit={() => {
+                    throw new Error('onSubmit not expected');
+                }}
+                onDelete={() => onDelete()}
+            />,
+        );
+
+        const deleteButton = getByTestId('button-delete');
+        fireEvent.press(deleteButton);
+        await wait(() => expect(onDelete).toBeCalled());
     });
 });

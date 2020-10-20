@@ -8,6 +8,7 @@ import {
     goToNewHabbajet,
     goToPurchases,
     goToNewPurchase,
+    goToPurchaseStats,
 } from '../navigation/navigation';
 import {
     selectHabbajetAction,
@@ -17,7 +18,7 @@ import {
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 import BudgetDisplay from '../components/budgetDisplay';
-import {faBars, faPlus} from '@fortawesome/free-solid-svg-icons';
+import {faBars, faPlus, faChartPie} from '@fortawesome/free-solid-svg-icons';
 
 const styles = StyleSheet.create({
     container: {
@@ -47,6 +48,10 @@ const HomeScreen = () => {
                         {
                             icon: faBars,
                             onPress: () => goToPurchases(),
+                        },
+                        {
+                            icon: faChartPie,
+                            onPress: () => goToPurchaseStats(),
                         },
                     ]}
                 />

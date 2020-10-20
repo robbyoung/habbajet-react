@@ -11,6 +11,7 @@ import {
     goToNewTag,
     goToEditPurchase,
     goToEditTag,
+    goToPurchaseStats,
 } from '../app/navigation/navigation';
 
 let layoutRoot: LayoutRoot;
@@ -93,5 +94,9 @@ describe('Navigation', () => {
 
     it('goToEditTag correctly navigates to the edit tag screen', () => {
         testStackPush(goToEditTag, 'EditTag');
+    });
+
+    it('goToPurchaseStats correctly navigates to the purchase stats screen', () => {
+        testStackPush(goToPurchaseStats, 'PurchaseStats');
     });
 });
