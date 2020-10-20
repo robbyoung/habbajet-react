@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown Component can render a dropdown 1`] = `
+<View
+  style={Object {}}
+>
+  <Text
+    style={
+      Object {
+        "color": "#959595",
+        "fontFamily": "Abel",
+        "fontSize": 20,
+      }
+    }
+  >
+    Test Dropdown
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "#959595",
+        "borderRadius": 5,
+        "borderWidth": 1,
+      }
+    }
+  >
+    <View>
+      <RNCPicker
+        items={
+          Array [
+            Object {
+              "label": "Option one",
+              "textColor": undefined,
+              "value": "one",
+            },
+            Object {
+              "label": "Option two",
+              "textColor": undefined,
+              "value": "two",
+            },
+          ]
+        }
+        onChange={[Function]}
+        selectedIndex={0}
+        style={
+          Array [
+            Object {
+              "height": 216,
+            },
+            Object {
+              "backgroundColor": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Dropdown Component will default to "None Selected" 1`] = `
+<View
+  style={Object {}}
+>
+  <Text
+    style={
+      Object {
+        "color": "#959595",
+        "fontFamily": "Abel",
+        "fontSize": 20,
+      }
+    }
+  >
+    Test Dropdown
+  </Text>
+  <View
+    style={
+      Object {
+        "borderColor": "#959595",
+        "borderRadius": 5,
+        "borderWidth": 1,
+      }
+    }
+  >
+    <View>
+      <RNCPicker
+        items={
+          Array [
+            Object {
+              "label": "None Selected",
+              "textColor": undefined,
+              "value": "",
+            },
+            Object {
+              "label": "Option one",
+              "textColor": undefined,
+              "value": "one",
+            },
+            Object {
+              "label": "Option two",
+              "textColor": undefined,
+              "value": "two",
+            },
+          ]
+        }
+        onChange={[Function]}
+        selectedIndex={0}
+        style={
+          Array [
+            Object {
+              "height": 216,
+            },
+            Object {
+              "backgroundColor": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

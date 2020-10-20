@@ -16,6 +16,7 @@
         "@fortawesome/react-native-fontawesome": "^0.2.3",
         "@react-native-community/art": "^1.1.2",
         "@react-native-community/async-storage": "^1.8.1",
+        "@react-native-community/picker": "1.4",
         "@types/react-native-uuid": "^1.4.0",
         "@types/react-redux": "^7.1.7",
         "@types/uuid": "^7.0.3",

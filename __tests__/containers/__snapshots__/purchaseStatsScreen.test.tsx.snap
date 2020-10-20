@@ -1,20 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Purchase Stats Screen Component display a message if there are no stats 1`] = `
-<Text
+<RCTScrollView
   style={
     Object {
-      "color": "#959595",
-      "fontFamily": "Abel",
-      "fontSize": 30,
-      "marginTop": 50,
-      "textAlign": "center",
-      "width": "100%",
+      "backgroundColor": "#ffffff",
+      "height": "100%",
     }
   }
 >
-  No Stats Yet
-</Text>
+  <View>
+    <View
+      style={
+        Object {
+          "marginHorizontal": "10%",
+          "marginVertical": 10,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+            }
+          }
+        >
+          Time Period
+        </Text>
+        <View
+          style={
+            Object {
+              "borderColor": "#959595",
+              "borderRadius": 5,
+              "borderWidth": 1,
+            }
+          }
+        >
+          <View>
+            <RNCPicker
+              items={
+                Array [
+                  Object {
+                    "label": "This Week",
+                    "textColor": undefined,
+                    "value": "This Week",
+                  },
+                  Object {
+                    "label": "Past Two Weeks",
+                    "textColor": undefined,
+                    "value": "Past Two Weeks",
+                  },
+                  Object {
+                    "label": "All Time",
+                    "textColor": undefined,
+                    "value": "All Time",
+                  },
+                ]
+              }
+              onChange={[Function]}
+              selectedIndex={0}
+              style={
+                Array [
+                  Object {
+                    "height": 216,
+                  },
+                  Object {
+                    "backgroundColor": "#959595",
+                    "fontFamily": "Abel",
+                    "fontSize": 20,
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "marginTop": 30,
+            "textAlign": "center",
+            "width": "100%",
+          }
+        }
+      >
+        No Stats For This Time Period
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
 `;
 
 exports[`Purchase Stats Screen Component will display purchase stats based on the state 1`] = `
@@ -36,1095 +118,81 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
       }
     >
       <View
+        style={Object {}}
+      >
+        <Text
+          style={
+            Object {
+              "color": "#959595",
+              "fontFamily": "Abel",
+              "fontSize": 20,
+            }
+          }
+        >
+          Time Period
+        </Text>
+        <View
+          style={
+            Object {
+              "borderColor": "#959595",
+              "borderRadius": 5,
+              "borderWidth": 1,
+            }
+          }
+        >
+          <View>
+            <RNCPicker
+              items={
+                Array [
+                  Object {
+                    "label": "This Week",
+                    "textColor": undefined,
+                    "value": "This Week",
+                  },
+                  Object {
+                    "label": "Past Two Weeks",
+                    "textColor": undefined,
+                    "value": "Past Two Weeks",
+                  },
+                  Object {
+                    "label": "All Time",
+                    "textColor": undefined,
+                    "value": "All Time",
+                  },
+                ]
+              }
+              onChange={[Function]}
+              selectedIndex={0}
+              style={
+                Array [
+                  Object {
+                    "height": 216,
+                  },
+                  Object {
+                    "backgroundColor": "#959595",
+                    "fontFamily": "Abel",
+                    "fontSize": 20,
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <Text
         style={
           Object {
-            "marginVertical": 10,
+            "color": "#959595",
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "marginTop": 30,
+            "textAlign": "center",
+            "width": "100%",
           }
         }
       >
-        <ARTSurfaceView
-          style={
-            Array [
-              undefined,
-              Object {
-                "height": 600,
-                "width": 600,
-              },
-            ]
-          }
-        >
-          <ARTGroup
-            opacity={1}
-            transform={
-              Array [
-                6.123233995736766e-17,
-                -1,
-                1,
-                6.123233995736766e-17,
-                0,
-                600,
-              ]
-            }
-          >
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  450,
-                  300,
-                  4,
-                  300,
-                  300,
-                  150,
-                  0,
-                  6.283185307179586,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#ffffff"
-              strokeCap={1}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  450,
-                  300,
-                  4,
-                  300,
-                  300,
-                  150,
-                  0,
-                  1.2566370614359172,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#e04747"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  346.3525491562421,
-                  442.658477444273,
-                  4,
-                  300,
-                  300,
-                  150,
-                  1.2566370614359172,
-                  2.373647782712288,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#8066c2"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  192.09902994920236,
-                  404.1987555688496,
-                  4,
-                  300,
-                  300,
-                  150,
-                  2.373647782712288,
-                  3.3510321638291125,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#eb712d"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  153.27785988992915,
-                  268.81324637733616,
-                  4,
-                  300,
-                  300,
-                  150,
-                  3.3510321638291125,
-                  4.1887902047863905,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#e64ce9"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  225.00000000000006,
-                  170.09618943233417,
-                  4,
-                  300,
-                  300,
-                  150,
-                  4.188790204786391,
-                  4.886921905584123,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#37353c"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  326.04722665003965,
-                  152.2788370481688,
-                  4,
-                  300,
-                  300,
-                  150,
-                  4.886921905584123,
-                  5.445427266222309,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#7f90ec"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  400.3695909538288,
-                  188.5282761783909,
-                  4,
-                  300,
-                  300,
-                  150,
-                  5.445427266222309,
-                  5.8643062867009474,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#b1b952"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  437.0318186463902,
-                  238.98950353863012,
-                  4,
-                  300,
-                  300,
-                  150,
-                  5.864306286700948,
-                  6.1435589670200415,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#2aad5e"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  448.54021031123557,
-                  279.1240348559901,
-                  4,
-                  300,
-                  300,
-                  150,
-                  6.14355896702004,
-                  6.283185307179586,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#e04747"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTShape
-              d={
-                Array [
-                  0,
-                  450,
-                  300.0000000000002,
-                  4,
-                  300,
-                  300,
-                  150,
-                  6.283185307179588,
-                  6.283185307179588,
-                  1,
-                ]
-              }
-              fill={null}
-              opacity={1}
-              stroke="#8066c2"
-              strokeCap={0}
-              strokeDash={null}
-              strokeJoin={1}
-              strokeWidth={300}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-            <ARTGroup
-              opacity={1}
-              transform={
-                Array [
-                  1,
-                  0,
-                  0,
-                  1,
-                  0,
-                  0,
-                ]
-              }
-            />
-          </ARTGroup>
-        </ARTSurfaceView>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#E04747",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 9
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            9.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            20
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#8066C2",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 8
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            8.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            18
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#EB712D",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 7
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            7.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            16
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#E64CE9",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 6
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            6.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            13
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#37353C",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 5
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            5.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            11
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#7F90EC",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 4
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            4.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            9
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#B1B952",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 3
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            3.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            7
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#2AAD5E",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 2
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            2.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            4
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#E04747",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 1
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            1.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            2
-            %
-          </Text>
-        </View>
-      </View>
-      <View
-        style={
-          Array [
-            Object {
-              "borderRadius": 10,
-              "marginBottom": 10,
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#8066C2",
-            },
-          ]
-        }
-      >
-        <Text
-          style={
-            Array [
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              },
-              Object {
-                "color": "#ffffff",
-                "marginLeft": 10,
-                "padding": 5,
-              },
-            ]
-          }
-        >
-          Tag 0
-        </Text>
-        <View
-          style={
-            Object {
-              "backgroundColor": "#ffffff",
-              "borderRadius": 10,
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginBottom": 10,
-              "marginHorizontal": 10,
-              "padding": 5,
-            }
-          }
-        >
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            $
-            0.00
-          </Text>
-          <Text
-            style={
-              Object {
-                "fontFamily": "Abel",
-                "fontSize": 20,
-              }
-            }
-          >
-            0
-            %
-          </Text>
-        </View>
-      </View>
+        No Stats For This Time Period
+      </Text>
     </View>
   </View>
 </RCTScrollView>
