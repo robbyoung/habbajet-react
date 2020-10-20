@@ -1,6 +1,11 @@
 import {createTestState} from '../../app/state/testState';
-import {getPurchaseStatsForAllTime} from '../../app/selectors/stats';
+import {
+    getPurchaseStatsForAllTime,
+    getPurchaseStatsForPastTwoWeeks,
+    getPurchaseStatsForThisWeek,
+} from '../../app/selectors/stats';
 import {grey} from '../../app/colors';
+import moment from 'moment';
 
 describe('Stats Selectors', () => {
     describe('Get Purchase Stats For All Time', () => {
@@ -70,6 +75,145 @@ describe('Stats Selectors', () => {
             const state = createTestState(3, 0, 100);
 
             const results = getPurchaseStatsForAllTime(state);
+            expect(results).toEqual([]);
+        });
+    });
+
+    describe('Get Purchase Stats For Past Two Weeks', () => {
+        it('will return sorted purchase stats for the past 14 days', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 30,
+                    date: moment()
+                        .subtract(10, 'days')
+                        .toISOString(),
+                    name: '10 Days Ago',
+                    tagId: state.tags[0].id,
+                },
+                {
+                    id: '1',
+                    cost: 70,
+                    date: moment()
+                        .subtract(2, 'days')
+                        .toISOString(),
+                    name: '2 Days Ago',
+                    tagId: state.tags[1].id,
+                },
+                {
+                    id: '2',
+                    cost: 20,
+                    date: moment()
+                        .subtract(15, 'days')
+                        .toISOString(),
+                    name: '15 Days Ago',
+                    tagId: state.tags[1].id,
+                },
+            ];
+
+            const results = getPurchaseStatsForPastTwoWeeks(state);
+            expect(results).toEqual([
+                {
+                    tagName: state.tags[1].name,
+                    total: 70,
+                    percentage: 0.7,
+                    color: state.tags[1].color,
+                },
+                {
+                    tagName: state.tags[0].name,
+                    total: 30,
+                    percentage: 0.3,
+                    color: state.tags[0].color,
+                },
+            ]);
+        });
+
+        it('will ignore future weeks', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 20,
+                    date: moment()
+                        .add(1, 'week')
+                        .toISOString(),
+                    name: 'Next Week',
+                    tagId: state.tags[1].id,
+                },
+            ];
+
+            const results = getPurchaseStatsForThisWeek(state);
+            expect(results).toEqual([]);
+        });
+    });
+
+    describe('Get Purchase Stats For Past Week', () => {
+        it('will return sorted purchase stats since the previous Monday', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 30,
+                    date: moment()
+                        .startOf('day')
+                        .toISOString(),
+                    name: 'Today',
+                    tagId: state.tags[0].id,
+                },
+                {
+                    id: '1',
+                    cost: 70,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .toISOString(),
+                    name: 'Monday',
+                    tagId: state.tags[1].id,
+                },
+                {
+                    id: '2',
+                    cost: 20,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .subtract(1, 'hour')
+                        .toISOString(),
+                    name: 'Last Sunday',
+                    tagId: state.tags[1].id,
+                },
+            ];
+
+            const results = getPurchaseStatsForThisWeek(state);
+            expect(results).toEqual([
+                {
+                    tagName: state.tags[1].name,
+                    total: 70,
+                    percentage: 0.7,
+                    color: state.tags[1].color,
+                },
+                {
+                    tagName: state.tags[0].name,
+                    total: 30,
+                    percentage: 0.3,
+                    color: state.tags[0].color,
+                },
+            ]);
+        });
+
+        it('will ignore future weeks', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 20,
+                    date: moment()
+                        .add(1, 'week')
+                        .toISOString(),
+                    name: 'Next Week',
+                    tagId: state.tags[1].id,
+                },
+            ];
+
+            const results = getPurchaseStatsForThisWeek(state);
             expect(results).toEqual([]);
         });
     });

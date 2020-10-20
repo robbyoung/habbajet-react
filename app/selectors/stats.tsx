@@ -17,9 +17,13 @@ export interface PurchaseStatistic {
 
 function getPurchaseStats(state: State, earliest: number) {
     const tagCosts: {[key: string]: number} = {};
+    const latest = moment().valueOf();
     let totalCost = 0;
     state.purchases
-        .filter(purchase => moment(purchase.date).valueOf() > earliest)
+        .filter(purchase => {
+            const timestamp = moment(purchase.date).valueOf();
+            return timestamp >= earliest && timestamp <= latest;
+        })
         .forEach(purchase => {
             tagCosts[purchase.tagId] = tagCosts[purchase.tagId]
                 ? tagCosts[purchase.tagId] + purchase.cost
