@@ -24,6 +24,7 @@ function testRewind(
         currentStreak: habbajet.oldStreaks[0],
         bestStreak: habbajet.oldStreaks[1],
         toClaim: false,
+        dangerDays: [0, 0, 0, 0, 0, 0, 0],
     });
     expect(state).toEqual([
         ...createTestState(4, 0, 0).habbajets,
@@ -50,6 +51,7 @@ describe('Rewind Habbajet Action', () => {
             totalSlack: 2,
             remainingSlack: 1,
             description: '',
+            dangerDays: [0, 0, 0, 0, 0, 0, 0],
         };
 
         testRewind(habbajet, [], '2020-03-22T11:00:00.000Z');
@@ -73,6 +75,7 @@ describe('Rewind Habbajet Action', () => {
             totalSlack: 4,
             remainingSlack: 0,
             description: '',
+            dangerDays: [0, 0, 0, 0, 0, 0, 0],
         };
 
         testRewind(habbajet, [2, 1, 1, 0, 0, 0, 1], '2020-03-22T11:00:00.000Z');

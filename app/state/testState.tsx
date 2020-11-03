@@ -34,6 +34,7 @@ export function createTestState(
             totalSlack: 0,
             remainingSlack: 0,
             description: '',
+            dangerDays: [0, 0, 0, 0, 0, 0, 0],
         });
     }
 

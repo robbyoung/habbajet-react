@@ -44,6 +44,7 @@ export function rewindHabbajet(
         bestStreak: original.oldStreaks[1],
         remainingSlack: original.totalSlack,
         toClaim: false,
+        dangerDays: original.dangerDays,
     };
 
     return newState;
