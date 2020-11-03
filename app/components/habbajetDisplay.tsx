@@ -10,6 +10,7 @@ import {white} from '../colors';
 import HabitStreak from './habitStreak';
 import SlackDays from './slackDays';
 import WideButton from './wideButton';
+import DangerDays from './dangerDays';
 
 const styles = StyleSheet.create({
     container: {
@@ -74,6 +75,11 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                     ) : (
                         undefined
                     )}
+                    <DangerDays
+                        bestDay="Monday"
+                        worstDay="Thursday"
+                        color={props.habbajet.color}
+                    />
                     {canReset ? (
                         <View style={styles.resetButton}>
                             <WideButton
