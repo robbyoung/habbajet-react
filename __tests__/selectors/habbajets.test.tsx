@@ -5,6 +5,7 @@ import {
     getHabbajetNames,
     getUnselectedHabbajetNames,
     checkHabbajetEquality,
+    getHabbajetDangerDays,
 } from '../../app/selectors';
 
 describe('Habbajet Selectors', () => {
@@ -111,6 +112,39 @@ describe('Habbajet Selectors', () => {
             const right = undefined;
             const result = checkHabbajetEquality(left, right);
             expect(result).toEqual(false);
+        });
+    });
+
+    describe('Get Habbajet Danger Days', () => {
+        it('will parse danger days for the selected habbajet', () => {
+            const state = createTestState(1, 0, 0, 0);
+            state.habbajets[0].dangerDays = [2, 10, 3, 4, 14, 0, 2];
+            const result = getHabbajetDangerDays(state);
+
+            expect(result).toEqual({
+                bestDay: 'Saturday',
+                worstDay: 'Friday',
+                color: state.habbajets[0].color,
+            });
+        });
+
+        it('will return undefined if no habbajet is selected', () => {
+            const state = createTestState(1, 0, 0);
+            state.habbajets[0].dangerDays = [2, 10, 3, 4, 14, 0, 2];
+            const result = getHabbajetDangerDays(state);
+
+            expect(result).toBeUndefined();
+        });
+
+        it('will return NA results if no days have been processed', () => {
+            const state = createTestState(1, 0, 0, 0);
+            const result = getHabbajetDangerDays(state);
+
+            expect(result).toEqual({
+                bestDay: 'N/A',
+                worstDay: 'N/A',
+                color: state.habbajets[0].color,
+            });
         });
     });
 });

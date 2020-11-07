@@ -17,6 +17,19 @@ describe('Load State Action', () => {
         expect(state).toEqual(state);
     });
 
+    it('will autofill danger days for older versions', () => {
+        const toLoad = createTestState(20, 5, 100) as any;
+        toLoad.habbajets[0].dangerDays = undefined;
+        toLoad.habbajets[10].dangerDays = undefined;
+
+        const state: Habbajet[] = [];
+        const action = loadStateAction(toLoad);
+        const newState = habbajetsReducer(state, action);
+
+        expect(newState).toEqual(createTestState(20, 5, 100).habbajets);
+        expect(state).toEqual([]);
+    });
+
     it('can load purchases', () => {
         const toLoad = createTestState(20, 5, 100);
         const state: Purchase[] = [];
@@ -24,7 +37,7 @@ describe('Load State Action', () => {
         const newState = purchasesReducer(state, action);
 
         expect(newState).toEqual(toLoad.purchases);
-        expect(state).toEqual(state);
+        expect(state).toEqual([]);
     });
 
     it('can load budget', () => {
@@ -34,7 +47,7 @@ describe('Load State Action', () => {
         const newState = budgetReducer(state, action);
 
         expect(newState).toEqual(toLoad.budget);
-        expect(state).toEqual(state);
+        expect(state).toEqual(0);
     });
 
     it('can load tags', () => {
@@ -44,6 +57,6 @@ describe('Load State Action', () => {
         const newState = tagReducer(state, action);
 
         expect(newState).toEqual(toLoad.tags);
-        expect(state).toEqual(state);
+        expect(state).toEqual([]);
     });
 });
