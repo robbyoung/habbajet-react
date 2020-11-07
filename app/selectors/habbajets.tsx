@@ -52,7 +52,7 @@ export function getHabbajetDangerDays(state: State) {
     let lowIndex = 0;
     let highIndex = 0;
 
-    if (!habbajet) {
+    if (!habbajet || !habbajet.dangerDays) {
         return undefined;
     }
 

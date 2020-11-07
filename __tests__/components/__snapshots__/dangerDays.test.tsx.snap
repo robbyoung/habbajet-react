@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DangerDays Component renders a row with two labels 1`] = `
+exports[`DangerDays Component renders a default display if the habajet has no danger day data 1`] = `
 <View
   style={
     Object {
@@ -27,7 +27,7 @@ exports[`DangerDays Component renders a row with two labels 1`] = `
             "padding": 0,
           },
           Object {
-            "color": "#8066C2",
+            "color": "#E04747",
           },
         ]
       }
@@ -48,7 +48,7 @@ exports[`DangerDays Component renders a row with two labels 1`] = `
         ]
       }
     >
-      Monday
+      N/A
     </Text>
   </View>
   <View
@@ -68,7 +68,7 @@ exports[`DangerDays Component renders a row with two labels 1`] = `
             "padding": 0,
           },
           Object {
-            "color": "#8066C2",
+            "color": "#E04747",
           },
         ]
       }
@@ -89,8 +89,105 @@ exports[`DangerDays Component renders a row with two labels 1`] = `
         ]
       }
     >
-      Thursday
+      N/A
     </Text>
   </View>
 </View>
 `;
+
+exports[`DangerDays Component renders a display with the selected habbajet's danger days 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "marginBottom": 10,
+      "marginTop": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "margin": 0,
+            "padding": 0,
+          },
+          Object {
+            "color": "#E04747",
+          },
+        ]
+      }
+    >
+      Best Day
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "marginTop": -5,
+            "padding": 0,
+          },
+          Object {
+            "fontSize": 30,
+          },
+        ]
+      }
+    >
+      Wednesday
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "fontSize": 20,
+            "margin": 0,
+            "padding": 0,
+          },
+          Object {
+            "color": "#E04747",
+          },
+        ]
+      }
+    >
+      Worst Day
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Abel",
+            "marginTop": -5,
+            "padding": 0,
+          },
+          Object {
+            "fontSize": 30,
+          },
+        ]
+      }
+    >
+      Saturday
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`DangerDays Component returns an empty view if there is no selected habbajet 1`] = `<View />`;

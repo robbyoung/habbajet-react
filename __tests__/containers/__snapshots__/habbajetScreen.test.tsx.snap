@@ -541,7 +541,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
                 ]
               }
             >
-              Monday
+              N/A
             </Text>
           </View>
           <View
@@ -582,7 +582,7 @@ exports[`Habbajet Screen Component will map state to a habbajet display 1`] = `
                 ]
               }
             >
-              Thursday
+              N/A
             </Text>
           </View>
         </View>

@@ -75,11 +75,7 @@ const HabbajetDisplay = (props: HabbajetDisplayProps) => {
                     ) : (
                         undefined
                     )}
-                    <DangerDays
-                        bestDay="Monday"
-                        worstDay="Thursday"
-                        color={props.habbajet.color}
-                    />
+                    <DangerDays />
                     {canReset ? (
                         <View style={styles.resetButton}>
                             <WideButton

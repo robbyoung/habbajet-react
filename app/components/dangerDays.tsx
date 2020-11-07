@@ -1,5 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
+import {useSelector} from 'react-redux';
+import {getHabbajetDangerDays} from '../selectors';
 import Label from './label';
 
 const styles = StyleSheet.create({
@@ -10,23 +12,20 @@ const styles = StyleSheet.create({
     },
 });
 
-interface DangerDaysProps {
-    bestDay: string;
-    worstDay: string;
-    color: string;
-}
-const DangerDays = (props: DangerDaysProps) => {
+const DangerDays = () => {
+    const data = useSelector(getHabbajetDangerDays);
+
+    if (data === undefined) {
+        return <View />;
+    }
+
     return (
         <View style={styles.container}>
-            <Label
-                title="Best Day"
-                content={props.bestDay}
-                color={props.color}
-            />
+            <Label title="Best Day" content={data.bestDay} color={data.color} />
             <Label
                 title="Worst Day"
-                content={props.worstDay}
-                color={props.color}
+                content={data.worstDay}
+                color={data.color}
             />
         </View>
     );
