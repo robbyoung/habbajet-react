@@ -51,7 +51,7 @@ describe('Rewind Habbajet Action', () => {
             totalSlack: 2,
             remainingSlack: 1,
             description: '',
-            dangerDays: [0, 0, 0, 0, 0, 0, 0],
+            dangerDays: [1, 0, 0, 0, 0, 0, 0],
         };
 
         testRewind(habbajet, [], '2020-03-22T11:00:00.000Z');
@@ -75,7 +75,7 @@ describe('Rewind Habbajet Action', () => {
             totalSlack: 4,
             remainingSlack: 0,
             description: '',
-            dangerDays: [0, 0, 0, 0, 0, 0, 0],
+            dangerDays: [1, 0, 0, 1, 1, 1, 1],
         };
 
         testRewind(habbajet, [2, 1, 1, 0, 0, 0, 1], '2020-03-22T11:00:00.000Z');
@@ -88,5 +88,17 @@ describe('Rewind Habbajet Action', () => {
         const newState = habbajetsReducer(state, action);
         expect([...newState]).toEqual(createTestState(5, 1, 10).habbajets);
         expect(state).toEqual(createTestState(5, 1, 10).habbajets);
+    });
+
+    it('will reset danger days to beginning of the week', () => {
+        const toReset = createTestState(1, 0, 0, 0).habbajets[0];
+        toReset.dangerDays = [2, 2, 2, 2, 2, 2, 2];
+        toReset.results = [1, 1, 1, 1, 1, 1, 1, 0, 1, 2, 1, 0, 1];
+        const state = [toReset];
+        const action = rewindHabbajetAction();
+
+        const newState = habbajetsReducer(state, action);
+        expect(newState[0].dangerDays).toEqual([2, 1, 1, 1, 2, 1, 2]);
+        expect(state).toEqual([toReset]);
     });
 });

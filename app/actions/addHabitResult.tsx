@@ -25,8 +25,7 @@ function updateDateAndDangerDays(habbajet: Habbajet, result: boolean) {
     const dayOfWeek = date.isoWeekday() - 1;
 
     if (!result) {
-        const dd = habbajet.dangerDays;
-        habbajet.dangerDays = [dd[0], dd[1], dd[2], dd[3], dd[4], dd[5], dd[6]];
+        habbajet.dangerDays = [...habbajet.dangerDays];
         habbajet.dangerDays[dayOfWeek]++;
     }
 

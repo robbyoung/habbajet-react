@@ -115,4 +115,18 @@ describe('Add Habit Result Action', () => {
         }
         expect(state).toEqual(createTestState(1, 0, 0).habbajets);
     });
+
+    it('will increment danger days for slack successess', () => {
+        const state = createTestState(1, 0, 0).habbajets;
+        state[0].totalSlack = 7;
+        state[0].remainingSlack = 7;
+        let newState = state;
+
+        for (let day = 0; day < 7; day++) {
+            const action = addHabitResultAction(newState[0].name, false);
+            newState = habbajetsReducer(newState, action);
+
+            expect(newState[0].dangerDays[day]).toEqual(1);
+        }
+    });
 });

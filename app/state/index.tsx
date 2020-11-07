@@ -21,7 +21,7 @@ export interface Habbajet {
     totalSlack: number;
     remainingSlack: number;
     description: string;
-    dangerDays: [number, number, number, number, number, number, number];
+    dangerDays: number[];
 }
 
 export interface Purchase {
