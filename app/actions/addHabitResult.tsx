@@ -20,6 +20,23 @@ export function addHabitResultAction(
     };
 }
 
+function updateDateAndDangerDays(habbajet: Habbajet, result: boolean) {
+    const date = moment(habbajet.date);
+    const dayOfWeek = date.isoWeekday() - 1;
+
+    if (!result) {
+        const dd = habbajet.dangerDays;
+        habbajet.dangerDays = [dd[0], dd[1], dd[2], dd[3], dd[4], dd[5], dd[6]];
+        habbajet.dangerDays[dayOfWeek]++;
+    }
+
+    date.add(1, 'day');
+    if (date.day() === 1) {
+        habbajet.toClaim = true;
+    }
+    habbajet.date = date.toISOString();
+}
+
 export function addHabitResult(
     state: Habbajet[],
     action: AddHabitResultAction,
@@ -33,13 +50,6 @@ export function addHabitResult(
 
     const newState = [...state];
     const edited: Habbajet = {...newState[index]};
-    const date = moment(edited.date);
-
-    date.add(1, 'day');
-    if (date.day() === 1) {
-        edited.toClaim = true;
-    }
-    edited.date = date.toISOString();
 
     let newResult = action.result ? HabitResult.Success : HabitResult.Failure;
     if (edited.remainingSlack > 0 && !action.result) {
@@ -60,6 +70,8 @@ export function addHabitResult(
         edited.currentValue /= edited.modifier;
         edited.currentStreak = 0;
     }
+
+    updateDateAndDangerDays(edited, action.result);
 
     newState[index] = edited;
     return newState;

@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import renderer, {act} from 'react-test-renderer';
 import store from '../../app/store';
 import DangerDays from '../../app/components/dangerDays';
 import {loadStateAction} from '../../app/actions';
@@ -8,9 +8,11 @@ import {Provider} from 'react-redux';
 
 describe('DangerDays Component', () => {
     it("renders a display with the selected habbajet's danger days", () => {
-        const state = createTestState(3, 0, 0, 1);
-        state.habbajets[1].dangerDays = [2, 3, 0, 3, 5, 9, 2];
-        store.dispatch(loadStateAction(state));
+        act(() => {
+            const state = createTestState(3, 0, 0, 1);
+            state.habbajets[1].dangerDays = [2, 3, 0, 3, 5, 9, 2];
+            store.dispatch(loadStateAction(state));
+        });
 
         const component = renderer.create(
             <Provider store={store}>
@@ -21,8 +23,10 @@ describe('DangerDays Component', () => {
     });
 
     it('renders a default display if the habajet has no danger day data', () => {
-        const state = createTestState(3, 0, 0, 1);
-        store.dispatch(loadStateAction(state));
+        act(() => {
+            const state = createTestState(3, 0, 0, 1);
+            store.dispatch(loadStateAction(state));
+        });
 
         const component = renderer.create(
             <Provider store={store}>
@@ -33,8 +37,10 @@ describe('DangerDays Component', () => {
     });
 
     it('returns an empty view if there is no selected habbajet', () => {
-        const state = createTestState(3, 0, 0);
-        store.dispatch(loadStateAction(state));
+        act(() => {
+            const state = createTestState(3, 0, 0);
+            store.dispatch(loadStateAction(state));
+        });
 
         const component = renderer.create(
             <Provider store={store}>
