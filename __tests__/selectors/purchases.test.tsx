@@ -32,5 +32,13 @@ describe('Purchase Selectors', () => {
                 unformatted: state.purchases[0],
             });
         });
+
+        it('will return up to 50 purchases', () => {
+            const state = createTestState(3, 51, 100);
+            const result = getPurchaseListFormatted(state);
+
+            expect(result.length).toBe(50);
+            expect(result[0].name).toBe(state.purchases[0].name);
+        });
     });
 });
