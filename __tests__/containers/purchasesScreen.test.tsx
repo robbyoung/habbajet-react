@@ -31,6 +31,20 @@ describe('New Purchases Screen Component', () => {
         expect(component.toJSON()).toMatchSnapshot();
     });
 
+    it('will render up to 50 purchases', () => {
+        act(() => {
+            const state = createTestState(5, 51, 200);
+            store.dispatch(loadStateAction(state));
+        });
+
+        const component = renderer.create(
+            <Provider store={store}>
+                <PurchasesScreen />
+            </Provider>,
+        );
+        expect(component.toJSON()).toMatchSnapshot();
+    });
+
     it('display a message if there are no purchases', () => {
         act(() => {
             const state = createTestState(5, 0, 200);

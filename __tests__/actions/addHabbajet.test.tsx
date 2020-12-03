@@ -20,6 +20,7 @@ describe('Add Habbajet Action', () => {
             expect(newState[0].maxValue).toBe(80);
             expect(newState[0].remainingSlack).toBe(1);
             expect(newState[0].totalSlack).toBe(1);
+            expect(newState[0].dangerDays).toEqual([0, 0, 0, 0, 0, 0, 0]);
             expect(state).toEqual([]);
         });
 

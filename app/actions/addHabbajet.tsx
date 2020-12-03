@@ -40,6 +40,7 @@ export function addHabbajetAction(
             totalSlack: slack,
             remainingSlack: slack,
             description,
+            dangerDays: [0, 0, 0, 0, 0, 0, 0],
         },
     };
 }

@@ -18,7 +18,15 @@ export function loadHabbajets(
     state: Habbajet[],
     action: LoadStateAction,
 ): Habbajet[] {
-    return action.state.habbajets;
+    state = action.state.habbajets;
+
+    state.forEach(habbajet => {
+        if (habbajet.dangerDays === undefined) {
+            habbajet.dangerDays = [0, 0, 0, 0, 0, 0, 0];
+        }
+    });
+
+    return state;
 }
 
 export function loadPurchases(

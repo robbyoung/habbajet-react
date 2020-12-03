@@ -1,7 +1,7 @@
 import moment from 'moment';
 import {Action} from 'redux';
 import {ActionType} from './actionTypes';
-import {Habbajet} from '../state';
+import {Habbajet, HabitResult} from '../state';
 
 export interface RewindHabbajetAction extends Action {
     type: ActionType.REWIND_HABBAJET;
@@ -32,6 +32,16 @@ export function rewindHabbajet(
         original.results.length - daysCompleted,
     );
 
+    const dangerDays = [...original.dangerDays];
+    const newResults = original.results.slice(
+        original.results.length - daysCompleted,
+    );
+    newResults.forEach((value, index) => {
+        if (value !== HabitResult.Success) {
+            dangerDays[index]--;
+        }
+    });
+
     newState[rewindIndex] = {
         ...original,
         results: pastResults,
@@ -44,6 +54,7 @@ export function rewindHabbajet(
         bestStreak: original.oldStreaks[1],
         remainingSlack: original.totalSlack,
         toClaim: false,
+        dangerDays,
     };
 
     return newState;
