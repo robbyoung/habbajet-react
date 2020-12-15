@@ -75,7 +75,7 @@ describe('Add Habbajet Action', () => {
             const state: Habbajet[] = createTestState(3, 0, 0, 1).habbajets;
             const action = addHabbajetAction(
                 'Test Edit',
-                '',
+                'Description',
                 80,
                 2,
                 3,
@@ -87,6 +87,7 @@ describe('Add Habbajet Action', () => {
             expect(newState[1]).toEqual({
                 ...state[1],
                 name: 'Test Edit',
+                description: 'Description',
                 currentValue: 80,
                 maxValue: 80,
                 modifier: 2,

@@ -107,6 +107,14 @@ describe('Habbajet Selectors', () => {
             expect(result).toEqual(false);
         });
 
+        it('will return false if habbajets have different descriptions', () => {
+            const habbajets = createTestState(2, 0, 0).habbajets;
+            const left = habbajets[0];
+            const right = {...left, description: 'different description'};
+            const result = checkHabbajetEquality(left, right);
+            expect(result).toEqual(false);
+        });
+
         it('will return false if either habbajet is undefined', () => {
             const left = createTestState(1, 0, 0).habbajets[0];
             const right = undefined;

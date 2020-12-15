@@ -34,6 +34,7 @@ export function checkHabbajetEquality(
     return (
         left.results.length === right.results.length &&
         left.name === right.name &&
+        left.description === right.description &&
         left.maxValue === right.maxValue &&
         left.modifier === right.modifier &&
         left.totalSlack === right.totalSlack &&
