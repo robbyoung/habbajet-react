@@ -23,3 +23,4 @@ export * from './clearTagEditor';
 export * from './deleteTag';
 export * from './rewindHabbajet';
 export * from './deletePurchase';
+export * from './invalidateEditor';

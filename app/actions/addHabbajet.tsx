@@ -64,6 +64,7 @@ export function addHabbajet(
     newState[replaceIndex] = {
         ...original,
         name: edited.name,
+        description: edited.description,
         maxValue: edited.maxValue,
         modifier: edited.modifier,
         totalSlack: edited.totalSlack,
