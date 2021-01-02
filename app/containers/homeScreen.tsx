@@ -14,11 +14,13 @@ import {
     selectHabbajetAction,
     clearEditorAction,
     clearPurchaseEditorAction,
+    reorderHabbajetListAction,
 } from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 import BudgetDisplay from '../components/budgetDisplay';
 import {faBars, faPlus, faChartPie} from '@fortawesome/free-solid-svg-icons';
+import {saveState} from '../storage';
 
 const styles = StyleSheet.create({
     container: {
@@ -60,6 +62,11 @@ const HomeScreen = () => {
                     onSelect={habbajet => {
                         dispatch(selectHabbajetAction(habbajet.name));
                         goToHabbajet();
+                    }}
+                    onReorder={reordered => {
+                        dispatch(reorderHabbajetListAction(reordered));
+                        saveState();
+                        console.log(reordered);
                     }}
                 />
                 <WideButton
