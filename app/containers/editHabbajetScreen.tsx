@@ -4,8 +4,8 @@ import {
     addHabbajetAction,
     updateEditorFieldAction,
     validateEditorAction,
-    clearEditorAction,
     deleteHabbajetAction,
+    invalidateEditorAction,
 } from '../actions';
 import {goBack, goToHome} from '../navigation/navigation';
 import {saveState} from '../storage';
@@ -31,7 +31,7 @@ const EditHabbajetScreen = () => {
     const habbajetNames = useSelector(getUnselectedHabbajetNames);
 
     if (isValid) {
-        dispatch(clearEditorAction());
+        dispatch(invalidateEditorAction());
         dispatch(
             addHabbajetAction(
                 newHabbajet.name,

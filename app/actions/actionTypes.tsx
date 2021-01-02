@@ -23,4 +23,5 @@ export enum ActionType {
     DELETE_TAG = 'Delete Tag',
     REWIND_HABBAJET = 'Rewind Habbajet',
     DELETE_PURCHASE = 'Delete Purchase',
+    INVALIDATE_EDITOR = 'Invalidate Editor',
 }

@@ -10,6 +10,8 @@ import {
     ClearEditorAction,
     setHabbajetToEdit,
     SetHabbajetToEditAction,
+    invalidateEditor,
+    InvalidateEditorAction,
 } from '../actions';
 import {DEFAULT_EDITOR_STATE} from '../state/defaults';
 
@@ -26,6 +28,8 @@ export default function habbajetEditorReducer(
             return clearEditor(state, action as ClearEditorAction);
         case ActionType.SET_HABBAJET_TO_EDIT:
             return setHabbajetToEdit(state, action as SetHabbajetToEditAction);
+        case ActionType.INVALIDATE_EDITOR:
+            return invalidateEditor(state, action as InvalidateEditorAction);
     }
     return state;
 }
