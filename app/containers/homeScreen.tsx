@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
@@ -34,8 +34,10 @@ const HomeScreen = () => {
     const habbajets = useSelector(getHabbajets);
     const dispatch = useDispatch();
 
+    const [scrollEnabled, setScrollEnabled] = useState(true);
+
     return (
-        <ScrollView>
+        <ScrollView scrollEnabled={scrollEnabled}>
             <View style={styles.container}>
                 <BudgetDisplay
                     budget={budget}
@@ -63,10 +65,10 @@ const HomeScreen = () => {
                         dispatch(selectHabbajetAction(habbajet.name));
                         goToHabbajet();
                     }}
+                    onDrag={done => setScrollEnabled(done)}
                     onReorder={reordered => {
                         dispatch(reorderHabbajetListAction(reordered));
                         saveState();
-                        console.log(reordered);
                     }}
                 />
                 <WideButton

@@ -22,15 +22,12 @@ const styles = StyleSheet.create({
         width: BUTTON_WIDTH,
         flexDirection: 'row',
     },
-    handle: {
-        width: 50,
-        height: 50,
-    },
 });
 
 interface HabbajetListProps {
     habbajets: Habbajet[];
     onSelect: (habbajet: Habbajet) => void;
+    onDrag: (done: boolean) => void;
     onReorder: (habbajets: Habbajet[]) => void;
 }
 const HabbajetList = (props: HabbajetListProps) => {
@@ -45,6 +42,8 @@ const HabbajetList = (props: HabbajetListProps) => {
                 childrenWidth={BUTTON_WIDTH}
                 marginChildrenBottom={10}
                 keyExtractor={habbajet => habbajet.id}
+                onDragStart={() => props.onDrag(false)}
+                onDragEnd={() => props.onDrag(true)}
                 onDataChange={data => props.onReorder(data)}
                 renderItem={(habbajet, index) => (
                     <View style={styles.draggable}>
