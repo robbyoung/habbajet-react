@@ -33,11 +33,13 @@ interface WideButton {
     color: string;
     highlight?: boolean;
     testID?: string;
+    disabled?: boolean;
     onPress: () => void;
 }
 const WideButton = (props: WideButton) => {
     return (
         <TouchableOpacity
+            disabled={props.disabled}
             testID={props.testID}
             onPress={() => props.onPress()}
             style={[styles.container, {backgroundColor: props.color}]}>

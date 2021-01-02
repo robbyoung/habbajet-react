@@ -45,6 +45,7 @@ const HabbajetList = (props: HabbajetListProps) => {
                 onDragStart={() => props.onDrag(false)}
                 onDragEnd={() => props.onDrag(true)}
                 onDataChange={data => props.onReorder(data)}
+                onClickItem={(_data, habbajet) => props.onSelect(habbajet)}
                 renderItem={(habbajet, index) => (
                     <View style={styles.draggable}>
                         <WideButton
@@ -54,9 +55,10 @@ const HabbajetList = (props: HabbajetListProps) => {
                                 today > moment(habbajet.date).valueOf() ||
                                 habbajet.toClaim
                             }
+                            disabled={true}
                             key={habbajet.name}
                             testID={`button-habbajet-${index}`}
-                            onPress={() => props.onSelect(habbajet)}
+                            onPress={() => undefined}
                         />
                     </View>
                 )}

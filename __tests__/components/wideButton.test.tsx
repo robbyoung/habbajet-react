@@ -46,4 +46,21 @@ describe('WideButton Component', () => {
         fireEvent.press(button);
         await wait(() => expect(onPress).toBeCalled());
     });
+
+    it('will not run the onPress callback if the button is disabled', async () => {
+        const onPress = jest.fn();
+        const {getByTestId} = render(
+            <WideButton
+                disabled={true}
+                text="Button"
+                testID="test-button"
+                color="#ffffff"
+                onPress={onPress}
+            />,
+        );
+
+        const button = getByTestId('test-button');
+        fireEvent.press(button);
+        await wait(() => expect(onPress).not.toBeCalled());
+    });
 });
