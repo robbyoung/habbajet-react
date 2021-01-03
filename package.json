@@ -25,6 +25,7 @@
         "prop-types": "15.6.0",
         "react": "16.9.0",
         "react-native": "0.61.5",
+        "react-native-drag-sort": "^2.4.2",
         "react-native-navigation": "^6.3.2",
         "react-native-pie": "^1.1.2",
         "react-native-splash-screen": "^3.2.0",

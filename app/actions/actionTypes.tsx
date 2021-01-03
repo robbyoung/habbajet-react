@@ -24,4 +24,5 @@ export enum ActionType {
     REWIND_HABBAJET = 'Rewind Habbajet',
     DELETE_PURCHASE = 'Delete Purchase',
     INVALIDATE_EDITOR = 'Invalidate Editor',
+    REORDER_HABBAJET_LIST = 'Reorder Habbajet List',
 }
