@@ -1,18 +1,11 @@
 import React, {useState} from 'react';
 import {ScrollView, StyleSheet, View, Text} from 'react-native';
 import {useSelector} from 'react-redux';
-import {
-    getPurchaseStatsForAllTime,
-    getPurchaseStatsForPastTwoWeeks,
-    getPurchaseStatsForThisWeek,
-    PurchaseStatistic,
-    TimePeriod,
-} from '../selectors/stats';
+import {getWeeklyPurchaseStats} from '../selectors/stats';
 import {white, grey} from '../colors';
 import PieChart from '../components/pieChart';
 import StatsEntry from '../components/statsEntry';
-import Dropdown from '../components/dropdown';
-import {State} from '../state';
+import WeekSelector from '../components/weekSelector';
 
 const styles = StyleSheet.create({
     background: {
@@ -34,23 +27,11 @@ const styles = StyleSheet.create({
 });
 
 const PurchaseStatsScreen = () => {
-    const [timePeriod, setTimePeriod] = useState<string>(TimePeriod.ThisWeek);
+    const weeklyStats = useSelector(getWeeklyPurchaseStats);
+    const [stats, setStats] = useState(weeklyStats[0]);
 
-    let statsSelector: (state: State) => PurchaseStatistic[];
-    switch (timePeriod) {
-        case TimePeriod.ThisWeek:
-            statsSelector = getPurchaseStatsForThisWeek;
-            break;
-        case TimePeriod.PastTwoWeeks:
-            statsSelector = getPurchaseStatsForPastTwoWeeks;
-            break;
-        default:
-            statsSelector = getPurchaseStatsForAllTime;
-    }
-
-    const stats = useSelector(statsSelector);
     const content =
-        stats.length > 0 ? (
+        stats !== undefined && stats.length > 0 ? (
             <View>
                 <PieChart sections={stats} />
                 {stats.map((data, index) => (
@@ -64,15 +45,9 @@ const PurchaseStatsScreen = () => {
     return (
         <ScrollView style={styles.background}>
             <View style={styles.container}>
-                <Dropdown
-                    title={'Time Period'}
-                    options={[
-                        {key: 'This Week', value: TimePeriod.ThisWeek},
-                        {key: 'Past Two Weeks', value: TimePeriod.PastTwoWeeks},
-                        {key: 'All Time', value: TimePeriod.AllTime},
-                    ]}
-                    selected={timePeriod}
-                    onValueChange={value => setTimePeriod(value)}
+                <WeekSelector
+                    weeklyStats={weeklyStats}
+                    onSelect={selectedStats => setStats(selectedStats)}
                 />
                 {content}
             </View>

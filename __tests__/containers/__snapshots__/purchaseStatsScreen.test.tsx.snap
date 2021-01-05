@@ -19,66 +19,44 @@ exports[`Purchase Stats Screen Component display a message if there are no stats
       }
     >
       <View
-        style={Object {}}
+        style={
+          Object {
+            "alignContent": "space-between",
+            "flexDirection": "row",
+            "marginTop": 10,
+          }
+        }
       >
+        <View
+          style={
+            Object {
+              "width": 25,
+            }
+          }
+        />
         <Text
           style={
             Object {
-              "color": "#959595",
+              "color": "#000000",
+              "flexGrow": 100,
               "fontFamily": "Abel",
-              "fontSize": 20,
+              "fontSize": 22,
+              "justifyContent": "center",
+              "textAlign": "center",
             }
           }
         >
-          Time Period
+          04/01/21
+           - 
+          10/01/21
         </Text>
         <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderRadius": 5,
-              "borderWidth": 1,
+              "width": 25,
             }
           }
-        >
-          <View>
-            <RNCPicker
-              items={
-                Array [
-                  Object {
-                    "label": "This Week",
-                    "textColor": undefined,
-                    "value": "This Week",
-                  },
-                  Object {
-                    "label": "Past Two Weeks",
-                    "textColor": undefined,
-                    "value": "Past Two Weeks",
-                  },
-                  Object {
-                    "label": "All Time",
-                    "textColor": undefined,
-                    "value": "All Time",
-                  },
-                ]
-              }
-              onChange={[Function]}
-              selectedIndex={0}
-              style={
-                Array [
-                  Object {
-                    "height": 216,
-                  },
-                  Object {
-                    "backgroundColor": "#959595",
-                    "fontFamily": "Abel",
-                    "fontSize": 20,
-                  },
-                ]
-              }
-            />
-          </View>
-        </View>
+        />
       </View>
       <Text
         style={
@@ -118,66 +96,44 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
       }
     >
       <View
-        style={Object {}}
+        style={
+          Object {
+            "alignContent": "space-between",
+            "flexDirection": "row",
+            "marginTop": 10,
+          }
+        }
       >
+        <View
+          style={
+            Object {
+              "width": 25,
+            }
+          }
+        />
         <Text
           style={
             Object {
-              "color": "#959595",
+              "color": "#000000",
+              "flexGrow": 100,
               "fontFamily": "Abel",
-              "fontSize": 20,
+              "fontSize": 22,
+              "justifyContent": "center",
+              "textAlign": "center",
             }
           }
         >
-          Time Period
+          04/01/21
+           - 
+          10/01/21
         </Text>
         <View
           style={
             Object {
-              "borderColor": "#959595",
-              "borderRadius": 5,
-              "borderWidth": 1,
+              "width": 25,
             }
           }
-        >
-          <View>
-            <RNCPicker
-              items={
-                Array [
-                  Object {
-                    "label": "This Week",
-                    "textColor": undefined,
-                    "value": "This Week",
-                  },
-                  Object {
-                    "label": "Past Two Weeks",
-                    "textColor": undefined,
-                    "value": "Past Two Weeks",
-                  },
-                  Object {
-                    "label": "All Time",
-                    "textColor": undefined,
-                    "value": "All Time",
-                  },
-                ]
-              }
-              onChange={[Function]}
-              selectedIndex={0}
-              style={
-                Array [
-                  Object {
-                    "height": 216,
-                  },
-                  Object {
-                    "backgroundColor": "#959595",
-                    "fontFamily": "Abel",
-                    "fontSize": 20,
-                  },
-                ]
-              }
-            />
-          </View>
-        </View>
+        />
       </View>
       <Text
         style={
