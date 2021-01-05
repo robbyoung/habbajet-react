@@ -15,14 +15,17 @@ export interface PurchaseStatistic {
     color: string;
 }
 
-function getPurchaseStats(state: State, earliest: number) {
+function getPurchaseStats(
+    state: State,
+    earliest: number,
+    latest = moment().valueOf(),
+) {
     const tagCosts: {[key: string]: number} = {};
-    const latest = moment().valueOf();
     let totalCost = 0;
     state.purchases
         .filter(purchase => {
             const timestamp = moment(purchase.date).valueOf();
-            return timestamp >= earliest && timestamp <= latest;
+            return timestamp >= earliest && timestamp < latest;
         })
         .forEach(purchase => {
             tagCosts[purchase.tagId] = tagCosts[purchase.tagId]
@@ -67,4 +70,29 @@ export function getPurchaseStatsForPastTwoWeeks(state: State) {
 
 export function getPurchaseStatsForAllTime(state: State) {
     return getPurchaseStats(state, 0);
+}
+
+export function getWeeklyPurchaseStats(state: State) {
+    const weeklyStats: PurchaseStatistic[][] = [];
+    let startOfWeek = moment().startOf('isoWeek');
+
+    while (true) {
+        const endOfWeek = moment(startOfWeek.valueOf())
+            .add(1, 'weeks')
+            .subtract(1, 'second');
+
+        const stats = getPurchaseStats(
+            state,
+            startOfWeek.valueOf(),
+            endOfWeek.valueOf(),
+        );
+
+        if (stats.length === 0) {
+            break;
+        }
+        weeklyStats.push(stats);
+        startOfWeek = startOfWeek.subtract(1, 'weeks');
+    }
+
+    return weeklyStats;
 }
