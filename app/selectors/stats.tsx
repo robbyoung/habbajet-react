@@ -15,14 +15,17 @@ export interface PurchaseStatistic {
     color: string;
 }
 
-function getPurchaseStats(state: State, earliest: number) {
+function getPurchaseStats(
+    state: State,
+    earliest: number,
+    latest = moment().valueOf(),
+) {
     const tagCosts: {[key: string]: number} = {};
-    const latest = moment().valueOf();
     let totalCost = 0;
     state.purchases
         .filter(purchase => {
             const timestamp = moment(purchase.date).valueOf();
-            return timestamp >= earliest && timestamp <= latest;
+            return timestamp >= earliest && timestamp < latest;
         })
         .forEach(purchase => {
             tagCosts[purchase.tagId] = tagCosts[purchase.tagId]
@@ -67,4 +70,52 @@ export function getPurchaseStatsForPastTwoWeeks(state: State) {
 
 export function getPurchaseStatsForAllTime(state: State) {
     return getPurchaseStats(state, 0);
+}
+
+function getEarliestDate(state: State): number {
+    if (state.purchases.length === 0) {
+        return moment()
+            .startOf('isoWeek')
+            .valueOf();
+    }
+
+    const firstPurchase = state.purchases[state.purchases.length - 1];
+    const dateOfFirstPurchase = moment(firstPurchase.date)
+        .startOf('isoWeek')
+        .valueOf();
+    const oneYearAgo = moment()
+        .subtract(1, 'years')
+        .startOf('isoWeek')
+        .valueOf();
+
+    return Math.max(dateOfFirstPurchase, oneYearAgo);
+}
+
+export function getWeeklyPurchaseStats(state: State) {
+    const weeklyStats: PurchaseStatistic[][] = [];
+    let startOfWeek = moment()
+        .startOf('isoWeek')
+        .valueOf();
+
+    const earliestDate = getEarliestDate(state);
+
+    while (startOfWeek >= earliestDate) {
+        const endOfWeek = moment(startOfWeek)
+            .add(1, 'weeks')
+            .subtract(1, 'second')
+            .valueOf();
+
+        const stats = getPurchaseStats(
+            state,
+            startOfWeek.valueOf(),
+            endOfWeek.valueOf(),
+        );
+
+        weeklyStats.push(stats);
+        startOfWeek = moment(startOfWeek)
+            .subtract(1, 'weeks')
+            .valueOf();
+    }
+
+    return weeklyStats;
 }

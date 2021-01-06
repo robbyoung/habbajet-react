@@ -8,6 +8,10 @@ import PurchaseStatsScreen from '../../app/containers/purchaseStatsScreen';
 
 jest.mock('../../app/storage', () => ({}));
 
+jest.mock('@fortawesome/react-native-fontawesome', () => ({
+    FontAwesomeIcon: '',
+}));
+
 describe('Purchase Stats Screen Component', () => {
     it('will display purchase stats based on the state', () => {
         const state = createTestState(5, 10, 200);

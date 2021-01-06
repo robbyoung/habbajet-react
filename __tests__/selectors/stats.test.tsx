@@ -3,9 +3,29 @@ import {
     getPurchaseStatsForAllTime,
     getPurchaseStatsForPastTwoWeeks,
     getPurchaseStatsForThisWeek,
+    getWeeklyPurchaseStats,
 } from '../../app/selectors/stats';
 import {grey} from '../../app/colors';
 import moment from 'moment';
+
+expect.extend({
+    toBeWithinRange(received, floor, ceiling) {
+        const pass = received >= floor && received <= ceiling;
+        if (pass) {
+            return {
+                message: () =>
+                    `expected ${received} not to be within range ${floor} - ${ceiling}`,
+                pass: true,
+            };
+        } else {
+            return {
+                message: () =>
+                    `expected ${received} to be within range ${floor} - ${ceiling}`,
+                pass: false,
+            };
+        }
+    },
+});
 
 describe('Stats Selectors', () => {
     describe('Get Purchase Stats For All Time', () => {
@@ -215,6 +235,166 @@ describe('Stats Selectors', () => {
 
             const results = getPurchaseStatsForThisWeek(state);
             expect(results).toEqual([]);
+        });
+    });
+
+    describe('Get Weekly Purchase Stats', () => {
+        it('can get a list of purchase stats by week', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 30,
+                    date: moment()
+                        .startOf('day')
+                        .toISOString(),
+                    name: 'Today',
+                    tagId: state.tags[0].id,
+                },
+                {
+                    id: '1',
+                    cost: 70,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .toISOString(),
+                    name: 'Monday',
+                    tagId: state.tags[1].id,
+                },
+                {
+                    id: '2',
+                    cost: 20,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .subtract(1, 'hour')
+                        .toISOString(),
+                    name: 'Last Sunday',
+                    tagId: state.tags[1].id,
+                },
+                {
+                    id: '3',
+                    cost: 60,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .subtract(12, 'days')
+                        .toISOString(),
+                    name: 'Two Wednesdays Ago',
+                    tagId: state.tags[0].id,
+                },
+                {
+                    id: '4',
+                    cost: 40,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .subtract(13, 'days')
+                        .toISOString(),
+                    name: 'Two Tuesdays Ago',
+                    tagId: state.tags[1].id,
+                },
+            ];
+
+            const results = getWeeklyPurchaseStats(state);
+            expect(results).toEqual([
+                [
+                    {
+                        tagName: state.tags[1].name,
+                        total: 70,
+                        percentage: 0.7,
+                        color: state.tags[1].color,
+                    },
+                    {
+                        tagName: state.tags[0].name,
+                        total: 30,
+                        percentage: 0.3,
+                        color: state.tags[0].color,
+                    },
+                ],
+                [
+                    {
+                        tagName: state.tags[1].name,
+                        total: 20,
+                        percentage: 1,
+                        color: state.tags[1].color,
+                    },
+                ],
+                [
+                    {
+                        tagName: state.tags[0].name,
+                        total: 60,
+                        percentage: 0.6,
+                        color: state.tags[0].color,
+                    },
+                    {
+                        tagName: state.tags[1].name,
+                        total: 40,
+                        percentage: 0.4,
+                        color: state.tags[1].color,
+                    },
+                ],
+            ]);
+        });
+
+        it('will create empty arrays for purchaseless weeks', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 30,
+                    date: moment()
+                        .startOf('day')
+                        .toISOString(),
+                    name: 'Today',
+                    tagId: state.tags[0].id,
+                },
+                {
+                    id: '2',
+                    cost: 20,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .subtract(2, 'weeks')
+                        .toISOString(),
+                    name: 'Two weeks ago',
+                    tagId: state.tags[1].id,
+                },
+            ];
+
+            const results = getWeeklyPurchaseStats(state);
+            expect(results).toEqual([
+                [
+                    {
+                        tagName: state.tags[0].name,
+                        total: 30,
+                        percentage: 1,
+                        color: state.tags[0].color,
+                    },
+                ],
+                [],
+                [
+                    {
+                        tagName: state.tags[1].name,
+                        total: 20,
+                        percentage: 1,
+                        color: state.tags[1].color,
+                    },
+                ],
+            ]);
+        });
+
+        it('will go back up to one year to find the earlist purchase', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 30,
+                    date: moment()
+                        .subtract(2, 'years')
+                        .toISOString(),
+                    name: 'Today',
+                    tagId: state.tags[0].id,
+                },
+            ];
+
+            const results = getWeeklyPurchaseStats(state);
+            (expect(results.length) as any).toBeWithinRange(52, 53);
         });
     });
 });
