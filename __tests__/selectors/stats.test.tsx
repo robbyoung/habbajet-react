@@ -8,6 +8,25 @@ import {
 import {grey} from '../../app/colors';
 import moment from 'moment';
 
+expect.extend({
+    toBeWithinRange(received, floor, ceiling) {
+        const pass = received >= floor && received <= ceiling;
+        if (pass) {
+            return {
+                message: () =>
+                    `expected ${received} not to be within range ${floor} - ${ceiling}`,
+                pass: true,
+            };
+        } else {
+            return {
+                message: () =>
+                    `expected ${received} to be within range ${floor} - ${ceiling}`,
+                pass: false,
+            };
+        }
+    },
+});
+
 describe('Stats Selectors', () => {
     describe('Get Purchase Stats For All Time', () => {
         it('will return sorted purchase stats for the given state', () => {
@@ -312,6 +331,70 @@ describe('Stats Selectors', () => {
                     },
                 ],
             ]);
+        });
+
+        it('will create empty arrays for purchaseless weeks', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 30,
+                    date: moment()
+                        .startOf('day')
+                        .toISOString(),
+                    name: 'Today',
+                    tagId: state.tags[0].id,
+                },
+                {
+                    id: '2',
+                    cost: 20,
+                    date: moment()
+                        .startOf('isoWeek')
+                        .subtract(2, 'weeks')
+                        .toISOString(),
+                    name: 'Two weeks ago',
+                    tagId: state.tags[1].id,
+                },
+            ];
+
+            const results = getWeeklyPurchaseStats(state);
+            expect(results).toEqual([
+                [
+                    {
+                        tagName: state.tags[0].name,
+                        total: 30,
+                        percentage: 1,
+                        color: state.tags[0].color,
+                    },
+                ],
+                [],
+                [
+                    {
+                        tagName: state.tags[1].name,
+                        total: 20,
+                        percentage: 1,
+                        color: state.tags[1].color,
+                    },
+                ],
+            ]);
+        });
+
+        it('will go back up to one year to find the earlist purchase', () => {
+            const state = createTestState(3, 0, 100);
+            state.purchases = [
+                {
+                    id: '0',
+                    cost: 30,
+                    date: moment()
+                        .subtract(2, 'years')
+                        .toISOString(),
+                    name: 'Today',
+                    tagId: state.tags[0].id,
+                },
+            ];
+
+            const results = getWeeklyPurchaseStats(state);
+            (expect(results.length) as any).toBeWithinRange(52, 53);
         });
     });
 });

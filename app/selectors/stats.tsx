@@ -72,14 +72,38 @@ export function getPurchaseStatsForAllTime(state: State) {
     return getPurchaseStats(state, 0);
 }
 
+function getEarliestDate(state: State): number {
+    if (state.purchases.length === 0) {
+        return moment()
+            .startOf('isoWeek')
+            .valueOf();
+    }
+
+    const firstPurchase = state.purchases[state.purchases.length - 1];
+    const dateOfFirstPurchase = moment(firstPurchase.date)
+        .startOf('isoWeek')
+        .valueOf();
+    const oneYearAgo = moment()
+        .subtract(1, 'years')
+        .startOf('isoWeek')
+        .valueOf();
+
+    return Math.max(dateOfFirstPurchase, oneYearAgo);
+}
+
 export function getWeeklyPurchaseStats(state: State) {
     const weeklyStats: PurchaseStatistic[][] = [];
-    let startOfWeek = moment().startOf('isoWeek');
+    let startOfWeek = moment()
+        .startOf('isoWeek')
+        .valueOf();
 
-    while (true) {
-        const endOfWeek = moment(startOfWeek.valueOf())
+    const earliestDate = getEarliestDate(state);
+
+    while (startOfWeek >= earliestDate) {
+        const endOfWeek = moment(startOfWeek)
             .add(1, 'weeks')
-            .subtract(1, 'second');
+            .subtract(1, 'second')
+            .valueOf();
 
         const stats = getPurchaseStats(
             state,
@@ -87,11 +111,10 @@ export function getWeeklyPurchaseStats(state: State) {
             endOfWeek.valueOf(),
         );
 
-        if (stats.length === 0) {
-            break;
-        }
         weeklyStats.push(stats);
-        startOfWeek = startOfWeek.subtract(1, 'weeks');
+        startOfWeek = moment(startOfWeek)
+            .subtract(1, 'weeks')
+            .valueOf();
     }
 
     return weeklyStats;
