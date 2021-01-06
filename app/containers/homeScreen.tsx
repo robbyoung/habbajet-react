@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {getBudgetFormatted, getHabbajets} from '../selectors';
 import {ScrollView, StyleSheet, View} from 'react-native';
@@ -14,11 +14,13 @@ import {
     selectHabbajetAction,
     clearEditorAction,
     clearPurchaseEditorAction,
+    reorderHabbajetListAction,
 } from '../actions';
 import WideButton from '../components/wideButton';
 import {grey} from '../colors';
 import BudgetDisplay from '../components/budgetDisplay';
 import {faBars, faPlus, faChartPie} from '@fortawesome/free-solid-svg-icons';
+import {saveState} from '../storage';
 
 const styles = StyleSheet.create({
     container: {
@@ -32,8 +34,10 @@ const HomeScreen = () => {
     const habbajets = useSelector(getHabbajets);
     const dispatch = useDispatch();
 
+    const [scrollEnabled, setScrollEnabled] = useState(true);
+
     return (
-        <ScrollView>
+        <ScrollView scrollEnabled={scrollEnabled}>
             <View style={styles.container}>
                 <BudgetDisplay
                     budget={budget}
@@ -60,6 +64,11 @@ const HomeScreen = () => {
                     onSelect={habbajet => {
                         dispatch(selectHabbajetAction(habbajet.name));
                         goToHabbajet();
+                    }}
+                    onDrag={done => setScrollEnabled(done)}
+                    onReorder={reordered => {
+                        dispatch(reorderHabbajetListAction(reordered));
+                        saveState();
                     }}
                 />
                 <WideButton
