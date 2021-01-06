@@ -14,14 +14,14 @@ const styles = StyleSheet.create({
     },
     weekText: {
         textAlign: 'center',
-        justifyContent: 'center',
         fontFamily: 'Abel',
         color: black,
         flexGrow: 100,
         fontSize: 22,
+        marginTop: 2,
     },
     buttonContainer: {
-        width: 25,
+        width: 30,
     },
 });
 
@@ -50,7 +50,8 @@ const WeekSelector = (props: WeekSelectorProps) => {
             <View style={styles.buttonContainer}>
                 {showLeftButton ? (
                     <IconButton
-                        size={25}
+                        testID={'btn-previous-week'}
+                        size={30}
                         color={grey}
                         icon={faChevronLeft}
                         onPress={() => {
@@ -72,7 +73,8 @@ const WeekSelector = (props: WeekSelectorProps) => {
             <View style={styles.buttonContainer}>
                 {showRightButton ? (
                     <IconButton
-                        size={25}
+                        testID={'btn-next-week'}
+                        size={30}
                         color={grey}
                         icon={faChevronRight}
                         onPress={() => {

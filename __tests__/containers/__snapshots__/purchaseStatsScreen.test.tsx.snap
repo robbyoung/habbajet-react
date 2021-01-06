@@ -30,7 +30,7 @@ exports[`Purchase Stats Screen Component display a message if there are no stats
         <View
           style={
             Object {
-              "width": 25,
+              "width": 30,
             }
           }
         />
@@ -41,7 +41,7 @@ exports[`Purchase Stats Screen Component display a message if there are no stats
               "flexGrow": 100,
               "fontFamily": "Abel",
               "fontSize": 22,
-              "justifyContent": "center",
+              "marginTop": 2,
               "textAlign": "center",
             }
           }
@@ -53,7 +53,7 @@ exports[`Purchase Stats Screen Component display a message if there are no stats
         <View
           style={
             Object {
-              "width": 25,
+              "width": 30,
             }
           }
         />
@@ -107,7 +107,7 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
         <View
           style={
             Object {
-              "width": 25,
+              "width": 30,
             }
           }
         >
@@ -127,6 +127,7 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
                 "opacity": 1,
               }
             }
+            testID="btn-previous-week"
           >
             <
               color="#959595"
@@ -143,7 +144,7 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
                   "prefix": "fas",
                 }
               }
-              size={25}
+              size={30}
             />
           </View>
         </View>
@@ -154,7 +155,7 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
               "flexGrow": 100,
               "fontFamily": "Abel",
               "fontSize": 22,
-              "justifyContent": "center",
+              "marginTop": 2,
               "textAlign": "center",
             }
           }
@@ -166,7 +167,7 @@ exports[`Purchase Stats Screen Component will display purchase stats based on th
         <View
           style={
             Object {
-              "width": 25,
+              "width": 30,
             }
           }
         />
