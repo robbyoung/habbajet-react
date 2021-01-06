@@ -19,8 +19,16 @@ let layout: Layout;
 jest.mock('react-native-navigation', () => ({
     Navigation: {
         registerComponent: () => undefined,
-        setRoot: (args: LayoutRoot) => (layoutRoot = args),
-        push: (id: string, args: Layout) => (layout = args),
+        setRoot: (args: LayoutRoot) =>
+            new Promise<void>(resolve => {
+                layoutRoot = args;
+                resolve();
+            }),
+        push: (id: string, args: Layout) =>
+            new Promise<void>(resolve => {
+                layout = args;
+                resolve();
+            }),
     },
 }));
 
@@ -37,66 +45,66 @@ jest.mock('../app/storage', () => ({
     loadState: () => undefined,
 }));
 
-function testStackReset(navigate: () => void, expected: string) {
-    navigate();
+async function testStackReset(navigate: () => Promise<any>, expected: string) {
+    await navigate();
 
     // @ts-ignore
     expect(layoutRoot.root.stack.children[0].component.name).toEqual(expected);
 }
 
-function testStackPush(navigate: () => void, expected: string) {
-    navigate();
+async function testStackPush(navigate: () => Promise<any>, expected: string) {
+    await navigate();
 
     // @ts-ignore
     expect(layout.component.name).toEqual(expected);
 }
 
 describe('Navigation', () => {
-    it('goToLoading correctly navigates to loading screen', () => {
-        testStackReset(goToLoading, 'Loading');
+    it('goToLoading correctly navigates to loading screen', async () => {
+        await testStackReset(goToLoading, 'Loading');
     });
 
-    it('goToHome correctly navigates to home screen', () => {
-        testStackReset(goToHome, 'Home');
+    it('goToHome correctly navigates to home screen', async () => {
+        await testStackReset(goToHome, 'Home');
     });
 
-    it('goToHabbajet correctly navigates to habbajet screen', () => {
-        testStackPush(goToHabbajet, 'Habbajet');
+    it('goToHabbajet correctly navigates to habbajet screen', async () => {
+        await testStackPush(goToHabbajet, 'Habbajet');
     });
 
-    it('goToNewHabbajet correctly navigates to the new habbajet screen', () => {
-        testStackPush(goToNewHabbajet, 'NewHabbajet');
+    it('goToNewHabbajet correctly navigates to the new habbajet screen', async () => {
+        await testStackPush(goToNewHabbajet, 'NewHabbajet');
     });
 
-    it('goToPurchases correctly navigates to the purchases screen', () => {
-        testStackPush(goToPurchases, 'Purchases');
+    it('goToPurchases correctly navigates to the purchases screen', async () => {
+        await testStackPush(goToPurchases, 'Purchases');
     });
 
-    it('goToNewPurchase correctly navigates to the new purchase screen', () => {
-        testStackPush(goToNewPurchase, 'NewPurchase');
+    it('goToNewPurchase correctly navigates to the new purchase screen', async () => {
+        await testStackPush(goToNewPurchase, 'NewPurchase');
     });
 
-    it('goToEditHabbajet correctly navigates to the edit habbajet screen', () => {
-        testStackPush(goToEditHabbajet, 'EditHabbajet');
+    it('goToEditHabbajet correctly navigates to the edit habbajet screen', async () => {
+        await testStackPush(goToEditHabbajet, 'EditHabbajet');
     });
 
-    it('goToStartingBudget correctly navigates to the starting budget screen', () => {
-        testStackReset(goToStartingBudget, 'StartingBudget');
+    it('goToStartingBudget correctly navigates to the starting budget screen', async () => {
+        await testStackReset(goToStartingBudget, 'StartingBudget');
     });
 
-    it('goToNewTag correctly navigates to the new tag screen', () => {
-        testStackPush(goToNewTag, 'NewTag');
+    it('goToNewTag correctly navigates to the new tag screen', async () => {
+        await testStackPush(goToNewTag, 'NewTag');
     });
 
-    it('goToEditPurchase correctly navigates to the edit purchase screen', () => {
-        testStackPush(goToEditPurchase, 'EditPurchase');
+    it('goToEditPurchase correctly navigates to the edit purchase screen', async () => {
+        await testStackPush(goToEditPurchase, 'EditPurchase');
     });
 
-    it('goToEditTag correctly navigates to the edit tag screen', () => {
-        testStackPush(goToEditTag, 'EditTag');
+    it('goToEditTag correctly navigates to the edit tag screen', async () => {
+        await testStackPush(goToEditTag, 'EditTag');
     });
 
-    it('goToPurchaseStats correctly navigates to the purchase stats screen', () => {
-        testStackPush(goToPurchaseStats, 'PurchaseStats');
+    it('goToPurchaseStats correctly navigates to the purchase stats screen', async () => {
+        await testStackPush(goToPurchaseStats, 'PurchaseStats');
     });
 });
