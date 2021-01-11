@@ -16,11 +16,27 @@ import {
 
 let layoutRoot: LayoutRoot;
 let layout: Layout;
+let mockNavigationDelay: number;
+let mockTimesNavigated: number;
 jest.mock('react-native-navigation', () => ({
     Navigation: {
         registerComponent: () => undefined,
-        setRoot: (args: LayoutRoot) => (layoutRoot = args),
-        push: (id: string, args: Layout) => (layout = args),
+        setRoot: (args: LayoutRoot) =>
+            new Promise<void>(async resolve => {
+                layoutRoot = args;
+                setTimeout(() => {
+                    mockTimesNavigated++;
+                    resolve();
+                }, mockNavigationDelay);
+            }),
+        push: (id: string, args: Layout) =>
+            new Promise<void>(async resolve => {
+                layout = args;
+                setTimeout(() => {
+                    mockTimesNavigated++;
+                    resolve();
+                }, mockNavigationDelay);
+            }),
     },
 }));
 
@@ -37,66 +53,89 @@ jest.mock('../app/storage', () => ({
     loadState: () => undefined,
 }));
 
-function testStackReset(navigate: () => void, expected: string) {
-    navigate();
+async function testStackReset(navigate: () => Promise<any>, expected: string) {
+    await navigate();
 
     // @ts-ignore
     expect(layoutRoot.root.stack.children[0].component.name).toEqual(expected);
 }
 
-function testStackPush(navigate: () => void, expected: string) {
-    navigate();
+async function testStackPush(navigate: () => Promise<any>, expected: string) {
+    await navigate();
 
     // @ts-ignore
     expect(layout.component.name).toEqual(expected);
 }
 
 describe('Navigation', () => {
-    it('goToLoading correctly navigates to loading screen', () => {
-        testStackReset(goToLoading, 'Loading');
+    beforeEach(() => {
+        mockNavigationDelay = 0;
     });
 
-    it('goToHome correctly navigates to home screen', () => {
-        testStackReset(goToHome, 'Home');
+    it('goToLoading correctly navigates to loading screen', async () => {
+        await testStackReset(goToLoading, 'Loading');
     });
 
-    it('goToHabbajet correctly navigates to habbajet screen', () => {
-        testStackPush(goToHabbajet, 'Habbajet');
+    it('goToHome correctly navigates to home screen', async () => {
+        await testStackReset(goToHome, 'Home');
     });
 
-    it('goToNewHabbajet correctly navigates to the new habbajet screen', () => {
-        testStackPush(goToNewHabbajet, 'NewHabbajet');
+    it('goToHabbajet correctly navigates to habbajet screen', async () => {
+        await testStackPush(goToHabbajet, 'Habbajet');
     });
 
-    it('goToPurchases correctly navigates to the purchases screen', () => {
-        testStackPush(goToPurchases, 'Purchases');
+    it('goToNewHabbajet correctly navigates to the new habbajet screen', async () => {
+        await testStackPush(goToNewHabbajet, 'NewHabbajet');
     });
 
-    it('goToNewPurchase correctly navigates to the new purchase screen', () => {
-        testStackPush(goToNewPurchase, 'NewPurchase');
+    it('goToPurchases correctly navigates to the purchases screen', async () => {
+        await testStackPush(goToPurchases, 'Purchases');
     });
 
-    it('goToEditHabbajet correctly navigates to the edit habbajet screen', () => {
-        testStackPush(goToEditHabbajet, 'EditHabbajet');
+    it('goToNewPurchase correctly navigates to the new purchase screen', async () => {
+        await testStackPush(goToNewPurchase, 'NewPurchase');
     });
 
-    it('goToStartingBudget correctly navigates to the starting budget screen', () => {
-        testStackReset(goToStartingBudget, 'StartingBudget');
+    it('goToEditHabbajet correctly navigates to the edit habbajet screen', async () => {
+        await testStackPush(goToEditHabbajet, 'EditHabbajet');
     });
 
-    it('goToNewTag correctly navigates to the new tag screen', () => {
-        testStackPush(goToNewTag, 'NewTag');
+    it('goToStartingBudget correctly navigates to the starting budget screen', async () => {
+        await testStackReset(goToStartingBudget, 'StartingBudget');
     });
 
-    it('goToEditPurchase correctly navigates to the edit purchase screen', () => {
-        testStackPush(goToEditPurchase, 'EditPurchase');
+    it('goToNewTag correctly navigates to the new tag screen', async () => {
+        await testStackPush(goToNewTag, 'NewTag');
     });
 
-    it('goToEditTag correctly navigates to the edit tag screen', () => {
-        testStackPush(goToEditTag, 'EditTag');
+    it('goToEditPurchase correctly navigates to the edit purchase screen', async () => {
+        await testStackPush(goToEditPurchase, 'EditPurchase');
     });
 
-    it('goToPurchaseStats correctly navigates to the purchase stats screen', () => {
-        testStackPush(goToPurchaseStats, 'PurchaseStats');
+    it('goToEditTag correctly navigates to the edit tag screen', async () => {
+        await testStackPush(goToEditTag, 'EditTag');
+    });
+
+    it('goToPurchaseStats correctly navigates to the purchase stats screen', async () => {
+        await testStackPush(goToPurchaseStats, 'PurchaseStats');
+    });
+
+    describe('Navigation Debouncing', () => {
+        beforeEach(() => {
+            mockTimesNavigated = 0;
+            mockNavigationDelay = 1000;
+        });
+
+        it('prevents multiple navigations from happening at once', async () => {
+            const navigation = testStackPush(
+                goToPurchaseStats,
+                'PurchaseStats',
+            );
+            testStackPush(goToPurchaseStats, 'PurchaseStats');
+            testStackPush(goToPurchaseStats, 'PurchaseStats');
+            await navigation;
+
+            expect(mockTimesNavigated).toBe(1);
+        });
     });
 });
