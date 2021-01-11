@@ -85,6 +85,7 @@ function getEarliestDate(state: State): number {
         .valueOf();
     const oneYearAgo = moment()
         .subtract(1, 'years')
+        .add(1, 'week')
         .startOf('isoWeek')
         .valueOf();
 
