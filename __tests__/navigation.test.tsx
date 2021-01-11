@@ -16,18 +16,26 @@ import {
 
 let layoutRoot: LayoutRoot;
 let layout: Layout;
+let mockNavigationDelay: number;
+let mockTimesNavigated: number;
 jest.mock('react-native-navigation', () => ({
     Navigation: {
         registerComponent: () => undefined,
         setRoot: (args: LayoutRoot) =>
-            new Promise<void>(resolve => {
+            new Promise<void>(async resolve => {
                 layoutRoot = args;
-                resolve();
+                setTimeout(() => {
+                    mockTimesNavigated++;
+                    resolve();
+                }, mockNavigationDelay);
             }),
         push: (id: string, args: Layout) =>
-            new Promise<void>(resolve => {
+            new Promise<void>(async resolve => {
                 layout = args;
-                resolve();
+                setTimeout(() => {
+                    mockTimesNavigated++;
+                    resolve();
+                }, mockNavigationDelay);
             }),
     },
 }));
@@ -60,6 +68,10 @@ async function testStackPush(navigate: () => Promise<any>, expected: string) {
 }
 
 describe('Navigation', () => {
+    beforeEach(() => {
+        mockNavigationDelay = 0;
+    });
+
     it('goToLoading correctly navigates to loading screen', async () => {
         await testStackReset(goToLoading, 'Loading');
     });
@@ -106,5 +118,24 @@ describe('Navigation', () => {
 
     it('goToPurchaseStats correctly navigates to the purchase stats screen', async () => {
         await testStackPush(goToPurchaseStats, 'PurchaseStats');
+    });
+
+    describe('Navigation Debouncing', () => {
+        beforeEach(() => {
+            mockTimesNavigated = 0;
+            mockNavigationDelay = 1000;
+        });
+
+        it('prevents multiple navigations from happening at once', async () => {
+            const navigation = testStackPush(
+                goToPurchaseStats,
+                'PurchaseStats',
+            );
+            testStackPush(goToPurchaseStats, 'PurchaseStats');
+            testStackPush(goToPurchaseStats, 'PurchaseStats');
+            await navigation;
+
+            expect(mockTimesNavigated).toBe(1);
+        });
     });
 });
