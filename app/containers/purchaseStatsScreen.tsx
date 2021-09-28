@@ -6,6 +6,7 @@ import {white, grey} from '../colors';
 import PieChart from '../components/pieChart';
 import StatsEntry from '../components/statsEntry';
 import WeekSelector from '../components/weekSelector';
+import StatsTotal from '../components/statsTotal';
 
 const styles = StyleSheet.create({
     background: {
@@ -34,6 +35,7 @@ const PurchaseStatsScreen = () => {
         stats !== undefined && stats.length > 0 ? (
             <View>
                 <PieChart sections={stats} />
+                <StatsTotal stats={stats} />
                 {stats.map((data, index) => (
                     <StatsEntry stats={data} key={index} />
                 ))}

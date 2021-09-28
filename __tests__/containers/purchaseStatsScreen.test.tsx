@@ -15,7 +15,9 @@ jest.mock('@fortawesome/react-native-fontawesome', () => ({
 
 describe('Purchase Stats Screen Component', () => {
     beforeAll(() => {
-        moment.now = jest.fn(() => 1560384673000);
+        moment.now = jest.fn(() =>
+            new Date('2020-03-22T11:00:00.000Z').valueOf(),
+        );
     });
 
     it('will display purchase stats based on the state', () => {
