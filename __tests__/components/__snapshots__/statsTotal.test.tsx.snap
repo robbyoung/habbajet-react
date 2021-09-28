@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsTotal Component can render a total label for the stats screen 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontFamily": "Abel",
+          "fontSize": 20,
+          "margin": 0,
+          "padding": 0,
+        },
+        Object {
+          "color": "#000000",
+        },
+      ]
+    }
+  >
+    Total
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "fontFamily": "Abel",
+          "marginTop": -5,
+          "padding": 0,
+        },
+        Object {
+          "fontSize": 50,
+        },
+      ]
+    }
+  >
+    $100.00
+  </Text>
+</View>
+`;
